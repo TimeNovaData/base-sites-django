@@ -1,0 +1,32 @@
+:root {
+  --xl-device: 1920px; // Extra Large
+  --lg-device: 1440px; // Large
+  --md-device: 1024px; // Medium
+  --sm-device: 600px; // Small
+}
+
+@mixin d($size) {
+  @if $size ==xl {
+    @media screen and (max-width: 1920px) {
+      @content
+    }
+  }
+
+  @else if $size ==lg {
+    @media screen and (max-width: 1440px) {
+      @content
+    }
+  }
+
+  @else if $size ==md {
+    @media screen and (max-width: 1024px) {
+      @content
+    }
+  }
+
+  @else if $size ==sm {
+    @media screen and (max-width: 600px) {
+      @content
+    }
+  }
+}

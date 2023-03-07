@@ -1,0 +1,16 @@
+@import "../sass/variaveis";
+@import "../sass/utilities/reset"; 
+
+@import "../sass/mixins"; //MIXINS
+@import "../sass/utilities/animation";
+
+
+//components
+@import "../sass/components/body"; //BODY
+@import "../sass/components/menu/menu";
+@import "../sass/components/footer";
+
+// PÁGINAS
+main {
+    overflow: hidden;
+}

@@ -3,7 +3,8 @@ from rest_framework.fields import empty
 
 
 class NovadataModelSerializer(serializers.ModelSerializer):
-    representation_fields: list[tuple] = []
+    # representation_fields: list[tuple] = []
+    representation_fields = []
 
     def to_representation(self, instance):
         default_return = super(
