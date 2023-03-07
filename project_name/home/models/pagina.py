@@ -13,24 +13,23 @@ class Pagina(models.Model):
     )
 
     custom_description = models.TextField(
-        verbose_name='Título',
+        verbose_name='Descrição',
         max_length=400,
     )
 
     js_adicional = models.TextField(
-        verbose_name='Título',
+        verbose_name='JS Adicional',
         max_length=400,
     )
 
     css_adicional = models.TextField(
-        verbose_name='Título',
+        verbose_name='CSS Adicional',
         max_length=400,
     )
 
     indexavel = models.BooleanField(
         verbose_name='Indexável?',
-        default=False,
-        null=True,
+        default=False
     )
 
     def __str__(self):
@@ -41,5 +40,5 @@ class Pagina(models.Model):
         '''Sub classe para definir meta atributos da classe principal.'''
 
         app_label = 'home'
-        verbose_name = 'Paginas'
-        verbose_name_plural = 'Pagina'
+        verbose_name = 'Pagina'
+        verbose_name_plural = 'Paginas'

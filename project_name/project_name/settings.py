@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'novadata_utils',
+    'advanced_filters',
     #
     # Apps
     'avatar',

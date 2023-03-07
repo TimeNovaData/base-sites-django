@@ -31,8 +31,10 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
+    path("advanced_filters/", include("advanced_filters.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler403 = "home.views.error_403"
