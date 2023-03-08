@@ -1,0 +1,51 @@
+//colocar  as variaveis de cor  do projeto no body como variaveis css
+body {
+    // Neutral
+    --neutral-100: #090A1A;
+    --neutral-70: #464651;
+    --neutral-60: #666670;
+    --neutral-50:rgba(9, 10, 26, 0.5);
+    --neutral-40:rgba(9, 10, 26, 0.4);
+    --neutral-30:#E5E6EB;
+    --neutral-20:#F0F1F5;
+    --neutral-10:#F5F6FA;
+
+    // Primary
+    --primary-light: #8186F7;
+    --primary-light-30: #A8ABFE;
+    --primary-pure-10: #EAEAF8;
+    --primary-pure: #3F45D4;
+    --primary-pure-70: #6A6ED1;
+
+    --alert-error:#E92C2C;
+    --alert-error-10:#FDEAEA;
+    --alert-warning:#D2AF00;
+    --alert-warning-10:#FBF7E6;
+    --alert-sucess:#008024;
+    --alert-sucess-10:#E6F9F0;
+
+}
+
+
+$font-1: sans-serif;
+
+$shadow-sm-1: 0px 0px 2px rgba(0, 0, 0, 0.06);
+$shadow-sm-2: 0px 2px 4px rgba(149, 157, 165, 0.08);
+$shadow-sm-2: 0px 0px 2px rgba(104, 110, 117, 0.2);
+
+$shadow-md-1: 0px 4px 8px rgba(0, 0, 0, 0.06);
+$shadow-md-2: 2px 4px 16px rgba(0, 0, 0, 0.06);
+$shadow-md-3: 2px 8px 32px rgba(0, 0, 0, 0.04);
+
+$shadow-lg-1: 2px 6px 24px -2px rgba(149, 157, 165, 0.06);
+$shadow-lg-2: 0px 24px 64px rgba(139, 152, 149, 0.06), 2px 8px 32px rgba(175, 185, 183, 0.06);
+$shadow-lg-3: 2px 24px 64px -20px rgba(0, 0, 0, 0.06);
+
+
+
+
+
+// forma de utilizar variaveis css com a syntaxe do sass
+
+// $cor-preto-1:#{var(--cor-preto-1)};
+
