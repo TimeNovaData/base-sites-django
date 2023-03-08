@@ -9,6 +9,10 @@ from .site import Site
 from .smtp import SMTP
 from .menu import Menu
 from .item_menu import ItemMenu
+from .manutencao import Manutencao
+from .coming_soon import ComingSoon
+from .termo import Termo
+from .aceite_termo import AceiteTermo
 
 __all__ = [
     AlterUserEmail,
@@ -21,5 +25,9 @@ __all__ = [
     Site,
     SMTP,
     Menu,
-    ItemMenu
+    ItemMenu,
+    Manutencao,
+    ComingSoon,
+    Termo,
+    AceiteTermo,
 ]

@@ -9,6 +9,10 @@ from .site_admin import SiteAdmin
 from .smtp_admin import SMTPAdmin
 from .menu_admin import MenuAdmin
 from .item_menu_inline import ItemMenuInline
+from .manutencao_admin import ManutencaoAdmin
+from .coming_soon_admin import ComingSoonAdmin
+from .termo_admin import TermoAdmin
+from .aceite_termo_inline import AceiteTermoInline
 
 __all__ = [
     BaseNovadataAdmin,
@@ -21,5 +25,9 @@ __all__ = [
     SiteAdmin,
     SMTPAdmin,
     MenuAdmin,
-    ItemMenuInline
+    ItemMenuInline,
+    ManutencaoAdmin,
+    ComingSoonAdmin,
+    TermoAdmin,
+    AceiteTermoInline,
 ]

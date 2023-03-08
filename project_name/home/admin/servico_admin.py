@@ -1,10 +1,11 @@
 from django.contrib import admin
 
 from ..models import Servico
+from novadata_utils.admin import NovadataModelAdmin
 
 
 @admin.register(Servico)
-class ServicoAdmin(admin.ModelAdmin):
+class ServicoAdmin(NovadataModelAdmin):
     list_display = [
         'id',
         'titulo'

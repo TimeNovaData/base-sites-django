@@ -1,10 +1,11 @@
 from django.contrib import admin
 
 from ..models import Portifolio
+from novadata_utils.admin import NovadataModelAdmin
 
 
 @admin.register(Portifolio)
-class PortifolioAdmin(admin.ModelAdmin):
+class PortifolioAdmin(NovadataModelAdmin):
     list_display = [
         'id',
         'nome'

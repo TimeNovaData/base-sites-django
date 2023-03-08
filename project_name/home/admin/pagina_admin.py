@@ -1,10 +1,11 @@
 from django.contrib import admin
 
 from ..models import Pagina
+from novadata_utils.admin import NovadataModelAdmin
 
 
 @admin.register(Pagina)
-class PaginaAdmin(admin.ModelAdmin):
+class PaginaAdmin(NovadataModelAdmin):
     list_display = [
         'id',
         'titulo',

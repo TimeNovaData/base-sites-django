@@ -1,9 +1,10 @@
 from django.contrib import admin
 from ..models import Site
+from novadata_utils.admin import NovadataModelAdmin
 
 
 @admin.register(Site)
-class SiteAdmin(admin.ModelAdmin):
+class SiteAdmin(NovadataModelAdmin):
     list_display = [
         'id',
         'titulo_global'
