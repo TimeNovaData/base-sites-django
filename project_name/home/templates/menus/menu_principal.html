@@ -1,0 +1,9 @@
+{% load home_tags %}
+
+{% if items_menu %}
+	<ul>
+		{% for item in items_menu %}
+			{% include 'menus/item_menu.html' with item=item %}
+		{% endfor %}
+	</ul>
+{% endif %}

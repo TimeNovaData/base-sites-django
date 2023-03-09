@@ -7,17 +7,23 @@ class Manutencao(models.Model):
 
     imagem_fundo = models.ImageField(
         verbose_name='Imagem Fundo',
-        upload_to='assets'
+        upload_to='assets',
+        null=True,
+        blank=True,
     )
 
     video_fundo = models.FileField(
         verbose_name='Video Fundo',
-        upload_to='assets'
+        upload_to='assets',
+        null=True,
+        blank=True,
     )
 
     logo = models.FileField(
         verbose_name='Logo',
-        upload_to='assets'
+        upload_to='assets',
+        null=True,
+        blank=True,
     )
 
     background_cor1 = ColorField(
@@ -33,11 +39,15 @@ class Manutencao(models.Model):
     link_telefone = models.CharField(
         verbose_name='Link Telefone',
         max_length=100,
+        null=True,
+        blank=True,
     )
 
     link_whatsapp = models.CharField(
         verbose_name='Link Whatsapp',
         max_length=100,
+        null=True,
+        blank=True,
     )
 
     template_email = models.ForeignKey(
@@ -45,7 +55,7 @@ class Manutencao(models.Model):
         verbose_name="Template Email",
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
+        blank=True,
     )
 
     def __str__(self):

@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+
+
+{% block extra_styles %}
+{% endblock %}
+
 {% block body_class %}{% endblock %}
 
 {% block content %}
 
 <main>
   <h1 >Aqui é a sua home</h1>
+
+  <h1 >Depoimentos</h1>
+
+  {% for item in pagina.depoimento_set.all %}
+    {{item}}
+  {% endfor %}
 </main>
+{% endblock %}
+
+{% block extra_js %}
 {% endblock %}

@@ -14,7 +14,8 @@ class ItemMenu(models.Model):
     )
 
     order = models.IntegerField(
-        verbose_name='Order',
+        verbose_name='Ordem',
+        default=0
     )
 
     menu = models.ForeignKey(

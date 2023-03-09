@@ -1,0 +1,14 @@
+{% load home_tags %}
+
+<li class="order-{{item.order}}">
+	<a href="{{ item.link }}">{{ item.label }}</a>
+	{% with item.itemmenu_set.all as childs %}
+		{% if childs %}
+			<ul>
+				{% for child in childs %}
+					{% include 'menus/item_menu.html' with item=child %}
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+</li>

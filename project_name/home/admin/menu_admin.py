@@ -4,21 +4,12 @@ from ..models import Menu
 from novadata_utils.admin import NovadataModelAdmin
 from .item_menu_inline import ItemMenuInline
 
+
 @admin.register(Menu)
 class MenuAdmin(NovadataModelAdmin):
-    list_display = [
-        'id',
-        'nome'
-    ]
+    auto_search_fields = True
 
-    search_fields = [
-        'id',
-        'nome'
-    ]
-
-    inlines = [
-        ItemMenuInline
-    ]
+    inlines = [ItemMenuInline]
 
     # list_filter = [
     #     'campos_fk_e_booleanos

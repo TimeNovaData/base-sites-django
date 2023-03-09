@@ -14,23 +14,26 @@ class Site(models.Model):
 
     js_global = models.TextField(
         verbose_name='JS Global',
+        null=True,
+        blank=True,
     )
 
     css_global = models.TextField(
         verbose_name='CSS Global',
+        null=True,
+        blank=True,
     )
 
-    meta_tag_google = models.TextField(
+    meta_tag_facebook = models.TextField(
         verbose_name='Meta Tag Facebook',
+        null=True,
+        blank=True,
     )
 
     meta_tag_google = models.TextField(
         verbose_name='Meta Tag Google',
-    )
-
-    favicon = models.ImageField(
-        verbose_name='Favicon',
-        upload_to='uploads/%Y/%m'
+        null=True,
+        blank=True,
     )
 
     favicon = models.FileField(
@@ -41,11 +44,6 @@ class Site(models.Model):
     logo = models.FileField(
         verbose_name='Logo',
         upload_to='assets'
-    )
-
-    indexavel = models.BooleanField(
-        verbose_name='Indexável?',
-        default=True
     )
 
     ativar_coming_soon = models.BooleanField(
@@ -67,4 +65,4 @@ class Site(models.Model):
 
         app_label = 'home'
         verbose_name = 'Site'
-        verbose_name_plural = 'Sites'
+        verbose_name_plural = 'Site'

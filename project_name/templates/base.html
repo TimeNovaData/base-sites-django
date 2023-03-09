@@ -9,12 +9,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boilerplate | {{title}}</title>
+    <title>
+        {{site.titulo_global}} | {{pagina.titulo}}
+    </title>
 
+    {% block noindex %}
+        {% if not pagina.indexavel %}
+            <meta name="robots" content="noindex">
+            <meta name="googlebot" content="noindex">
+        {% endif %}
+    {% endblock %}
 
+    <meta property="og:title" content="{{site.titulo_global}}" />
+    <meta property="og:description" content="{{pagina.custom_description}}" />
+    <meta property="og:image" content="{{site.logo.url}}" />
+
+    <link rel="icon" type="image/x-icon" href="{{site.favicon.url}}">
 
     <link rel="stylesheet" href="{% static 'front_assets/dist/css/style.css' %}">
 
+    {{site.meta_tag_google|safe}}
+    
+    <style type="text/css">
+        {{site.css_global|safe}}
+    </style>
+
+    <style type="text/css">
+        {{pagina.css_adicional|safe}}
+    </style>
 
     {% block extra_styles_vendor %}
     <!--  -->
@@ -26,6 +48,7 @@
 </head>
 
 <body class="{% block body_class %} {% endblock %}">
+    {% include "menus/menu_principal.html" %}
 
 
     <div class="container-main">
@@ -40,6 +63,13 @@
     <!--  -->
     {% endblock %}
 
+    <script>
+        {{site.js_global|safe}}
+    </script>
+
+    <script>
+        {{pagina.js_adicional|safe}}
+    </script>
 
     <script type="text/javascript" src="{% static 'front_assets/dist/js/main.js' %}"></script>
 

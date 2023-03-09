@@ -22,7 +22,7 @@ class AceiteTermo(models.Model):
     def __str__(self):
         '''Método que retorna a representação do objeto como string.'''
         return self.ip
-
+    
     class Meta:
         '''Sub classe para definir meta atributos da classe principal.'''
 

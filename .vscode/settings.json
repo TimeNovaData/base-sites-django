@@ -29,7 +29,7 @@
     HTML
     */
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
         "editor.insertSpaces": false,
     },
     "files.associations": {

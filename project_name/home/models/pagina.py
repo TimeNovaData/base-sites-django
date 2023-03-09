@@ -10,6 +10,14 @@ class Pagina(models.Model):
     slug = models.SlugField(
         verbose_name='Slug',
         max_length=100,
+        null=True,
+        blank=True,
+        unique=True
+    )
+
+    template = models.CharField(
+        verbose_name='Nome do Template',
+        max_length=100,
     )
 
     custom_description = models.TextField(
@@ -20,16 +28,20 @@ class Pagina(models.Model):
     js_adicional = models.TextField(
         verbose_name='JS Adicional',
         max_length=400,
+        null=True,
+        blank=True,
     )
 
     css_adicional = models.TextField(
         verbose_name='CSS Adicional',
         max_length=400,
+        null=True,
+        blank=True,
     )
 
     indexavel = models.BooleanField(
         verbose_name='Indexável?',
-        default=False
+        default=True
     )
 
     def __str__(self):
