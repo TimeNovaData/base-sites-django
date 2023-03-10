@@ -44,7 +44,7 @@ pip install django
 - Crie um projeto Django utilizando o comando abaixo
 (lembre-se de trocar o fim do comando pelo nome do seu projeto)
 ```shell
-django-admin startproject --template https://github.com/TimeNovaData/base-sites-django/raw/master/project_name.zip --name=Procfile --name=package.json --name=README.md nome_do_projeto
+django-admin startproject --template https://github.com/TimeNovaData/base-sites-django/raw/main/project_name.zip --name=Procfile --name=package.json --name=README.md nome_do_projeto
 ```
 
 - Entre na pasta do projeto
