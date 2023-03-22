@@ -1,4 +1,4 @@
- from django.http import JsonResponse
+from django.http import JsonResponse
 
 
 def aceitar_termo(request):

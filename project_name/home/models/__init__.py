@@ -13,6 +13,7 @@ from .manutencao import Manutencao
 from .coming_soon import ComingSoon
 from .termo import Termo
 from .aceite_termo import AceiteTermo
+from .parceiro import Parceiro
 
 __all__ = [
     AlterUserEmail,
@@ -30,4 +31,5 @@ __all__ = [
     ComingSoon,
     Termo,
     AceiteTermo,
+    Parceiro
 ]

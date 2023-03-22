@@ -1,8 +1,14 @@
 # Não manda os bancos
-*.sqlite3
+# *.sqlite3
 
 # Não manda os arquivos cache do Python
 *pyc
+
+manage.py
+
+project_name/asgi.py
+project_name/settings.py
+project_name/wsgi.py
 
 .env
 

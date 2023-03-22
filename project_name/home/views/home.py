@@ -32,10 +32,10 @@ def home(request, slug=None):
     em_manutencao = site.ativar_manutencao
     em_coming_soon = site.ativar_coming_soon
 
-    if em_manutencao:
+    if em_manutencao and not request.user.is_authenticated:
         return redirect("manutencao")
 
-    if em_coming_soon:
+    if em_coming_soon and not request.user.is_authenticated:
         return redirect("coming_soon")
 
     return render(
