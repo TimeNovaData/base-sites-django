@@ -3,7 +3,7 @@
 #sobre{
     padding: 12.5rem 0 7.5rem 0;
     position: relative;
-    z-index: 2;
+    background: #0A0B21;
     @include d(md2){
         padding: 6rem 0 .875rem 0;
     }
@@ -103,6 +103,7 @@
             text-align: center;
             letter-spacing: -0.02em;
             color: var(--primary-pure-10);
+            margin-bottom: 1.5rem;
             @include d(sm){
                 font-size: 1rem;
                 text-align: start;

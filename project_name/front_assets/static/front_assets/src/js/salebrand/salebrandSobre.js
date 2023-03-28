@@ -1,4 +1,4 @@
-export default function(){
+export default function salebrandSobre(){
     const swiperServicosSobre = new Swiper(".swiper-servicos-sobre", {
         slidesPerView: 2.5,
         spaceBetween: 16,
