@@ -562,13 +562,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 // SECTIONS
 var _salebrandPortfolioJs = require("./salebrand/salebrandPortfolio.js");
 var _salebrandPortfolioJsDefault = parcelHelpers.interopDefault(_salebrandPortfolioJs);
+var _salebrandSobreJs = require("./salebrand/salebrandSobre.js");
+var _salebrandSobreJsDefault = parcelHelpers.interopDefault(_salebrandSobreJs);
 const pageHome = document.querySelector(".body-home");
-(0, _salebrandPortfolioJsDefault.default)();
+(0, _salebrandSobreJsDefault.default)();
 // ★ Pages Scopo
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./salebrand/salebrandPortfolio.js":"JqSue"}],"2GLs3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3"}],"2GLs3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -638,6 +640,40 @@ exports.default = function() {
     };
     breakpoint.addListener(breakpointChecker);
     breakpointChecker();
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"fMZK3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function() {
+    const swiperServicosSobre = new Swiper(".swiper-servicos-sobre", {
+        slidesPerView: 2.5,
+        spaceBetween: 16,
+        loop: true,
+        speed: 5000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: "#sobre .swiper-pagination",
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 4.2,
+                spaceBetween: 16
+            },
+            768: {
+                slidesPerView: 5.2,
+                spaceBetween: 16
+            },
+            1024: {
+                slidesPerView: 7,
+                spaceBetween: 16
+            }
+        }
+    });
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")

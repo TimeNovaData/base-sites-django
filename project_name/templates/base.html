@@ -24,6 +24,9 @@
     <meta property="og:description" content="{{pagina.custom_description}}" />
     <meta property="og:image" content="{{site.logo.url}}" />
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <link rel="icon" type="image/x-icon" href="{{site.favicon.url}}">
 
     <link rel="stylesheet" href="{% static 'front_assets/dist/css/style.css' %}">
@@ -48,6 +51,8 @@
 </head>
 
 <body class="{% block body_class %} {% endblock %}">
+    {% include 'svg_defs.html' %}
+
     {% include "menus/menu_principal.html" %}
 
 
@@ -70,6 +75,9 @@
     <script>
         {{pagina.js_adicional|safe}}
     </script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script type="text/javascript" src="{% static 'front_assets/dist/js/main.js' %}"></script>
 
