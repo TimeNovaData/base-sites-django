@@ -1,3 +1,5 @@
+import math
+
 from django.shortcuts import render, redirect, get_object_or_404
 from ..models import Pagina, Site
 
@@ -22,11 +24,17 @@ def home(request, slug=None):
         menu_codigo = None
     # menu = pagina.menu_set.menu.codigo
 
+    lines = split_query_in_x_parts(
+        pagina.parceiro_set.all(),
+        3,
+    )
+
     context = {
         "pagina": pagina,
         "site": site,
         "items_menu": items_menu,
         "menu_codigo": menu_codigo,
+        "lines": lines,
     }
 
     em_manutencao = site.ativar_manutencao
@@ -43,3 +51,19 @@ def home(request, slug=None):
         template_name,
         context,
     )
+
+
+def split_query_in_x_parts(query, parts):
+    """Divide uma query em x partes."""
+    count = query.count()
+    media = count / parts if count >= 3 else count
+
+    minor = math.floor(media)
+    major = math.ceil(media)
+    lines = {}
+    for i in range(0, parts):
+        new_major = i * major
+        amount = new_major + minor
+        lines[i + 1] = query[new_major:amount]
+
+    return lines

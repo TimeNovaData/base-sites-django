@@ -4,23 +4,6 @@
     overflow: hidden;
     height: 100vh;
     background: #0A0B21;
-    .ornamento{
-      position: absolute;
-      z-index: 1;
-      @include d(sm){
-        display: none;
-      }
-      img{
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-      }
-    }
-    &::before{
-      @include d(sm){
-        display: none;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
@@ -33,14 +16,6 @@
         rgba(117, 74, 152, 0.1) 0%,
         rgba(50, 68, 150, 0.1) 100%
       );
-    }
-    &::before{
-      @include OrnamentoSection(581px, 581px);
-      z-index: 2;
-      bottom: -290px;
-      left: -2.1875rem;
-      background: linear-gradient(90deg, rgba(50, 68, 150, 0.5) 0%, rgba(117, 74, 152, 0.5) 100%);
-      filter: blur(75px);
     }
     .video-banner {
       position: relative;

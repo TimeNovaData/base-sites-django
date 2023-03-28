@@ -3,7 +3,7 @@
 #portfolio {
     margin-top: -5rem;
     position: relative;
-    z-index: 3;
+    background: #0A0B21;
     @include d(sm){
         background: linear-gradient(90deg, #00020D 0%, #07000D 100%);
     }

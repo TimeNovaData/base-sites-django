@@ -43,3 +43,18 @@ def salebrand_home(request, slug=None):
         template_name,
         context,
     )
+
+
+def split_query_in_x_parts(query, parts):
+    """Divide uma query em x partes."""
+    media = query.count() / parts
+
+    minor = math.floor(media)
+    major = math.ceil(media)
+    lines = {}
+    for i in range(0, parts):
+        new_major = i * major
+        amount = new_major + minor
+        lines[i + 1] = query[new_major:amount]
+
+    return lines

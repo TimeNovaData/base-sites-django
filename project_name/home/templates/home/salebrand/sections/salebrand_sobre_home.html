@@ -1,0 +1,39 @@
+{% load static %}
+
+<section id="sobre">
+    <div class="container">
+        <div class="content">
+            <div class="col-1">
+                <span class="tag">Sobre nós</span>
+                <h2 class="title"><strong>Aqui cuidamos do marketing digital</strong> da sua empresa de uma maneira ampla</h2>
+            </div>
+            <div class="col-2">
+                <p class="description">Nós somos uma agência de marketing com foco em Inbound Marketing, produção de conteúdo, gestão de tráfego, redes sociais, desenvolvimento de sites, consultoria de branding e gestão de campanhas. Temos um time experiente e criativo, comprometido em ajudar nossos clientes a alcançar seus objetivos de negócios.</p>
+                
+                <br><p class="description">Aqui nós utilizamos a tecnologia para fornecer soluções modernas e seguras. Estamos ansiosos para ajudar sua marca a ter sucesso online. Entre em contato conosco para saber mais sobre nossos serviços.</p>
+            </div>
+        </div>
+        <div class="servicos">
+            <h3 class="title">Serviços que oferecemos:</h3>
+            <div class="swiper swiper-servicos-sobre">
+                <div class="swiper-wrapper items-wrapper">
+                    {% if pagina.servico_set.exists %}
+                    {% for item in pagina.servico_set.all %}
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <svg class="icon">
+                                <use xlink:href="#{{ item.icone }}"></use>
+                            </svg>
+                            <p>{{ item.titulo|safe }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
