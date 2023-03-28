@@ -1,0 +1,63 @@
+{% load static %}
+
+<section id="contato">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="col-1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <span class="tag">Contato</span>
+                <h2 class="title">Vamos criar o seu <strong>próximo projeto juntos?</strong></h2>
+                <div class="content">
+                    <div class="contato-item">
+                        <svg class="icon-contato">
+                            <use xlink:href="#icon-maps"></use>
+                        </svg>
+                        <div class="info">
+                            <span>São Paulo</span>
+                            <a href="https://goo.gl/maps/K7HGK9RheF6tkxr98" target="_blank">Rua Irmã Gabriela, 51,
+                                Berrini</a>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <svg class="icon-contato">
+                            <use xlink:href="#icon-phone"></use>
+                        </svg>
+                        <div class="info">
+                            <span>Telefone</span>
+                            <a href="tel:+5500000000000">+55 00 00000-0000</a>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <svg class="icon-contato">
+                            <use xlink:href="#icon-email"></use>
+                        </svg>
+                        <div class="info">
+                            <span>E-mail</span>
+                            <a href="mailto:contato@exemple.com.br">contato@exemple.com.br</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <h2>Contratar a SaleBrand</h2>
+                <form class="content-form" id="form-submit">
+                    {% csrf_token %}
+                    <div class="form-item">
+                        <input required type="text" name="nome" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-item">
+                        <input required type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-item">
+                        <input required type="text" name="telefone" id="telefone" data-mask="(00) 00000-0000"
+                            placeholder="Telefone">
+                    </div>
+                    <div class="form-item">
+                        <textarea required name="mensagem" id="mensagem" cols="30" rows="5"
+                            placeholder="Envie sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

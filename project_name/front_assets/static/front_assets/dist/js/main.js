@@ -566,15 +566,18 @@ var _salebrandSobreJs = require("./salebrand/salebrandSobre.js");
 var _salebrandSobreJsDefault = parcelHelpers.interopDefault(_salebrandSobreJs);
 var _salebrandClientesJs = require("./salebrand/salebrandClientes.js");
 var _salebrandClientesJsDefault = parcelHelpers.interopDefault(_salebrandClientesJs);
+var _salebrandContatoJs = require("./salebrand/salebrandContato.js");
+var _salebrandContatoJsDefault = parcelHelpers.interopDefault(_salebrandContatoJs);
 const pageHome = document.querySelector(".body-home");
 (0, _salebrandPortfolioJsDefault.default)();
 (0, _salebrandSobreJsDefault.default)();
 (0, _salebrandClientesJsDefault.default)();
+(0, _salebrandContatoJsDefault.default)();
 // ★ Pages Scopo
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"JqSue":[function(require,module,exports) {
+},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./salebrand/salebrandContato.js":"kxvLQ"}],"JqSue":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = function() {
@@ -738,6 +741,51 @@ function salebrandClientes() {
     });
 }
 exports.default = salebrandClientes;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"kxvLQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function salebrandContato() {
+    const contatoFormSubmit = document.querySelector("#form-submit");
+    contatoFormSubmit && contatoFormSubmit.addEventListener("submit", function(event) {
+        event.preventDefault();
+        disabledBtn();
+        const form_data = {
+            nome: document.querySelector("#nome").value,
+            email: document.querySelector("#email").value,
+            telefone: document.querySelector("#telefone").value,
+            mensagem: document.querySelector("#mensagem").value
+        };
+        const url = "/fale-conosco/";
+        axios.post(url, form_data).then((response)=>showMessage(response)).catch((response)=>showMessage(response));
+    });
+    function showMessage(response) {
+        const message = response.data ? response.data.message : response.message;
+        Toastify({
+            ...toastifyDefault,
+            text: message
+        }).showToast();
+        contatoFormSubmit.reset();
+        setTimeout(enabledBtn, 1000);
+    }
+    const btnSubmit = document.querySelector(".btn");
+    function disabledBtn() {
+        btnSubmit.disabled = true;
+        btnSubmit.classList.add("disabled");
+    }
+    function enabledBtn() {
+        btnSubmit.disabled = false;
+        btnSubmit.classList.remove("disabled");
+    }
+    const toastifyDefault = {
+        duration: 3000,
+        position: "center",
+        style: {
+            background: "linear-gradient(to right, rgb(155, 69, 226), rgb(88, 26, 138))"
+        }
+    };
+}
+exports.default = salebrandContato;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")
 
