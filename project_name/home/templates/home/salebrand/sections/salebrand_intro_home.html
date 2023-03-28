@@ -1,0 +1,20 @@
+{% load static %}
+{% load home_tags %}
+
+<section id="banner">
+  <div class="video-banner">
+    {% if pagina.arquivo_banner|type_file == "mp4" %}
+      <video poster="{{pagina.thumbail_banner.url}}" muted autoplay loop>
+        <source src="{{pagina.arquivo_banner.url}}">
+      </video>
+    {% elif pagina.arquivo_banner %}
+      <img src="{{pagina.arquivo_banner.url}}" alt="">
+    {% endif %}
+  </div>
+  <div class="container">
+    <div class="content-banner" data-aos="fade-down">
+      <h2 class="subtitle">O sucesso está na forma que sua</h2>
+      <p class="title">empresa se posiciona</p>
+    </div>
+  </div>
+</section>

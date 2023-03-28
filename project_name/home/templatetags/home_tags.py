@@ -7,3 +7,15 @@ register = template.Library()
 @register.simple_tag()
 def is_dev():
     return settings.DEV
+
+    
+@register.filter()
+def type_file(file):
+    """Retorna o tipo do arquivo."""
+    if file:
+        name = file.name
+        first_split = name.split("/")[-1]
+        second_split = first_split.split(".")[-1]
+        return second_split
+
+    return None

@@ -1,0 +1,45 @@
+{% load static %}
+{% load home_tags %}
+
+<section id="portfolio">
+  <div class="cards">
+    <div class="card-principal">
+      <div class="content">
+        <svg class="icon">
+            <use xlink:href="#icon-bag"></use>
+        </svg>
+        <span class="subtitle">Nosso</span>
+        <h2 class="title">Portfólio</h2>
+      </div>
+    </div>
+    <div class="swiper swiper-portfolio">
+      <div class="swiper-wrapper">
+        {% if pagina.portifolio_set.exists %}
+        {% for item in pagina.portifolio_set.all %}
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="img-card">
+              {% if item.imagem_destacada|type_file == "mp4" %}
+                <video muted autoplay loop playsinline>
+                  <source src="{{ item.imagem_destacada.url }}">
+                </video>
+              {% else %}
+                <img src="{{ item.imagem_destacada.url }}" loading="lazy" alt="">
+              {% endif %}
+            </div>
+            <div class="content">
+              <span class="tag">{{ item.categoria }}</span>
+              <h2 class="title">{{ item.nome }}</h2>
+              <p class="description">{{ item.descricao }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    <div class="nav-wrapper">
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

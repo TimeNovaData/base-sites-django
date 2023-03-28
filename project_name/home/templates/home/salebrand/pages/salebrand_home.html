@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block extra_styles %}
+{% endblock %}
+
+{% block body_class %}{% endblock %}
+
+{% block content %}
+
+<main>
+  <!-- INTRO -->
+  {% include 'home/salebrand/sections/salebrand_intro_home.html' %}
+
+  <!-- PORTFÓLIO -->
+  {% include 'home/salebrand/sections/salebrand_portfolio_home.html' %}
+</main>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

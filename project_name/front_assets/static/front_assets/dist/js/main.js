@@ -558,11 +558,88 @@ function hmrAccept(bundle, id) {
 
 },{}],"d6S3V":[function(require,module,exports) {
 // PAGES
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// SECTIONS
+var _salebrandPortfolioJs = require("./salebrand/salebrandPortfolio.js");
+var _salebrandPortfolioJsDefault = parcelHelpers.interopDefault(_salebrandPortfolioJs);
 const pageHome = document.querySelector(".body-home");
+(0, _salebrandPortfolioJsDefault.default)();
 // ★ Pages Scopo
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./salebrand/salebrandPortfolio.js":"JqSue"}],"2GLs3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"JqSue":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function() {
+    const breakpoint = window.matchMedia("(min-width:1024px)");
+    let swiperPortfolio;
+    const breakpointChecker = function() {
+        if (breakpoint.matches === true) {
+            if (swiperPortfolio !== undefined) swiperPortfolio.destroy(true, true);
+            return;
+        } else if (breakpoint.matches === false) return enableSwiper();
+    };
+    const enableSwiper = function() {
+        swiperPortfolio = new Swiper(".swiper-portfolio", {
+            slidesPerView: 1.2,
+            spaceBetween: 8,
+            loop: true,
+            speed: 10000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: "#portfolio .swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 8
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 8
+                }
+            }
+        });
+    };
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")
 
 //# sourceMappingURL=main.js.map
