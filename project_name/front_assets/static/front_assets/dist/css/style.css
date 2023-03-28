@@ -1317,6 +1317,50 @@ html {
   border-color: #0000;
 }
 
+#footer {
+  background: #0a0b21;
+  padding-bottom: 2.25rem;
+  position: relative;
+}
+
+#footer .footer-wrapper {
+  justify-content: space-between;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  #footer .footer-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #footer .footer-wrapper .copy {
+    width: 206px;
+    align-self: center;
+  }
+}
+
+#footer .footer-wrapper .copy h3 {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--primary-pure-10);
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 133%;
+}
+
+@media screen and (max-width: 600px) {
+  #footer .footer-wrapper .copy h3 {
+    text-align: center;
+    font-size: .625rem;
+  }
+
+  #footer .footer-wrapper .logo {
+    align-self: center;
+  }
+}
+
 main {
   overflow: hidden;
 }

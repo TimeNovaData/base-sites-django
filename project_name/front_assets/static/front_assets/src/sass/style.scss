@@ -2,7 +2,6 @@
 @import "../sass/utilities/reset"; 
 
 @import "../sass/mixins"; //MIXINS
-@import "../sass/salebrand_mixins"; //MIXINS SALEBRAND
 @import "../sass/utilities/animation";
 
 
@@ -11,13 +10,8 @@
 @import "../sass/components/menu/menu";
 @import "../sass/components/footer";
 
-// SECTIONS
-@import "../sass/sections/salebrand/salebrand_intro";
-@import "../sass/sections/salebrand/salebrand_portfolio";
-@import "../sass/sections/salebrand/salebrand_sobre";
-@import "../sass/sections/salebrand/salebrand_clientes";
-@import "../sass/sections/salebrand/salebrand_contato";
-
+// STYLE SALEBRAND
+@import "../sass/sections/salebrand/salebrand_style";
 
 // PÁGINAS
 main {

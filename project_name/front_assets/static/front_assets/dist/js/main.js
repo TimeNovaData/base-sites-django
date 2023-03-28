@@ -577,7 +577,7 @@ const pageHome = document.querySelector(".body-home");
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./salebrand/salebrandContato.js":"kxvLQ"}],"JqSue":[function(require,module,exports) {
+},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","./salebrand/salebrandContato.js":"kxvLQ","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"JqSue":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = function() {
