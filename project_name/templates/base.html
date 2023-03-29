@@ -2,6 +2,8 @@
 {% load home_tags %}
 {% is_dev as is_dev %}
 
+{% get_site as site %}
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,8 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>
-        {{site.titulo_global}} | {{pagina.titulo}}
+        {% block title %}
+           {{site.titulo_global}} | {{pagina.titulo}}
+        {% endblock %}
     </title>
 
     {% block noindex %}

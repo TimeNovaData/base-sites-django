@@ -287,7 +287,7 @@ html {
   }
 }
 
-#login .ornamento .logo-salebrand {
+#login .ornamento .logo-cliente {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -295,13 +295,13 @@ html {
 }
 
 @media (max-width: 1660px) {
-  #login .ornamento .logo-salebrand {
+  #login .ornamento .logo-cliente {
     padding-top: 2.75rem;
   }
 }
 
 @media screen and (max-width: 1440px) {
-  #login .ornamento .logo-salebrand {
+  #login .ornamento .logo-cliente {
     padding-top: 2rem;
   }
 }

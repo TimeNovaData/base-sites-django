@@ -31,7 +31,7 @@ def home(request, slug=None):
 
     context = {
         "pagina": pagina,
-        "site": site,
+        # "site": site,
         "items_menu": items_menu,
         "menu_codigo": menu_codigo,
         "lines": lines,
