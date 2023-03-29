@@ -29,9 +29,9 @@ class Portifolio(models.Model):
         max_length=200
     )
 
-    imagem_destacada = models.ImageField(
-        verbose_name='Imagem Destacada',
-        upload_to='uploads/%Y/%m'
+    imagem = models.ImageField(
+        verbose_name='Imagem',
+        upload_to='portifolio'
     )
 
     pagina = models.ManyToManyField(Pagina)

@@ -11,7 +11,7 @@ class Galeria(models.Model):
 
     imagem = models.ImageField(
         verbose_name="Imagem",
-        upload_to="uploads/%Y/%m",
+        upload_to="galeria",
     )
 
     descricao = models.TextField(
