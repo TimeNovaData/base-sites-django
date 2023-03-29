@@ -1,5 +1,6 @@
 from django import template
 from django.conf import settings
+from home.models import Site
 
 register = template.Library()
 
@@ -7,6 +8,13 @@ register = template.Library()
 @register.simple_tag()
 def is_dev():
     return settings.DEV
+
+
+@register.simple_tag()
+def get_site():
+    # config global
+    site = Site.objects.all().first()
+    return site
 
     
 @register.filter()

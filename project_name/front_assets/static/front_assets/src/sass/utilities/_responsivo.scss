@@ -2,6 +2,7 @@
   --xl-device: 1920px; // Extra Large
   --lg-device: 1440px; // Large
   --md-device: 1024px; // Medium
+  --md2-device: 768px; // Medium 2
   --sm-device: 600px; // Small
 }
 
@@ -20,6 +21,12 @@
 
   @else if $size ==md {
     @media screen and (max-width: 1024px) {
+      @content
+    }
+  }
+
+  @else if $size ==md2 {
+    @media screen and (max-width: 768px) {
       @content
     }
   }
