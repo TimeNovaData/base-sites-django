@@ -18,9 +18,9 @@ class Servico(models.Model):
         max_length=100,
     )
     
-    foto = models.ImageField(
-        verbose_name='Foto',
-        upload_to='uploads/%Y/%m'
+    imagem = models.ImageField(
+        verbose_name='Imagem',
+        upload_to='servico'
     )
 
     pagina = models.ManyToManyField(Pagina)

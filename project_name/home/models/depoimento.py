@@ -25,7 +25,7 @@ class Depoimento(models.Model):
 
     foto = models.ImageField(
         verbose_name='foto',
-        upload_to='uploads/%Y/%m'
+        upload_to='depoimento'
     )
 
     pagina = models.ManyToManyField(Pagina)
