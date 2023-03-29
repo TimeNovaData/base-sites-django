@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load home_tags %}
+{% is_dev as is_dev %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        {{title}} | {{site.titulo_global}}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'front_assets/dist/css/style.css' %}">
+
+    {% block extra_styles_vendor %}
+    <!--  -->
+    {% endblock %}
+</head>
+
+<body class="{% block body_class %} {% endblock %}">
+
+    <div>
+        {% block content %} <!--  --> {% endblock %}
+    </div>
+
+
+    {% block extra_js %}
+    <script>
+      const navHeader = document.querySelector("#header")
+      navHeader && (navHeader.style.display="none")
+    </script>
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'front_assets/dist/js/main.js' %}"></script>
+
+</body>
+
+</html>
