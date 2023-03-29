@@ -114,6 +114,7 @@ input, [type="button"], select {
   --xl-device: 1920px;
   --lg-device: 1440px;
   --md-device: 1024px;
+  --md2-device: 768px;
   --sm-device: 600px;
 }
 
@@ -764,6 +765,12 @@ html {
   display: grid;
 }
 
+@media screen and (max-width: 768px) {
+  #portfolio .swiper-portfolio {
+    margin-top: 12rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #portfolio .swiper-portfolio {
     margin-top: 9rem;
@@ -861,6 +868,16 @@ html {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #portfolio .cards .card-principal {
+    width: 427px;
+    height: 182px;
+    top: -12rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media screen and (max-width: 600px) {
   #portfolio .cards .card-principal {
     width: 327px;
@@ -871,29 +888,17 @@ html {
   }
 }
 
-#portfolio .cards .card-principal .orn-card-principal {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 600px) {
-  #portfolio .cards .card-principal .orn-card-principal {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-#portfolio .cards .card-principal .orn-card-principal img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 #portfolio .cards .card-principal .content {
   position: absolute;
   top: 8rem;
   left: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio .cards .card-principal .content {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
 }
 
 #portfolio .cards .card-principal .content .icon {
@@ -902,12 +907,25 @@ html {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  #portfolio .cards .card-principal .content .icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 #portfolio .cards .card-principal .content .subtitle {
   letter-spacing: -.02em;
   color: var(--primary-pure-10);
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 120%;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio .cards .card-principal .content .subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -927,6 +945,12 @@ html {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 114%;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio .cards .card-principal .content .title {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1065,6 +1089,12 @@ html {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  #sobre {
+    padding: 6rem 0 .875rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #sobre {
     padding: 3rem 0 .875rem;
@@ -1074,6 +1104,12 @@ html {
 #sobre .content {
   justify-content: space-between;
   display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  #sobre .content {
+    flex-direction: column;
+  }
 }
 
 #sobre .content .col-1 {
@@ -1136,6 +1172,12 @@ html {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  #sobre .content .col-2 {
+    margin-top: 4rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #sobre .content .col-2 {
     width: 327px;
@@ -1165,6 +1207,12 @@ html {
 @media (max-width: 1190px) {
   #sobre .servicos {
     margin-top: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sobre .servicos {
+    margin-top: 3.5rem;
   }
 }
 
@@ -1454,6 +1502,12 @@ html {
 #contato .content-wrapper {
   justify-content: space-between;
   display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  #contato .content-wrapper {
+    flex-direction: column;
+  }
 }
 
 #contato .content-wrapper .col-1 {
