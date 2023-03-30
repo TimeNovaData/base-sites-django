@@ -60,7 +60,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'home.middlewares.ModelAndAppNameMiddleware',
+    # Custom middlewares
+    "home.middlewares.ModelAndAppNameMiddleware",
+    "crum.CurrentRequestUserMiddleware",
 ]
 
 DEV = config('DEV', default=False, cast=bool)

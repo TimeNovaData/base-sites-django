@@ -1,4 +1,3 @@
-
 // PAGES
 const pageHome = document.querySelector(".body-home");
 
@@ -8,16 +7,13 @@ import salebrandSobre from "./salebrand/salebrandSobre.js";
 import salebrandClientes from "./salebrand/salebrandClientes.js";
 import salebrandContato from "./salebrand/salebrandContato.js";
 
-salebrandPortfolio()
-salebrandSobre()
-salebrandClientes()
-salebrandContato()
-
+salebrandPortfolio();
+salebrandSobre();
+salebrandClientes();
+salebrandContato();
 
 // ★ Pages Scopo
 if (pageHome) {
-
-
 }
 
 document.addEventListener("DOMContentLoaded", () =>

@@ -1,9 +1,8 @@
 @import "../sass/variaveis";
-@import "../sass/utilities/reset"; 
+@import "../sass/utilities/reset";
 
 @import "../sass/mixins"; //MIXINS
 @import "../sass/utilities/animation";
-
 
 //components
 @import "../sass/components/body"; //BODY
@@ -16,5 +15,5 @@
 
 // PÁGINAS
 main {
-    overflow: hidden;
+  overflow: hidden;
 }
