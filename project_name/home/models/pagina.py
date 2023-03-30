@@ -15,6 +15,21 @@ class Pagina(models.Model):
         unique=True
     )
 
+    arquivo_banner = models.FileField(
+        verbose_name="Arquivo do banner",
+        upload_to="pagina",
+        null=True,
+        blank=True,
+    )
+
+    thumbail_banner = models.FileField(
+        verbose_name="Thumbnail do banner",
+        upload_to="pagina",
+        help_text="Só será usado quando o banner for um vídeo.",
+        null=True,
+        blank=True,
+    )
+
     template = models.CharField(
         verbose_name='Nome do Template',
         max_length=100,

@@ -9,7 +9,7 @@ class Parceiro(models.Model):
     
     brand = models.FileField(
         verbose_name='Brand',
-        upload_to='uploads/%Y/%m'
+        upload_to='brand'
     )
 
     descricao = models.TextField(

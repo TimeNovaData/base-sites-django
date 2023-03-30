@@ -21,6 +21,7 @@ urlpatterns = [
     path("manutencao/", views.manutencao, name="manutencao"),
     path("coming_soon/", views.coming_soon, name="coming_soon"),
     path('aceitar_termo/', views.aceitar_termo, name='aceitar_termo'),
+    path('fale-conosco/', views.fale_conosco, name='fale_conosco'),
     path("<str:slug>/", views.home, name="home"),
     path("design_system/", views.design_system, name="design_system"),
     path("svg_viewer/", views.svg_viewer, name="svg_viewer"),
