@@ -57,6 +57,7 @@ pkginfo==1.9.6
 platformdirs==3.1.0
 pycodestyle==2.10.0
 pycparser==2.21
+pydocstyle==6.3.0
 pyflakes==3.0.1
 Pygments==2.14.0
 pyrsistent==0.19.3
@@ -71,6 +72,7 @@ rich==13.3.2
 SecretStorage==3.3.3
 simplejson==3.18.3
 six==1.16.0
+snowballstemmer==2.2.0
 sqlparse==0.4.2
 static3==0.7.0
 tablib==3.3.0

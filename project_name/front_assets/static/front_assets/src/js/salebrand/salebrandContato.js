@@ -42,7 +42,7 @@ export default function salebrandContato(){
       duration: 3000,
       position: "center",
       style: {
-        background: "linear-gradient(to right, rgb(155, 69, 226), rgb(88, 26, 138))",
+        background: "linear-gradient(to right, rgb(var(--primary-dark)), rgb(var(--primary-pure)))",
       },
     }
 }

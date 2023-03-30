@@ -1,7 +1,7 @@
 #login{
     height: 100vh;
     position: relative;
-    background: #0A0B21;
+    background: linear-gradient(92.74deg, var(--primary-pure) 0%, var(--primary-light) 100%);
     padding-top: 3.75rem;
     @media (max-width: 1660px){
         height: 120vh;
@@ -21,7 +21,7 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        background: linear-gradient(92.74deg, var(--primary-pure) 0%, var(--primary-light) 100%);
+        background: linear-gradient(92.74deg, var(--primary-dark) 0%, var(--primary-pure) 100%);
         border-radius: 11.875rem;
         @media (max-width: 1660px){
             padding: 3rem;
@@ -220,10 +220,10 @@
                 font-size: 1rem;
                 line-height: 150%;
                 letter-spacing: -0.02em;
-                background-color: rgba(155, 69, 226, 0.1);
-                border: 1px solid var(--primary-pure);
+                background-color: rgba(107, 182, 239, 0.1);
+                border: 1px solid var(--primary-ligth);
                 border-radius: 1.75rem;
-                color: var(--primary-pure);
+                color: var(--primary-ligth);
                 cursor: pointer;
                 transition: background-color .2s ease-in, transform .1s ease-in;
                 @include d(sm){
@@ -233,7 +233,7 @@
                 &:hover{
                     box-shadow: 0 0.5em 0.5em -0.4em var(--primary-pure);
                     transform: translateY(-0.25em) !important;
-                    color: var(--primary-light);
+                    color: var(--white);
                     border-color: var(--primary-pure);
                 }
             }
