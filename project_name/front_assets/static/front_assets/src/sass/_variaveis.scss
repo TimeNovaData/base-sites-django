@@ -1,5 +1,11 @@
 //colocar  as variaveis de cor  do projeto no body como variaveis css
 body {
+    // Generics
+    --white: #FFFFFF;
+    --white-70-op: hsla(0, 0%, 100%, 0.7);
+    --white-10-op: hsla(0, 0%, 100%, 0.1);
+    --black: #000000;
+
     // Neutral
     --neutral-100: #090A1A;
     --neutral-70: #464651;
@@ -12,15 +18,14 @@ body {
 
     // Primary
     --primary-light: #8186F7;
+    --primary-light-10-op: hsla(237, 88%, 74%, 0.1);
     --primary-light-30: #A8ABFE;
     --primary-pure-10: #EAEAF8;
-    --primary-pure: #3F45D4;
+    --primary-pure: hsla(238, 64%, 54%, 1);
     --primary-pure-70: #6A6ED1;
 
-    // Generics
-    --white: #FFFFFF;
-    --black: #000000;
-    
+    --hue-primary: 238;
+
     --alert-error:#E92C2C;
     --alert-error-10:#FDEAEA;
     --alert-warning:#D2AF00;

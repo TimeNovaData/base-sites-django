@@ -1,7 +1,7 @@
 #login{
     height: 100vh;
     position: relative;
-    background: linear-gradient(92.74deg, var(--primary-pure) 0%, var(--primary-light) 100%);
+    background: linear-gradient(90deg, hsla(var(--hue-primary), 100%, 3%, 1) 0%, hsla(var(--hue-primary), 100%, 3%, 1) 100%);
     padding-top: 3.75rem;
     @media (max-width: 1660px){
         height: 120vh;
@@ -21,7 +21,7 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        background: linear-gradient(92.74deg, var(--primary-dark) 0%, var(--primary-pure) 100%);
+        background: linear-gradient(92.74deg, hsla(var(--hue-primary), 68%, 32%, 1) 0%, hsla(var(--hue-primary), 100%, 73%, 1) 100%);
         border-radius: 11.875rem;
         @media (max-width: 1660px){
             padding: 3rem;
@@ -76,7 +76,7 @@
         height: fit-content;
         padding: 2rem;
         background: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--white-10-op);
         backdrop-filter: blur(40px);
         border-radius: 8px;
         margin: 0 auto;
@@ -94,7 +94,7 @@
                 font-size: 1.5rem;
                 line-height: 133%;
                 letter-spacing: -0.02em;
-                color: var(--primary-pure-10);
+                color: var(--white);
                 margin-bottom: .5rem;
             }
             .description{
@@ -102,7 +102,7 @@
                 font-size: 1rem;
                 line-height: 150%;
                 letter-spacing: -0.02em;
-                color: var(--neutral-30);
+                color: var(--white-70-op);
             }
         }
         .inputs-wrapper{
@@ -123,7 +123,7 @@
                     font-size: 1rem;
                     line-height: 150%;
                     letter-spacing: -0.02em;
-                    color: var(--primary-pure-10);
+                    color: var(--white);
 
                     @include d(sm){
                         font-size: .875rem;
@@ -136,7 +136,7 @@
                         font-size: 1rem;
                         line-height: 150%;
                         letter-spacing: -0.02em;
-                        color: var(--primary-pure-10);
+                        color: var(--white);
 
                         @include d(sm){
                             font-size: .875rem;
@@ -179,10 +179,10 @@
                     font-size: .75rem;
                     line-height: 167%;
                     letter-spacing: -0.02em;
-                    color: var(--neutral-30);
+                    color: var(--white-70-op);
                     text-decoration: none;
                     &:hover{
-                        color: var(--primary-pure-10);
+                        color: var(--white);
                         text-decoration: underline;
                     }
                 }
@@ -220,10 +220,10 @@
                 font-size: 1rem;
                 line-height: 150%;
                 letter-spacing: -0.02em;
-                background-color: rgba(107, 182, 239, 0.1);
-                border: 1px solid var(--primary-ligth);
+                background-color: var(--primary-light-10-op);
+                border: 1px solid var(--primary-light);
                 border-radius: 1.75rem;
-                color: var(--primary-ligth);
+                color: var(--primary-light);
                 cursor: pointer;
                 transition: background-color .2s ease-in, transform .1s ease-in;
                 @include d(sm){
@@ -233,7 +233,7 @@
                 &:hover{
                     box-shadow: 0 0.5em 0.5em -0.4em var(--primary-pure);
                     transform: translateY(-0.25em) !important;
-                    color: var(--white);
+                    color: var(--neutral-10);
                     border-color: var(--primary-pure);
                 }
             }
@@ -247,9 +247,9 @@
                 font-size: .875rem;
                 line-height: 157%;
                 letter-spacing: -0.02em;
-                color: var(--neutral-30);
+                color: var(--white-70-op);
                 &:hover{
-                    color: var(--primary-pure-10);
+                    color: var(--white);
                     text-decoration: underline;
                 }
             }
@@ -272,7 +272,7 @@
                     line-height: 150%;
                     user-select: none;
                     letter-spacing: -0.02em;
-                    color: var(--neutral-30);
+                    color: var(--white-70-op);
                     .checkbox{
                         position: absolute;
                         width: 1px;
@@ -285,7 +285,7 @@
                         border-width: 0px;
                     }
                     &:hover{
-                        color: var(--primary-pure-10);
+                        color: var(--white);
                         font-weight: 400;
                         .radio-circle {
                             border-color: var(--primary-pure);

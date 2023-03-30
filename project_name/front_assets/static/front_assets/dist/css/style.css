@@ -1,4 +1,8 @@
 body {
+  --white: #fff;
+  --white-70-op: #ffffffb3;
+  --white-10-op: #ffffff1a;
+  --black: #000;
   --neutral-100: #090a1a;
   --neutral-70: #464651;
   --neutral-60: #666670;
@@ -8,10 +12,12 @@ body {
   --neutral-20: #f0f1f5;
   --neutral-10: #f5f6fa;
   --primary-light: #8186f7;
+  --primary-light-10-op: #8288f71a;
   --primary-light-30: #a8abfe;
   --primary-pure-10: #eaeaf8;
-  --primary-pure: #3f45d4;
+  --primary-pure: #3f44d5;
   --primary-pure-70: #6a6ed1;
+  --hue-primary: 238;
   --alert-error: #e92c2c;
   --alert-error-10: #fdeaea;
   --alert-warning: #d2af00;
@@ -227,7 +233,7 @@ html {
 
 #login {
   height: 100vh;
-  background: #0a0b21;
+  background: linear-gradient(90deg, hsla(var(--hue-primary), 100%, 3%, 1) 0%, hsla(var(--hue-primary), 100%, 3%, 1) 100%);
   padding-top: 3.75rem;
   position: relative;
 }
@@ -261,7 +267,7 @@ html {
   max-height: 394px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(92.74deg, var(--primary-pure) 0%, var(--primary-light) 100%);
+  background: linear-gradient(92.74deg, hsla(var(--hue-primary), 68%, 32%, 1) 0%, hsla(var(--hue-primary), 100%, 73%, 1) 100%);
   border-radius: 11.875rem;
   margin: 0 auto;
 }
@@ -338,11 +344,11 @@ html {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  border: 1px solid var(--white-10-op);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   margin: 0 auto;
   background: #00000080;
-  border: 1px solid #ffffff1a;
   border-radius: 8px;
   margin-top: -210px;
   padding: 2rem;
@@ -362,7 +368,7 @@ html {
 
 #login .form-wrapper .content .title {
   letter-spacing: -.02em;
-  color: var(--primary-pure-10);
+  color: var(--white);
   margin-bottom: .5rem;
   font-size: 1.5rem;
   font-weight: 400;
@@ -371,7 +377,7 @@ html {
 
 #login .form-wrapper .content .description {
   letter-spacing: -.02em;
-  color: var(--neutral-30);
+  color: var(--white-70-op);
   font-size: 1rem;
   font-weight: 300;
   line-height: 150%;
@@ -390,7 +396,7 @@ html {
   height: 56px;
   border: unset;
   letter-spacing: -.02em;
-  color: var(--primary-pure-10);
+  color: var(--white);
   background: none;
   border-bottom: 1px solid #ffffff1a;
   padding: .5rem;
@@ -409,7 +415,7 @@ html {
 
 #login .form-wrapper .inputs-wrapper .input-item .input::placeholder {
   letter-spacing: -.02em;
-  color: var(--primary-pure-10);
+  color: var(--white);
   font-family: sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -460,7 +466,7 @@ html {
 
 #login .form-wrapper .inputs-wrapper .recuperar-senha a {
   letter-spacing: -.02em;
-  color: var(--neutral-30);
+  color: var(--white-70-op);
   font-size: .75rem;
   font-weight: 300;
   line-height: 167%;
@@ -468,7 +474,7 @@ html {
 }
 
 #login .form-wrapper .inputs-wrapper .recuperar-senha a:hover {
-  color: var(--primary-pure-10);
+  color: var(--white);
   text-decoration: underline;
 }
 
@@ -480,10 +486,10 @@ html {
   width: 100%;
   height: 56px;
   letter-spacing: -.02em;
-  border: 1px solid var(--primary-pure);
-  color: var(--primary-pure);
+  background-color: var(--primary-light-10-op);
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
   cursor: pointer;
-  background-color: #9b45e21a;
   border-radius: 1.75rem;
   justify-content: center;
   align-items: center;
@@ -503,7 +509,7 @@ html {
 
 #login .form-wrapper .btn-wrapper .btn:hover {
   box-shadow: 0 .5em .5em -.4em var(--primary-pure);
-  color: var(--primary-light);
+  color: var(--neutral-10);
   border-color: var(--primary-pure);
   transform: translateY(-.25em) !important;
 }
@@ -516,14 +522,14 @@ html {
 
 #login .form-wrapper .voltar a {
   letter-spacing: -.02em;
-  color: var(--neutral-30);
+  color: var(--white-70-op);
   font-size: .875rem;
   font-weight: 300;
   line-height: 157%;
 }
 
 #login .form-wrapper .voltar a:hover {
-  color: var(--primary-pure-10);
+  color: var(--white);
   text-decoration: underline;
 }
 
@@ -544,7 +550,7 @@ html {
   -webkit-user-select: none;
   user-select: none;
   letter-spacing: -.02em;
-  color: var(--neutral-30);
+  color: var(--white-70-op);
   align-items: center;
   gap: .375rem;
   font-size: .875rem;
@@ -566,7 +572,7 @@ html {
 }
 
 #login .form-wrapper .checkbox-wrapper .radio-container .check-label:hover {
-  color: var(--primary-pure-10);
+  color: var(--white);
   font-weight: 400;
 }
 
