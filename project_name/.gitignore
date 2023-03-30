@@ -4,12 +4,6 @@
 # Não manda os arquivos cache do Python
 *pyc
 
-manage.py
-
-project_name/asgi.py
-project_name/settings.py
-project_name/wsgi.py
-
 .env
 
 media

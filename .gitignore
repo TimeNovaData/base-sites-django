@@ -1,3 +1,9 @@
 .testes
 env/
 env_base
+
+project_name/manage.py
+
+project_name/project_name/asgi.py
+project_name/project_name/settings.py
+project_name/project_name/wsgi.py
