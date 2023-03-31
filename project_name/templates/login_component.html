@@ -54,7 +54,8 @@
       </div>
     </div>
 
-    {{form.non_field_errors}}
+    {{form.errors|json_script:"form-errors-login"}}
+
     <div class="checkbox-wrapper">
       <div class="radio-container round size-16">
         <label class="check-label">

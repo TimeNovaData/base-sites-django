@@ -17,11 +17,7 @@ export default function salebrandContato(){
 
     function showMessage(response) {
       const message = response.data ? response.data.message : response.message
-      Toastify({
-        ...toastifyDefault,
-        text: message,
-      }).showToast();
-
+      GLOBAL.showToastify(message)
       contatoFormSubmit.reset()
       setTimeout(enabledBtn, 1000)
     }
@@ -36,13 +32,5 @@ export default function salebrandContato(){
     function enabledBtn() {
       btnSubmit.disabled = false
       btnSubmit.classList.remove("disabled")
-    }
-
-    const toastifyDefault = {
-      duration: 3000,
-      position: "center",
-      style: {
-        background: "linear-gradient(to right, rgb(var(--primary-dark)), rgb(var(--primary-pure)))",
-      },
     }
 }

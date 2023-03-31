@@ -562,6 +562,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 // SCRIPT SENHA LOGIN
 var _mostrarSenhaJs = require("./mostrarSenha.js");
 var _mostrarSenhaJsDefault = parcelHelpers.interopDefault(_mostrarSenhaJs);
+var _showFormErrorsJs = require("./showFormErrors.js");
+var _showFormErrorsJsDefault = parcelHelpers.interopDefault(_showFormErrorsJs);
 // SECTIONS
 var _salebrandPortfolioJs = require("./salebrand/salebrandPortfolio.js");
 var _salebrandPortfolioJsDefault = parcelHelpers.interopDefault(_salebrandPortfolioJs);
@@ -573,6 +575,7 @@ var _salebrandContatoJs = require("./salebrand/salebrandContato.js");
 var _salebrandContatoJsDefault = parcelHelpers.interopDefault(_salebrandContatoJs);
 const pageHome = document.querySelector(".body-home");
 (0, _mostrarSenhaJsDefault.default)();
+(0, _showFormErrorsJsDefault.default)();
 (0, _salebrandPortfolioJsDefault.default)();
 (0, _salebrandSobreJsDefault.default)();
 (0, _salebrandClientesJsDefault.default)();
@@ -581,7 +584,74 @@ const pageHome = document.querySelector(".body-home");
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","./salebrand/salebrandContato.js":"kxvLQ","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./mostrarSenha.js":"4wb0P"}],"JqSue":[function(require,module,exports) {
+},{"./mostrarSenha.js":"4wb0P","./showFormErrors.js":"7uzVw","./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","./salebrand/salebrandContato.js":"kxvLQ","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"4wb0P":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function mostrarSenha() {
+    const attr = "[js-password]";
+    const divs = document.querySelectorAll(`.show-password${attr}`);
+    if (!divs.length) return;
+    function handleEvent(div) {
+        return function(event) {
+            let input = div.querySelector("[js-input-password]");
+            let item = event.currentTarget;
+            input.type = input.type == "text" ? "password" : "text";
+            if (input.type == "text") item.classList.add("mostra");
+            else item.classList.remove("mostra");
+        };
+    }
+    divs.forEach((div)=>{
+        const buttonPass = div.querySelector(".password");
+        buttonPass.addEventListener("click", handleEvent(div));
+    });
+}
+exports.default = mostrarSenha;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"2GLs3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"7uzVw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function showFormErrors() {
+    const allFormsErrors = document.querySelectorAll("[id^='form-errors']");
+    allFormsErrors.forEach((formErrors)=>showErrors(formErrors));
+    function showErrors(formErrors) {
+        const errorsText = formErrors.textContent;
+        const errors = JSON.parse(errorsText).__all__;
+        errors.forEach((error)=>error ? GLOBAL.showToastify(error) : "");
+    }
+}
+exports.default = showFormErrors;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"JqSue":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = function() {
@@ -623,37 +693,7 @@ exports.default = function() {
     breakpointChecker();
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"2GLs3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"fMZK3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"fMZK3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function salebrandSobre() {
@@ -765,10 +805,7 @@ function salebrandContato() {
     });
     function showMessage(response) {
         const message = response.data ? response.data.message : response.message;
-        Toastify({
-            ...toastifyDefault,
-            text: message
-        }).showToast();
+        GLOBAL.showToastify(message);
         contatoFormSubmit.reset();
         setTimeout(enabledBtn, 1000);
     }
@@ -781,38 +818,8 @@ function salebrandContato() {
         btnSubmit.disabled = false;
         btnSubmit.classList.remove("disabled");
     }
-    const toastifyDefault = {
-        duration: 3000,
-        position: "center",
-        style: {
-            background: "linear-gradient(to right, rgb(var(--primary-dark)), rgb(var(--primary-pure)))"
-        }
-    };
 }
 exports.default = salebrandContato;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"4wb0P":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function mostrarSenha() {
-    const attr = "[js-password]";
-    const divs = document.querySelectorAll(`.show-password${attr}`);
-    if (!divs.length) return;
-    function handleEvent(div) {
-        return function(event) {
-            let input = div.querySelector("[js-input-password]");
-            let item = event.currentTarget;
-            input.type = input.type == "text" ? "password" : "text";
-            if (input.type == "text") item.classList.add("mostra");
-            else item.classList.remove("mostra");
-        };
-    }
-    divs.forEach((div)=>{
-        const buttonPass = div.querySelector(".password");
-        buttonPass.addEventListener("click", handleEvent(div));
-    });
-}
-exports.default = mostrarSenha;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")
 
