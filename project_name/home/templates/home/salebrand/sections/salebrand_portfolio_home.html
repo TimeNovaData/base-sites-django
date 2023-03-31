@@ -19,12 +19,12 @@
         <div class="swiper-slide">
           <div class="card">
             <div class="img-card">
-              {% if item.imagem_destacada|type_file == "mp4" %}
+              {% if item.imagem|type_file == "mp4" %}
                 <video muted autoplay loop playsinline>
-                  <source src="{{ item.imagem_destacada.url }}">
+                  <source src="{{ item.imagem.url }}">
                 </video>
               {% else %}
-                <img src="{{ item.imagem_destacada.url }}" loading="lazy" alt="">
+                <img src="{{ item.imagem.url }}" loading="lazy" alt="">
               {% endif %}
             </div>
             <div class="content">
