@@ -559,6 +559,9 @@ function hmrAccept(bundle, id) {
 },{}],"d6S3V":[function(require,module,exports) {
 // PAGES
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// SCRIPT SENHA LOGIN
+var _mostrarSenhaJs = require("./mostrarSenha.js");
+var _mostrarSenhaJsDefault = parcelHelpers.interopDefault(_mostrarSenhaJs);
 // SECTIONS
 var _salebrandPortfolioJs = require("./salebrand/salebrandPortfolio.js");
 var _salebrandPortfolioJsDefault = parcelHelpers.interopDefault(_salebrandPortfolioJs);
@@ -569,6 +572,7 @@ var _salebrandClientesJsDefault = parcelHelpers.interopDefault(_salebrandCliente
 var _salebrandContatoJs = require("./salebrand/salebrandContato.js");
 var _salebrandContatoJsDefault = parcelHelpers.interopDefault(_salebrandContatoJs);
 const pageHome = document.querySelector(".body-home");
+(0, _mostrarSenhaJsDefault.default)();
 (0, _salebrandPortfolioJsDefault.default)();
 (0, _salebrandSobreJsDefault.default)();
 (0, _salebrandClientesJsDefault.default)();
@@ -577,7 +581,7 @@ const pageHome = document.querySelector(".body-home");
 pageHome;
 document.addEventListener("DOMContentLoaded", ()=>document.body.classList.add("dcl"));
 
-},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","./salebrand/salebrandContato.js":"kxvLQ","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"JqSue":[function(require,module,exports) {
+},{"./salebrand/salebrandPortfolio.js":"JqSue","./salebrand/salebrandSobre.js":"fMZK3","./salebrand/salebrandClientes.js":"kk5L9","./salebrand/salebrandContato.js":"kxvLQ","@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3","./mostrarSenha.js":"4wb0P"}],"JqSue":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = function() {
@@ -781,11 +785,34 @@ function salebrandContato() {
         duration: 3000,
         position: "center",
         style: {
-            background: "linear-gradient(to right, rgb(155, 69, 226), rgb(88, 26, 138))"
+            background: "linear-gradient(to right, rgb(var(--primary-dark)), rgb(var(--primary-pure)))"
         }
     };
 }
 exports.default = salebrandContato;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}],"4wb0P":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function mostrarSenha() {
+    const attr = "[js-password]";
+    const divs = document.querySelectorAll(`.show-password${attr}`);
+    if (!divs.length) return;
+    function handleEvent(div) {
+        return function(event) {
+            let input = div.querySelector("[js-input-password]");
+            let item = event.currentTarget;
+            input.type = input.type == "text" ? "password" : "text";
+            if (input.type == "text") item.classList.add("mostra");
+            else item.classList.remove("mostra");
+        };
+    }
+    divs.forEach((div)=>{
+        const buttonPass = div.querySelector(".password");
+        buttonPass.addEventListener("click", handleEvent(div));
+    });
+}
+exports.default = mostrarSenha;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"2GLs3"}]},["dZ2iM","d6S3V"], "d6S3V", "parcelRequire9b8f")
 

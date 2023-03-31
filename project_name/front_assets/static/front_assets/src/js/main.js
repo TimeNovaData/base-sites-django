@@ -1,6 +1,10 @@
 // PAGES
 const pageHome = document.querySelector(".body-home");
 
+// SCRIPT SENHA LOGIN
+import mostrarSenha from "./mostrarSenha.js"
+mostrarSenha()
+
 // SECTIONS
 import salebrandPortfolio from "./salebrand/salebrandPortfolio.js";
 import salebrandSobre from "./salebrand/salebrandSobre.js";

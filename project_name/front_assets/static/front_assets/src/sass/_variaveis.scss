@@ -21,7 +21,7 @@ body {
     --primary-light-10-op: hsla(237, 88%, 74%, 0.1);
     --primary-light-30: #A8ABFE;
     --primary-pure-10: #EAEAF8;
-    --primary-pure: hsla(238, 64%, 54%, 1);
+    --primary-pure: hsla(var(--hue-primary), 64%, 54%, 1);
     --primary-pure-70: #6A6ED1;
 
     --hue-primary: 238;
