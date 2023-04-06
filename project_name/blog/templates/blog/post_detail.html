@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block extra_styles %}
+{% endblock %}
+
+{% block body_class %}{% endblock %}
+
+{% block content %}
+
+<main>
+  <h1 >Aqui é seu blog</h1>
+
+  <h1 >{{objeto}}</h1>
+
+  {% for item in posts %}
+	<div>
+		{{item.conteudo.html|safe}}
+	</div>
+  {% endfor %}
+
+  <!-- paginação -->
+  	{% if posts.has_next or posts.has_previous %}
+	<div class="pagination">
+		<span class="step-links">
+			{% if posts.has_previous %}
+			<h2>
+				<a href="?page={{ posts.previous_page_number }}">Voltar</a>
+			</h2>
+			{% endif %}
+			
+			<span class="current-page">
+				Página {{ posts.number }} de {{ posts.paginator.num_pages }}
+			</span>
+
+			{% if posts.has_next %}
+			<h2>
+				<a href="?page={{ posts.next_page_number }}">Próximo</a>
+			</h2>
+			{% endif %}
+		</span>
+	</div>
+	{% endif %}
+</main>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

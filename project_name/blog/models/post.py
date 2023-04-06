@@ -1,6 +1,6 @@
 from django.db import models
 from django_quill.fields import QuillField
-
+from django.contrib.auth.models import User
 from .categoria import Categoria
 from .tag import Tag
 
@@ -63,22 +63,36 @@ class Post(models.Model):
     )
 
     usuario_criacao = models.ForeignKey(
-        "auth.User",
-        related_name="%(class)s_requests_created",
+        User,
+        verbose_name="Usúario de Criação",
+        related_name="usuario_criacao",
         blank=True,
         null=True,
-        default=None,
         on_delete=models.SET_NULL,
     )
 
     usuario_atualizacao = models.ForeignKey(
-        "auth.User",
-        related_name="%(class)s_requests_modified",
+        User,
+        verbose_name="Usúario de Atualização",
+        related_name="usuario_atualizacao",
         blank=True,
         null=True,
-        default=None,
         on_delete=models.SET_NULL,
     )
+
+    def save(self, *args, **kwargs):
+        '''Sobrescrita do método save para realizarmos ações personalizadas.'''
+        from crum import get_current_user
+    
+        user = get_current_user()
+        if user and not user.pk:
+            user = None
+        if not self.pk:
+            self.usuario_criacao = user
+        self.usuario_atualizacao = user
+    
+        super().save(*args, **kwargs)
+    
 
     def __str__(self):
         """Método que retorna a representação do objeto como string."""
