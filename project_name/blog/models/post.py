@@ -90,10 +90,9 @@ class Post(models.Model):
         if not self.pk:
             self.usuario_criacao = user
         self.usuario_atualizacao = user
-    
+   
         super().save(*args, **kwargs)
     
-
     def __str__(self):
         """Método que retorna a representação do objeto como string."""
         return self.titulo

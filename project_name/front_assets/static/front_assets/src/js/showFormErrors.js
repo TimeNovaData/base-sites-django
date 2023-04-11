@@ -5,6 +5,6 @@ export default function showFormErrors() {
     function showErrors(formErrors) {
         const errorsText = formErrors.textContent
         const errors = JSON.parse(errorsText).__all__
-        errors.forEach(error => error ? GLOBAL.showToastify(error) : "")
+        errors && errors.forEach(error => error ? GLOBAL.showToastify(error) : "")
     }
 }
