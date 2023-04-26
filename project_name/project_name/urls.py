@@ -15,6 +15,7 @@ urlpatterns = [
     path("admin/docs/", include("django.contrib.admindocs.urls")),
     path("admin/", admin.site.urls),
     path("", include("django.contrib.auth.urls")),
+    path("blog/", include("blog.urls")),
     path("", include("home.urls")),
     path("", include("django_app_novadata.urls")),
     path("avatar/", include("avatar.urls")),
@@ -40,3 +41,4 @@ urlpatterns = [
 handler403 = "home.views.error_403"
 handler404 = "home.views.error_404"
 handler500 = "home.views.error_500"
+
