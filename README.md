@@ -15,8 +15,6 @@ Esse modelo conta com as seguintes features:
 - Design system.
 - SVG viewer.
 - Barra de notificações (apenas no front).
-- BaseViewNovadata, contanto com implementação de breadcrumbs por padrão.
-- BaseNovadataAdmin, contanto com import export das models por padrão.
 - Funções para construção de breadcrumbs.
 - Autenticação de login por user e e-mail simultaneamente.
 

@@ -1,4 +1,3 @@
-from .base_novadata_admin import BaseNovadataAdmin
 from .custom_user_admin import CustomUserAdmin
 from .galeria_admin import GaleriaAdmin
 from .pagina_admin import PaginaAdmin
@@ -16,7 +15,6 @@ from .aceite_termo_inline import AceiteTermoInline
 from .parceiro_admin import ParceiroAdmin
 
 __all__ = [
-    BaseNovadataAdmin,
     CustomUserAdmin,
     GaleriaAdmin,
     PaginaAdmin,
