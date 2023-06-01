@@ -1,5 +1,6 @@
 from crum import get_current_user
 from decouple import config
+from django.conf import settings
 from django.core.mail import EmailMessage
 from django.db import models
 from django.template import Context, Template
@@ -169,7 +170,7 @@ class MensagemEmail(models.Model):
                 assunto_text,
                 html_email,
                 "{} <{}>".format(
-                    config("EMAIL_NAME"), config("EMAIL_HOST_USER")
+                    settings.EMAIL_NAME, settings.EMAIL_HOST_USER
                 ),
                 destinatarios,
             )
