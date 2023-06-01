@@ -19,6 +19,7 @@ urlpatterns = [
     path("", include("home.urls")),
     path("", include("django_app_novadata.urls")),
     path("avatar/", include("avatar.urls")),
+    path("advanced_filters/", include("advanced_filters.urls")),
     #
     path("api/", include(main_router.urls)),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -32,13 +33,10 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-    path("advanced_filters/", include("advanced_filters.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
-
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler403 = "home.views.error_403"
 handler404 = "home.views.error_404"
 handler500 = "home.views.error_500"
-
