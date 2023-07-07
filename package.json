@@ -1,0 +1,31 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "author": "novadata",
+  "license": "ISC",
+  "scripts": {
+    "watch-js": "parcel watch front_assets/static/front_assets/src/js/main.js --dist-dir front_assets/static/front_assets/dist/js --no-cache -p 7081",
+    "watch-scss": "parcel watch front_assets/static/front_assets/src/sass/style.scss --dist-dir front_assets/static/front_assets/dist/css --no-cache -p 7082",
+    "build-js": "parcel build front_assets/static/front_assets/src/js/main.js --dist-dir front_assets/static/front_assets/dist/js --no-content-hash --no-cache",
+    "build-scss": "parcel build front_assets/static/front_assets/src/sass/style.scss --dist-dir front_assets/static/front_assets/dist/css --no-content-hash --no-cache",
+    "dev": "concurrently --kill-others \"npm run watch-js\" \"npm run watch-scss\"",
+    "build": "concurrently \"npm run build-js\" \"npm run build-scss\""
+  },
+  "browserslist": "> 0.5%, not dead",
+  "devDependencies": {
+    "@parcel/config-default": "^2.8.3",
+    "@parcel/core": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "parcel": "^2.9.3",
+    "parcel-bundler": "^1.5.1",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.1",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.2.7"
+  }
+}
