@@ -1,0 +1,24 @@
+{
+  "css/css.css": {
+    "file": "css-978bda2c.css",
+    "src": "css/css.css"
+  },
+  "css/css.js": {
+    "css": [
+      "css-978bda2c.css"
+    ],
+    "file": "css-756df746.js",
+    "isEntry": true,
+    "src": "css/css.js"
+  },
+  "js/main.js": {
+    "file": "main-2845ec51.js",
+    "isEntry": true,
+    "src": "js/main.js"
+  },
+  "js/utils/GLOBAL.js": {
+    "file": "global-321003f2.js",
+    "isEntry": true,
+    "src": "js/utils/GLOBAL.js"
+  }
+}

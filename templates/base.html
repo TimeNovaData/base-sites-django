@@ -1,31 +1,34 @@
 {% load static %}
 {% load home_tags %}
 {% is_dev as is_dev %}
-
 {% get_site as site %}
+{% load django_vite %}
+
 
 
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% vite_hmr_client %}
 
-    <title>
-        {% block title %}
-           {{site.titulo_global}} | {{pagina.titulo}}
-        {% endblock %}
-    </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% block noindex %}
-        {% if not pagina.indexavel %}
-            <meta name="robots" content="noindex">
-            <meta name="googlebot" content="noindex">
-        {% endif %}
-    {% endblock %}
+	<title>
+		{% block title %}
+			{{site.titulo_global}} | {{pagina.titulo}}
+		{% endblock %}
+	</title>
 
-    <!-- Facebook Meta Tags -->
+	{% block noindex %}
+		{% if not pagina.indexavel %}
+			<meta name="robots" content="noindex">
+			<meta name="googlebot" content="noindex">
+		{% endif %}
+	{% endblock %}
+
+	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="{{site.dominio_oficial}}">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{site.titulo_global}}">
@@ -35,108 +38,86 @@
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{site.titulo_global}}">
-	<meta name="twitter:description"
-		content="{{site.descricao_global}}">
+	<meta name="twitter:description" content="{{site.descricao_global}}">
 	<meta name="twitter:image" content="{{site.logo.url}}">
 
-    <meta property="og:title" content="{{site.titulo_global}}" />
-    <meta property="og:description" content="{{pagina.custom_description}}" />
-    <meta property="og:image" content="{{site.logo.url}}" />
+	<meta property="og:title" content="{{site.titulo_global}}" />
+	<meta property="og:description" content="{{pagina.custom_description}}" />
+	<meta property="og:image" content="{{site.logo.url}}" />
 
-    <!-- description -->
-    <meta itemprop="description"
-		content="{{site.descricao_global}}">
+	<!-- description -->
+	<meta itemprop="description" content="{{site.descricao_global}}">
 	<meta itemprop="image" content="{{site.logo.url}}">
+	<link rel="icon" type="image/x-icon" href="{{site.favicon.url}}">
 
-    <!-- meta tag facebook -->
-    {{meta_tag_facebook|safe}}
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+		rel="stylesheet">
 
-    <!-- meta tag google -->
-    {{meta_tag_google|safe}}
+	<!-- meta tag facebook -->
+	{{meta_tag_facebook|safe}}
+	<!-- meta tag google -->
+	{{meta_tag_google|safe}}
+	{{site.meta_tag_google|safe}}
 
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    
-    <!-- toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <link rel="icon" type="image/x-icon" href="{{site.favicon.url}}">
-
-    <link rel="stylesheet" href="{% static 'front_assets/dist/css/style.css' %}">
-
-    <script type="text/javascript" src="{% static 'front_assets/src/js/GLOBAL.js' %}"></script>
-
-    {{site.meta_tag_google|safe}}
-    
-    <style type="text/css">
-        {{site.css_global|safe}}
-    </style>
-
-    <style type="text/css">
-        {{pagina.css_adicional|safe}}
-    </style>
+	<style type="text/css">
+		{{site.css_global|safe}}
+		{{ pagina.css_adicional|safe }}
+	</style>
 
 
-    {% block extra_styles_vendor %}
-    <!--  -->
-    {% endblock %}
 
-    {% block extra_styles %}
-    {% endblock %}
+	<!-- GLOBAL -->
+	{% vite_asset 'src/js/utils/GLOBAL.js' type='text/javascript' %}
+
+	<script>
+		GLOBAL.context.csrf = '{{ csrf_token }}'
+	</script>
+
+	<!-- CSS -->
+	{% vite_asset 'src/index.js' %}
+
+
+	{% block extra_styles_vendor %}
+	{% endblock %}
+
+
+	{% block extra_styles %}
+	{% endblock %}
 
 </head>
 
-<body class="{% block body_class %} {% endblock %}">
-    {% include 'svg_defs.html' %}
-
-    {% include "menus/menu_principal.html" %}
-
-
-    <div class="container-main">
-        {% block content %}
-        <!--  -->
-        {% endblock %}
-
-    </div>
+<body style="opacity: 0;" class="{% block body_class %} {% endblock %}">
+	<div id="app">
+		{% include 'svg_defs.html' %}
+		{% include "menus/menu_principal.html" %}
 
 
-    {% block extra_js %}
-    <!--  -->
-    {% endblock %}
+		<div class="container-main">
+			{% block content %}
+			<!--  -->
+			{% endblock %}
 
-    <script>
-        {{site.js_global|safe}}
-    </script>
+		</div>
+	</div>
 
-    <script>
-        {{pagina.js_adicional|safe}}
-    </script>
+	{% block extra_js %}
+	<!--  -->
+	{% endblock %}
 
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Toastify -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script>
+		{{ site.js_global | safe }}
+		{{ pagina.js_adicional | safe }}
+	</script>
 
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Jquery Mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
-    integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- MAIN -->
+	{% vite_asset 'src/js/main.js'%}
 
-    <!-- Axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- Axios config -->
-    <script>
-        axios.defaults.xsrfCookieName = 'csrftoken'
-        axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
-        axios.defaults.headers.post['X-CSRFTOKEN'] = '{{ csrf_token }}';
-    </script>
-
-    <script type="text/javascript" src="{% static 'front_assets/dist/js/main.js' %}"></script>
 </body>
 
 </html>

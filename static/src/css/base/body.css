@@ -1,0 +1,5 @@
+body {
+	&.DOMContentLoaded {
+		opacity: 1 !important;
+	}
+}

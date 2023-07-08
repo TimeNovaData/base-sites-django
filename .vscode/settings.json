@@ -29,14 +29,32 @@
     HTML
     */
     "[html]": {
-        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": false,
         "editor.insertSpaces": false,
     },
-    "files.associations": {
-        ".env": "django-txt",
-        "*.html": "html"
+    "[javascript]": {
+        "editor.formatOnSave": true,
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "files.associations": {
+        ".env": "django-txt",
+        "*.html": "html",
+        "**/*.html": "html",
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "postcss": "css",
+    },
+    "[django-html]": {
+        "editor.autoClosingQuotes": "always",
+        "emmet.showAbbreviationSuggestions": true,
+    },
+    "[postcss]": {
+        "editor.defaultFormatter": "mrmlnc.vscode-stylefmt"
+    },
+    
+    "html.validate.styles": false
 }
