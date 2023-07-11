@@ -5,3 +5,5 @@ node_modules
 .env
 Zone.Identifier
 *Zone.Identifier
+dev.sh
+db.sqlite3

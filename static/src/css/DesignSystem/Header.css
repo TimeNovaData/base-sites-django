@@ -1,0 +1,32 @@
+[js-header] {
+	transition: height 0.3s ease-out;
+	transform: translateZ(0);
+
+	&[js-header-fixed='true'] {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	&[js-header-reduce='true'] {
+		height: var(--height-fixed);
+
+		.logo {
+			height: var(--logo-height-fixed);
+		}
+	}
+
+	&[js-header-animate='true'] {
+		animation: topAppear 0.3s both ease-out;
+	}
+}
+
+@keyframes topAppear {
+	from {
+		transform: translateY(-110%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}

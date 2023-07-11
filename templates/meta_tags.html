@@ -1,0 +1,34 @@
+
+{% if not pagina.indexavel %}
+<meta name="robots" content="noindex" />
+<meta name="googlebot" content="noindex" />
+{% endif %} 
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{site.dominio_oficial}}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{site.titulo_global}}" />
+<meta property="og:description" content="{{site.descricao_global}}" />
+<meta property="og:image" content="{{site.logo.url}}" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{site.titulo_global}}" />
+<meta name="twitter:description" content="{{site.descricao_global}}" />
+<meta name="twitter:image" content="{{site.logo.url}}" />
+
+<meta property="og:title" content="{{site.titulo_global}}" />
+<meta property="og:description" content="{{pagina.custom_description}}" />
+<meta property="og:image" content="{{site.logo.url}}" />
+
+<!-- description -->
+<meta itemprop="description" content="{{site.descricao_global}}" />
+<meta itemprop="image" content="{{site.logo.url}}" />
+<link rel="icon" type="image/x-icon" href="{{site.favicon.url}}" />
+<!-- meta tag facebook -->
+{{meta_tag_facebook|safe}}
+<!-- meta tag google -->
+{{meta_tag_google|safe}} {{site.meta_tag_google|safe}}

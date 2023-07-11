@@ -1,0 +1,16 @@
+body {
+	&.DOMContentLoaded {
+		opacity: 1 !important;
+	}
+}
+
+html {
+	--font-base: 100%;
+	font-size: var(--font-base);
+}
+
+@media (max-width: 1446px) {
+	html {
+		font-size: calc(var(--font-base) - 7%);
+	}
+}

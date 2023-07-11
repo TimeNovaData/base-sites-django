@@ -1,0 +1,13 @@
+[js-accordion-content] {
+	height: 0px;
+}
+
+[js-accordion-item].active {
+	.seta {
+		transform: rotate(0);
+	}
+
+	[js-accordion-content] {
+		height: 100%;
+	}
+}

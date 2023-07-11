@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% load django_vite %}
+
+{% block extra_styles %}
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+{% include './Header.html' %}
+
+<main class="">
+	<div class="flex   gap-32  w-full">
+
+		<aside class=" w-[260px] sticky top-0  h-screen overflow-y-auto border-r pt-72 border-r-neutral-10">
+			<div class="flex flex-col gap-8 px-16 pt-40">
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Button">Button</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Accordion">Accordion</a>
+			</div>
+		</aside>
+
+
+
+		<div class="container h-[4000px] overflow-y-auto  pt-40">
+			<section id="Button" class="pt-72">
+				{% include './parts/title.html' with text='Button' %}
+				<div class="flex gap-16 flex-wrap">
+					{% include './Button.html' %}
+				</div>
+
+
+				<select class="" multiple>
+					<option value="1">Some option</option>
+					<option value="2">Another option</option>
+					<option value="3" disabled>A disabled option</option>
+					<option value="4">Potato</option>
+				</select>
+				<img src="{% vite_asset_url 'img/hilda.webp' %}">
+
+
+			</section>
+
+
+
+
+			<section id="Accordion" class="pt-72">
+
+				{% include './parts/title.html' with text='Accordion' %}
+				{% include './Accordion.html' %}
+			</section>
+
+		</div>
+
+
+	</div>
+</main>
+
+{% endblock %}
