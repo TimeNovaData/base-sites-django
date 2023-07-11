@@ -1,24 +1,24 @@
 {
-  "css/css.css": {
-    "file": "css-978bda2c.css",
-    "src": "css/css.css"
+  "src/index.css": {
+    "file": "index-1b543573.css",
+    "src": "src/index.css"
   },
-  "css/css.js": {
+  "src/index.js": {
     "css": [
-      "css-978bda2c.css"
+      "index-1b543573.css"
     ],
-    "file": "css-756df746.js",
+    "file": "index-0340b553.js",
     "isEntry": true,
-    "src": "css/css.js"
+    "src": "src/index.js"
   },
-  "js/main.js": {
-    "file": "main-2845ec51.js",
+  "src/js/main.js": {
+    "file": "main-45652b43.js",
     "isEntry": true,
-    "src": "js/main.js"
+    "src": "src/js/main.js"
   },
-  "js/utils/GLOBAL.js": {
-    "file": "global-321003f2.js",
+  "src/js/utils/GLOBAL.js": {
+    "file": "global-fe01e59a.js",
     "isEntry": true,
-    "src": "js/utils/GLOBAL.js"
+    "src": "src/js/utils/GLOBAL.js"
   }
 }

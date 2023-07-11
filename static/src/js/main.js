@@ -1,13 +1,14 @@
-// import Swiper from "swiper";
 import axios from "axios";
 import axiosConfig from "./modules/axiosConfig";
 import PageHome from './pages/Home.js'
-import DesignSystem from "./modules/DesignSystem/DesignSystem";
-
+import DesignSystem from "./DesignSystem/DesignSystem";
+// import SvgUse from "./utils/SvgUse";
 
 // Init
-axiosConfig(GLOBAL.context.csrf, axios)
-DesignSystem()
+GLOBAL.DesignSystem = DesignSystem({})
+
+// Config
+axiosConfig({ csrf: GLOBAL.context }, axios)
 
 // Pages
 PageHome()
@@ -15,4 +16,11 @@ PageHome()
 
 
 
-console.log("🟡 main.js");
+
+
+
+
+console.log({ GLOBAL })
+console.log(import.meta.env)
+
+

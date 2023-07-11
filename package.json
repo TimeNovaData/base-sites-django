@@ -6,23 +6,31 @@
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "webp": "node ndt_tools/node_scripts/webp_convert.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "gsap": "^3.12.2",
+    "nice-select2": "^2.1.0",
+    "swiper": "^10.0.4",
+    "tippy.js": "^6.3.7",
+    "toastify-js": "^1.12.0"
   },
   "browserslist": "> 0.5%, not dead",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.3.3",
     "postcss": "^8.4.21",
+    "postcss-comment": "^2.0.0",
+    "postcss-custom-media": "^10.0.0",
     "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
     "postcss-nested": "^6.0.1",
     "postcss-simple-vars": "^7.0.1",
+    "sharp": "^0.32.1",
     "tailwindcss": "^3.2.7",
     "vite": "^4.4.2"
-  },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "swiper": "^10.0.4",
-    "toastify-js": "^1.12.0"
   }
 }

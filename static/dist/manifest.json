@@ -1,23 +1,23 @@
 {
   "src/index.css": {
-    "file": "index-978bda2c.css",
+    "file": "index-84cc66f2.css",
     "src": "src/index.css"
   },
   "src/index.js": {
     "css": [
-      "index-978bda2c.css"
+      "index-84cc66f2.css"
     ],
-    "file": "index-49d42644.js",
+    "file": "index-608bc9a4.js",
     "isEntry": true,
     "src": "src/index.js"
   },
   "src/js/main.js": {
-    "file": "main-09d376d3.js",
+    "file": "main-06b327fb.js",
     "isEntry": true,
     "src": "src/js/main.js"
   },
   "src/js/utils/GLOBAL.js": {
-    "file": "global-321003f2.js",
+    "file": "global-084699f7.js",
     "isEntry": true,
     "src": "src/js/utils/GLOBAL.js"
   }

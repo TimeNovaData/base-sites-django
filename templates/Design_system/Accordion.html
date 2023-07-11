@@ -1,0 +1,34 @@
+<!-- 
+js:  "static/src/js/DesignSystem/Accordion.js" 
+css: "static/src/css/DesignSystem/Accordion.css" 
+
+	NEED
+		[js-accordion-container]
+			[js-accordion-item]    						 opcional: [js-accordion-parent="id"] [class='active']
+				[js-accordion-title="id"]  
+				[js-accordion-content="id"]	
+ -->
+
+<section  js-accordion-container class="border rounded-md border-neutral-20">
+
+	<article js-accordion-item>
+		<header js-accordion-title="@id"
+			class="relative flex items-center gap-8 py-10 font-semibold transition cursor-pointer select-none px-14 text-neutral-80 text-paragraph-1 hover:bg-neutral-10">
+			<svg class="w-16 h-16 transition-transform rotate-180 seta">
+				<use xlink:href="#icon_seta_up"></use>
+			</svg>
+			<h5>Titulo ✨</h5>
+		</header>
+
+		<fieldset class="overflow-hidden" js-accordion-content="@id">
+			<div class="px-24 max-w-[500px] text-neutral-80">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus nunc
+				<p> elementum, et, nisl. Etiam a velit commodo convallis a est dapibus</p>
+				tempus. Libero bibendum ipsum sit nunc vel, fringilla lacinia. Lobortis.</p>
+			</div>
+		</fieldset>
+
+	</article>
+</section>
+
+

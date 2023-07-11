@@ -1,205 +1,156 @@
 /** @type {import('tailwindcss').Config} */
 
+// CHEATSHEET
+// https://tailwindcomponents.com/cheatsheet/
+
+// DOCS
+// https://tailwindcss.com/
+
 const plugin = require('tailwindcss/plugin')
+
 module.exports = {
-  content: [
-    "./templates/*.html",
-    "./templates/*/*.html",
-    "./*/templates/*.html",
-    "./*/templates/*/*.html",
-    "./*/templates/*/*/*.html",
-    "!./node_modules/**/*",
-  ],
-  safelist: ["flex", "flex-wrap", "breadcrumb-wrapper", "errorlist"],
+	content: [
+		"**/*.html",
+		"!./node_modules/**/*",
+	],
+	safelist: ["flex", "flex-wrap", "breadcrumb-wrapper", "errorlist"],
 
-  theme: {
-    fontFamily: {
-      sans: ["Inter", "sans-serif"],
-    },
+	theme: {
+		fontFamily: {
+			sans: ["Space Grotesk", "sans-serif"],
+		},
 
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      white: "#fff",
-      "white-10-o": "rgba(255, 255, 255, 0.1)",
-      "neutral-02": "#FAFAFA",
-      "neutral-05": "#F2F2F2",
-      "neutral-10": "#E6E6E6",
-      "neutral-20": "#CCCCCC",
-      "neutral-30": "#B3B3B3;",
-      "neutral-40": "#999999",
-      "neutral-50": "#808080",
-      "neutral-60": "#666666",
-      "neutral-70": " #4D4D4D",
-      "neutral-80": "#333333",
-      "neutral-90": "#1A1A1A",
-      "neutral-100": "#212529",
-      "primary-pure": "#004993",
-      "primary-pure-light": "#E6EDF5",
-      "primary-pure-light-o": "#E6EDF5",
-      "primary-pure-dark": "#033971",
-      "primary-pure-4": "#F5F8FB",
-      "primary-pure-40": "#80A4C9",
-      "primary-pure-op-4": "rgba(0, 73, 147, 0.04)",
-      "primary-bg": "#F7F9FB",
-      "bg-sidebar-level": "#F2F6F9",
+		colors: {
 
-      //alerts
-      "alert-red-100": "#EC3539",
-      "alert-red-10": "#FEEBEC",
-      "alert-red-10-o": "rgba(236, 53, 57, 0.1)",
+			transparent: "transparent",
+			current: "currentColor",
+			white: withOpacity("--white"),
+			black: withOpacity("--black"),
 
-      "alert-green-100": "#A6CE44",
-      "alert-green-10": "#F7FBED",
-      "alert-green-10-o": "rgba(28, 192, 102, 0.1)",
+			"neutral-10": withOpacity("--neutral-10"),
+			"neutral-20": withOpacity("--neutral-20"),
+			"neutral-30": withOpacity("--neutral-30"),
+			"neutral-60": withOpacity("--neutral-60"),
+			"neutral-70": withOpacity("--neutral-70"),
+			"neutral-100": withOpacity("--neutral-100"),
+			//primary
+			"primary-light": withOpacity("--primary-light"),
+			"primary-light-30": withOpacity("--primary-light-30"),
+			"primary-pure-10": withOpacity("--primary-pure-10"),
+			"primary-pure": withOpacity("--primary-pure"),
+			"primary-pure-70": withOpacity("--primary-pure-70"),
+			"primary-dark": withOpacity("--primary-dark"),
+			// alerts
+			"alert-error": withOpacity("var(--alert-error)"),
+			"alert-error-10": withOpacity("var(--alert-error-10) "),
 
-      "alert-warning-100": "#FDD426",
-      "alert-warning-10": "#FFFBEA",
-      "alert-warning-10-o": "rgba(253, 212, 38, 0.1)",
-    },
+			"alert-warning": withOpacity("var(--alert-warning)"),
+			"alert-warning-10": withOpacity("var(--alert-warning-10) "),
 
-    spacing: {
-      0: "0",
-      1: "1px",
-      2: "0.125rem",
-      4: "0.25rem",
-      6: "0.375rem",
-      8: "0.5rem",
-      10: ".625rem",
-      12: "0.75rem",
-      14: "0.875rem",
-      16: "1rem",
-      20: "1.25rem",
-      24: "1.5rem",
-      28: "1.75rem",
-      32: "2rem",
-      40: "2.5rem",
-      48: "3rem",
-      56: "3.5rem",
-      64: "4rem",
-      72: "4.5rem",
-      80: "5rem",
-      96: "6rem",
-      120: "7.5rem",
-      160: "10rem",
-    },
+			"alert-success": withOpacity("var(--alert-success)"),
+			"alert-success-10": withOpacity("var(--alert-success-10) "),
 
-    lineHeight: {
-      100: "100%",
-      140: "140%",
-      150: "150%",
-    },
 
-    screens: {
-      min2xl: { min: "1441px" },
-      // => @media (max-width: 1535px) { ... }
-      "2xl": { max: "1441px" },
-      // => @media (max-width: 1535px) { ... }
+		},
 
-      xl: { max: "1367px" },
-      // => @media (max-width: 1279px) { ... }
+		spacing: {
+			0: "0",
+			1: "1px",
+			2: "0.125rem",
+			4: "0.25rem",
+			6: "0.375rem",
+			8: "0.5rem",
+			10: ".625rem",
+			12: "0.75rem",
+			14: "0.875rem",
+			16: "1rem",
+			20: "1.25rem",
+			24: "1.5rem",
+			28: "1.75rem",
+			32: "2rem",
+			40: "2.5rem",
+			48: "3rem",
+			56: "3.5rem",
+			64: "4rem",
+			72: "4.5rem",
+			80: "5rem",
+			96: "6rem",
+			120: "7.5rem",
+			160: "10rem",
+		},
 
-      lg: { max: "1281px" },
-      // => @media (max-width: 1023px) { ... }
+		lineHeight: {
+			100: "100%",
+			140: "140%",
+			150: "150%",
+		},
 
-      md2: { max: "1180px" },
-      // => @media (max-width: 767px) { ... }
+		screens: {
+			min2xl: { min: "1441px" },
+			// => @media (max-width: 1535px) { ... }
+			"2xl": { max: "1441px" },
+			// => @media (max-width: 1535px) { ... }
 
-      md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
+			xl: { max: "1367px" },
+			// => @media (max-width: 1279px) { ... }
 
-      sm: { max: "639px" },
-      // => @media (max-width: 639px) { ... }
-    },
+			lg: { max: "1281px" },
+			// => @media (max-width: 1023px) { ... }
 
-    extend: {
-      letterSpacing: {
-        tight: "-0.02em",
-      },
-      gridTemplateColumns: {
-        "grid-tabela-7": "minmax(200px, 260px) repeat(7, minmax(80px, 200px))",
-        "grid-tabela-2": "minmax(200px, 280px) 1fr",
-      },
+			md2: { max: "1180px" },
+			// => @media (max-width: 767px) { ... }
 
-      fontSize: {
-        "2xl": [
-          "1.5rem",
-          {
-            lineHeight: "150%",
-          },
-        ],
-        xl: [
-          "1.125rem",
-          {
-            lineHeight: "150%",
-          },
-        ],
-        base: [
-          "1rem",
-          {
-            lineHeight: "150%",
-          },
-        ],
-        sm: [
-          "0.875rem",
-          {
-            lineHeight: "150%",
-          },
-        ],
-        xs: [
-          ".75rem",
-          {
-            lineHeight: "150%",
-            letterSpacing: "0.03em",
-          },
-        ],
-        "xs-space": [
-          ".75rem",
-          {
-            lineHeight: "150%",
-            letterSpacing: "0.1em",
-          },
-        ],
-      },
+			md: { max: "767px" },
+			// => @media (max-width: 767px) { ... }
 
-      boxShadow: {
-        xs: "0px 1px 2px #CED4DA",
-        sm: "0px 1px 2px rgba(0, 0, 0, 0.06)",
-        regular: "0px 8px 16px rgba(204, 204, 204, 0.3)",
-        lg: "0px 24px 32px rgba(204, 204, 204, 0.25)",
-        blue: "0px 0px 0px 2px rgba(0, 73, 147, 0.2)",
-      },
-    },
-  },
-  plugins: [
-    plugin(function ({ addUtilities }) {
-      // prettier-ignore
-      addUtilities({ 
-        '.text-display': ({ theme }) => ({ fontSize: '4rem', lineHeight: '125%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'}),
-        '.text-title-1': { fontSize: '3rem', lineHeight: '125%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'},
-        '.text-title-2': { fontSize: '1.5rem', lineHeight: '138%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'},
-        '.text-title-3': { fontSize: '1.5rem', lineHeight: '133%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'},
-        '.text-title-4': { fontSize: '1.125rem', lineHeight: '144%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'},
-        '.text-title-5': { fontSize: '1rem', lineHeight: '150%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'DM Sans, sans-serif'},
-        
-        '.text-headline-1': { fontSize: '1.125rem', lineHeight: '144%', 'letterSpacing': '-0.02em', fontWeight: '500', fontFamily: 'Inter, sans-serif'},
-        '.text-headline-2': { fontSize: '1rem', lineHeight: '150%', 'letterSpacing': '-0.02em', fontWeight: '500', fontFamily: 'Inter, sans-serif'},
-        '.text-headline-3': { fontSize: '.875rem', lineHeight: '157%', 'letterSpacing': '-0.02em', fontWeight: '500', fontFamily: 'Inter, sans-serif'},
-        '.text-headline-4': { fontSize: '.75rem', lineHeight: '158%', 'letterSpacing': '-0.02em', fontWeight: '500', fontFamily: 'Inter, sans-serif'},
-        '.text-headline-5': { fontSize: '.625rem', lineHeight: '180%', 'letterSpacing': '-0.02em', fontWeight: '500', fontFamily: 'Inter, sans-serif'},
-        
-        '.text-paragraph-1': { fontSize: '1rem', lineHeight: '150%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'Inter, sans-serif'},
-        '.text-paragraph-2': { fontSize: '.875rem', lineHeight: '157%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'Inter, sans-serif'},
-        '.text-paragraph-3': { fontSize: '.75rem', lineHeight: '167%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'Inter, sans-serif'},
-        '.text-paragraph-4': { fontSize: '.625rem', lineHeight: '180%', 'letterSpacing': '-0.02em', fontWeight: '400', fontFamily: 'Inter, sans-serif'},
-        
-        '.text-caps-1': { fontSize: '1rem', lineHeight: '125%', 'letterSpacing': '0.04em', fontWeight: '600', fontFamily: 'Inter, sans-serif', textTransform:'uppercase'},
-        '.text-caps-2': { fontSize: '.75rem', lineHeight: '133%', 'letterSpacing': '0.04em', fontWeight: '600', fontFamily: 'Inter, sans-serif', textTransform:'uppercase'},
-        '.text-caps-3': { fontSize: '.625rem', lineHeight: '160%', 'letterSpacing': '0.04em', fontWeight: '600', fontFamily: 'Inter, sans-serif', textTransform:'uppercase'}
-        
-        
-    })
-    }),
-  ],
-  // plugins: [require("./static/src/css/base/typography.css")],
+			sm: { max: "639px" },
+			// => @media (max-width: 639px) { ... }
+		},
+
+		// Extendss 
+		extend: {
+			letterSpacing: {},
+			gridTemplateColumns: {},
+			borderRadius: {},
+			fontSize: {},
+			boxShadow: {},
+		},
+	},
+	plugins: [
+		plugin(function ({ addUtilities, theme }) {
+			// prettier-ignore
+			addUtilities({
+				'.text-display': { fontSize: '4rem', lineHeight: '5rem', 'letterSpacing': '-0.08rem', fontFamily: theme('fontFamily.sans') },
+
+				'.text-title-1': { fontSize: '3.5rem', lineHeight: '4rem', 'letterSpacing': '-0.07rem', fontFamily: theme('fontFamily.sans') },
+				'.text-title-2': { fontSize: '3rem', lineHeight: '4rem', 'letterSpacing': '-0.06rem', fontFamily: theme('fontFamily.sans') },
+				'.text-title-3': { fontSize: '2rem', lineHeight: '2.125rem', 'letterSpacing': '-0.04rem', fontFamily: theme('fontFamily.sans') },
+				'.text-title-4': { fontSize: '1.5rem', lineHeight: '2rem', 'letterSpacing': '-0.03rem', fontFamily: theme('fontFamily.sans') },
+
+				'.text-headline-1': { fontSize: '1.125rem', lineHeight: '1.625rem', 'letterSpacing': '-0.02rem', fontFamily: theme('fontFamily.sans') },
+				'.text-headline-2': { fontSize: '1rem', lineHeight: '1.5rem', 'letterSpacing': '-0.02rem', fontFamily: theme('fontFamily.sans') },
+				'.text-headline-3': { fontSize: '0.875rem', lineHeight: '1.375rem', 'letterSpacing': '-0.18rem', fontFamily: theme('fontFamily.sans') },
+				'.text-headline-4': { fontSize: '0.75rem', lineHeight: '1.25rem', 'letterSpacing': '-0.15rem', fontFamily: theme('fontFamily.sans') },
+				'.text-headline-5': { fontSize: '0.625rem', lineHeight: '1.25rem', 'letterSpacing': '-0.13rem', fontFamily: theme('fontFamily.sans') },
+
+				'.text-caps-1': { fontSize: '1rem', lineHeight: '1.375rem', 'letterSpacing': '-0.04rem', fontFamily: theme('fontFamily.sans') },
+				'.text-caps-2': { fontSize: '0.875rem', lineHeight: '1.375rem', 'letterSpacing': '-0.035rem', fontFamily: theme('fontFamily.sans') },
+				'.text-caps-3': { fontSize: '0.75rem', lineHeight: '1rem', 'letterSpacing': '-0.03rem', fontFamily: theme('fontFamily.sans') },
+				'.text-caps-4': { fontSize: '0.625rem', lineHeight: '1rem', 'letterSpacing': '-0.025rem', fontFamily: theme('fontFamily.sans') },
+
+
+			})
+		}),
+	],
+
 };
+
+function withOpacity(variableName) {
+	return ({ opacityValue }) => {
+		if (opacityValue !== undefined) {
+			return `rgba(var(${variableName}), ${opacityValue})`
+		}
+		return `rgb(var(${variableName}))`
+	}
+}
+

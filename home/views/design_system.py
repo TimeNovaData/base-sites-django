@@ -6,6 +6,6 @@ def design_system(request):
 
     return render(
         request,
-        "home/design_system.html",
+        "Design_system/Design_system.html",
         context,
     )

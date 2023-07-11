@@ -4,119 +4,50 @@
 {% get_site as site %}
 {% load django_vite %}
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
 	{% vite_hmr_client %}
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title>
-		{% block title %}
-			{{site.titulo_global}} | {{pagina.titulo}}
-		{% endblock %}
+		{% block title %} {{site.titulo_global}} | {{pagina.titulo}} {% endblock%}
 	</title>
 
-	{% block noindex %}
-		{% if not pagina.indexavel %}
-			<meta name="robots" content="noindex">
-			<meta name="googlebot" content="noindex">
-		{% endif %}
-	{% endblock %}
-
-	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content="{{site.dominio_oficial}}">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{site.titulo_global}}">
-	<meta property="og:description" content="{{site.descricao_global}}">
-	<meta property="og:image" content="{{site.logo.url}}">
-
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{{site.titulo_global}}">
-	<meta name="twitter:description" content="{{site.descricao_global}}">
-	<meta name="twitter:image" content="{{site.logo.url}}">
-
-	<meta property="og:title" content="{{site.titulo_global}}" />
-	<meta property="og:description" content="{{pagina.custom_description}}" />
-	<meta property="og:image" content="{{site.logo.url}}" />
-
-	<!-- description -->
-	<meta itemprop="description" content="{{site.descricao_global}}">
-	<meta itemprop="image" content="{{site.logo.url}}">
-	<link rel="icon" type="image/x-icon" href="{{site.favicon.url}}">
+	{% include 'meta_tags.html' %}
 
 	<!-- FONT -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
-		rel="stylesheet">
-
-	<!-- meta tag facebook -->
-	{{meta_tag_facebook|safe}}
-	<!-- meta tag google -->
-	{{meta_tag_google|safe}}
-	{{site.meta_tag_google|safe}}
-
-	<style type="text/css">
-		{{site.css_global|safe}}
-		{{ pagina.css_adicional|safe }}
-	</style>
-
-
+		rel="stylesheet" />
 
 	<!-- GLOBAL -->
 	{% vite_asset 'src/js/utils/GLOBAL.js' type='text/javascript' %}
 
-	<script>
-		GLOBAL.context.csrf = '{{ csrf_token }}'
-	</script>
-
 	<!-- CSS -->
 	{% vite_asset 'src/index.js' %}
 
+	{% block extra_styles %} <!--  --> {% endblock %}
 
-	{% block extra_styles_vendor %}
-	{% endblock %}
-
-
-	{% block extra_styles %}
-	{% endblock %}
-
+	<!-- CSS ADICIONAL ADMIN -->
+	{% include 'adicionais/css.html' %}
+	<!-- CONTEXTO GLOBAL Django para Javascript -->
+	{% include 'adicionais/context.html' %}
 </head>
 
-<body style="opacity: 0;" class="{% block body_class %} {% endblock %}">
-	<div id="app">
-		{% include 'svg_defs.html' %}
-		{% include "menus/menu_principal.html" %}
+<body style="opacity: 0" class="{% block body_class %} {% endblock %}">
+
+	{% include 'svg_defs.html' %}
+	{% include "menus/menu_principal.html" %}
 
 
-		<div class="container-main">
-			{% block content %}
-			<!--  -->
-			{% endblock %}
+	{% block content %} <!-- content --> {% endblock %}
 
-		</div>
-	</div>
-
-	{% block extra_js %}
-	<!--  -->
-	{% endblock %}
-
-
-	<script>
-		{{ site.js_global | safe }}
-		{{ pagina.js_adicional | safe }}
-	</script>
-
-
+	<!-- JS ADICIONAL ADMIN -->
+	{% include 'adicionais/js.html' %}
 	<!-- MAIN -->
 	{% vite_asset 'src/js/main.js'%}
-
 
 </body>
 

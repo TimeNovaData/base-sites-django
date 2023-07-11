@@ -6,3 +6,4 @@ node_modules
 Zone.Identifier
 *Zone.Identifier
 dev.sh
+db.sqlite3

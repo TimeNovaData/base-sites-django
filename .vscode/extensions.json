@@ -9,6 +9,10 @@
         "editorconfig.editorconfig",
         "vunguyentuan.vscode-postcss",
         "cipchk.cssrem",
-        "mrmlnc.vscode-stylefmt"
+        "bradlc.vscode-tailwindcss",
+        "heybourn.headwind",
+        "formulahendry.auto-rename-tag",
+        "stivo.tailwind-fold",
+        "naumovs.color-highlight"
     ]
 }
