@@ -13,6 +13,7 @@
         "heybourn.headwind",
         "formulahendry.auto-rename-tag",
         "stivo.tailwind-fold",
-        "naumovs.color-highlight"
+        "naumovs.color-highlight",
+        "eamodio.gitlens"
     ]
 }

@@ -1,4 +1,5 @@
 
+// https://bluzky.github.io/nice-select2/
 // utility functions
 function triggerClick(el) {
 	var event = new Event("click");
@@ -92,9 +93,11 @@ export default function NiceSelect(element, options) {
 
 NiceSelect.prototype.create = function () {
 	this.el.style.opacity = "0";
-	this.el.style.width = "0";
+	this.el.style.width = "1px";
 	this.el.style.padding = "0";
-	this.el.style.height = "0";
+	this.el.style.marginLeft = "-1px";
+	this.el.style.height = "1px";
+
 	if (this.data) {
 		this.processData(this.data);
 	} else {
@@ -140,6 +143,7 @@ NiceSelect.prototype.extractData = function () {
 				disabled: item.getAttribute("disabled") != null
 			};
 		}
+
 
 		var attributes = {
 			selected: item.selected,
@@ -204,8 +208,8 @@ NiceSelect.prototype._renderSelectedItems = function () {
 
 		this.dropdown.querySelector(".multiple-options").innerHTML = selectedHtml;
 	} else {
+		console.log(this.selectedOptions)
 		var html = this.selectedOptions.length > 0 ? this.selectedOptions[0].data.text : this.placeholder;
-
 		this.dropdown.querySelector(".current").innerHTML = html;
 	}
 };

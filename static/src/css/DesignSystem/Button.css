@@ -13,9 +13,9 @@
 		background: rgb(var(--primary-pure-70));
 	}
 
-	&:active {
-		transform: scale(0.92);
-	}
+	/* &:active {
+		background: rgb(var(--primary-pure-70));
+	} */
 
 	&[size='sm'] {
 		padding: 0.5rem 1rem;

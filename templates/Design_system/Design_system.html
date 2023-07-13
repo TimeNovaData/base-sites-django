@@ -23,38 +23,72 @@
 			<div class="flex flex-col gap-8 px-16 pt-40">
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Button">Button</a>
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Accordion">Accordion</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Selects">Selects</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Header">Header</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Input">Input</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Card">Card</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Tooltip">Tooltip</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Carrousel">Carrousel</a>
 			</div>
 		</aside>
 
 
 
 		<div class="container h-[4000px] overflow-y-auto  pt-40">
+
 			<section id="Button" class="pt-72">
 				{% include './parts/title.html' with text='Button' %}
-				<div class="flex gap-16 flex-wrap">
-					{% include './Button.html' %}
-				</div>
-
-
-				<select class="" multiple>
-					<option value="1">Some option</option>
-					<option value="2">Another option</option>
-					<option value="3" disabled>A disabled option</option>
-					<option value="4">Potato</option>
-				</select>
-				<img src="{% vite_asset_url 'img/hilda.webp' %}">
-
-
+				{% include './Button.html' %}
 			</section>
-
-
 
 
 			<section id="Accordion" class="pt-72">
-
 				{% include './parts/title.html' with text='Accordion' %}
 				{% include './Accordion.html' %}
 			</section>
+
+			<section id="Selects" class="pt-72">
+				{% include './parts/title.html' with text='Selects' %}
+				<div class="flex gap-16 flex-wrap">
+					{% include './Select.html' %}
+				</div>
+			</section>
+
+			<section id="Header" class="pt-72">
+				{% include './parts/title.html' with text='Header' %}
+				{% include './Header.html' %}
+			</section>
+
+			<section id="Input" class="pt-72">
+				{% include './parts/title.html' with text='Input' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Input.html' %}
+				</div>
+			</section>
+
+			<section id="Card" class="pt-72">
+				{% include './parts/title.html' with text='Card' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Card.html' %}
+				</div>
+			</section>
+
+
+			<section id="Tooltip" class="pt-72">
+				{% include './parts/title.html' with text='Tooltip' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Tooltip.html' %}
+				</div>
+			</section>
+
+			<section id="Carrousel" class="pt-72">
+				{% include './parts/title.html' with text='Carrousel' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Carrousel.html' %}
+				</div>
+			</section>
+
+
 
 		</div>
 
