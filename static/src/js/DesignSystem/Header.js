@@ -4,7 +4,6 @@ export default function (props) {
 
 	// Defaults
 	const opts = {
-		reduceHeight: true,
 		selector: '[js-header]',
 		fixedOnScrool: false,
 		animateOnFixed: true,
@@ -20,7 +19,7 @@ export default function (props) {
 	function onScroll() {
 		window.addEventListener('scroll', (e) => {
 			const point = window.scrollY > opts.topReduce
-			
+
 			if (opts.fixedOnScrool) fixed(point, opts.animateOnFixed)
 			if (opts.reduce) reduce(point)
 

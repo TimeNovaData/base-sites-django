@@ -11,5 +11,13 @@ export default (opts) => ({
 	Selects: Select(),
 	// Header2: Header({ selector: '[js-header="2"]', fixedOnScrool: true }).init(),
 
+
+
+
+
+
+
+	//Examples
+	HeaderExample: Header({ selector: '[js-header="example"]', fixed: false, reduce: false }).init(),
 	...opts,
 })

@@ -1,0 +1,4 @@
+.Card {
+	border: 1px solid rgb(var(--neutral-30));
+	border-radius: var(--border-default);
+}

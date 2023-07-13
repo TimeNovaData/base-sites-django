@@ -10,14 +10,14 @@
 
 {% block content %}
 
-<main id="Home"> 
-  <h1 >Aqui é a sua home</h1>
+<main id="Home">
+	<h1>Aqui é a sua home</h1>
 
-  <h1 >Depoimentos</h1>
+	<h1>Depoimentos</h1>
 
-  {% for item in pagina.depoimento_set.all %}
-    {{item}}
-  {% endfor %}
+	{% for item in pagina.depoimento_set.all %}
+	{{item}}
+	{% endfor %}
 
 </main>
 {% endblock %}
