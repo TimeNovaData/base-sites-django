@@ -27,6 +27,8 @@
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Header">Header</a>
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Input">Input</a>
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Card">Card</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Tooltip">Tooltip</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Carrousel">Carrousel</a>
 			</div>
 		</aside>
 
@@ -71,7 +73,22 @@
 				</div>
 			</section>
 
-		
+
+			<section id="Tooltip" class="pt-72">
+				{% include './parts/title.html' with text='Tooltip' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Tooltip.html' %}
+				</div>
+			</section>
+
+			<section id="Carrousel" class="pt-72">
+				{% include './parts/title.html' with text='Carrousel' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Carrousel.html' %}
+				</div>
+			</section>
+
+
 
 		</div>
 

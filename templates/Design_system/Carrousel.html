@@ -1,0 +1,32 @@
+{% load django_vite %}
+
+<!-- 
+	https://swiperjs.com/element#usage
+	
+	Aqui uma forma simples de usar o Swiper pelo webComponents
+	as props vao direto no swiper container,
+	a forma de inicio antiga tambem é valida
+
+ -->
+
+<swiper-container slides-per-view="auto" space-between="8px" class="max-w-[660px]" navigation="true" pagination="true">
+	<swiper-slide class="w-[300px] h-[300px]">
+		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+	</swiper-slide>
+
+	<swiper-slide class="w-[300px] h-[300px]">
+		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+	</swiper-slide>
+
+	<swiper-slide class="w-[300px] h-[300px]">
+		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+	</swiper-slide>
+	<swiper-slide class="w-[300px] h-[300px]">
+		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+	</swiper-slide>
+	<swiper-slide class="w-[300px] h-[300px]">
+		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+	</swiper-slide>
+
+
+</swiper-container>
