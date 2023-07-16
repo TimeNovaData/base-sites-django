@@ -37,14 +37,14 @@ module.exports = {
 			'primary-pure-70': withOpacity('--primary-pure-70'),
 			'primary-dark': withOpacity('--primary-dark'),
 			// alerts
-			'alert-error': withOpacity('var(--alert-error)'),
-			'alert-error-10': withOpacity('var(--alert-error-10) '),
+			'alert-error': withOpacity('--alert-error'),
+			'alert-error-10': withOpacity('--alert-error-10'),
 
-			'alert-warning': withOpacity('var(--alert-warning)'),
-			'alert-warning-10': withOpacity('var(--alert-warning-10) '),
+			'alert-warning': withOpacity('--alert-warning'),
+			'alert-warning-10': withOpacity('--alert-warning-10'),
 
-			'alert-success': withOpacity('var(--alert-success)'),
-			'alert-success-10': withOpacity('var(--alert-success-10) '),
+			'alert-success': withOpacity('--alert-success'),
+			'alert-success-10': withOpacity('--alert-success-10'),
 		},
 
 		spacing: {

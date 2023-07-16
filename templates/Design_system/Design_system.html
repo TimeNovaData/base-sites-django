@@ -29,6 +29,7 @@
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Card">Card</a>
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Tooltip">Tooltip</a>
 				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Carrousel">Carrousel</a>
+				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Modal">Modal</a>
 			</div>
 		</aside>
 
@@ -85,6 +86,13 @@
 				{% include './parts/title.html' with text='Carrousel' %}
 				<div class="flex items-center gap-8 flex-wrap">
 					{% include './Carrousel.html' %}
+				</div>
+			</section>
+
+			<section id="Modal" class="pt-72">
+				{% include './parts/title.html' with text='Modal' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Modal.html' %}
 				</div>
 			</section>
 

@@ -7,55 +7,18 @@
 {% block content %}
 
 <div>
-	<p class="text-title-4 border-b border-b-neutral-100/30  mt-24">About us 2</p>
+	<!-- ABOUT US  -->
+	{% include './about_us/about_us2.html' %}
 
-	<!-- ABOUT US 2 -->
-	<section class="h-screen w-full md:h-auto min-h-[500px]">
 
-		<div class="grid grid-cols-2 h-full md:flex md:flex-col-reverse">
 
-			<article class="grid place-items-center">
-
-				<div class="flex flex-col  max-w-[30.5rem] p-24 ">
-					<span class="text-caps-2 inline-flex gap-8 text-primary-pure font-semibold items-center ">
-						<ion-icon name="skull-outline" class="text-lg"></ion-icon>
-						<p>badge</p>
-					</span>
-					<h1 class="text-title-2 mb-16">Section title</h1>
-					<p class="text-paragraph-2 mt-24">Lorem ipsum dolor sit amet consectetur. Orci viverra pretium rutrum
-						volutpat.
-						Eleifend vitae adipiscing urna
-						lacus amet semper nunc. Orci congue mattis sed semper. Odio cursus consectetur morbi duis platea porta
-						turpis.
-					</p>
-					<p class="text-paragraph-2 mt-24">Lorem ipsum dolor sit amet consectetur. Orci viverra pretium rutrum
-						volutpat.
-						Eleifend vitae adipiscing urna
-						lacus amet semper nunc. Orci congue mattis sed semper. Odio cursus consectetur morbi duis platea porta
-						turpis.
-					</p>
-					<span class="inline-flex gap-8 text-primary-pure mt-32 items-center cursor-pointer group">
-						<p class="text-paragraph-2">Conheça nossa empresa</p>
-						<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6"></ion-icon>
-					</span>
-				</div>
-			</article>
-
-			<div class="w-full h-screen md:h-[375px]">
-				<img class="object-cover h-full w-full" src="{% vite_asset_url 'img/placeholder.png' %}" alt="">
-
-			</div>
-
-		</div>
-
-	</section>
-
-	{% include './faq/secoes-faq1.html' %}
-	{% include './faq/secoes-faq2.html' %}
-	{% include './faq/secoes-faq3.html' %}
-	{% include './faq/secoes-faq4.html' %}
-	{% include './faq/secoes-faq5.html' %}
-	{% include './faq/secoes-faq6.html' %}
+	<!-- FAQ -->
+	{% include './faq/faq1.html' %}
+	{% include './faq/faq2.html' %}
+	{% include './faq/faq3.html' %}
+	{% include './faq/faq4.html' %}
+	{% include './faq/faq5.html' %}
+	{% include './faq/faq6.html' %}
 
 </div>
 <!------------------------------------------>

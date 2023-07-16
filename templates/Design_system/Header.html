@@ -11,16 +11,20 @@ css: "static/src/css/DesignSystem/Header.css"
 <header js-header="1" js-header-fixed="true"
 	class="h-72	 flex w-full bg-white border-b h-70 border-b-neutral-10 [--height-fixed:3.5rem] items-center z-50 shadow-sm">
 	<div class="container flex items-center py-12">
-		<a href="/" class="block h-full w-max">
+
+		<a href="/" class="flex items-end h-full w-max">
 			<img class="object-contain w-auto h-32 logo  [--logo-height-fixed:1.5rem] transition-[height]"
 				src="{% vite_asset_url 'img/logo.svg' %}" alt="logo">
 		</a>
+
 		<span class="flex-1"></span>
+		
 		<ul class="flex items-center gap-8">
 			<li><a href="#">item</a></li>
 			<li><a href="#">item</a></li>
 			<li><a href="#">item</a></li>
 		</ul>
+
 	</div>
 </header>
 

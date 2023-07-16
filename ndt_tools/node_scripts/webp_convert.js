@@ -91,20 +91,21 @@ function imgCallback(webpPath, original, { largura, altura, resized }) {
 
 			tamanhoConvertidoTotal += tamanhoConvertido;
 
-			const tf = formatarBytes(tamanhoConvertido)
+			const tf = formatarBytes(tamanhoConvertido);
 
 			function valorMaiorQue600kb(bytes) {
 				const tamanhoEmKb = bytes / 1024;
 				return tamanhoEmKb > 600;
 			}
 
-			const finalColor = () => valorMaiorQue600kb(tamanhoConvertido) ? `\x1b[35m ${formatarBytes(tamanhoConvertido)}` : `${formatarBytes(tamanhoConvertido)}`
+			const finalColor = () => valorMaiorQue600kb(tamanhoConvertido) ? `\x1b[35m ${formatarBytes(tamanhoConvertido)}` : `${formatarBytes(tamanhoConvertido)}`;
 
 			const total = formatarBytes(tamanhoConvertido - original);
+			const percentage = ((tamanhoConvertido - original) / original) * 100;
 			console.log("\x1b[33m", `✅ ${webpPath.replace('static/public/img/', '')} ${resized ? `\x1b[90m(resized: ${largura} x ${altura})` : ""}`);
 			console.log(`\x1b[90m ${formatarBytes(original)}  ➡️  ${finalColor()}`);
-			console.log(total.includes('-') ? '\x1b[32m' : "\x1b[31m", `${total.includes('-') ? total : '+' + total} 			
-			`);
+			console.log(total.includes('-') ? '\x1b[32m' : "\x1b[31m", `${total.includes('-') ? total : '+' + total}   ${percentage >= 0 ? `+${percentage.toFixed(2)}%` : `${percentage.toFixed(2)}%`}`);
+			console.log(``);
 
 		}
 	};

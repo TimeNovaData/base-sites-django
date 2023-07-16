@@ -1,5 +1,3 @@
-
-[somenteTeste] {
-	opacity: 1;
+.safe-text {
+	word-break: break-word;
 }
-

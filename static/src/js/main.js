@@ -9,10 +9,10 @@ import { register } from 'swiper/element/bundle';
 
 // Init
 GLOBAL.DesignSystem = DesignSystem({})
-register()
+register() // Swiper Web Component 
 
 // Config
-axiosConfig({ csrf: GLOBAL.context }, axios)
+axiosConfig({ csrf: GLOBAL.context?.csrf }, axios)
 UseMouseOrKeyboard()
 
 // Pages
@@ -25,7 +25,9 @@ PageHome()
 
 
 
-console.log({ GLOBAL })
-console.log(import.meta.env)
+if (import.meta.env.DEV) {
+	console.log('\x1b[33mGLOBAL\n', GLOBAL)
+}
+
 
 

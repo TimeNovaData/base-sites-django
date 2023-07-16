@@ -67,6 +67,7 @@ MIDDLEWARE = [
 ]
 
 DEV = config("DEV", default=False, cast=bool)
+
 # if DEV:
 #     MIDDLEWARE += [
 #         "django_browser_reload.middleware.BrowserReloadMiddleware",
