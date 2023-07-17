@@ -33,4 +33,17 @@
 			height: 3.5rem;
 		}
 	}
+
+	&.secondary {
+		background: rgba(var(--primary-pure), 0.1);
+		color: rgb(var(--primary-pure));
+		border: 1px solid rgb(var(--primary-pure));
+		width: 100%;
+		display: grid;
+		place-items: center;
+
+		&:hover {
+			background: rgba(var(--primary-pure), 0.2);
+		}
+	}
 }
