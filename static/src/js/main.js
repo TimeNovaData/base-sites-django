@@ -1,5 +1,5 @@
-import axios from "axios";
-import axiosConfig from "./modules/axiosConfig";
+import axios from 'axios'
+import axiosConfig from './modules/axiosConfig'
 import PageHome from './pages/Home.js'
 import PageLogin from "./pages/Login";
 import UseMouseOrKeyboard from "./modules/UseMouseOrKeyboard";
@@ -10,13 +10,13 @@ import ripple from "./modules/ripple";
 import formErros from "./modules/formErros";
 import animaAoScroll from "./animation/animaAoScroll";
 import animateSetup from "./animation/animateSetup";
-
+import showCardContent from './modules/showCardContent'
 
 // import SvgUse from "./utils/SvgUse";
 
 // Init
 GLOBAL.DesignSystem = DesignSystem({})
-register() // Swiper Web Component 
+register() // Swiper Web Component
 
 // Config
 axiosConfig({ csrf: GLOBAL.context?.csrf }, axios)
@@ -25,6 +25,8 @@ ripple()
 formErros()
 animateSetup()
 animaAoScroll()
+
+showCardContent()
 
 // Pages
 PageHome()
@@ -36,9 +38,6 @@ PageLogin()?.init()
 
 
 
-
 // utils logs
 logs()
-
-
 

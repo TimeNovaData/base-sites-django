@@ -9,7 +9,7 @@
 		border-radius: 4px;
 		color: white;
 		background: rgb(var(--primary-pure));
-		
+
 		&:hover {
 			background: rgb(var(--primary-pure-70));
 		}
@@ -21,6 +21,18 @@
 
 			&:hover {
 				background: rgba(var(--primary-pure), 0.2);
+			}
+		}
+
+		.tertiary,
+		[tertiary] {
+			display: grid;
+			place-items: center;
+			background: white;
+			color: rgb(var(--primary-pure));
+
+			&:hover {
+				background: rgba(var(--primary-pure), 0.1);
 			}
 		}
 
