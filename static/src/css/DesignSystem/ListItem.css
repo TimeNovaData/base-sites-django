@@ -1,0 +1,16 @@
+@layer components {
+	.ListItem {
+		padding: 1rem;
+		transition: 0.3s ease;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		flex-wrap: nowrap;
+		user-select: none;
+		&:hover {
+			background: rgba(var(--primary-pure), 0.1);
+			color: rgba(var(--primary-pure), 1);
+		}
+	}
+}

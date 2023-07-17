@@ -1,11 +1,12 @@
 body {
 	--scrolbar-width: 8px;
-		overflow-x: hidden;
+	overflow-x: hidden;
+	scroll-behavior: inherit;
 
 	&.DOMContentLoaded {
 		opacity: 1 !important;
 	}
-	scroll-behavior: inherit;
+
 	// Scrollbar
 	&::-webkit-scrollbar-track {
 		background-color: transparent;
@@ -22,9 +23,8 @@ body {
 	* {
 		outline: none;
 	}
-
+	
 	&:not(.using-mouse) {
-
 		*:focus-visible {
 			outline-width: 2px;
 			outline-style: dashed;

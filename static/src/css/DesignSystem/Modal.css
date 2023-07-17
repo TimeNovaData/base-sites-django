@@ -1,4 +1,11 @@
+// Inicio do modal logo abaixo
+
 @define-mixin Modal $ID_MODAL {
+	body.$(ID_MODAL)-open {
+		margin-right: calc(var(--scrolbar-width) + 6px);
+		overflow: hidden;
+	}
+
 	[js-modal='$(ID_MODAL)'] {
 		--zindex-deep: 900;
 		--bg-modal: white;
@@ -26,13 +33,17 @@
 		transform: translateZ(0);
 
 		//
-		border-radius: 4px;
+		border-radius: var(--border-default, 4px);
 		box-shadow: rgb(0 0 0 / 10%) 0px 10px 60px;
 
 		//
 		&[data-position='center'] {
+			transform: translateY(30vh);
 			inset: 0;
 			margin: auto;
+			&.active {
+				transform: translateY(0);
+			}
 		}
 
 		// POSITIONS
@@ -116,8 +127,8 @@
 		top: 0;
 		overflow: hidden;
 		// z-index: -999999;
-		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
-			visibility 0.3s ease-in-out, background 0.2s ease-in-out;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+			background 0.2s ease-in-out;
 		pointer-events: none;
 		visibility: hidden;
 		position: fixed;
@@ -155,12 +166,6 @@
 
 	[js-modal='$(ID_MODAL)'] {
 		@mixin-content;
-	}
-
-	body.$(ID_MODAL)-open {
-		margin-right: calc(var(--scrolbar-width) + 6px);
-
-		overflow: hidden;
 	}
 }
 

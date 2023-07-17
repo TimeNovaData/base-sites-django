@@ -1,4 +1,4 @@
-import { findAll } from "../utils/utils";
+import { findAll } from "utils/dom";
 import modalX from "../vendor/modalX";
 
 
@@ -12,15 +12,17 @@ export default function () {
 		const opts = {
 			zIndex: 90,
 			zIndexDeep: 80,
-			// onOpen: () => console.log('abriu'),
+			// deep: true,
+			// bgModal: null,
+			// observer: false,  // To add mutatiom observer in modal
+			// onOpen: () => null, 
+			// onClose: () => null,
 			...props
 		}
 
 
 		const instance = modalX(idModal, opts).init()
-
 		modal.instance = instance
-
 		return instance
 	})
 

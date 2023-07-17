@@ -28,7 +28,7 @@ close
 	Open Modal Right
 </button>
 
-
+<!-- MODAL CENTER -->
 <dialog js-modal="modal-default" data-position='center'>
 	<!-- CONTEUDO 1 -->
 	<section js-modal-content data-id="@idDaSection" class="min-h-[400px] w-[500px] flex flex-col max-h-screen">
@@ -42,16 +42,16 @@ close
 
 		<div class="mt-auto mx-auto p-16">
 			<!-- CLOSE : Usando a instance inserida no proprio element  -->
-			<button class="Button" size="sm"
+			<button class="Button" size="md"
 				onclick="document.querySelector(`[js-modal='modal-default']`).instance.closeModal()">close
 			</button>
 
 			<!-- CLOSE  : Por data attributo  	-->
-			<button class="Button" size="sm" data-xclose="modal-default">close
+			<button class="Button" size="md" data-xclose="modal-default">close
 			</button>
 
 			<!-- Proximo Conteudo -->
-			<button class="Button" size="sm" data-xopen="modal-default" data-id="@idDaSection2">Proximo Conteudo
+			<button class="Button" size="md" data-xopen="modal-default" data-id="@idDaSection2">Proximo Conteudo
 			</button>
 		</div>
 
@@ -62,11 +62,12 @@ close
 		<img class="w-full h-[200px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
 
 		<article class="mx-auto p-24  text-center flex-1 overflow-y-auto  text-paragraph-1 safe-text">
+			<p class="text-title-3 mb-40">A existência pulsante</p>
 			{% include './parts/conteudo_enorme.html' %}
 		</article>
 
 		<div class="mt-auto mx-auto p-16">
-			<button class="Button" size="sm" data-xopen="modal-default" data-id="@idDaSection">Conteudo Anterior
+			<button class="Button" size="md" data-xopen="modal-default" data-id="@idDaSection">Conteudo Anterior
 			</button>
 
 		</div>
@@ -76,8 +77,8 @@ close
 
 
 
-<!--  -->
-<dialog js-modal="modal-right" data-position='right'>
+<!-- MODAL RIGHT  -->
+<dialog js-modal="modal-right" data-position='right' js-props='{"deep":false}'>
 	<!-- CONTEUDO 1 -->
 	<section js-modal-content data-id="@idDaSection" class="h-screen w-[500px] flex flex-col">
 		<img class="w-full h-[250px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
@@ -89,17 +90,16 @@ close
 		</article>
 
 		<div class="mt-auto mx-auto p-16">
-			<button class="Button" size="sm" data-xclose="modal-right">close
+			<button class="Button" size="md" data-xclose="modal-right">close
 			</button>
 
-			<button class="Button" size="sm" data-xopen="modal-right" data-id="@idDaSection2">Modal left 2
+			<button class="Button" size="md" data-xopen="modal-right" data-id="@idDaSection2">Modal left 2
 			</button>
 		</div>
-
 	</section>
 
 	<!-- CONTEUDO 2 -->
-	<section js-modal-content data-id="@idDaSection2" class="h-screen w-[620px] flex flex-col">
+	<section js-modal-content data-id="@idDaSection2" class="h-screen w-[620px] flex flex-col" >
 		<img class="w-full h-[250px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
 		<!-- <div class="mt-auto mx-auto p-16 flex flex-col"> -->
 		<article class="flex-1 overflow-y-auto p-40 text-paragraph-1 safe-text">
@@ -108,8 +108,10 @@ close
 
 		</article>
 
-		<div class="flex p-20 justify-start">
-			<button class="Button" size="sm" data-xopen="modal-right" data-id="@idDaSection">Conteudo Anterior
+		<div class="flex p-20 gap-8 justify-start">
+			<button class="Button" size="md" data-xclose="modal-right">close
+			</button>
+			<button class="Button" size="md" data-xopen="modal-right" data-id="@idDaSection">Conteudo Anterior
 			</button>
 		</div>
 

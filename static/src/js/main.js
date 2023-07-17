@@ -4,6 +4,8 @@ import PageHome from './pages/Home.js'
 import UseMouseOrKeyboard from "./modules/UseMouseOrKeyboard";
 import DesignSystem from "./DesignSystem/DesignSystem";
 import { register } from 'swiper/element/bundle';
+import logs from "./utils/logs";
+import ripple from "./modules/ripple";
 
 // import SvgUse from "./utils/SvgUse";
 
@@ -14,6 +16,9 @@ register() // Swiper Web Component
 // Config
 axiosConfig({ csrf: GLOBAL.context?.csrf }, axios)
 UseMouseOrKeyboard()
+ripple()
+
+
 
 // Pages
 PageHome()
@@ -25,9 +30,8 @@ PageHome()
 
 
 
-if (import.meta.env.DEV) {
-	console.log('\x1b[33mGLOBAL\n', GLOBAL)
-}
+// utils logs
+logs()
 
 
 

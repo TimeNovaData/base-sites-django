@@ -10,7 +10,7 @@ precisamos colocar uma option
 	
 -->
 
-<select required>
+<select required js-select>
 	<option value="" disabled selected>Selecione</option>
 	<option value="1">Select default</option>
 	<option value="2">Another option</option>
@@ -19,14 +19,14 @@ precisamos colocar uma option
 </select>
 
 
-<select multiple class="!h-48">
+<select multiple class="!h-48" js-select>
 	<option value="1">Some option</option>
 	<option value="2">Another option</option>
 	<option value="3" disabled>A disabled option</option>
 	<option value="4">Potato</option>
 </select>
 
-<select multiple class="!h-56" js-props='{"placeholder": "Placeholder Multiple"}'>
+<select multiple class="!h-56" js-props='{"placeholder": "Placeholder Multiple"}' js-select>
 	<option value="1">Some option</option>
 	<option value="2">Another option</option>
 	<option value="3" disabled>A disabled option</option>

@@ -104,7 +104,7 @@ function imgCallback(webpPath, original, { largura, altura, resized }) {
 			const percentage = ((tamanhoConvertido - original) / original) * 100;
 			console.log("\x1b[33m", `✅ ${webpPath.replace('static/public/img/', '')} ${resized ? `\x1b[90m(resized: ${largura} x ${altura})` : ""}`);
 			console.log(`\x1b[90m ${formatarBytes(original)}  ➡️  ${finalColor()}`);
-			console.log(total.includes('-') ? '\x1b[32m' : "\x1b[31m", `${total.includes('-') ? total : '+' + total}   ${percentage >= 0 ? `+${percentage.toFixed(2)}%` : `${percentage.toFixed(2)}%`}`);
+			console.log(total.includes('-') ? '\x1b[32m' : "\x1b[31m", `${total.includes('-') ? total : '+' + total}${percentage >= 0 ? `  ↑  +${percentage.toFixed(2)}%` : ` ↓  ${percentage.toFixed(2)}%`}`);
 			console.log(``);
 
 		}

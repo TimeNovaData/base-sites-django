@@ -17,7 +17,7 @@
 
 		&:active,
 		&:focus-within {
-			border: 1px solid rgb(var(--neutral-100), 0.4);
+			border: 1px solid rgb(var(--primary-pure), 1);
 		}
 
 		textarea {
