@@ -3,6 +3,9 @@
 {% load humanize %}
 {% load django_vite %}
 
+{% block title %}
+{{site.titulo_global}} | Seções
+{% endblock %}
 
 {% block content %}
 
@@ -19,6 +22,12 @@
 	{% include './faq/faq4.html' %}
 	{% include './faq/faq5.html' %}
 	{% include './faq/faq6.html' %}
+
+
+	<!-- SERVICES -->
+	{% include './services/services2.html' %}
+	{% include './services/services6.html' %}
+	{% include './services/services7.html' %}
 
 </div>
 <!------------------------------------------>
