@@ -31,6 +31,7 @@
 				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Dropdown">Dropdown</a>
 				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Carrousel">Carrousel</a>
 				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Modal">Modal</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Checkbox">Checkbox</a>
 			</div>
 		</aside>
 
@@ -88,6 +89,13 @@
 				{% include './parts/title.html' with text='Dropdown' %}
 				<div class="flex items-center gap-8 flex-wrap">
 					{% include './Dropdown.html' %}
+				</div>
+			</section>
+
+			<section id="Checkbox" class="pt-72">
+				{% include './parts/title.html' with text='Checkbox' %}
+				<div class="flex items-end gap-8 flex-wrap">
+					{% include './Checkbox.html' %}
 				</div>
 			</section>
 

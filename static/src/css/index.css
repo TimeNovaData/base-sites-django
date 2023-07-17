@@ -12,6 +12,9 @@
 @import './DesignSystem/Modal.css';
 @import './DesignSystem/Dropdown.css';
 @import './DesignSystem/ListItem.css';
+@import './DesignSystem/Checkbox.css';
+@import './DesignSystem/Label.css';
+@import './DesignSystem/Error.css';
 //
 @import './vendor/nice-select2.css';
 //

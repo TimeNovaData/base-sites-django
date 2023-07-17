@@ -10,76 +10,83 @@
 {% endblock %}
 
 {% block content %}
-<form method="post" action="" id="login" class="h-screen">
-	{% csrf_token %}
-	<div class="flex flex-col justify-center p-[3.75rem] md:p-0">
-		<div
-			class="orn-sections relative z-[-1] flex justify-center max-w-[112.5rem] h-[24.625rem] rounded-[190px] bg-primary-pure md:max-w-full md:rounded-b-2xl md:rounded-none">
-			<div class="logo-cliente absolute top-72">
-				<img class="h-32 mx-auto md:h-24" src="{% vite_asset_url 'img/logo_brand.webp' %}" alt="">
-			</div>
-			<picture>
-				<source srcset="{% static 'front_assets/src/assets/img/' %}ornamento-mobile.webp" media="(max-width: 600px)">
-				<img src="{% static 'front_assets/src/assets/img/' %}ornamento-desktop.webp" alt="">
-			</picture>
-		</div>
-
-		<!--login-->
-		<div
-			class="Card py-32 px-24 rounded-lg form-wrapper w-fit -mt-[12.9375rem] border mx-auto max-w-[428px] bg-white sm:mx-24">
-			<div class="content flex flex-col gap-8">
-				<h2 class="text-title-4">Fazer login</h2>
-				<p class="description text-neutral-70">
-					Seja bem-vindo(a)! Insira seu e-mail e senha para entrar em sua conta.
-				</p>
+<main id="page-login">
+	<form method="post" action="" class="min-h-screen" autofocus>
+		{% csrf_token %}
+		<div class="flex flex-col justify-center p-[3.75rem] md:p-0 xl:p-16">
+			<div
+				class="orn-sections relative z-[-1] flex justify-center max-w-[112.5rem] h-[24.625rem] rounded-[190px] bg-primary-pure md:max-w-full md:rounded-b-2xl md:rounded-none xl:h-[20rem] pointer-events-none">
+				<div class="logo-cliente absolute top-72 xl:top-48" js-anima data-anima="down" data-duration="0.7">
+					<img class="h-32 mx-auto md:h-24 " src="{% vite_asset_url 'img/logo_brand.webp' %}" alt="">
+				</div>
+				<picture>
+					<source srcset="{% static 'front_assets/src/assets/img/' %}ornamento-mobile.webp" media="(max-width: 600px)">
+					<img src="{% static 'front_assets/src/assets/img/' %}ornamento-desktop.webp" alt="">
+				</picture>
 			</div>
 
-			<div class="inputs-wrapper mt-32 mx-auto">
-				<div class="input-item border-b border-neutral-30 px-8 py-16">
-					{{form.username|add_class:'input w-full'|attr:'placeholder:E-mail'|attr:'js-ativo'}}
+			<!--login-->
+			<div
+				class="Card shadow-sm py-32 px-24 rounded-lg form-wrapper w-fit -mt-[12.9375rem] border mx-auto max-w-[428px] bg-white sm:max-w-[calc(100%_-_32px)]"
+				js-anima data-anima="down" data-value="100" data-duration="0.6">
+				<div class="content flex flex-col gap-8">
+					<h2 js-anima data-delay="0.1" data-anima="opacity" class="text-title-4">Fazer login</h2>
+					<p class="description text-neutral-70" js-anima data-delay="0.15" data-anima="opacity">
+						Seja bem-vindo(a)!<br> Insira seu e-mail e senha para entrar em sua conta.
+					</p>
 				</div>
 
-				<div class="input-item border-b border-neutral-30 px-8 py-16">
-					<div class="show-password flex" js-password>
-						{{form.password|add_class:'input w-full'|attr:'js-input-password'|attr:'placeholder:Senha'|attr:'js-ativo'}}
-						<div class="password grid place-items-center cursor-pointer">
-							<ion-icon name="eye-outline" class="show" size="small"></ion-icon>
-							<ion-icon name="eye-off-outline" class="hidden"></ion-icon>
-						</div>
+				<div class="inputs-wrapper mt-32 mx-auto">
+					<div class="Input h-48  flex" js-anima data-delay="0.2" data-anima="opacity">
+						{{form.username|attr:'placeholder:E-mail'}}
+					</div>
+
+					<div class="Input h-48 flex mt-8 gap-0" js-password js-anima data-delay="0.25" data-anima="opacity">
+						{{form.password|attr:'js-input-password'|attr:'placeholder:Senha'}}
+						<button js-button-password type="button"
+							class="grid place-items-center cursor-pointer h-full w-48 shrink-0 hover:bg-primary-pure/10" js-ripple>
+							<ion-icon class="on text-paragraph-1 text-neutral-70" name="eye-outline" size="small"></ion-icon>
+							<ion-icon class="off hidden text-paragraph-1 text-neutral-70" name="eye-off-outline"></ion-icon>
+						</button>
+					</div>
+					<div class="recuperar-senha mt-8" js-anima data-delay="0.30" data-anima="opacity">
+						<a href="{% url 'password_reset' %}" class="hover:underline text-headline-4  text-neutral-60 ">
+							Esqueceu a senha?
+						</a>
 					</div>
 				</div>
-				<div class="recuperar-senha mt-8">
-					<a href="{% url 'password_reset' %}" class="text-paragraph-4 text-neutral-70 text-xs">
-						Esqueceu a senha?
-					</a>
+				<div js-anima data-delay="0.35 " data-anima="opacity">
+					<!-- Erros -->
+					{{form.errors|json_script:"js-error"}}
+				</div>
+
+
+				<label class="Label-check text-headline-3 mt-16" js-anima data-delay="0.35 " data-anima="opacity">
+					<div js-checkbox size="sm">
+						<input type="checkbox" name="permanecer_conectado" checked>
+					</div>
+					<p>Permanecer conectado</p>
+				</label>
+
+				<div class="btn-wrapper mt-40 " js-anima data-delay="0.40" data-anima="opacity">
+					<button class="Button  text-headline-2 !rounded-3xl w-full justify-center" secondary size="lg" js-ripple>
+						Entrar na conta
+					</button>
 				</div>
 			</div>
 
-			{{form.errors|json_script:"form-errors-login"}}
-
-			<div class="checkbox-wrapper mt-24">
-				<div class="radio-container round size-16">
-					<label class="check-label text-neutral-70">
-						<input type="checkbox" class="checkbox">
-						<span class="radio-circle">
-							<i class="radio-circle-inner"></i>
-						</span>
-						Permanecer conectado
-					</label>
-				</div>
-			</div>
-
-			<div class="btn-wrapper mt-40">
-				<button class="Button secondary text-headline-2 !rounded-3xl" size="lg">
-					Entrar na conta
-				</button>
+			<div class="logo-ndt mt-auto py-16" js-anima data-delay="0.5" data-anima="opacity">
+				<img class="h-24 mx-auto xl:h-16" src="{% vite_asset_url 'img/logo_ndt_light.png' %}" alt="">
 			</div>
 		</div>
 
-		<div class="logo-ndt mt-auto">
-			<img class="h-32 mx-auto" src="{% vite_asset_url 'img/logo_ndt_light.png' %}" alt="">
-		</div>
-	</div>
+	</form>
 
-</form>
+</main>
+
+{% endblock %}
+
+
+{% block extra_js %}
+
 {% endblock %}

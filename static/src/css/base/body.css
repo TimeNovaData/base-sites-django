@@ -28,8 +28,8 @@ body {
 		*:focus-visible {
 			outline-width: 2px;
 			outline-style: dashed;
-			outline-color: #4d4d4d;
-			outline-offset: 6px;
+			outline-color: rgba(var(--neutral-100), 0.4);;
+			outline-offset: 4px;
 		}
 	}
 }

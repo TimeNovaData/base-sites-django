@@ -1,0 +1,20 @@
+[js-error-wrapper] {
+	display: flex;
+	flex-direction: column;
+	gap: 2;
+	background-color: rgb(var(--alert-warning-10));
+	color: rgb(var(--alert-warning));
+	border-top-right-radius: var(--border-default);
+	border-bottom-right-radius: var(--border-default);
+	margin: 4px 0;
+	
+	border-left: 2px solid rgb(var(--alert-warning));
+	[js-error-line] {
+		padding: 8px;
+		font-weight: 500;
+		@apply text-paragraph-3;
+	}
+	[js-error-line] + [js-error-line] {
+		border-top: 1px solid rgb(var(--alert-warning));
+	}
+}

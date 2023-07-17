@@ -81,24 +81,12 @@ module.exports = {
 
 		screens: {
 			min2xl: { min: '1441px' },
-			// => @media (max-width: 1535px) { ... }
 			'2xl': { max: '1441px' },
-			// => @media (max-width: 1535px) { ... }
-
-			xl: { max: '1367px' },
-			// => @media (max-width: 1279px) { ... }
-
+			xl: { max: '1460px' },
 			lg: { max: '1281px' },
-			// => @media (max-width: 1023px) { ... }
-
 			md2: { max: '1180px' },
-			// => @media (max-width: 767px) { ... }
-
 			md: { max: '767px' },
-			// => @media (max-width: 767px) { ... }
-
 			sm: { max: '639px' },
-			// => @media (max-width: 639px) { ... }
 		},
 
 		// Extendss
@@ -117,29 +105,124 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			// prettier-ignore
 			addUtilities({
-				'.text-display': { fontSize: '4rem', lineHeight: '5rem', 'letterSpacing': '-0.08rem', fontFamily: theme('fontFamily.sans') },
-
-				'.text-title-1': { fontSize: '3.5rem', lineHeight: '4rem', 'letterSpacing': '-0.07rem', fontFamily: theme('fontFamily.sans') },
-				'.text-title-2': { fontSize: '3rem', lineHeight: '4rem', 'letterSpacing': '-0.06rem', fontFamily: theme('fontFamily.sans') },
-				'.text-title-3': { fontSize: '2rem', lineHeight: '2.125rem', 'letterSpacing': '-0.04rem', fontFamily: theme('fontFamily.sans') },
-				'.text-title-4': { fontSize: '1.5rem', lineHeight: '2rem', 'letterSpacing': '-0.03rem', fontFamily: theme('fontFamily.sans') },
-
-				'.text-headline-1': { fontSize: '1.125rem', lineHeight: '1.625rem', 'letterSpacing': '-0.0225rem', fontFamily: theme('fontFamily.sans') },
-				'.text-headline-2': { fontSize: '1rem', lineHeight: '1.5rem', 'letterSpacing': '-0.02rem', fontFamily: theme('fontFamily.sans') },
-				'.text-headline-3': { fontSize: '0.875rem', lineHeight: '1.375rem', 'letterSpacing': '-0.0175rem', fontFamily: theme('fontFamily.sans') },
-				'.text-headline-4': { fontSize: '0.75rem', lineHeight: '1.25rem', 'letterSpacing': '-0.015rem', fontFamily: theme('fontFamily.sans') },
-				'.text-headline-5': { fontSize: '0.625rem', lineHeight: '1.25rem', 'letterSpacing': '-0.0125rem', fontFamily: theme('fontFamily.sans') },
-
-				'.text-caps-1': { fontSize: '1rem', lineHeight: '1.375rem', 'letterSpacing': '0.04rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
-				'.text-caps-2': { fontSize: '0.875rem', lineHeight: '1.375rem', 'letterSpacing': '0.035rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
-				'.text-caps-3': { fontSize: '0.75rem', lineHeight: '1rem', 'letterSpacing': '0.03rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
-				'.text-caps-4': { fontSize: '0.625rem', lineHeight: '1rem', 'letterSpacing': '0.025rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase', },
-
-				'.text-paragraph-1': { fontSize: '1.125rem', lineHeight: '1.625rem', 'letterSpacing': '-0.0225rem', fontFamily: theme('fontFamily.sans') },
-				'.text-paragraph-2': { fontSize: '1rem', lineHeight: '1.5rem', 'letterSpacing': '-0.02rem', fontFamily: theme('fontFamily.sans') },
-				'.text-paragraph-3': { fontSize: '0.875remm', lineHeight: '1.5rem', 'letterSpacing': '-0.0175rem', fontFamily: theme('fontFamily.sans') },
-				'.text-paragraph-4': { fontSize: '0.75remm', lineHeight: '1.5rem', 'letterSpacing': '-0.015rem', fontFamily: theme('fontFamily.sans') },
-				'.text-paragraph-5': { fontSize: '0.675remm', lineHeight: '1.5rem', 'letterSpacing': '-0.0125rem', fontFamily: theme('fontFamily.sans') },
+				'.text-display-1': {
+					fontSize: '4rem',
+					lineHeight: '140%',
+					letterSpacing: '-0.08rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-title-1': {
+					fontSize: '3.5rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.07rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-title-2': {
+					fontSize: '3rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.06rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-title-3': {
+					fontSize: '2rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.04rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-title-4': {
+					fontSize: '1.5rem',
+					lineHeight: '125%',
+					letterSpacing: '-0.03rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-headline-1': {
+					fontSize: '1.125rem',
+					lineHeight: '100%',
+					letterSpacing: '-0.0225rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-headline-2': {
+					fontSize: '1rem',
+					lineHeight: '100%',
+					letterSpacing: '-0.02rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-headline-3': {
+					fontSize: '0.875rem',
+					lineHeight: '100%',
+					letterSpacing: '-0.0175rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-headline-4': {
+					fontSize: '0.75rem',
+					lineHeight: '100%',
+					letterSpacing: '-0.015rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-headline-5': {
+					fontSize: '0.625rem',
+					lineHeight: '100%',
+					letterSpacing: '-0.0125rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-caps-1': {
+					fontSize: '1rem',
+					lineHeight: '100%',
+					letterSpacing: '0.04rem',
+					fontFamily: theme('fontFamily.sans'),
+					textTransform: 'uppercase'
+				},
+				'.text-caps-2': {
+					fontSize: '0.875rem',
+					lineHeight: '100%',
+					letterSpacing: '0.035rem',
+					fontFamily: theme('fontFamily.sans'),
+					textTransform: 'uppercase'
+				},
+				'.text-caps-3': {
+					fontSize: '0.75rem',
+					lineHeight: '100%',
+					letterSpacing: '0.03rem',
+					fontFamily: theme('fontFamily.sans'),
+					textTransform: 'uppercase'
+				},
+				'.text-caps-4': {
+					fontSize: '0.625rem',
+					lineHeight: '130%',
+					letterSpacing: '0.025rem',
+					fontFamily: theme('fontFamily.sans'),
+					textTransform: 'uppercase'
+				},
+				'.text-paragraph-1': {
+					fontSize: '1.125rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.0225rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-paragraph-2': {
+					fontSize: '1rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.02rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-paragraph-3': {
+					fontSize: '0.875rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.0175rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-paragraph-4': {
+					fontSize: '0.75rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.015rem',
+					fontFamily: theme('fontFamily.sans')
+				},
+				'.text-paragraph-5': {
+					fontSize: '0.675rem',
+					lineHeight: '130%',
+					letterSpacing: '-0.0125rem',
+					fontFamily: theme('fontFamily.sans')
+				}
 			})
 		}),
 	],
