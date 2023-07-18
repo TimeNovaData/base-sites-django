@@ -14,6 +14,7 @@ function createRipple(e) {
 	setTimeout(() => ripple.parentNode.removeChild(ripple), 500);
 }
 
+/** material ripples onClick */
 export default function () {
 	const els = findAll('[js-ripple]');
 	els?.forEach(el => el.addEventListener('mousedown', createRipple))

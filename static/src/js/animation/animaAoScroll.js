@@ -26,6 +26,8 @@ export default function animaAoScroll() {
 				// onLeave: function () {
 				// 	hide(elem)
 				// } // assure that the element is hidden when scrolled into view
+
+
 			});
 		});
 

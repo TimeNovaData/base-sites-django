@@ -1,6 +1,5 @@
 export default function (functions) {
 	const container = document.querySelector(".cookies-container");
-
 	const save = document.querySelector(".cookies-save");
 
 	if (!container || !save) return null;

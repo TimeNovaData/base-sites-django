@@ -1,5 +1,4 @@
-@layer components {
-}
+
 
 [data-tippy-root] {
 	* {
@@ -8,7 +7,7 @@
 	.tippy-box[data-theme~='Menu'] {
 		display: flex;
 		flex-direction: column;
-		border-radius: var(--border-default) !important;
+		border-radius: var(--rounded-sm) !important;
 		background-color: rgb(var(--white));
 		color: initial;
 		border-radius: initial;

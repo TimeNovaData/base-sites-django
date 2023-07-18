@@ -10,7 +10,6 @@ import ripple from "./modules/ripple";
 import formErros from "./modules/formErros";
 import animaAoScroll from "./animation/animaAoScroll";
 import animateSetup from "./animation/animateSetup";
-import showCardContent from './modules/showCardContent'
 
 // import SvgUse from "./utils/SvgUse";
 
@@ -25,8 +24,6 @@ ripple()
 formErros()
 animateSetup()
 animaAoScroll()
-
-showCardContent()
 
 // Pages
 PageHome()

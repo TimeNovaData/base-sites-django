@@ -25,11 +25,11 @@ export default function () {
 
 
 	function init() {
-		els.forEach(render)
+		els?.forEach(render)
 		return this
 	}
 
 
-	return { init }
+	return { init, els }
 
 }

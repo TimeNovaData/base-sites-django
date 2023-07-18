@@ -7,13 +7,13 @@
 		align-items: center;
 		gap: 0.5rem;
 
-		border-radius: var(--border-default);
+		border-radius: var(--rounded-sm);
 
 		input {
 			width: 100%;
 			padding: 0.25rem 0.5rem;
 			height: 100%;
-			border-radius: var(--border-default);
+			border-radius: var(--rounded-sm);
 		}
 
 		&:active,

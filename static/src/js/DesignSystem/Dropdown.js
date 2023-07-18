@@ -1,7 +1,6 @@
 import tippy from "tippy.js";
 import { find, findAll } from "utils/dom";
-import 'css/vendor/tippy-js.css';
-import 'tippy.js/animations/shift-away-subtle.css';
+
 import ripple from "../modules/ripple";
 // 	https://atomiks.github.io/tippyjs/
 
@@ -15,7 +14,6 @@ export default function () {
 
 			const attr = menu.getAttribute('js-props')
 			const props = attr ? JSON.parse(attr) : {}
-
 
 			const instance = tippy(dropdown, {
 				content: menu,

@@ -3,7 +3,7 @@ import { find } from "utils/dom"
 import mostraSenha from "../modules/mostrarSenha"
 
 export default function () {
-	const Login = find('#page-login')
+	const Login = find("[js-page='login']")
 	if (!Login) return
 
 	const focusOnInput = () => document.addEventListener('DOMContentLoaded',
@@ -15,7 +15,6 @@ export default function () {
 	function init() {
 		focusOnInput()
 		mostraSenha()
-
 
 	}
 

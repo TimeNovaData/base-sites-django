@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "webp": "node ndt_tools/node_scripts/webp_convert.js"
+    "webp": "node ndt_tools/node_scripts/webp_convert.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -22,7 +23,7 @@
     "autoprefixer": "^10.4.13",
     "fs": "^0.0.1-security",
     "inquirer": "^7.3.3",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.26",
     "postcss-comment": "^2.0.0",
     "postcss-custom-media": "^10.0.0",
     "postcss-import": "^15.1.0",
@@ -31,6 +32,7 @@
     "postcss-simple-vars": "^7.0.1",
     "sharp": "^0.32.1",
     "tailwindcss": "^3.2.7",
-    "vite": "^4.4.2"
+    "vite": "4.4.2",
+    "husky": "^8.0.0"
   }
 }

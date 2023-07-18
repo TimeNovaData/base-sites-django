@@ -12,11 +12,13 @@
 		display: block;
 		transition: 0.3s ease;
 	}
+
 	&:hover {
 		.mask:before {
 			background-color: rgb(var(--neutral-100), 0.1);
 		}
 	}
+
 	&[size='sm'] {
 		.Checkbox {
 			width: 16px;
@@ -83,12 +85,13 @@
 			transition: all 0.25s ease;
 			z-index: -1;
 			border: 2px solid rgb(var(--neutral-30));
-			box-sizing: border-box;
 		}
+
 		.icon-check {
 			opacity: 0;
 			z-index: 200;
 			transform: scale(0.9);
+
 			span {
 				transform: rotate(45deg);
 				display: block;
@@ -144,6 +147,7 @@
 		}
 	}
 
+	// reset estilos do input
 	input {
 		position: absolute;
 		width: 100%;
@@ -162,7 +166,7 @@
 		}
 		&:active {
 			~ .mask {
-				background: var(--prim) !important;
+				background: var(--primary-pure) !important;
 			}
 		}
 

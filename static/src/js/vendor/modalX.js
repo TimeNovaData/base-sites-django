@@ -57,12 +57,11 @@ export default function (ID_MODAL, opts) {
 		$Deep.classList.add(options.classActive);
 		$Body.classList.add(`${ID_MODAL}-${options.classOpen}`);
 
-		$Contents && $Contents.forEach((i) => i.classList.remove(options.classActive));
-		contentActive && contentActive.classList.add(options.classActive);
+		$Contents?.forEach((i) => i.classList.remove(options.classActive));
+		contentActive?.classList.add(options.classActive);
 
 		$Modal.dataset.active = state.idActive;
 		state.open = true;
-
 
 		if (contentActive) {
 
@@ -94,7 +93,7 @@ export default function (ID_MODAL, opts) {
 		const modalHeight = $Modal.getBoundingClientRect().height.toFixed(0) + 'px';
 		const contentActive = getContentActive()
 
-		$Contents && $Contents.forEach((i) => i.classList.remove(options.classActive));
+		$Contents?.forEach((i) => i.classList.remove(options.classActive));
 		$Modal.classList.remove(options.classActive);
 		$Deep.classList.remove(options.classActive);
 

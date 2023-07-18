@@ -17,6 +17,7 @@ export default function animateFrom(elem, direction) {
 	const att = elem.getAttribute('data-anima')
 	const valorTransicao = elem.getAttribute("data-value")
 
+
 	//direção
 	if (att === "left") {
 		x = valorTransicao || -100;

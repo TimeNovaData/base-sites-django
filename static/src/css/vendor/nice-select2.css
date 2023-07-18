@@ -12,7 +12,7 @@ $input-height: 40px;
 
 .nice-select {
 	--input_height: 38px;
-	--input_border_radius: var(--border-default);
+	--input_border_radius: var(--rounded-sm);
 	--dropdown-padding: 1rem;
 	--dropdown-y-option: 0.5rem;
 }
