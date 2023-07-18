@@ -3,4 +3,6 @@
 
 yarn build
 
-echo '🟢 Build FInalizado'
+echo `
+🟢 Husky builded 
+`
