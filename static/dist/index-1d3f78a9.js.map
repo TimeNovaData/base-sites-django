@@ -1,1 +1,0 @@
-{"version":3,"file":"index-1d3f78a9.js","sources":["../src/index.js"],"sourcesContent":["import 'css/base/variables.css';\nimport \"css/index.css\";\n\n\ndocument\n\t.addEventListener(\"DOMContentLoaded\", () =>\n\t\tdocument.body.classList.add(\"DOMContentLoaded\")\n\t)\n"],"names":[],"mappings":"AAIA,SACE,iBAAiB,mBAAoB,IACrC,SAAS,KAAK,UAAU,IAAI,kBAAkB,CAChD"}
