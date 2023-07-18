@@ -6,6 +6,7 @@ function triggerClick(el) {
 	el.dispatchEvent(event);
 }
 
+
 function triggerChange(el) {
 	var event = new Event("change");
 	el.dispatchEvent(event);
