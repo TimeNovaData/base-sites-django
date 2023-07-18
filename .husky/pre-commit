@@ -4,3 +4,5 @@
 yarn build
 
 echo '🟢 Build Finalizado'
+
+rm -f yarn.lock
