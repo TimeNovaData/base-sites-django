@@ -10,6 +10,6 @@ rm -f package-lock.json
 
 yarn build
 
-echo '🟢 Build Front Finalizado'
+echo '🟢 Finalizado'
 
 
