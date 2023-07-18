@@ -7,5 +7,5 @@ rm -f package-lock.json
 
 yarn build
 
-echo '🟢\x1b[35mBuild Front Finalizado'
+echo '🟢 Build Front Finalizado'
 
