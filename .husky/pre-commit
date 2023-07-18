@@ -9,7 +9,7 @@ rm -f yarn-error.log
 rm -f package-lock.json
 
 yarn build
-
+git add .
 echo '🟢 pre-commit finalizado'
 
 
