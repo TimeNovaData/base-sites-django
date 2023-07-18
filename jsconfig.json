@@ -1,8 +1,6 @@
 {
   "baseUrl": "./static",
   "compilerOptions": {
-
-  
     "paths": {
       // "@/*": [
       //   "./*"
@@ -19,8 +17,14 @@
       // "@t:another_app/*": [
       //   "./another_app/templates/another_app/*"
       // ]
- 
+      "utils/*": ["./static/src/js/utils"],
+      "public/*": ["./static/public"],
+      "js/*": ["./static/src/js"],
+      "css/*": ["./static/src/css"],
     }
   },
-  "exclude": ["dist", "node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
