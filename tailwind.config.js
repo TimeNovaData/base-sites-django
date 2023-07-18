@@ -105,7 +105,6 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			// prettier-ignore
 			addUtilities({
-
 				'.text-display-1': { fontSize: '4rem', lineHeight: '140%', letterSpacing: '-0.08rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-1': { fontSize: '3.5rem', lineHeight: '130%', letterSpacing: '-0.07rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-2': { fontSize: '3rem', lineHeight: '130%', letterSpacing: '-0.06rem', fontFamily: theme('fontFamily.sans') },

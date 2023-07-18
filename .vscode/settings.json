@@ -25,29 +25,26 @@
     "python.formatting.blackArgs": [
         "--line-length=79",
     ],
-    /*  */
+
+    /*
+    * Front
+    */
+    
     "tailwind-fold.foldStyle": "QUOTES",
     "tailwind-fold.supportedLanguages": [
-        "django-html",
         "html",
-        "typescriptreact",
         "javascriptreact",
         "typescript",
         "javascript",
         "vue-html",
         "vue",
-        "php",
-        "markdown",
-        "coffeescript",
-        "svelte",
-        "astro"
     ],
     "tailwind-fold.unfoldIfLineSelected": false,
     "tailwind-fold.showTailwindImage": false,
     "tailwind-fold.autoFold": true,
+
     // "html.validate.styles": true,
     "postcss.validate": true,
-    
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features",
         "editor.formatOnSave": false,
@@ -56,7 +53,6 @@
     "[javascript]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "vscode.typescript-language-features"
-
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -69,10 +65,6 @@
     "emmet.includeLanguages": {
         "django-html": "html",
         "postcss": "css",
-    },
-    "[django-html]": {
-        "editor.autoClosingQuotes": "always",
-        "emmet.showAbbreviationSuggestions": true,
     },
     "[postcss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"

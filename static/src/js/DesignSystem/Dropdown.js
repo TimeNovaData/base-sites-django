@@ -32,6 +32,7 @@ export default function () {
 				animation: 'shift-away-subtle',
 				appendTo: 'parent',
 
+
 				...props,
 				onCreate(instance) {
 					addEventHide(instance)

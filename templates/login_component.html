@@ -12,6 +12,21 @@
 <!--  js: "static/src/js/pages/Login.js" -->
 
 {% block content %}
+<!--login-->
+<svg class="w-full fixed bottom-0 left-0 h-auto backdrop-blur-2xl" viewBox="0 0 1920 744" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<g filter="url(#filter0_b_3423_30273)">
+		<path d="M0 744V551L1920 0V744H0Z" fill="white" fill-opacity="0.5" />
+	</g>
+	<defs>
+		<filter id="filter0_b_3423_30273" x="-80" y="-80" width="2080" height="904" filterUnits="userSpaceOnUse"
+			color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feGaussianBlur in="BackgroundImageFix" stdDeviation="40" />
+			<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3423_30273" />
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3423_30273" result="shape" />
+		</filter>
+	</defs>
+</svg>
 <main js-page='login'>
 	<form method="post" action="" class="min-h-screen">
 		{% csrf_token %}
@@ -19,7 +34,7 @@
 			<header
 				class=" relative z-[-1] flex justify-center max-w-[112.5rem] h-[24.625rem] rounded-[190px] bg-primary-pure md:max-w-full md:rounded-b-2xl md:rounded-none xl:h-[20rem] pointer-events-none">
 				<div class="logo-cliente absolute top-72 xl:top-48" js-anima data-anima="down" data-duration="0.7">
-					<img class="h-32 mx-auto md:h-24 " src="{% vite_asset_url 'img/logo_brand.webp' %}" alt="">
+					<img class="h-32 mx-auto md:h-24 " src="{% vite_asset_url 'img/natura.png' %}" alt="">
 				</div>
 				<picture>
 					<source srcset="{% static 'front_assets/src/assets/img/' %}ornamento-mobile.webp" media="(max-width: 600px)">
@@ -27,7 +42,8 @@
 				</picture>
 			</header>
 
-			<!--login-->
+			
+
 			<div
 				class="Card shadow-sm py-32 px-24 rounded-lg form-wrapper w-fit -mt-[12.9375rem] border mx-auto max-w-[428px] bg-white sm:max-w-[calc(100%_-_32px)]"
 				js-anima data-anima="down" data-value="100" data-duration="0.6">
@@ -88,6 +104,8 @@
 		</div>
 
 	</form>
+
+
 
 </main>
 
