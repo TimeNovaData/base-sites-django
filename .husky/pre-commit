@@ -11,6 +11,6 @@ rm -f package-lock.json
 yarn build
 git add .
 echo '🟢 pre-commit finalizado'
-echo 'git add .'
+echo '\n git add \n .'
 
 
