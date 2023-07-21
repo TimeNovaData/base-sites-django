@@ -1,4 +1,5 @@
 {% load django_vite %}
+{% load static %}
 
 <!-- 
 css: "static/src/css/DesignSystem/Modal.css" 
@@ -32,7 +33,7 @@ close
 <dialog js-modal="modal-default" data-position='center'>
 	<!-- CONTEUDO 1 -->
 	<section js-modal-content data-id="@idDaSection" class="min-h-[400px] w-[500px] flex flex-col max-h-screen">
-		<img class="w-full h-[200px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-[200px] object-cover" src="{% static 'img/placeholder.png' %}" />
 
 
 		<article class="mx-auto p-24  text-center flex-1 overflow-y-auto  text-paragraph-1 safe-text">
@@ -59,7 +60,7 @@ close
 
 	<!-- CONTEUDO 2 -->
 	<section js-modal-content data-id="@idDaSection2" class="min-h-[400px] w-[500px] flex flex-col  max-h-screen">
-		<img class="w-full h-[200px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-[200px] object-cover" src="{% static 'img/placeholder.png' %}" />
 
 		<article class="mx-auto p-24  text-center flex-1 overflow-y-auto  text-paragraph-1 safe-text">
 			<p class="text-title-3 mb-40">A existência pulsante</p>
@@ -81,7 +82,7 @@ close
 <dialog js-modal="modal-right" data-position='right' js-props='{"deep":false}'>
 	<!-- CONTEUDO 1 -->
 	<section js-modal-content data-id="@idDaSection" class="h-screen w-[500px] flex flex-col">
-		<img class="w-full h-[250px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-[250px] object-cover" src="{% static 'img/placeholder.png' %}" />
 
 		<article class="flex-1 overflow-y-auto p-40 text-paragraph-1 safe-text">
 			<p class="text-title-3 mb-40">Do nascimento ao último suspiro,</p>
@@ -100,7 +101,7 @@ close
 
 	<!-- CONTEUDO 2 -->
 	<section js-modal-content data-id="@idDaSection2" class="h-screen w-[620px] flex flex-col" >
-		<img class="w-full h-[250px] object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-[250px] object-cover" src="{% static 'img/placeholder.png' %}" />
 		<!-- <div class="mt-auto mx-auto p-16 flex flex-col"> -->
 		<article class="flex-1 overflow-y-auto p-40 text-paragraph-1 safe-text">
 			<p class="text-title-3 mb-40">A vida se desenrola </p>
