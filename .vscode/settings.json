@@ -25,11 +25,16 @@
     "python.formatting.blackArgs": [
         "--line-length=79",
     ],
-
     /*
     * Front
     */
-    
+    "files.exclude": {
+        // "node_modules/": true,
+        ".mypy_cache": true,
+        "*/__pycache__": true,
+        ".husky":true
+    },
+
     "tailwind-fold.foldStyle": "QUOTES",
     "tailwind-fold.supportedLanguages": [
         "html",
@@ -42,7 +47,6 @@
     "tailwind-fold.unfoldIfLineSelected": false,
     "tailwind-fold.showTailwindImage": false,
     "tailwind-fold.autoFold": true,
-
     // "html.validate.styles": true,
     "postcss.validate": true,
     "[html]": {
@@ -68,5 +72,5 @@
     },
     "[postcss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
 }

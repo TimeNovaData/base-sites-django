@@ -4,16 +4,14 @@
 export PS1="\[\e[31m\]\d \t\[\e[0m\]\s-\v\$ "
 
 echo '
-⚡ Hook pre-commit
+⚡ pre-commit hook 
 '
 
 rm -f yarn.lock
 rm -f yarn-error.log
 rm -f package-lock.json
 
-# remove tudo da static da raiz que n seja src,dist,public
-
-
+# yarn clear-src
 yarn build
 
 git add .
