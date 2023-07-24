@@ -9,6 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY", "")
 
 DEBUG = config("DEBUG", default=False, cast=bool)
+DEV = config("DEV", default=False, cast=bool)
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -165,5 +166,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ⚡VITE -----
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
-DJANGO_VITE_DEV_MODE = DEBUG
+DJANGO_VITE_DEV_MODE = DEV
 STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]

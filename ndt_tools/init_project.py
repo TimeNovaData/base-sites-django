@@ -21,7 +21,7 @@ PROJECT_NAME = glob('**/settings.py')[0].split('/')[0]
 
 # Comandos
 create_env_command = [
-    'python3', '-m', 'venv', '../.env_name'
+    'python3', '-m', 'venv', '../env'
 ]
 npm_init_command = [
     'npm', 'install'
@@ -87,14 +87,14 @@ if len(parameter) > 0 and 'help' not in parameter:
             text=True
         )
         
-    create_env_command[3] = f"../.env_{project_name}"
+    create_env_command[3] = f"../env"
     
     result_env = create_env(project_name)
     
     if result_env:
         print('Execute o comando a seguir para habilitar a env:')
         print(YELLOW)
-        print(f"source ../.env_{project_name}/bin/activate")
+        print(f"source ../env/bin/activate")
         print(RESET)
 
         # if "VIRTUAL_ENV" in os.environ:

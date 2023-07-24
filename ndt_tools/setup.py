@@ -29,7 +29,7 @@ USE_AWS=
 """
 
 # Comandos
-create_env_command = ["python3", "-m", "venv", "../.env_name"]
+create_env_command = ["python3", "-m", "venv", "../env"]
 npm_init_command = ["npm", "install"]
 install_requirements_command = ["pip", "install", "-r", "requirements-dev.txt"]
 make_migrations_command = ["python3", "manage.py", "makemigrations"]

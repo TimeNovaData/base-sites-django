@@ -91,7 +91,7 @@ function imgCallback(webpPath, original, { largura, altura, resized }) {
 
 			tamanhoConvertidoTotal += tamanhoConvertido;
 
-			const tf = formatarBytes(tamanhoConvertido);
+			// const tf = formatarBytes(tamanhoConvertido);
 
 			function valorMaiorQue600kb(bytes) {
 				const tamanhoEmKb = bytes / 1024;

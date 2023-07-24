@@ -10,3 +10,4 @@ db.sqlite3
 .mypy_cache
 yarn.lock
 package-lock.json
+*.pyc
