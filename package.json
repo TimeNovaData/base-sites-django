@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "webp": "node ndt_tools/node_scripts/webp_convert.js",
+    "clear-src": "find ./static -mindepth 1 -maxdepth 1 ! -name 'src' ! -name 'dist' ! -name 'public' -exec rm -r {} \\;",
     "prepare": "husky install"
   },
   "dependencies": {

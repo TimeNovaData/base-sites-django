@@ -2,6 +2,7 @@
 # https://typicode.github.io/husky/
 . "$(dirname -- "$0")/_/husky.sh"
 export PS1="\[\e[31m\]\d \t\[\e[0m\]\s-\v\$ "
+
 echo '⚡ Hook pre-commit'
 
 rm -f yarn.lock
@@ -9,10 +10,12 @@ rm -f yarn-error.log
 rm -f package-lock.json
 
 # remove tudo da static da raiz que n seja src,dist,public
-find ./static -mindepth 1 -maxdepth 1 ! -name "src" ! -name "dist" ! -name "public" -exec rm -r {} \;
+
 
 yarn build
-echo git add .
+
+git add .
+
 echo '🟢 pre-commit finalizado'
 echo '\n git add  .\n'
 
