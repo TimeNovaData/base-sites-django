@@ -1,4 +1,16 @@
 <!-- 
+js:  "static/src/js/DesignSystem/Dropdown.js" 
+css: "static/src/css/DesignSystem/Dropdown.css" 
+
+	NEED
+		[js-dropdown]   => oq abre o dropdown  
+	  [id-dropdown="@id"] => o id do dropdown referente
+
+		#@id[js-props] => para passar props para iniciar o dropdown
+
+		[js-hide] => ao clicar fecha a instancia
+			
+
 
 -->
 
@@ -11,7 +23,7 @@
 </button>
 
 <ul id="dropdown1" class="min-w-[200px]" js-props='{"placement": "bottom-start"}'>
-	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
+	<li class="ListItem" js-hide ><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal 2 32</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal 323</li>

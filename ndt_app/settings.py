@@ -165,4 +165,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
 DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
-STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]
+STATICFILES_DIRS = [
+    BASE_DIR / "static" / 'public',
+    DJANGO_VITE_ASSETS_PATH,
+    # BASE_DIR / "static"
+
+]

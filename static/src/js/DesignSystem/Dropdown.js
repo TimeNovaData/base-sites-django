@@ -18,7 +18,6 @@ export default function () {
 			const instance = tippy(dropdown, {
 				content: menu,
 				allowHTML: true,
-				expanded: true,
 				trigger: "mouseenter click",
 				interactive: true,
 				interactiveBorder: 10,
@@ -32,16 +31,9 @@ export default function () {
 				animation: 'shift-away-subtle',
 				appendTo: 'parent',
 
-
 				...props,
-				onCreate(instance) {
-					addEventHide(instance)
-
-
-				},
-				onShown() {
-					ripple()
-				}
+				onCreate(instance) { addEventHide(instance) },
+				onShown() { ripple() }
 
 			})
 
