@@ -17,7 +17,7 @@ yarn build
 git add .
 
 echo '🟢 pre-commit finalizado'
-echo '\n git add  .\n'
+
 
 
 
