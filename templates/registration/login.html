@@ -8,12 +8,10 @@
 {% block title %}
 {{site.titulo_global}} | Admin
 {% endblock %}
-
-<!--  js: "static/src/js/pages/Login.js" -->
-
+<!--  
+	js: "static/src/js/pages/Login.js"
+-->
 {% block content %}
-
-
 
 <main js-page='login'>
 	<form method="post" action="">
@@ -35,7 +33,7 @@
 			<section class="flex flex-col mx-120 xl:mx-64 my-auto overflow-hidden md2:mt-[-400px] sm:mx-16 sm:mt-[-350px]">
 				<!-- Formulario -->
 				<article
-					class="Card shadow-sm py-32 px-24 rounded-lg form-wrapper  border mx-auto max-w-[428px] bg-white sm:max-w-[initial]  mt-48 "
+					class="Card shadow-sm py-32 px-24 rounded-lg form-wrapper  border mx-auto w-[428px] sm:w-full bg-white sm:max-w-[initial]  mt-48 "
 					js-anima data-anima="left" data-value="-100%" data-duration="0.6">
 
 					<header class="flex flex-col gap-8">
@@ -59,7 +57,7 @@
 							</button>
 						</div>
 
-						<div class="recuperar-senha mt-8" js-anima data-delay="0.30" data-anima="opacity">
+						<div class="mt-8" js-anima data-delay="0.30" data-anima="opacity">
 							<a href="{% url 'password_reset' %}" class="hover:underline text-headline-4  text-neutral-60 ">
 								Esqueceu a senha?
 							</a>

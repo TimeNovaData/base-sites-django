@@ -1,5 +1,7 @@
 export default function () {
-	if (import.meta.env.DEV) {
+	const DEV = import.meta.env.DEV
+
+	if (DEV) {
 		console.log('\x1b[33m ⚡ GLOBAL \n', GLOBAL)
 
 	} else {

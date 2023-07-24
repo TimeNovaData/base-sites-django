@@ -20,6 +20,7 @@ module.exports = {
 		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
+
 			white: withOpacity('--white'),
 			black: withOpacity('--black'),
 
@@ -29,6 +30,7 @@ module.exports = {
 			'neutral-60': withOpacity('--neutral-60'),
 			'neutral-70': withOpacity('--neutral-70'),
 			'neutral-100': withOpacity('--neutral-100'),
+
 			//primary
 			'primary-light': withOpacity('--primary-light'),
 			'primary-light-30': withOpacity('--primary-light-30'),
@@ -36,6 +38,7 @@ module.exports = {
 			'primary-pure': withOpacity('--primary-pure'),
 			'primary-pure-70': withOpacity('--primary-pure-70'),
 			'primary-dark': withOpacity('--primary-dark'),
+
 			// alerts
 			'alert-error': withOpacity('--alert-error'),
 			'alert-error-10': withOpacity('--alert-error-10'),

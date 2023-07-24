@@ -171,3 +171,7 @@
 
 @mixin Modal modal-default;
 @mixin Modal modal-right;
+
+// @mixin Modal modal-right {
+//  max-width: 500px;
+// };

@@ -1,7 +1,9 @@
+import { findAll } from "../utils/dom";
+
 export default function () {
 
 	const attr = "[js-password]"
-	const els = document.querySelectorAll(`${attr}`);
+	const els = findAll(`${attr}`);
 
 	if (!els.length) return
 

@@ -2,6 +2,7 @@
  * ligar opcoes de acessibilidade
  */
 export default function () {
+
 	document.body.addEventListener('mousedown', function () {
 		document.body.classList.add('using-mouse');
 	});
@@ -14,6 +15,5 @@ export default function () {
 	});
 
 	document.addEventListener('DOMContentLoaded', () => document.body.classList.add('using-mouse'))
-
 
 }

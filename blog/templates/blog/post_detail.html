@@ -25,6 +25,7 @@
   	{% if posts.has_next or posts.has_previous %}
 	<div class="pagination">
 		<span class="step-links">
+			
 			{% if posts.has_previous %}
 			<h2>
 				<a href="?page={{ posts.previous_page_number }}">Voltar</a>

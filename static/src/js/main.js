@@ -10,7 +10,6 @@ import ripple from "./modules/ripple";
 import formErros from "./modules/formErros";
 import animaAoScroll from "./animation/animaAoScroll";
 import animateSetup from "./animation/animateSetup";
-
 // import SvgUse from "./utils/SvgUse";
 
 // Init
@@ -28,12 +27,6 @@ animaAoScroll()
 // Pages
 PageHome()
 PageLogin()?.init()
-
-
-
-
-
-
 
 // utils logs
 logs()

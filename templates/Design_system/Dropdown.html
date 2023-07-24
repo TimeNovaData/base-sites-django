@@ -4,16 +4,15 @@ css: "static/src/css/DesignSystem/Dropdown.css"
 
 	NEED
 		[js-dropdown]   => oq abre o dropdown  
-	  [id-dropdown="@id"] => o id do dropdown referente
+	  [id-dropdown="#id"] => o id do dropdown referente
 
-		#@id[js-props] => para passar props para iniciar o dropdown
+		#id [js-props] => para passar props adicionais
 
 		[js-hide] => ao clicar fecha a instancia
 			
 
 
 -->
-
 <button class="Button" size="md" js-dropdown id-dropdown="#dropdown1" aria-describedby="dropdown1" aria-haspopup="true">
 	Abrir Menu com Submenu
 </button>
@@ -23,7 +22,7 @@ css: "static/src/css/DesignSystem/Dropdown.css"
 </button>
 
 <ul id="dropdown1" class="min-w-[200px]" js-props='{"placement": "bottom-start"}'>
-	<li class="ListItem" js-hide ><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
+	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal 2 32</li>
 	<li class="ListItem" js-hide><ion-icon class="text-paragraph-1" name="mail-outline"></ion-icon> item tal 323</li>
@@ -41,7 +40,8 @@ css: "static/src/css/DesignSystem/Dropdown.css"
 	<div js-hide class="ListItem">item tal 323</div>
 </div>
 
-<div id="dropdown3" class="min-w-[180px]" js-props='{"placement": "bottom"} '>
+
+<div id="dropdown3" class="min-w-[180px]" js-props='{"placement": "bottom"}'>
 	<div js-hide class="ListItem">item tal ✨</div>
 	<div js-hide class="ListItem">item tal</div>
 	<div js-hide class="ListItem">item tal 2 32</div>
