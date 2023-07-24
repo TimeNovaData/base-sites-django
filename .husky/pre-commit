@@ -12,7 +12,7 @@ rm -f package-lock.json
 find ./static -mindepth 1 -maxdepth 1 ! -name "src" ! -name "dist" ! -name "public" -exec rm -r {} \;
 
 yarn build
-git add .
+echo git add .
 echo '🟢 pre-commit finalizado'
 echo '\n git add  .\n'
 
