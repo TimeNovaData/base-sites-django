@@ -37,6 +37,8 @@ export default defineConfig((/* { command, mode } */) => {
 			port: 3000,
 			open: false,
 			watch: { usePolling: true, disableGlobbing: false },
+
+
 		},
 
 		resolve: {

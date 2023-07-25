@@ -30,9 +30,11 @@
     */
     "files.exclude": {
         // "node_modules/": true,
+        // "runtime.txt": true,
         ".mypy_cache": true,
         "*/__pycache__": true,
-        ".husky":true
+        ".husky":true,
+        ".env_example": true
     },
 
     "tailwind-fold.foldStyle": "QUOTES",
