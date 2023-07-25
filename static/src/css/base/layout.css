@@ -9,10 +9,26 @@
 @custom-media --md (max-width: 1024px);
 @custom-media --md2 (max-width: 1280px);
 @custom-media --sm (max-width: 600px);
+/*
+Exemplo 
 
-/* @media (--xl) {
+@media (--xl) {
 	body {
 		background: black;
 	}
 }
+
  */
+// Remove auto complete estile
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: currentColor !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}

@@ -1,35 +1,54 @@
-.Button {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	cursor: pointer;
-	user-select: none;
-	transition: 0.3s ease;
-	border-radius: 4px;
-	color: white;
-	background: rgb(var(--primary-pure));
+@layer components {
+	.Button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+		user-select: none;
+		transition: 0.3s ease;
+		border-radius: 4px;
+		color: white;
+		background: rgb(var(--primary-pure));
 
-	&:hover {
-		background: rgb(var(--primary-pure-70));
-	}
 
-	/* &:active {
-		background: rgb(var(--primary-pure-70));
-	} */
+		&:hover {
+			background: rgb(var(--primary-pure-70));
+		}
 
-	&[size='sm'] {
-		padding: 0.5rem 1rem;
-		height: 2.5rem;
-	}
+		&[secondary] {
+			background: rgba(var(--primary-pure), 0.1);
+			color: rgb(var(--primary-pure));
+			border: 1px solid rgb(var(--primary-pure));
 
-	&[size='md'] {
-		padding: 0.5rem 1rem;
-		height: 3rem;
-	}
+			&:hover {
+				background: rgba(var(--primary-pure), 0.2);
+			}
+		}
 
-	&[size='lg'] {
-		padding: 0.5rem 1.5rem;
-		height: 3.5rem;
+		&[tertiary] {
+			display: grid;
+			place-items: center;
+			background: white;
+			color: rgb(var(--primary-pure));
+
+			&:hover {
+				background: rgba(var(--primary-pure), 0.1);
+			}
+		}
+
+		&[size='sm'] {
+			padding: 0.5rem 1rem;
+			height: 2.5rem;
+		}
+
+		&[size='md'] {
+			padding: 0.5rem 1rem;
+			height: 3rem;
+		}
+
+		&[size='lg'] {
+			padding: 0.5rem 1.5rem;
+			height: 3.5rem;
+		}
 	}
 }
-

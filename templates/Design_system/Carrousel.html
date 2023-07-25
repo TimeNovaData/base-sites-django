@@ -1,4 +1,5 @@
 {% load django_vite %}
+{% load static %}
 
 <!-- 
 	https://swiperjs.com/element#usage
@@ -11,22 +12,20 @@
 
 <swiper-container slides-per-view="auto" space-between="8px" class="max-w-[660px]" navigation="true" pagination="true">
 	<swiper-slide class="w-[300px] h-[300px]">
-		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-full object-cover" src="{% static 'img/placeholder.png' %}" />
 	</swiper-slide>
 
 	<swiper-slide class="w-[300px] h-[300px]">
-		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-full object-cover" src="{% static 'img/placeholder.png' %}" />
 	</swiper-slide>
 
 	<swiper-slide class="w-[300px] h-[300px]">
-		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-full object-cover" src="{% static 'img/placeholder.png' %}" />
 	</swiper-slide>
 	<swiper-slide class="w-[300px] h-[300px]">
-		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-full object-cover" src="{% static 'img/placeholder.png' %}" />
 	</swiper-slide>
 	<swiper-slide class="w-[300px] h-[300px]">
-		<img class="w-full h-full object-cover" src="{% vite_asset_url 'img/placeholder.png' %}" />
+		<img class="w-full h-full object-cover" src="{% static 'img/placeholder.png' %}" />
 	</swiper-slide>
-
-
 </swiper-container>

@@ -1,4 +1,4 @@
-import { find } from "utils/utils.js"
+import { find } from "utils/dom.js"
 
 export default function (props) {
 

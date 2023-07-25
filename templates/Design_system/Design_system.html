@@ -19,16 +19,19 @@
 <main class="">
 	<div class="flex   gap-32  w-full">
 
-		<aside class=" w-[260px] sticky top-0  h-screen overflow-y-auto border-r pt-72 border-r-neutral-10">
+		<aside class=" w-[260px] sticky top-72  h-screen overflow-y-auto border-r pt-- border-r-neutral-10">
 			<div class="flex flex-col gap-8 px-16 pt-40">
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Button">Button</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Accordion">Accordion</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Selects">Selects</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Header">Header</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Input">Input</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Card">Card</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Tooltip">Tooltip</a>
-				<a class="p-8 transition rounded-md hover:bg-neutral-10" href="#Carrousel">Carrousel</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Button">Button</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Accordion">Accordion</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Selects">Selects</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Header">Header</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Input">Input</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Card">Card</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Tooltip">Tooltip</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Dropdown">Dropdown</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Carrousel">Carrousel</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Modal">Modal</a>
+				<a js-ripple class="p-8 transition rounded-md hover:bg-neutral-10 block" href="#Checkbox">Checkbox</a>
 			</div>
 		</aside>
 
@@ -81,10 +84,39 @@
 				</div>
 			</section>
 
+
+			<section id="Dropdown" class="pt-72">
+				{% include './parts/title.html' with text='Dropdown' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Dropdown.html' %}
+				</div>
+			</section>
+
+			<section id="Checkbox" class="pt-72">
+				{% include './parts/title.html' with text='Checkbox' %}
+				<div class="flex items-end gap-8 flex-wrap">
+					{% include './Checkbox.html' %}
+				</div>
+			</section>
+
 			<section id="Carrousel" class="pt-72">
 				{% include './parts/title.html' with text='Carrousel' %}
 				<div class="flex items-center gap-8 flex-wrap">
 					{% include './Carrousel.html' %}
+				</div>
+			</section>
+
+			<section id="Modal" class="pt-72">
+				{% include './parts/title.html' with text='Modal' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Modal.html' %}
+				</div>
+			</section>
+
+			<section id="Cookies" class="pt-72">
+				{% include './parts/title.html' with text='Cookies' %}
+				<div class="flex items-center gap-8 flex-wrap">
+					{% include './Cookies.html' %}
 				</div>
 			</section>
 

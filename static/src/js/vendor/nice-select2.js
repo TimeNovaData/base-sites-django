@@ -6,6 +6,7 @@ function triggerClick(el) {
 	el.dispatchEvent(event);
 }
 
+
 function triggerChange(el) {
 	var event = new Event("change");
 	el.dispatchEvent(event);
@@ -208,7 +209,6 @@ NiceSelect.prototype._renderSelectedItems = function () {
 
 		this.dropdown.querySelector(".multiple-options").innerHTML = selectedHtml;
 	} else {
-		console.log(this.selectedOptions)
 		var html = this.selectedOptions.length > 0 ? this.selectedOptions[0].data.text : this.placeholder;
 		this.dropdown.querySelector(".current").innerHTML = html;
 	}
@@ -355,7 +355,6 @@ NiceSelect.prototype._onItemClicked = function (option, e) {
 			if (hasClass(optionEl, "selected")) {
 				removeClass(optionEl, "selected");
 				this.selectedOptions.splice(this.selectedOptions.indexOf(option), 1);
-				console.log(optionEl.dataset.value);
 				this.el.querySelector(`option[value="${optionEl.dataset.value}"]`).removeAttribute('selected');
 			} else {
 				addClass(optionEl, "selected");

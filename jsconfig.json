@@ -1,26 +1,19 @@
 {
-  "baseUrl": "./static",
+  "noErrorTruncation": true,
   "compilerOptions": {
-
-  
+    "baseUrl": ".",
     "paths": {
-      // "@/*": [
-      //   "./*"
-      // ],
-      // "@s:home/*": [
-      //   "./home/static/home/*"
-      // ],
-      // "@t:home/*": [
-      //   "./home/templates/home/*"
-      // ],
-      // "@s:another_app/*": [
-      //   "./another_app/static/another_app/*"
-      // ],
-      // "@t:another_app/*": [
-      //   "./another_app/templates/another_app/*"
-      // ]
- 
+      "utils/*": [
+        "static/src/js/utils"
+      ],
+      "public/*": [
+        "static/public"
+      ],
+      "css/*": [ "static/src/css" ],
     }
   },
-  "exclude": ["dist", "node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }

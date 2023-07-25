@@ -39,7 +39,7 @@
 <body style="opacity: 0" class="{% block body_class %} {% endblock %}">
 
 	{% include 'svg_defs.html' %}
-	{% include "menus/menu_principal.html" %}
+	<!-- 	{% include "menus/menu_principal.html" %} -->
 
 
 	{% block content %} <!-- content --> {% endblock %}
@@ -50,6 +50,7 @@
 	{% vite_asset 'src/js/main.js'%}
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	{% block extra_js %} {% endblock %}
 
 </body>
 

@@ -154,7 +154,7 @@ LOGOUT_REDIRECT_URL = "login"
 LOGIN_URL = "login"
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "collectedstatic")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -164,5 +164,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ⚡VITE -----
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
-DJANGO_VITE_DEV_MODE = DEBUG
-STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]
+DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
+STATICFILES_DIRS = [
+    BASE_DIR / "static" / 'public',
+    DJANGO_VITE_ASSETS_PATH,
+    # BASE_DIR / "static"
+
+]

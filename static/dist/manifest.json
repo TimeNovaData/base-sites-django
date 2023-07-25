@@ -1,25 +1,18 @@
 {
   "src/index.css": {
-    "file": "index-3b845e07.css",
+    "file": "index-42e39eb3.css",
     "src": "src/index.css"
   },
   "src/index.js": {
     "css": [
-      "index-3b845e07.css"
+      "index-42e39eb3.css"
     ],
-    "file": "index-1d3f78a9.js",
+    "file": "index-a270c48c.js",
     "isEntry": true,
     "src": "src/index.js"
   },
-  "src/js/main.css": {
-    "file": "main-a1ae07b3.css",
-    "src": "src/js/main.css"
-  },
   "src/js/main.js": {
-    "css": [
-      "main-a1ae07b3.css"
-    ],
-    "file": "main-a373cced.js",
+    "file": "main-14564112.js",
     "isEntry": true,
     "src": "src/js/main.js"
   },

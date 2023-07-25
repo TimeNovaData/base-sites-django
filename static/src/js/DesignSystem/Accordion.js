@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import { find, findAll } from 'utils/utils';
+import { find, findAll } from 'utils/dom';
 
 
 export default function Accordion() {
@@ -36,12 +36,12 @@ export default function Accordion() {
 		}
 	}
 
+
 	function init() {
 		if (containerAccordions.length) {
 			containerAccordions
 				.forEach((container) => container.addEventListener("click", (e) => onClick(e, container)));
 		}
-
 		return this
 	}
 
