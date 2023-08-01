@@ -17,6 +17,7 @@ ALLOWED_HOSTS = [
     "seo-pro.herokuapp.com",
 ]
 
+
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
@@ -141,6 +142,33 @@ AUTHENTICATION_BACKENDS = [
     "global_functions.authentication.LoginUsernameEmail",
 ]
 
+USE_AWS = config("USE_AWS", default=False, cast=bool)
+if USE_AWS:
+    AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = "django-forzza"
+    AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+    AWS_S3_OBJECT_PARAMETERS = {
+        "CacheControl": "max-age=86400",
+    }
+    AWS_LOCATION = "static"
+    AWS_DEFAULT_ACL = None
+
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+    # s3 public media settings
+    PUBLIC_MEDIA_LOCATION = "media"
+    MEDIA_URL = "https://%s/%s/" % (
+        AWS_S3_CUSTOM_DOMAIN,
+        PUBLIC_MEDIA_LOCATION,
+    )
+    DEFAULT_FILE_STORAGE = "seo-pro.storage_backends.PublicMediaStorage"
+else:
+    STATIC_URL = "/static/"
+    MEDIA_URL = "/media/"
+
 LANGUAGE_CODE = "pt-br"
 
 TIME_ZONE = "America/Sao_Paulo"
@@ -155,10 +183,7 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "login"
 LOGIN_URL = "login"
 
-STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -167,4 +192,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
 DJANGO_VITE_DEV_MODE = DEV
+DJANGO_VITE_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
 STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]

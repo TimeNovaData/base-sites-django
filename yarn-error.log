@@ -1,0 +1,69 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\vini\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vini\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\vini\AppData\Local\Microsoft\WindowsApps;C:\Users\vini\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vini\AppData\Roaming\npm;C:\Users\vini\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\vini\AppData\Local\Yarn\Cache\v6\npm-tar-fs-2.1.1-489a15ab85f1f0befabb370b7de4f9eb5cbe8784-integrity\node_modules\tar-fs\.travis.yml' -> '\\wsl.localhost\Ubuntu\home\vini\LINUX_SISTEMAS\SEO-PRO\base-sites-django\node_modules\prebuild-install\node_modules\tar-fs\.travis.yml'
+
+npm manifest: 
+  {
+    "name": "seo-pro",
+    "version": "1.0.0",
+    "description": "",
+    "author": "novadata",
+    "license": "ISC",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "webp": "node ndt_tools/node_scripts/webp_convert.js",
+      "clear-src": "find ./static -mindepth 1 -maxdepth 1 ! -name 'src' ! -name 'dist' ! -name 'public' -exec rm -r {} \\;",
+      "prepare": "husky install"
+    },
+    "dependencies": {
+      "axios": "^1.4.0",
+      "gsap": "^3.12.2",
+      "nice-select2": "^2.1.0",
+      "swiper": "^10.0.4",
+      "tippy.js": "^6.3.7",
+      "toastify-js": "^1.12.0"
+    },
+    "browserslist": "> 0.5%, not dead",
+    "devDependencies": {
+      "autoprefixer": "^10.4.13",
+      "fs": "^0.0.1-security",
+      "husky": "^8.0.0",
+      "inquirer": "^7.3.3",
+      "postcss": "^8.4.26",
+      "postcss-comment": "^2.0.0",
+      "postcss-custom-media": "^10.0.0",
+      "postcss-import": "^15.1.0",
+      "postcss-mixins": "^9.0.4",
+      "postcss-nested": "^6.0.1",
+      "postcss-simple-vars": "^7.0.1",
+      "sharp": "^0.32.1",
+      "tailwindcss": "^3.2.7",
+      "vite": "4.4.4"
+    },
+    "engines": {
+      "node": ">=18.17.0",
+      "npm": ">= 8.5",
+      "yarn": ">= 1.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

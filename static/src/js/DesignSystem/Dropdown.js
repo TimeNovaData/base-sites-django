@@ -29,7 +29,7 @@ export default function () {
 				arrow: false,
 				offset: [0, 4],
 				animation: 'shift-away-subtle',
-				appendTo: 'parent',
+				appendTo: () => document.body,
 
 
 				...props,
