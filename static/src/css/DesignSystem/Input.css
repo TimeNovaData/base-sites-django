@@ -1,0 +1,31 @@
+@layer components {
+	.Input {
+		border: 1px solid rgb(var(--neutral-30));
+
+		min-height: 2.5rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		border-radius: var(--rounded-sm);
+
+		input {
+			width: 100%;
+			padding: 0.25rem 0.5rem;
+			height: 100%;
+			border-radius: var(--rounded-sm);
+		}
+
+		&:active,
+		&:focus-within {
+			border: 1px solid rgb(var(--primary-pure), 1);
+		}
+
+		textarea {
+			border-radius: inherit;
+			border: none;
+			resize: none;
+			padding: 0.5rem;
+		}
+	}
+}

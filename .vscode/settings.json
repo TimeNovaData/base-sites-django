@@ -26,17 +26,53 @@
         "--line-length=79",
     ],
     /*
-    HTML
+    * Front
     */
+    "files.exclude": {
+        // "node_modules/": true,
+        // "runtime.txt": true,
+        ".mypy_cache": true,
+        "*/__pycache__": true,
+        ".husky":true,
+        ".env_example": true
+    },
+
+    "tailwind-fold.foldStyle": "QUOTES",
+    "tailwind-fold.supportedLanguages": [
+        "html",
+        "javascriptreact",
+        "typescript",
+        "javascript",
+        "vue-html",
+        "vue",
+    ],
+    "tailwind-fold.unfoldIfLineSelected": false,
+    "tailwind-fold.showTailwindImage": false,
+    "tailwind-fold.autoFold": true,
+    // "html.validate.styles": true,
+    "postcss.validate": true,
     "[html]": {
-        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare",
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": false,
         "editor.insertSpaces": false,
     },
-    "files.associations": {
-        ".env": "django-txt",
-        "*.html": "html"
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.associations": {
+        ".env": "django-txt",
+        "*.html": "html",
+        "**/*.html": "html",
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "postcss": "css",
+    },
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 }

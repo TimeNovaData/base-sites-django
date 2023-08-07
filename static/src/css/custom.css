@@ -1,0 +1,28 @@
+.safe-text {
+	word-break: break-word;
+}
+
+.three-lines {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+}
+
+.four-lines {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+}
+
+ul .circle::before {
+	content: '\2022';
+	color: rgb(var(--primary-pure));
+	font-weight: bold;
+	display: inline-block;
+	width: 1rem;
+	margin-left: -1rem;
+}

@@ -1,0 +1,34 @@
+<!-- 
+css: "static/src/css/vendor/nice-select2.css"
+JS:  "static/src/js/DesignSystem/Select.js"
+
+GITHUB: https://github.com/bluzky/nice-select2
+
+Obs: Single Select nao pega opcao placeholder, pra isso 
+precisamos colocar uma option 
+<option value="" disabled selected>Placeholder</option> 
+	
+-->
+
+<select required js-select>
+	<option value="" disabled selected>Selecione</option>
+	<option value="1">Select default</option>
+	<option value="2">Another option</option>
+	<option value="3">A disabled option</option>
+	<option value="4">Potato</option>
+</select>
+
+
+<select multiple class="!h-48" js-select>
+	<option value="1">Some option</option>
+	<option value="2">Another option</option>
+	<option value="3" disabled>A disabled option</option>
+	<option value="4">Potato</option>
+</select>
+
+<select multiple class="!h-56" js-props='{"placeholder": "Placeholder Multiple"}' js-select>
+	<option value="1">Some option</option>
+	<option value="2">Another option</option>
+	<option value="3" disabled>A disabled option</option>
+	<option value="4">Potato</option>
+</select>

@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     #
     # Apps
     "avatar",
-    "front_assets",
     "home",
     "emails",
     "blog",
@@ -42,7 +41,7 @@ INSTALLED_APPS = [
     "advanced_filters",
     "colorfield",
     "debug_toolbar",
-    "django_browser_reload",
+    # "django_browser_reload",
     "django_filters",
     "django_object_actions",
     "django_quill",
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
     "novadata_utils",
     "rest_framework",
     "widget_tweaks",
+    "django_vite",
 ]
 
 MIDDLEWARE = [
@@ -67,11 +67,11 @@ MIDDLEWARE = [
 ]
 
 DEV = config("DEV", default=False, cast=bool)
-if DEV:
-    MIDDLEWARE += [
-        "django_browser_reload.middleware.BrowserReloadMiddleware",
-        # 'debug_toolbar.middleware.DebugToolbarMiddleware',
-    ]
+# if DEV:
+#     MIDDLEWARE += [
+#         "django_browser_reload.middleware.BrowserReloadMiddleware",
+#         # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+#     ]
 
 ROOT_URLCONF = "ndt_app.urls"
 
@@ -160,3 +160,14 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# ⚡VITE -----
+
+DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
+DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
+STATICFILES_DIRS = [
+    BASE_DIR / "static" / 'public',
+    DJANGO_VITE_ASSETS_PATH,
+    # BASE_DIR / "static"
+
+]

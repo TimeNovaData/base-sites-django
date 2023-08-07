@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "steoates.autoimport",
+        "novadatasnippets.nova-data-snippets",
+        "almahdi.code-django",
+        "ms-python.python",
+        "ms-vsliveshare.vsliveshare",
+        "massi.javascript-docstrings",
+        "editorconfig.editorconfig",
+        "vunguyentuan.vscode-postcss",
+        "cipchk.cssrem",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-rename-tag",
+        "stivo.tailwind-fold",
+        "naumovs.color-highlight",
+        "eamodio.gitlens"
+    ]
+}

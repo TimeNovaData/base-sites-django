@@ -5,3 +5,9 @@ node_modules
 .env
 Zone.Identifier
 *Zone.Identifier
+dev.sh
+db.sqlite3
+.mypy_cache
+yarn.lock
+package-lock.json
+*.pyc

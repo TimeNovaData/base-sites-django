@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+# https://typicode.github.io/husky/
+. "$(dirname -- "$0")/_/husky.sh"
+export PS1="\[\e[31m\]\d \t\[\e[0m\]\s-\v\$ "
+
+echo '
+⚡ pre-commit hook 
+'
+
+rm -f yarn.lock
+rm -f yarn-error.log
+rm -f package-lock.json
+
+# yarn clear-src
+yarn build
+
+git add .
+
+echo '🟢 pre-commit finalizado'
+
+
+
+
+

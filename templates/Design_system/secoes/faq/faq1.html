@@ -1,0 +1,131 @@
+{% load static %}
+{% load humanize %}
+{% load django_vite %}
+
+<section class="min-h-screen w-full flex px-24 justify-center md:h-auto sm:min-h-[500px]">
+
+	<div class="flex flex-col items-center gap-56 max-w-[76rem] my-72 sm:my-32 sm:gap-24">
+		<div class="flex flex-col gap-4 justify-center max-w-[37rem] items-center mx-auto sm:items-start">
+			<span class="text-caps-2 inline-flex gap-8 text-primary-pure font-semibold items-center ">
+				<ion-icon name="checkmark-circle-outline" class="text-2xl"></ion-icon>
+				<p>badge - FAQ</p>
+				<ion-icon name="checkmark-circle-outline" class="text-2xl"></ion-icon>
+			</span>
+			<h1 class="text-title-2 mb-16 sm:mb-12">Section title | 1</h1>
+			<p class="text-paragraph-2 text-center text-neutral-70 mt-8 sm:text-start">Lorem ipsum dolor sit amet
+				consectetur. Sit vitae
+				vel fermentum dui
+				iaculis sem
+				amet. Tellus interdum nunc aliquam nisi felis eu augue.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-2 h-full gap-32 md:flex md:flex-col-reverse">
+			<div class="flex flex-col w-full">
+				<div js-accordion-container class="border-b border-neutral-20">
+					<article js-accordion-item>
+						<header js-accordion-title="@id"
+							class="relative flex items-center gap-8 py-20 font-semibold transition cursor-pointer select-none px-14 text-neutral-80 text-paragraph-1 hover:bg-neutral-10 sm:py-10">
+							<svg class="w-16 h-16 transition-transform rotate-180 seta">
+								<use xlink:href="#icon_seta_up"></use>
+							</svg>
+							<h5>Lorem ipsum dolor sit amet?</h5>
+						</header>
+
+						<fieldset class="overflow-hidden" js-accordion-content="@id">
+							<div class="px-24 py-8 text-neutral-80">
+								<p class="w-full text-neutral-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin
+									sed odio tellus
+									aliquam. Ut
+									scelerisque lorem sit varius odio vel viverra. Eget nulla interdum enim aliquet justo.</p>
+							</div>
+						</fieldset>
+
+					</article>
+
+				</div>
+
+				<div js-accordion-container class="border-b border-neutral-20">
+					<article js-accordion-item>
+						<header js-accordion-title="@id"
+							class="relative flex items-center gap-8 py-20 font-semibold transition cursor-pointer select-none px-14 text-neutral-80 text-paragraph-1 hover:bg-neutral-10 sm:py-10">
+							<svg class="w-16 h-16 transition-transform rotate-180 seta">
+								<use xlink:href="#icon_seta_up"></use>
+							</svg>
+							<h5>Lorem ipsum dolor sit amet?</h5>
+						</header>
+
+						<fieldset class="overflow-hidden" js-accordion-content="@id">
+							<div class="px-24 py-8 text-neutral-80">
+								<p class="w-full text-neutral-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin
+									sed odio tellus
+									aliquam. Ut
+									scelerisque lorem sit varius odio vel viverra. Eget nulla interdum enim aliquet justo.</p>
+							</div>
+						</fieldset>
+
+					</article>
+
+				</div>
+
+				<div js-accordion-container class="border-b border-neutral-20">
+					<article js-accordion-item>
+						<header js-accordion-title="@id"
+							class="relative flex items-center gap-8 py-20 font-semibold transition cursor-pointer select-none px-14 text-neutral-80 text-paragraph-1 hover:bg-neutral-10 sm:py-10">
+							<svg class="w-16 h-16 transition-transform rotate-180 seta">
+								<use xlink:href="#icon_seta_up"></use>
+							</svg>
+							<h5>Lorem ipsum dolor sit amet?</h5>
+						</header>
+
+						<fieldset class="overflow-hidden" js-accordion-content="@id">
+							<div class="px-24 py-8 text-neutral-80">
+								<p class="w-full text-neutral-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin
+									sed odio tellus
+									aliquam. Ut
+									scelerisque lorem sit varius odio vel viverra. Eget nulla interdum enim aliquet justo.</p>
+							</div>
+						</fieldset>
+
+					</article>
+
+				</div>
+
+				<div js-accordion-container class="border-b border-neutral-20">
+					<article js-accordion-item>
+						<header js-accordion-title="@id"
+							class="relative flex items-center gap-8 py-20 font-semibold transition cursor-pointer select-none px-14 text-neutral-80 text-paragraph-1 hover:bg-neutral-10 sm:py-10">
+							<svg class="w-16 h-16 transition-transform rotate-180 seta">
+								<use xlink:href="#icon_seta_up"></use>
+							</svg>
+							<h5>Lorem ipsum dolor sit amet?</h5>
+						</header>
+
+						<fieldset class="overflow-hidden" js-accordion-content="@id">
+							<div class="px-24 py-8 text-neutral-80">
+								<p class="w-full text-neutral-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin
+									sed odio tellus
+									aliquam. Ut
+									scelerisque lorem sit varius odio vel viverra. Eget nulla interdum enim aliquet justo.</p>
+							</div>
+						</fieldset>
+
+					</article>
+
+				</div>
+			</div>
+
+			<!-- Image container-->
+			<div class="w-full h-[25rem] md:h-[375px]">
+				<img class="object-cover h-full w-full" src="{% static 'img/placeholder.png' %}" alt="">
+			</div>
+		</div>
+
+		<button class="Button w-fit md:w-full md:flex md:justify-center" size="md">
+			<ion-icon name="person-circle-outline" class="text-2xl"></ion-icon>
+			Call to Action
+			<ion-icon name="person-circle-outline" class="text-2xl"></ion-icon>
+		</button>
+	</div>
+
+</section>

@@ -1,0 +1,19 @@
+{
+  "noErrorTruncation": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "utils/*": [
+        "static/src/js/utils"
+      ],
+      "public/*": [
+        "static/public"
+      ],
+      "css/*": [ "static/src/css" ],
+    }
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
