@@ -7,6 +7,7 @@ from .coming_soon import coming_soon
 from .svg_viewer import svg_viewer
 from .aceitar_termo import aceitar_termo
 from .fale_conosco import fale_conosco
+from .parceiros_teste import ParceirosView
 
 errors_views = [
     error_403,
@@ -22,5 +23,6 @@ __all__ = [
     design_system,
     svg_viewer,
     aceitar_termo,
-    fale_conosco
+    fale_conosco,
+    ParceirosView,
 ] + errors_views

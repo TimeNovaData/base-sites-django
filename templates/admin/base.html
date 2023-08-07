@@ -1,0 +1,45 @@
+{% extends 'admin/base.html' %}
+{% load templates_tags_admin %}
+{% load load_colors %}
+{% load static %}
+
+{% custom_admin_color 'primary' as custom_admin_primary_color %}
+{% custom_admin_color 'secondary' as custom_admin_secondary_color %}
+
+{% block extrahead %}
+{% customizados_style_admin as customizados_style_admin %}
+{% customizados_script_admin as customizados_script_admin %}
+{% customizados_head_admin as customizados_head_admin %}
+
+<!-- Head Customizado-->
+{% for head_custom in customizados_head_admin %}
+{{head_custom|safe}}
+{% endfor %}
+
+<link rel="stylesheet" href="https://django-pacotes.s3.sa-east-1.amazonaws.com/django-admin-main/dist/css/@admin.css">
+<script src="https://django-pacotes.s3.sa-east-1.amazonaws.com/django-admin-main/dist/js/main.js" ></script>
+
+<!-- Style Customizado-->
+<style>
+	{% for estilo in customizados_style_admin %}
+	{{estilo|safe}}
+	{% endfor %}
+	
+	body {
+		--primary: {{custom_admin_primary_color}};
+		--secondary: {{custom_admin_secondary_color}};
+		--default-button-hover-bg: #465E9B;
+		--save-and-continue: rgba(232, 251, 242, 0.116);
+
+	}
+</style>
+
+<!-- Script Customizado-->
+<script>
+	{% for customjs in customizados_script_admin %}
+	{{customjs|safe}}
+	{% endfor %}
+</script>
+{% endblock %}
+
+
