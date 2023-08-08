@@ -8,7 +8,6 @@ from ..models import (
     ComingSoon,
     Portifolio,
     Servico,
-    Site,
     Pagina
 )
 
@@ -41,12 +40,6 @@ def converter_para_webp_portifolio(sender, instance, **kwargs):
 @receiver(pre_save, sender=Servico)
 def converter_para_webp_servico(sender, instance, **kwargs):
     convert_img_to_webp(instance)
-
-
-@receiver(pre_save, sender=Site)
-def converter_para_webp_site(sender, instance, **kwargs):
-    convert_img_to_webp(instance)
-
 
 @receiver(pre_save, sender=Pagina)
 def converter_para_webp_pagina(sender, instance, **kwargs):

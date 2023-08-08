@@ -1,4 +1,5 @@
 from django.db import models
+from colorfield.fields import ColorField
 
 
 class Site(models.Model):
@@ -10,6 +11,26 @@ class Site(models.Model):
     descricao_global = models.TextField(
         verbose_name="Descrição Global",
         max_length=500,
+    )
+
+    cor_primario = ColorField(
+        verbose_name='Cor Primária',
+        default='#00D77C',
+    )
+
+    cor_secundario = ColorField(
+        verbose_name='Cor Secundaria',
+        default='#121212',
+    )
+
+    cor_email = ColorField(
+        verbose_name='Cor Email',
+        default='#00D77C',
+    )
+
+    cor_login = ColorField(
+        verbose_name='Cor Login',
+        default='#121212',
     )
 
     js_global = models.TextField(

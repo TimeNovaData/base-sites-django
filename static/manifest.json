@@ -1,0 +1,24 @@
+{
+  "src/index.css": {
+    "file": "index-42e39eb3.css",
+    "src": "src/index.css"
+  },
+  "src/index.js": {
+    "css": [
+      "index-42e39eb3.css"
+    ],
+    "file": "index-a270c48c.js",
+    "isEntry": true,
+    "src": "src/index.js"
+  },
+  "src/js/main.js": {
+    "file": "main-14564112.js",
+    "isEntry": true,
+    "src": "src/js/main.js"
+  },
+  "src/js/utils/GLOBAL.js": {
+    "file": "global-084699f7.js",
+    "isEntry": true,
+    "src": "src/js/utils/GLOBAL.js"
+  }
+}

@@ -9,3 +9,8 @@ class SiteAdmin(NovadataModelAdmin):
         "id",
         "titulo_global",
     ]
+
+    class Media:
+        js = (
+            'home/admin_conteudo_custom.js',  # app static folder
+        )
