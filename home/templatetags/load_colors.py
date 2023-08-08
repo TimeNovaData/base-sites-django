@@ -15,3 +15,10 @@ def custom_admin_color(parameter):
     color = site.cor_secundario
 
   return color
+
+@register.simple_tag()
+def customizados_logo_admin():
+
+    customizado_logo = Site.objects.first()
+    
+    return customizado_logo.logo

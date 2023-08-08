@@ -3,7 +3,6 @@
 {% load load_colors %}
 {% load static %}
 
-{% custom_admin_color 'primary' as custom_admin_primary_color %}
 {% custom_admin_color 'secondary' as custom_admin_secondary_color %}
 
 {% block extrahead %}
@@ -21,25 +20,23 @@
 
 <!-- Style Customizado-->
 <style>
-	{% for estilo in customizados_style_admin %}
-	{{estilo|safe}}
-	{% endfor %}
-	
-	body {
-		--primary: {{custom_admin_primary_color}};
-		--secondary: {{custom_admin_secondary_color}};
-		--default-button-hover-bg: #465E9B;
-		--save-and-continue: rgba(232, 251, 242, 0.116);
+    {% for estilo in customizados_style_admin %}
+    {{estilo|safe}}
+    {% endfor %}
+    
+    body {
+        --primary: {% custom_admin_color 'primary' %};
+        --secondary: {% custom_admin_color 'secondary' %};
+        --default-button-hover-bg: {% custom_admin_color 'primary' %};
+        --save-and-continue: rgba(232, 251, 242, 0.116);
 
-	}
+    }
 </style>
 
 <!-- Script Customizado-->
 <script>
-	{% for customjs in customizados_script_admin %}
-	{{customjs|safe}}
-	{% endfor %}
+    {% for customjs in customizados_script_admin %}
+    {{customjs|safe}}
+    {% endfor %}
 </script>
 {% endblock %}
-
-
