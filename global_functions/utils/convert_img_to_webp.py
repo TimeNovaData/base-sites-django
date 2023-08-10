@@ -28,17 +28,19 @@ def convert_img_to_webp(instance):
         # pega o campo real atravez do atributo
         file = getattr(instance, field.name)
 
-        is_webp = file.name.endswith(".webp")
-        in_img_types = file.name.endswith(img_types)
+        if file:
 
-        if not is_webp and in_img_types:
-            
-            parse_image = Image.open(file)
+            is_webp = file.name.endswith(".webp")
+            in_img_types = file.name.endswith(img_types)
 
-            buffer = BytesIO()
+            if not is_webp and in_img_types:
+                
+                parse_image = Image.open(file)
 
-            parse_image.save(buffer, format="webp")
+                buffer = BytesIO()
 
-            file.name = f"{os.path.splitext(file.name)[0]}.webp"
+                parse_image.save(buffer, format="webp")
 
-            file.file = buffer
+                file.name = f"{os.path.splitext(file.name)[0]}.webp"
+
+                file.file = buffer
