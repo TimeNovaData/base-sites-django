@@ -9,12 +9,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY", "")
 
 DEBUG = config("DEBUG", default=False, cast=bool)
-DEV = config("DEV", default=False, cast=bool)
 
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "seo-pro.herokuapp.com",
+    "seo_pro.herokuapp.com",
 ]
 
 INTERNAL_IPS = [
@@ -68,14 +67,13 @@ MIDDLEWARE = [
 ]
 
 DEV = config("DEV", default=False, cast=bool)
-
 # if DEV:
 #     MIDDLEWARE += [
 #         "django_browser_reload.middleware.BrowserReloadMiddleware",
 #         # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 #     ]
 
-ROOT_URLCONF = "seo-pro.urls"
+ROOT_URLCONF = "seo_pro.urls"
 
 TEMPLATES = [
     {
@@ -93,7 +91,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "seo-pro.wsgi.application"
+WSGI_APPLICATION = "seo_pro.wsgi.application"
 
 
 default_dburl = "sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
@@ -112,8 +110,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "seo-pro API",
-    "DESCRIPTION": "seo-pro description",
+    "TITLE": "seo_pro API",
+    "DESCRIPTION": "seo_pro description",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     #
@@ -166,5 +164,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ⚡VITE -----
 
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
-DJANGO_VITE_DEV_MODE = DEV
-STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]
+DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
+STATICFILES_DIRS = [
+    BASE_DIR / "static" / 'public',
+    DJANGO_VITE_ASSETS_PATH,
+    # BASE_DIR / "static"
+
+]

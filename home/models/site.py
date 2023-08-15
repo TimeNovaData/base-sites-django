@@ -92,4 +92,4 @@ class Site(models.Model):
 
         app_label = "home"
         verbose_name = "Site"
-        verbose_name_plural = "Site"
+        verbose_name_plural = "Configurações Básicas"

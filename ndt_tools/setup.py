@@ -109,16 +109,16 @@ def install_requirements():
 
 
 def generate_env_file():
-    env_example_path = ".env_example"
+#     env_example_path = ".env_example"
     env_file_path = ".env"
 
-    if not os.path.exists(env_example_path):
-        print(f"O arquivo .env_example não existe")
-        return
+#     if not os.path.exists(env_example_path):
+#         print(f"O arquivo .env_example não existe")
+#         return
 
-    if os.path.exists(env_file_path):
-        print(f"O arquivo .env já existe")
-        return
+#     if os.path.exists(env_file_path):
+#         print(f"O arquivo .env já existe")
+#         return
 
     try:
         with open(env_file_path, "w") as env_file:

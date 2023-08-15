@@ -1,6 +1,9 @@
 from django.contrib import admin
 from ..models import Site
 from novadata_utils.admin import NovadataModelAdmin
+from django_app_novadata.models import ConteudoCustom
+
+admin.site.unregister(ConteudoCustom)
 
 
 @admin.register(Site)
