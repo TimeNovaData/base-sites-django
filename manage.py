@@ -5,7 +5,7 @@ import sys
 def main():
     """Função principal para executar o projeto."""
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "ndt_app.settings"
+        "DJANGO_SETTINGS_MODULE", "seo_pro.settings"
     )
     try:
         from django.core.management import execute_from_command_line
