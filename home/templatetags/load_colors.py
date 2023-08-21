@@ -9,10 +9,10 @@ def custom_admin_color(parameter):
   site = Site.objects.first()
 
   if parameter == 'primary':
-    color = site.cor_primario
+    color = site.cor_primario if site.cor_primario else '#00D77C'
 
   elif parameter == 'secondary':
-    color = site.cor_secundario
+    color = site.cor_secundario if site.cor_secundario else '#121212'
 
   return color
 
