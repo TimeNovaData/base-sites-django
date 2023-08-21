@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     "novadata_utils",
     "rest_framework",
     "widget_tweaks",
-    "django_vite",
+    "ndt_vite_tags",
 ]
 
 MIDDLEWARE = [
@@ -193,20 +193,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # ⚡VITE -----
-DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
-DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
-DJANGO_VITE_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
+ndt_vite_tags_ASSETS_PATH = BASE_DIR / "static" / "dist"
+ndt_vite_tags_DEV_MODE = config("DEV", default=False, cast=bool)
+ndt_vite_tags_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
 PUBLIC_FOLDER = BASE_DIR / "static" / "public"
-STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH, PUBLIC_FOLDER]
+STATICFILES_DIRS = [ndt_vite_tags_ASSETS_PATH, PUBLIC_FOLDER]
 
 
 """
 
-DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
-DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
+ndt_vite_tags_ASSETS_PATH = BASE_DIR / "static" / "dist"
+ndt_vite_tags_DEV_MODE = config("DEV", default=False, cast=bool)
 STATICFILES_DIRS = [
     BASE_DIR / "static" / "public",
-    DJANGO_VITE_ASSETS_PATH,
+    ndt_vite_tags_ASSETS_PATH,
     # BASE_DIR / "static"
 ]
 """
