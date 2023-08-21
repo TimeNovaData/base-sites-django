@@ -1,3 +1,3 @@
-from home.templatetags import load_colors, ndt_vite_tags
+from home.templatetags import django_vite_tags, load_colors
 
-__all__ = [load_colors, ndt_vite_tags]
+__all__ = [load_colors, django_vite_tags]
