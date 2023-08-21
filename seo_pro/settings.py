@@ -198,14 +198,3 @@ DJANGO_VITE_DEV_MODE = config("DEV", default=False, cast=bool)
 DJANGO_VITE_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
 PUBLIC_FOLDER = BASE_DIR / "static" / "public"
 STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH, PUBLIC_FOLDER]
-
-
-"""
-django_vite_ASSETS_PATH = BASE_DIR / "static" / "dist"
-django_vite_DEV_MODE = config("DEV", default=False, cast=bool)
-STATICFILES_DIRS = [
-    BASE_DIR / "static" / "public",
-    django_vite_ASSETS_PATH,
-    # BASE_DIR / "static"
-]
-"""
