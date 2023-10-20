@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="cookies_1" class="overflow-hidden h-screen relative flex items-end">
+		<picture class="h-full w-full absolute z-[-1]">
+			<source class="object-cover h-full w-full" srcset="{% static 'img/banners/banner_1_desktop.webp' %}" alt="banner-1-desktop" media="(min-width: 640px)">
+				<img  class="object-cover h-full w-full" src="{% static 'img/banners/banner_1_mobile.webp' %}" alt="banner-1-mobile">
+			</picture> 
+		
+			<div class="container">
+					<div class="bg-white rounded-lg mb-64 md:max-w-[512px] sm:max-w-full">
+						<div class="flex justify-between px-24 py-24 md:flex-col md:gap-40">
+							<div class="flex flex-col gap-16 max-w-[420px] md:max-w-full">
+								<span class="text-caps-2 inline-flex gap-8 text-primary-pure items-center mb-4 md:text-caps-3">
+									<svg class="w-[24px] h-[24px]">
+										<use xlink:href="#icon_certificate_2"></use>
+									</svg>
+									<p>badge</p>
+									<svg class="w-[24px] h-[24px]">
+										<use xlink:href="#icon_certificate_2"></use>
+									</svg>
+								</span>
+
+								<h2 class="text-title-3 text-neutral-100">Esse site usa cookies</h2>
+								<p class="text-paragraph-3 text-neutral-70">
+									Nós armazenamos dados temporariamente para melhorar a sua experiência de navegação 
+									e recomendar conteúdo de seu interesse. Ao utilizar nossos serviços, você concorda com tal monitoramento.
+								</p>
+
+								<a href="" class="text-paragraph-3 text-neutral-70 underline">Política de Privacidade</a>
+							</div>
+
+							<div class="flex gap-16 flex-col max-w-[464px] w-full justify-center md:max-w-full md:flex-row-reverse">
+								<button class="Button w-full flex justify-center" size="lg" js-ripple>
+									Aceitar
+								</button>
+
+								<button class="Button w-full flex justify-center bg-white text-primary-pure border-[1px] border-b-primary-pure" size="lg" js-ripple>
+									Rejeitar
+								</button>
+
+							</div>
+						</div>
+			</div>
+</section>

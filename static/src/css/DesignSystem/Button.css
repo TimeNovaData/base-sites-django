@@ -36,6 +36,17 @@
 			}
 		}
 
+		&[fourth] {
+			padding: 1rem !important;
+			background: rgb(var(--primary-light));
+			//border-radius: 0;
+			color: rgb(var(--primary-dark));
+
+			&:hover {
+				background: rgba(var(--primary-pure), 0.1);
+			}
+		}
+
 		&[size='sm'] {
 			padding: 0.5rem 1rem;
 			height: 2.5rem;
@@ -50,5 +61,14 @@
 			padding: 0.5rem 1.5rem;
 			height: 3.5rem;
 		}
+	}
+
+	.ButtonPurple {
+		border-radius: 4px;
+		border: 1px solid var(--ds-primary-light-20-op, rgba(88, 95, 247, 0.20));
+		background: var(--ds-primary-light-10-op, rgba(88, 95, 247, 0.10));
+
+		/* Ds Backdrop Blur/01 */
+		backdrop-filter: blur(8px);
 	}
 }

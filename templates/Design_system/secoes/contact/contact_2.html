@@ -1,0 +1,75 @@
+{% load static %}
+
+<section id="contact_2" class="h-screen sm:h-auto sm:py-32 sm:mb-[240px]">
+<div class="w-full max-h-[492px] h-full bg-primary-dark pt-64 md:max-h-[95vh] sm:max-h-[88vh]">
+	<div class="container flex gap-120 justify-between md:flex-col md:gap-32">
+			<div class="flex flex-col gap-56 sm:gap-0">
+				<div class=" flex flex-col max-w-[487px]">
+					<span class="text-caps-2 inline-flex gap-8 text-primary-pure items-center mb-4 sm:text-caps-3">
+						<svg class="w-[24px] h-[24px]">
+							<use xlink:href="#icon_certificate_2"></use>
+						</svg>
+						<p>badge</p>
+						<svg class="w-[24px] h-[24px]">
+							<use xlink:href="#icon_certificate_2"></use>
+						</svg>
+					</span>
+					<h1 class="text-title-2 text-white  sm:text-title-3 sm:mb-16">Section title</h1>
+				</div>
+
+				<div class="grid gap-24">
+					<div class="flex gap-16">
+						<img  class="object-cover h-40 w-40" src="{% static 'img/email.svg' %}" alt="email">
+						<div class="flex flex-col justify-center">
+							<h4 class="text-headline-2 text-white font-semibold mb-8">E-mail</h4>
+							<p class="text-paragraph-2 font-normal text-white opacity-70 sm:text-paragraph-3">contato@contato.com.br</p>
+						</div>
+					</div>
+
+					<div class="flex gap-16">
+						<img  class="object-cover h-40 w-40" src="{% static 'img/phone.svg' %}" alt="phone">
+
+						<div class="flex flex-col justify-center">
+							<h4 class="text-headline-2 text-white font-semibold mb-8">Telefone</h4>
+							<p class="text-paragraph-2 font-normal text-white opacity-70 sm:text-paragraph-3">+55 11 99999 9999</p>
+						</div>
+					</div>
+
+					<div class="flex gap-16">
+						<img  class="object-cover h-40 w-40" src="{% static 'img/location.svg' %}" alt="location">
+						<div class="flex flex-col justify-center">
+							<h4 class="text-headline-2 text-white font-semibold mb-8">Cidade</h4>
+							<p class="text-paragraph-2 font-normal text-white opacity-70 sm:text-paragraph-3">Rua Avenida perto dali, Nº 129</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="bg-white rounded-lg shadow-md border-neutral-10 max-w-[592px] w-full h-fit sm:max-w-full">
+				<div class="flex flex-col gap-32 py-48 px-32">
+					<form action="" class="flex flex-col">
+						<label class="text-paragraph-2 text-neutral-100 font-normal mb-4" for="">Nome</label>
+						<input class="h-56 border-b-[1px] border-b-neutral-10 mb-16 text-paragraph-2 text-neutral-70 placeholder:text-neutral-70 placeholder:text-paragraph-2 px-8" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+						<label class="text-paragraph-2 text-neutral-100 font-normal mb-4" for="">E-mail</label>
+						<input class="h-56 border-b-[1px] border-b-neutral-10 mb-16 text-paragraph-2 text-neutral-70 placeholder:text-neutral-70 placeholder:text-paragraph-2 px-8" type="text" name="telefone" id="telefone" placeholder="Digite seu e-mail">
+						<label class="text-paragraph-2 text-neutral-100 font-normal mb-4" for="">Mensagem</label>
+						<textarea class="h-[132px] border-b-[1px] border-b-neutral-10 mb-32 text-paragraph-2 text-neutral-70 placeholder:text-neutral-70 placeholder:text-paragraph-2 py-8 px-8" name="mensagem" id="mensagem" placeholder="Digite aqui..."></textarea>
+
+						<a href="" class="Button text-paragraph-2 text-white w-fit sm:w-full sm:flex sm:justify-center" size="md">
+							<svg class="w-[24px] h-[24px] rotate-180">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+	
+							Call to action
+
+							<svg class="w-[24px] h-[24px]">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+						</a>
+					</form>
+				</div>
+			</div>
+	</div>
+</div>
+</section>
