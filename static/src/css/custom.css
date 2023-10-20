@@ -26,3 +26,13 @@ ul .circle::before {
 	width: 1rem;
 	margin-left: -1rem;
 }
+
+.LinearGradientWhite {
+	background: linear-gradient(270deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.10) 100%);
+}
+
+.LinearGradientBlack {
+	border-radius: 8px;
+	border: 1px solid var(--ds-neutral-l-05-op, rgba(9, 10, 26, 0.05));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+}

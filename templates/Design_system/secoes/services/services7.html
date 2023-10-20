@@ -2,42 +2,56 @@
 {% load humanize %}
 {% load ndt_vite_tags %}
 
-<section class="min-h-screen w-full flex px-24 justify-center md:h-auto sm:min-h-[500px]">
+<section id="services_7" class="min-h-screen w-full flex px-24 justify-center md:h-auto sm:min-h-[500px]">
 
 	<div class="flex flex-col items-center gap-56 max-w-[76rem] h-full w-full my-72 md:gap-32 sm:my-32 sm:gap-24">
 		<div class="flex flex-col gap-4 w-full items-start">
 			<span class="text-caps-2 inline-flex gap-8 text-primary-pure font-semibold items-center ">
 				<ion-icon name="checkmark-circle-outline" class="text-2xl"></ion-icon>
-				<p>badge - Services</p>
+				<p class="text-paragraph-4">badge - Services</p>
 				<ion-icon name="checkmark-circle-outline" class="text-2xl"></ion-icon>
 			</span>
-			<h1 class="text-title-2">Section title | 7</h1>
+			<h1 class="text-title-2 sm:text-title-3">Section title | 7</h1>
 		</div>
 
-		<div class="grid grid-cols-3 h-full w-full">
+		<div class="grid grid-cols-3 h-full w-full md:flex md:flex-col">
 
 			<!-- MENU -->
-			<div class="flex">
-				Menu
-			</div>
+			<div class="flex md:overflow-x-scroll">
+				<ul class="md:flex md:mb-16">
+					<li class="text-headline-1 text-neutral-100 px-32 py-24 border-l-2 border-primary-pure md:border-l-0 md:px-16 md:py-16 md:border-t-2 sm:w-[138px] sm:text-headline-2">
+						Service Name
+					</li>
+					<li class="text-headline-1 text-neutral-100 px-32 py-24 border-l-2 border-neutral-30  md:border-l-0 md:px-16 md:py-16 md:border-t-2 sm:w-[138px] sm:text-headline-2">
+						Service Name
+					</li>
+					<li class="text-headline-1 text-neutral-100 px-32 py-24 border-l-2 border-neutral-30  md:border-l-0 md:px-16 md:py-16 md:border-t-2 sm:w-[138px] sm:text-headline-2">
+						Service Name
+					</li>
+					<li class="text-headline-1 text-neutral-100 px-32 py-24 border-l-2 border-neutral-30  md:border-l-0 md:px-16 md:py-16 md:border-t-2 sm:w-[138px] sm:text-headline-2">
+						Service Name
+					</li>
+					
+				</ul>			
+</div>
 
 			<!-- IMAGE -->
 			<div class="flex">
-				<img class="object-cover h-full w-full" src="{% static 'img/placeholder.png' %}" alt="">
+				<img class="object-cover h-full w-full md:h-[444px] rounded-lg sm:h-auto" src="{% static 'img/placeholder.png' %}" alt="">
 			</div>
 
 			<!-- CONTENT -->
-			<div class="grid place-items-center">
+			<div class="grid place-items-center md:mt-16 md:place-items-start">
 				<div class="flex flex-col">
-					<span class="text-caps-2 text-primary-pure font-semibold">Subtitle</span>
-					<h2 class="text-title-3 mt-12 font-medium">Service Name</h2>
-					<p class="text-paragraph-2 text-neutral-70 mt-24 four-lines">Breve descrição de no máximo 4 linhas. </p>
-					<ul class="pl-20 mt-24">
+					<span class="text-caps-2 text-primary-pure font-semibold sm:text-caps-4">Subtitle</span>
+					<h2 class="text-title-3 mt-12 font-medium sm:text-headline-1 sm:mt-4">Service Name</h2>
+					<p class="text-paragraph-2 text-neutral-70 mt-24 four-lines sm:mt-6">Breve descrição de no máximo 4 linhas. </p>
+					<ul class="pl-20 mt-24 sm:mt-12">
 						<li class="circle">Pontos a destacar</li>
 						<li class="circle">Pontos a destacar</li>
 						<li class="circle">Pontos a destacar</li>
 					</ul>
-					<a href="#" class="inline-flex gap-8 text-primary-pure mt-32 items-center cursor-pointer group">
+					<a href="#" class="inline-flex gap-8 text-primary-pure mt-32 items-center cursor-pointer group sm:mt-24">
 						<p class="text-paragraph-2">Saiba mais</p>
 						<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6"></ion-icon>
 					</a>

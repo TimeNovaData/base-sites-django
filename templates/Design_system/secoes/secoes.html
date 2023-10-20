@@ -11,9 +11,36 @@
 
 <div>
 	<!-- ABOUT US  -->
+	{% include './about_us/about_us1.html' %}
 	{% include './about_us/about_us2.html' %}
 
+	<!-- ACEITAR COOKIES  -->
+	{% include './aceitar_cookies/cookies_1.html' %}
+	{% include './aceitar_cookies/cookies_2.html' %}
 
+	<!-- BANNERS -->
+	{% include './banners/banner_1.html' %}
+	{% include './banners/banner_2.html' %}
+
+	<!-- BLOG -->
+	{% include './blog/blog_1.html' %}
+	{% include './blog/blog_2.html' %}
+
+	<!-- BIG NUMBERS -->
+	{% include './big_numbers/big_number1.html' %}
+	{% include './big_numbers/big_number2.html' %}
+
+	<!-- CARDS -->
+	{% include './cards/card_1.html' %}
+	{% include './cards/card_2.html' %}
+
+	<!-- CONTACT -->
+	{% include './contact/contact_1.html' %}
+	{% include './contact/contact_2.html' %}
+
+	<!-- COMO FUNCIONA / STAGES -->
+	{% include './como_funciona/stage_1.html' %}
+	{% include './como_funciona/stage_2.html' %}
 
 	<!-- FAQ -->
 	{% include './faq/faq1.html' %}
@@ -23,16 +50,65 @@
 	{% include './faq/faq5.html' %}
 	{% include './faq/faq6.html' %}
 
+	<!-- FOOTER -->
+	{% include './footer/footer_1.html' %}
+	{% include './footer/footer_2.html' %}
+
+	<!-- GALLERY -->
+	{% include './gallery/gallery_1.html' %}
+	{% include './gallery/gallery_2.html' %}
+	
+	<!-- INSTAGRAM -->
+	{% include './instagram/instagram_1.html' %}
+	{% include './instagram/instagram_2.html' %}
+
+	<!-- PARTNERS -->
+	{% include './partners/partners_1.html' %}
+	{% include './partners/partners_2.html' %}
+
+	<!-- PRICING -->
+	{% include './pricing/pricing_1.html' %}
+	{% include './pricing/pricing_2.html' %}
+
+	<!-- TEAM -->
+	{% include './team/team_1.html' %}
+	{% include './team/team_2.html' %}
+
+	<!-- TERMOS E SERVICOS	-->
+	{% include './termos_politicas/termos_politicas_1.html' %}
+	{% include './termos_politicas/termos_politicas_2.html' %}
+	
+	<!-- TESTIMONIALS	-->
+	{% include './testimonials/depoimentos_1.html' %}
+	{% include './testimonials/depoimentos_2.html' %}
 
 	<!-- SERVICES -->
+	{% include './services/services1.html' %}
 	{% include './services/services2.html' %}
 	{% include './services/services6.html' %}
 	{% include './services/services7.html' %}
+	
+
 
 </div>
 <!------------------------------------------>
 
-
+<script>
+	let re = false
+	document.addEventListener('keydown', function (event) {
+		// Verifica se a tecla 'F' foi pressionada e a tecla 'Ctrl' (ou 'Cmd' em Mac) está sendo pressionada ao mesmo tempo
+		if ((event.ctrlKey || event.metaKey) && event.key === 'f') {
+			if (re) return
+			re = true
+			document.querySelectorAll('section').forEach((i) => {
+				i.insertAdjacentHTML(
+					'beforebegin',
+					`<h1 class="text-display-1 font-bold">${i.id}</h1>`
+				)
+			})
+		}
+	})
+	</script>
 
 
 {% endblock %}

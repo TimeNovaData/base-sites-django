@@ -15,6 +15,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Space Grotesk', 'sans-serif'],
+			inter: ['Inter', 'sans-serif'],
 		},
 
 		colors: {
@@ -27,6 +28,7 @@ module.exports = {
 			'neutral-10': withOpacity('--neutral-10'),
 			'neutral-20': withOpacity('--neutral-20'),
 			'neutral-30': withOpacity('--neutral-30'),
+			'neutral-40': withOpacity('--neutral-40'),
 			'neutral-60': withOpacity('--neutral-60'),
 			'neutral-70': withOpacity('--neutral-70'),
 			'neutral-100': withOpacity('--neutral-100'),
@@ -83,16 +85,31 @@ module.exports = {
 		},
 
 		screens: {
+			/*
 			min2xl: { min: '1441px' },
 			'2xl': { max: '1441px' },
 			xl: { max: '1460px' },
 			lg: { max: '1281px' },
 			md2: { max: '1180px' },
+			md3: { max: '1024px' },
 			md: { max: '767px' },
 			sm: { max: '639px' },
+			*/
+			xl:{max: '1920px'},
+			lg:{max: '1440px'},
+			lg2:{max: '1280px'},
+			md:{max: '1024px'},
+			sm:{max: '600px'},
+	
 		},
 
-		// Extendss
+		// xs     599.99px
+		// sm    600px
+		// md    1024px
+		// lg    1440px
+		// xl    1920px 
+
+		// Extendss 
 		extend: {
 			letterSpacing: {},
 			gridTemplateColumns: {},
@@ -108,18 +125,18 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			// prettier-ignore
 			addUtilities({
-				'.text-display-1': { fontSize: '4rem', lineHeight: '140%', letterSpacing: '-0.08rem', fontFamily: theme('fontFamily.sans') },
+				'.text-display-1': { fontSize: '4rem', lineHeight: '125%', letterSpacing: '-0.08rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-1': { fontSize: '3.5rem', lineHeight: '130%', letterSpacing: '-0.07rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-2': { fontSize: '3rem', lineHeight: '130%', letterSpacing: '-0.06rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-3': { fontSize: '2rem', lineHeight: '130%', letterSpacing: '-0.04rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-4': { fontSize: '1.5rem', lineHeight: '125%', letterSpacing: '-0.03rem', fontFamily: theme('fontFamily.sans') },
-				'.text-headline-1': { fontSize: '1.125rem', lineHeight: '100%', letterSpacing: '-0.0225rem', fontFamily: theme('fontFamily.sans') },
+				'.text-headline-1': { fontSize: '1.125rem', lineHeight: '144%', letterSpacing: '-0.0225rem', fontFamily: theme('fontFamily.sans') },
 				'.text-headline-2': { fontSize: '1rem', lineHeight: '100%', letterSpacing: '-0.02rem', fontFamily: theme('fontFamily.sans') },
 				'.text-headline-3': { fontSize: '0.875rem', lineHeight: '100%', letterSpacing: '-0.0175rem', fontFamily: theme('fontFamily.sans') },
 				'.text-headline-4': { fontSize: '0.75rem', lineHeight: '100%', letterSpacing: '-0.015rem', fontFamily: theme('fontFamily.sans') },
 				'.text-headline-5': { fontSize: '0.625rem', lineHeight: '100%', letterSpacing: '-0.0125rem', fontFamily: theme('fontFamily.sans') },
 				'.text-caps-1': { fontSize: '1rem', lineHeight: '100%', letterSpacing: '0.04rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
-				'.text-caps-2': { fontSize: '0.875rem', lineHeight: '100%', letterSpacing: '0.035rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
+				'.text-caps-2': { fontSize: '0.875rem', lineHeight: '100%', letterSpacing: '0.035rem', fontFamily: theme('fontFamily.inter'), textTransform: 'uppercase' },
 				'.text-caps-3': { fontSize: '0.75rem', lineHeight: '100%', letterSpacing: '0.03rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
 				'.text-caps-4': { fontSize: '0.625rem', lineHeight: '130%', letterSpacing: '0.025rem', fontFamily: theme('fontFamily.sans'), textTransform: 'uppercase' },
 				'.text-paragraph-1': { fontSize: '1.125rem', lineHeight: '130%', letterSpacing: '-0.0225rem', fontFamily: theme('fontFamily.sans') },
