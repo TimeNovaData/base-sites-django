@@ -36,3 +36,33 @@ ul .circle::before {
 	border: 1px solid var(--ds-neutral-l-05-op, rgba(9, 10, 26, 0.05));
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
 }
+
+.LinearGradientPurple {
+	background: linear-gradient(-270deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+}
+
+.LinearGradientBigNumberTop {
+	max-width: 280px;
+  padding: 1.5rem;
+  position: relative;
+	border-radius: .5rem;
+  background:linear-gradient(360deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1px;
+
+	@media (max-width:1024px){
+		max-width: 327px;
+	}
+}
+
+.LinearGradientBigNumberBottom {
+	max-width: 280px;
+  padding: 1.5rem;
+  position: relative;
+	border-radius: .5rem;
+  background:linear-gradient(180deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1px;
+
+	@media (max-width:1024px){
+		max-width: 327px;
+	}
+}
