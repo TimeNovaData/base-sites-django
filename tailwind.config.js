@@ -35,6 +35,7 @@ module.exports = {
 
 			//primary
 			'primary-light': withOpacity('--primary-light'),
+			'primary-light-10': withOpacity('--primary-light-10'),
 			'primary-light-30': withOpacity('--primary-light-30'),
 			'primary-pure-10': withOpacity('--primary-pure-10'),
 			'primary-pure': withOpacity('--primary-pure'),
