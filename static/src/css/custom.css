@@ -66,3 +66,22 @@ ul .circle::before {
 		max-width: 327px;
 	}
 }
+
+.LinearGradientBigNumberBottom2 {
+	max-width: 384px;
+  padding: 1.5rem;
+  position: relative;
+	border-radius: .5rem;
+  background:linear-gradient(180deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1px;
+
+	@media (max-width:1024px){
+		max-width: 327px;
+	}
+}
+
+.BorderNeutralWhiteOp5 {
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(25px);
+}
