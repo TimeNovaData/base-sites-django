@@ -1,2 +1,2 @@
 document.addEventListener("DOMContentLoaded",()=>document.body.classList.add("DOMContentLoaded"));
-//# sourceMappingURL=index-a5fdd4bc.js.map
+//# sourceMappingURL=index-8bbb864a.js.map

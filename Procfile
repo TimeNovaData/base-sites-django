@@ -1,1 +1,1 @@
-web: gunicorn seo_pro.wsgi
+web: gunicorn lubrisint.wsgi
