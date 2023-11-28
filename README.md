@@ -120,3 +120,4 @@ Agora é só codar!!
 Basta baixar o projeto em sua máquina, modificar o que desejar, apagar e recriar o arquivo .zip e fazer o pull request como de costume!
 
 Obrigado por contribuir! o/
+# Canal-A
