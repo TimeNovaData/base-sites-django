@@ -1,1 +1,1 @@
-web: gunicorn lubrisint.wsgi
+web: gunicorn canal_a.wsgi
