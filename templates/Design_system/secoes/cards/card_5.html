@@ -1,0 +1,29 @@
+{% load static %}
+
+<section id="card_5" class="overflow-hidden h-screen flex items-center justify-center">
+	<div class="container  relative">
+		<picture class="h-[200px] w-full rounded-lg ">
+			<source class="object-cover h-full w-full rounded-lg" srcset="{% static 'img/cards/bg-card5.webp' %}" alt="banner-1-desktop" media="(min-width: 1024px)">
+				<img  class="object-cover h-full w-full rounded-lg md:h-[250px] sm:h-[290px]" src="{% static 'img/cards/bg-card5-mobile.webp' %}" alt="banner-1-mobile">
+		</picture> 	
+
+		 <div class="flex justify-between max-w-[1187px] w-full py-[30px] px-40 absolute top-0 md:flex-col md:gap-32 md:max-w-full sm:left-0 sm:right-0">
+			<div class="max-w-[525px] w-full">
+				<h1 class="text-title-4 text-white font-medium mb-16">Lorem ipsum dolor</h1>
+				<h4 class="text-paragraph-1 text-white text-opacity-70 ">Lorem ipsum dolor sit amet consectetur. Nec dictum enim orci egestas nullam at enim. Potenti lorem faucibus aenean mauris ipsum eu. </h4>
+			</div>
+			<a href="" class="Button text-paragraph-2 text-white w-fit sm:flex sm:w-full sm:justify-center !bg-primary-dark" size="md">
+				<svg class="w-[24px] h-[24px] rotate-180">
+					<use xlink:href="#icon_arrow_white_2"></use>
+				</svg>
+		
+				Call to action
+		
+				<svg class="w-[24px] h-[24px]">
+					<use xlink:href="#icon_arrow_white_2"></use>
+				</svg>
+			</a>
+		</div> 
+	</div>
+</section>
+

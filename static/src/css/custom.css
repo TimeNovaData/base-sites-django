@@ -28,54 +28,54 @@ ul .circle::before {
 }
 
 .LinearGradientWhite {
-	background: linear-gradient(270deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.10) 100%);
+	background: linear-gradient(270deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 
 .LinearGradientBlack {
 	border-radius: 8px;
 	border: 1px solid var(--ds-neutral-l-05-op, rgba(9, 10, 26, 0.05));
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .LinearGradientPurple {
-	background: linear-gradient(-270deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	background: linear-gradient(-270deg, #8186f7 50%, rgba(129, 134, 247, 0) 98.92%);
 }
 
 .LinearGradientBigNumberTop {
 	max-width: 280px;
-  padding: 1.5rem;
-  position: relative;
-	border-radius: .5rem;
-  background:linear-gradient(360deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1.5rem;
+	position: relative;
+	border-radius: 0.5rem;
+	background: linear-gradient(360deg, #8186f7 50%, rgba(129, 134, 247, 0) 98.92%);
 	padding: 1px;
 
-	@media (max-width:1024px){
+	@media (max-width: 1024px) {
 		max-width: 327px;
 	}
 }
 
 .LinearGradientBigNumberBottom {
 	max-width: 280px;
-  padding: 1.5rem;
-  position: relative;
-	border-radius: .5rem;
-  background:linear-gradient(180deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1.5rem;
+	position: relative;
+	border-radius: 0.5rem;
+	background: linear-gradient(180deg, #8186f7 50%, rgba(129, 134, 247, 0) 98.92%);
 	padding: 1px;
 
-	@media (max-width:1024px){
+	@media (max-width: 1024px) {
 		max-width: 327px;
 	}
 }
 
 .LinearGradientBigNumberBottom2 {
 	max-width: 384px;
-  padding: 1.5rem;
-  position: relative;
-	border-radius: .5rem;
-  background:linear-gradient(180deg, #8186F7 50%, rgba(129, 134, 247, 0.00) 98.92%);
+	padding: 1.5rem;
+	position: relative;
+	border-radius: 0.5rem;
+	background: linear-gradient(180deg, #8186f7 50%, rgba(129, 134, 247, 0) 98.92%);
 	padding: 1px;
 
-	@media (max-width:1024px){
+	@media (max-width: 1024px) {
 		max-width: 327px;
 	}
 }
@@ -84,4 +84,10 @@ ul .circle::before {
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(25px);
+}
+
+.BorderPrimaryLigthOp10 {
+	border-radius: 0.25rem;
+	background: var(--ds-primary-light-10-op, rgba(88, 95, 247, 0.1));
+	backdrop-filter: blur(1.5625rem);
 }
