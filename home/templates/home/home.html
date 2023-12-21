@@ -10,12 +10,11 @@
 
 {% block content %}
 
-<main id="Home">
+<main id="Home" js-page='home'>
 
-	<div class="p-32">
-		<a href="/design_system" class="Button" size="md" >Design System</a>
-	</div>
+	{% include 'home/componente_global/header.html' %}
 
+	{% include 'home/section/home_about_us.html' %}
 <!-- 	{% for item in pagina.depoimento_set.all %}
 	{{item}}
 	{% endfor %}
