@@ -34,10 +34,14 @@ module.exports = {
 			'neutral-100': withOpacity('--neutral-100'),
 
 			//primary
+			'primary-dark': withOpacity('--primary-dark'),
 			'primary-light': withOpacity('--primary-light'),
 			'primary-light-10': withOpacity('--primary-light-10'),
 			'primary-light-30': withOpacity('--primary-light-30'),
+			'primary-dark': withOpacity('--primary-dark'),
+
 			'primary-pure-10': withOpacity('--primary-pure-10'),
+			'primary-pure-70': withOpacity('--primary-pure-70'),
 			'primary-pure': withOpacity('--primary-pure'),
 			'primary-pure-70': withOpacity('--primary-pure-70'),
 			'primary-dark': withOpacity('--primary-dark'),
@@ -96,21 +100,30 @@ module.exports = {
 			md: { max: '767px' },
 			sm: { max: '639px' },
 			*/
-			xl:{max: '1920px'},
-			lg:{max: '1440px'},
-			lg2:{max: '1280px'},
-			md:{max: '1024px'},
-			sm:{max: '600px'},
-	
+<<<<<<< HEAD
+			xl: { max: '1920px' },
+			lg: { max: '1440px' },
+			lg2: { max: '1280px' },
+			md: { max: '1024px' },
+			sm: { max: '600px' },
+
+=======
+			xl: { max: '1920px' },
+			lg: { max: '1440px' },
+			lg2: { max: '1280px' },
+			md: { max: '1024px' },
+			md2: { max: '767px' },
+			sm: { max: '600px' },
+>>>>>>> 37437a6 (novas sections)
 		},
 
 		// xs     599.99px
 		// sm    600px
 		// md    1024px
 		// lg    1440px
-		// xl    1920px 
+		// xl    1920px
 
-		// Extendss 
+		// Extendss
 		extend: {
 			letterSpacing: {},
 			gridTemplateColumns: {},
