@@ -1,1 +1,1 @@
-web: gunicorn canal_a.wsgi
+web: gunicorn liberdadeelogoali.wsgi
