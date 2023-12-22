@@ -31,98 +31,147 @@
 		</div>
 
 		<div class="flex gap-32 mb-32 md:gap-24 md:flex-wrap"> 
-			<div class="max-w-[384px] w-full">
-				<div class="flex flex-col gap-16">
-					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+			<div class="max-w-[384px] w-full border-[1px] border-neutral-30 rounded-lg">
+				<div class="flex flex-col">
+					<img  class="object-cover max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
 
 					<div>
-						<div class="flex gap-12 mb-12">
+						<div class="flex gap-12 border-b-[1px] border-neutral-30 p-16 justify-between">
 							<span class="text-headline-3 font-normal bg-primary-pure-10 text-primary-pure px-14 py-8 rounded-[14px]">Categoria </span>	
-							<p class="text-headline-4 font-medium text-neutral-60 flex gap-4 items-center">
-								<svg class="w-[16px] h-[16px]">
-									<use xlink:href="#icon_file"></use>
-								</svg>
-								12 minutos de leitura
-							</p>
+							<div class="flex gap-32 items-center">
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_date"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Data</p>
+								</div>
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_eye"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Time</p>
+								</div>
+							</div>
 						</div>
 
+						<div class="border-b-[1px] border-neutral-30 p-16">
 						<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
 						<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
-						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%]">
 							Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
 							Compra...
+						</p>
+					</div>
+
+					<div class="p-16 flex justify-between">
+						<p class="text-paragraph-2 text-neutral-70 font-medium leading-[150%]">
+							Por: User
 						</p>
 
 						<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center">
 							Continuar lendo
 							<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6"></ion-icon>
 						</a>
-
+					</div>
+				
 					</div>
 				</div>
 			</div>
-
-			<div class="max-w-[384px] w-full sm:hidden">
-				<div class="flex flex-col gap-16">
-					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+<!-- Quando está no mobile display hidden remover se necessário -->
+			<div class="max-w-[384px] w-full border-[1px] border-neutral-30 rounded-lg md:hidden">
+				<div class="flex flex-col">
+					<img  class="object-cover max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
 
 					<div>
-						<div class="flex gap-12 mb-12">
+						<div class="flex gap-12 border-b-[1px] border-neutral-30 p-16 justify-between">
 							<span class="text-headline-3 font-normal bg-primary-pure-10 text-primary-pure px-14 py-8 rounded-[14px]">Categoria </span>	
-							<p class="text-headline-4 font-medium text-neutral-60 flex gap-4 items-center">
-								<svg class="w-[16px] h-[16px]">
-									<use xlink:href="#icon_file"></use>
-								</svg>
-								12 minutos de leitura
-							</p>
+							<div class="flex gap-32 items-center">
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_date"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Data</p>
+								</div>
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_eye"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Time</p>
+								</div>
+							</div>
 						</div>
 
+						<div class="border-b-[1px] border-neutral-30 p-16">
 						<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
 						<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
-						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%]">
 							Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
 							Compra...
+						</p>
+					</div>
+
+					<div class="p-16 flex justify-between">
+						<p class="text-paragraph-2 text-neutral-70 font-medium leading-[150%]">
+							Por: User
 						</p>
 
 						<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center">
 							Continuar lendo
 							<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6"></ion-icon>
 						</a>
-
+					</div>
+				
 					</div>
 				</div>
 			</div>
-
-			<div class="max-w-[384px] w-full sm:hidden">
-				<div class="flex flex-col gap-16">
-					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+<!-- Quando está no mobile display hidden remover se necessário -->
+			<div class="max-w-[384px] w-full border-[1px] border-neutral-30 rounded-lg sm:hidden">
+				<div class="flex flex-col">
+					<img  class="object-cover max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
 
 					<div>
-						<div class="flex gap-12 mb-12">
+						<div class="flex gap-12 border-b-[1px] border-neutral-30 p-16 justify-between">
 							<span class="text-headline-3 font-normal bg-primary-pure-10 text-primary-pure px-14 py-8 rounded-[14px]">Categoria </span>	
-							<p class="text-headline-4 font-medium text-neutral-60 flex gap-4 items-center">
-								<svg class="w-[16px] h-[16px]">
-									<use xlink:href="#icon_file"></use>
-								</svg>
-								12 minutos de leitura
-							</p>
+							<div class="flex gap-32 items-center">
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_date"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Data</p>
+								</div>
+								<div class="flex gap-4 items-center">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_eye"></use>
+									</svg>
+									<p class="text-headline-4 text-neutral-60 font-medium">Time</p>
+								</div>
+							</div>
 						</div>
 
+						<div class="border-b-[1px] border-neutral-30 p-16">
 						<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
 						<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
-						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+						<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%]">
 							Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
 							Compra...
+						</p>
+					</div>
+
+					<div class="p-16 flex justify-between">
+						<p class="text-paragraph-2 text-neutral-70 font-medium leading-[150%]">
+							Por: User
 						</p>
 
 						<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center">
 							Continuar lendo
 							<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6"></ion-icon>
 						</a>
-
+					</div>
+				
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<div class="hidden gap-24 h-fit items-center justify-between md:flex">
@@ -144,6 +193,6 @@
 				</svg>
 			</div>
 		</div>
-
+		
 	</div>
 </section>
