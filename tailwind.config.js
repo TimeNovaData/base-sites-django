@@ -37,8 +37,14 @@ module.exports = {
 			'neutral-100': withOpacity('--neutral-100'),
 
 			//primary
+			'primary-dark': withOpacity('--primary-dark'),
+			'primary-light': withOpacity('--primary-light'),
+			'primary-light-10': withOpacity('--primary-light-10'),
+			'primary-light-30': withOpacity('--primary-light-30'),
+			'primary-dark': withOpacity('--primary-dark'),
 
 			'primary-pure-10': withOpacity('--primary-pure-10'),
+			'primary-pure-70': withOpacity('--primary-pure-70'),
 			'primary-pure': withOpacity('--primary-pure'),
 			'primary-pure-10-op': withOpacity('--primary-pure-10-op'),
 
@@ -56,7 +62,6 @@ module.exports = {
 			'generics-white-20-op': withOpacity('--generics-white-20-op'),
 			'generics-white-10-op': withOpacity('--generics-white-10-op'),
 			'generics-white-05-op': withOpacity('--generics-white-05-op'),
-
 		},
 
 		spacing: {
@@ -108,16 +113,15 @@ module.exports = {
 			md: { max: '1024px' },
 			md2: { max: '767px' },
 			sm: { max: '600px' },
-
 		},
 
 		// xs     599.99px
 		// sm    600px
 		// md    1024px
 		// lg    1440px
-		// xl    1920px 
+		// xl    1920px
 
-		// Extendss 
+		// Extendss
 		extend: {
 			letterSpacing: {},
 			gridTemplateColumns: {},
@@ -133,25 +137,8 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			// prettier-ignore
 			addUtilities({
-				'.text-display-1': { fontSize: '6rem', fontWeight: 300, lineHeight: '130%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-display-2': { fontSize: '3.5rem', fontWeight: 300, lineHeight: '130%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-title-1': { fontSize: '3.5rem', fontWeight: 300, lineHeight: '130%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-title-2': { fontSize: '2.5rem', fontWeight: 400, lineHeight: '130%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-title-3': { fontSize: '1.5rem', fontWeight: 400, lineHeight: '130%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-headline-1': { fontSize: '1.25rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-headline-2': { fontSize: '1rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-headline-3': { fontSize: '0.875rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-headline-4': { fontSize: '0.75rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-paragraph-1': { fontSize: '1.25rem', fontWeight: 300, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-paragraph-2': { fontSize: '1.125rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-paragraph-3': { fontSize: '1rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-paragraph-4': { fontSize: '0.875rem', fontWeight: 400, lineHeight: '150%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-caps-1': { fontSize: '1.125rem', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%', fontFamily: theme('fontFamily.lato') },
-				'.text-caps-2': { fontSize: '1rem', fontWeight: 400, lineHeight: '100%', letterSpacing: '6%', fontFamily: theme('fontFamily.lato') },
-				'.text-caps-3': { fontSize: '0.875em', fontWeight: 400, lineHeight: '100%', letterSpacing: '6%', fontFamily: theme('fontFamily.lato') },
-				'.text-caps-4': { fontSize: '0.625rem', fontWeight: 400, lineHeight: '100%', letterSpacing: '6%', fontFamily: theme('fontFamily.lato') },
-
-				/*'.text-title-1': { fontSize: '3.5rem', lineHeight: '130%', letterSpacing: '-0.07rem', fontFamily: theme('fontFamily.sans') },
+				'.text-display-1': { fontSize: '4rem', lineHeight: '125%', letterSpacing: '-0.08rem', fontFamily: theme('fontFamily.sans') },
+				'.text-title-1': { fontSize: '3.5rem', lineHeight: '130%', letterSpacing: '-0.07rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-2': { fontSize: '3rem', lineHeight: '130%', letterSpacing: '-0.06rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-3': { fontSize: '2rem', lineHeight: '130%', letterSpacing: '-0.04rem', fontFamily: theme('fontFamily.sans') },
 				'.text-title-4': { fontSize: '1.5rem', lineHeight: '125%', letterSpacing: '-0.03rem', fontFamily: theme('fontFamily.sans') },
@@ -168,7 +155,7 @@ module.exports = {
 				'.text-paragraph-2': { fontSize: '1rem', lineHeight: '130%', letterSpacing: '-0.02rem', fontFamily: theme('fontFamily.sans') },
 				'.text-paragraph-3': { fontSize: '0.875rem', lineHeight: '130%', letterSpacing: '-0.0175rem', fontFamily: theme('fontFamily.sans') },
 				'.text-paragraph-4': { fontSize: '0.75rem', lineHeight: '130%', letterSpacing: '-0.015rem', fontFamily: theme('fontFamily.sans') },
-				'.text-paragraph-5': { fontSize: '0.675rem', lineHeight: '130%', letterSpacing: '-0.0125rem', fontFamily: theme('fontFamily.sans') }*/
+				'.text-paragraph-5': { fontSize: '0.675rem', lineHeight: '130%', letterSpacing: '-0.0125rem', fontFamily: theme('fontFamily.sans') }
 			})
 		}),
 	],
