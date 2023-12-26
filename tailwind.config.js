@@ -32,6 +32,7 @@ module.exports = {
 			'neutral-40-op': withOpacity('----neutral-40-op'),
 			'neutral-10-op': withOpacity('--neutral-10-op'),
 			'neutral-05-op': withOpacity('--neutral-05-op'),
+			'neutral-40': withOpacity('--neutral-40'),
 			'neutral-60': withOpacity('--neutral-60'),
 			'neutral-70': withOpacity('--neutral-70'),
 			'neutral-100': withOpacity('--neutral-100'),
