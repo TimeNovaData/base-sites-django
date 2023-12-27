@@ -1,0 +1,161 @@
+{% load static %}
+
+<section id="stage_6" class="py-120 h-auto sm:py-32 sm:mb-[240px]">
+	<div class="container h-screen flex flex-col gap-56 md:gap-24">
+
+		<!-- Title -->
+		<div class="flex justify-between items-end w-full sm:flex-col sm:items-start sm:gap-24">
+			<div class=" flex flex-col max-w-[487px]">
+				<span class="text-caps-2 inline-flex gap-8 text-primary-pure items-center mb-4 sm:text-caps-3">
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_certificate_2"></use>
+					</svg>
+					<p>badge</p>
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_certificate_2"></use>
+					</svg>
+				</span>
+
+				<h1 class="text-title-2 text-neutral-100  sm:text-title-3">Section title</h1>
+			</div>
+
+			<a href="" class="Button text-paragraph-2 text-primary-pure bg-white border-[1px] border-b-primary-pure sm:w-full sm:flex sm:justify-center" size="md">
+				<svg class="w-[24px] h-[24px] rotate-180">
+					<use xlink:href="#icon_arrow_purple_2"></use>
+				</svg>
+
+				Call to Action
+
+				<svg class="w-[24px] h-[24px]">
+					<use xlink:href="#icon_arrow_purple_2"></use>
+				</svg>
+			</a>
+		</div>
+
+		<div class="grid grid-cols-3 gap-32 md:grid-cols-2 sm:grid-cols-1">
+			<div>
+				<div class="relative">
+					<img  class="object-cover w-[384px] h-[156px] rounded-t-md md:w-full" src="{% static 'img/placeholder_2.png' %}" alt="phone">
+					<div class="absolute w-full top-0 left-0 px-40 py-56 flex gap-16">
+						<div class="h-full flex flex-col items-center">
+							<div class="w-[3px] h-16 bg-primary-light"></div>
+							<div class="w-[1px] h-32 bg-white bg-opacity-20"></div>
+						</div>
+
+						<div>
+							<div class="flex gap-4 mb-8">
+								<p class="text-headline-2 text-primary-light font-medium">01</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">.</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">03</p>
+							</div>
+							<h1 class="text-title-4 text-white font-bold">Baixe o aplicativo</h1>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="bg-neutral-10 rounded-b-lg backdrop-blur-xl">
+					<div class="p-40 grid gap-120">
+						<div class="grid gap-24">
+								<span class="text-caps-2 text-white font-semibold bg-primary-pure py-4 px-8 rounded-sm w-fit">Passo 1</span>
+								<h1 class="text-title-4 text-neutral-100 font-medium">Baixe o aplicativo do FGTS em seu smartphone.</h1>
+						</div>
+						<div class="flex gap-8">
+							<img  class="object-cover w-[132px] h-[38px] rounded-t-md md:w-[102px] md:h-[30px]" src="{% static 'img/logos/logo-play-store.webp' %}" alt="play-store">
+							<img  class="object-cover w-[132px] h-[38px] rounded-t-md md:w-[102px] md:h-[30px]" src="{% static 'img/logos/logo-apple.webp' %}" alt="apple">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Hidden no mobile, somente para exemplificar que tem swipper, quando usar em um projeto retire o hidden e inicialize um swipper-->
+			<div class="sm:hidden">
+				<div class="relative">
+					<img  class="object-cover w-[384px] h-[156px] rounded-t-md md:w-full" src="{% static 'img/placeholder_2.png' %}" alt="phone">
+					<div class="absolute w-full top-0 left-0 px-40 py-56 flex gap-16">
+						<div class="h-full flex flex-col items-center">
+							<div class="w-[3px] h-16 bg-primary-light"></div>
+							<div class="w-[1px] h-32 bg-white bg-opacity-20"></div>
+						</div>
+
+						<div>
+							<div class="flex gap-4 mb-8">
+								<p class="text-headline-2 text-primary-light font-medium">02</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">.</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">03</p>
+							</div>
+							<h1 class="text-title-4 text-white font-bold">Baixe o aplicativo</h1>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="bg-neutral-10 rounded-b-lg backdrop-blur-xl">
+					<div class="p-40 grid gap-120">
+						<div class="grid gap-24">
+								<span class="text-caps-2 text-white font-semibold bg-primary-pure py-4 px-8 rounded-sm w-fit">Passo 2</span>
+								<h1 class="text-title-4 text-neutral-100 font-medium">Baixe o aplicativo do FGTS em seu smartphone.</h1>
+						</div>
+						<a href="" class="Button text-paragraph-2 text-white w-fit !rounded-none sm:w-full flex sm:justify-center" size="md">
+							<svg class="w-[24px] h-[24px] rotate-180">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+		
+							Call to action
+		
+							<svg class="w-[24px] h-[24px]">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- Hidden no mobile, somente para exemplificar que tem swipper, quando usar em um projeto retire o hidden-->
+			<div class="md:hidden">
+				<div class="relative">
+					<img  class="object-cover w-[384px] h-[156px] rounded-t-md md:w-full" src="{% static 'img/placeholder_2.png' %}" alt="phone">
+					<div class="absolute w-full top-0 left-0 px-40 py-56 flex gap-16">
+						<div class="h-full flex flex-col items-center">
+							<div class="w-[3px] h-16 bg-primary-light"></div>
+							<div class="w-[1px] h-32 bg-white bg-opacity-20"></div>
+						</div>
+
+						<div>
+							<div class="flex gap-4 mb-8">
+								<p class="text-headline-2 text-primary-light font-medium">03</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">.</p>
+								<p class="text-headline-3 text-white text-opacity-70 font-medium">03</p>
+							</div>
+							<h1 class="text-title-4 text-white font-bold">Baixe o aplicativo</h1>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="bg-neutral-10 rounded-b-lg backdrop-blur-xl">
+					<div class="p-40 grid gap-120">
+						<div class="grid gap-24">
+								<span class="text-caps-2 text-white font-semibold bg-primary-pure py-4 px-8 rounded-sm w-fit">Passo 3</span>
+								<h1 class="text-title-4 text-neutral-100 font-medium">Baixe o aplicativo do FGTS em seu smartphone.</h1>
+						</div>
+						<a href="" class="Button text-paragraph-2 text-white w-fit !rounded-none sm:w-full flex sm:justify-center" size="md">
+							<svg class="w-[24px] h-[24px] rotate-180">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+		
+							Call to action
+		
+							<svg class="w-[24px] h-[24px]">
+								<use xlink:href="#icon_arrow_white_2"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</section>
