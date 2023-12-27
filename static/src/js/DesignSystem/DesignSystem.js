@@ -6,9 +6,6 @@ import Select from './Select';
 import Tooltip from './Tooltip';
 import Checkbox from './Checkbox';
 
-
-
-
 export default (opts) => ({
 	Accordion: Accordion().init(),
 	HeaderDefault: Header({ selector: '[js-header="1"]' }).init(),
