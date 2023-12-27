@@ -1,7 +1,9 @@
 import { defineConfig, loadEnv } from "vite";
 import path from 'path'
 
-const resolve = (p) => path.resolve(__dirname, p)
+const isLinux = process.platform === 'linux'
+const resolve = (p) => isLinux ? path.resolve(__dirname, p) : p
+
 
 export default defineConfig((/* { command, mode } */) => {
 	// const env = loadEnv(mode, process.cwd(), '')
@@ -37,12 +39,10 @@ export default defineConfig((/* { command, mode } */) => {
 			port: 3000,
 			open: false,
 			watch: { usePolling: true, disableGlobbing: false },
-
-
 		},
 
 		resolve: {
-			extensions: [".js", ".json"],
+			extensions: [".js", ".json", '.vue'],
 			alias: {
 				utils: resolve('./static/src/js/utils'),
 				public: resolve('./static/public'),
