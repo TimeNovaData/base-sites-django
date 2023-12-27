@@ -100,21 +100,12 @@ module.exports = {
 			md: { max: '767px' },
 			sm: { max: '639px' },
 			*/
-<<<<<<< HEAD
-			xl: { max: '1920px' },
-			lg: { max: '1440px' },
-			lg2: { max: '1280px' },
-			md: { max: '1024px' },
-			sm: { max: '600px' },
-
-=======
 			xl: { max: '1920px' },
 			lg: { max: '1440px' },
 			lg2: { max: '1280px' },
 			md: { max: '1024px' },
 			md2: { max: '767px' },
 			sm: { max: '600px' },
->>>>>>> 37437a6 (novas sections)
 		},
 
 		// xs     599.99px
