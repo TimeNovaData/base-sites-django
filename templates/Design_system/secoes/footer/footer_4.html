@@ -3,45 +3,62 @@
 <section id="footer_4" class="min-h-screen w-full py-64 md:h-auto relative">
 	<div class="bg-primary-dark">
 		<div class="container">
-			<div class="flex justify-between items-center py-64 md:flex-col md:gap-32 md:py-64 sm:items-start">
-				<a href="">
-					<img class="object-cover h-48 w-[104px]" src="{% static 'img/logo-white.svg' %}" alt="logo">
-				</a>
-				
-				<div class="flex gap-48 sm:flex-col sm:gap-64">
-					<ul class="flex gap-32 md:grid md:grid-cols-2">
-						<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
-							<a href="">
-								Item menu
-							</a>
-						</li>
-
-						<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
-							<a href="">
-								Item menu
-							</a>
-						</li>
-
-						<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
-							<a href="">
-								Item menu
-							</a>
-						</li>
-
-						<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
-							<a href="">
-								Item menu
-							</a>
-						</li>
-
-						<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
-							<a href="">
-								Item menu
-							</a>
-						</li>
+			<div class="flex items-center gap-64 md:flex-col md:gap-0 md:p-0 sm:items-start">
+				<div class="w-full flex py-64 items-center justify-between md:flex-col md:gap-48 md:py-48">
+					<a href="">
+						<img class="object-cover h-48 w-[104px]" src="{% static 'img/logo-white.svg' %}" alt="logo">
+					</a>
 					
-					</ul>
-					<div class="flex gap-16">
+					<div class="flex gap-48">
+						<ul class="flex gap-32 md:flex-col md:gap-24">
+							<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
+								<a href="">
+									Item menu
+								</a>
+							</li>
+
+							<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
+								<a href="">
+									Item menu
+								</a>
+							</li>
+
+							<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
+								<a href="">
+									Item menu
+								</a>
+							</li>
+
+							<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
+								<a href="">
+									Item menu
+								</a>
+							</li>
+
+							<li class="text-paragraph-2 text-white font-normal sm:text-paragraph-3">
+								<a href="">
+									Item menu
+								</a>
+							</li>
+
+							<li class="text-paragraph-2 text-white  font-normal sm:text-paragraph-3">
+								<a href="" class="flex gap-8 items-center">
+									<svg class="w-[20px] h-[20px]">
+										<use xlink:href="#icon_flag_brasil"></use>
+									</svg>
+									PT
+									<svg class="w-[9px] h-[5px]">
+										<use xlink:href="#icon_poligono"></use>
+									</svg>
+								</a>
+							</li>
+						
+						</ul>
+					</div>
+				</div>	
+
+				<div class="border-l border-white border-opacity-10 md:hidden">
+					<div class="flex pl-32 gap-16 py-[4.75rem]">
 						<a href="">
 							<svg class="w-[24px] h-[24px]">
 								<use xlink:href="#icon_whatsapp_purple_2"></use>
@@ -49,28 +66,101 @@
 						</a>
 						<a href="">
 							<svg class="w-[24px] h-[24px]">
-								<use xlink:href="#icon_facebook_purple"></use>
+								<use xlink:href="#icon_facebook_purple_2"></use>
 							</svg>
 						</a>
 						<a href="">
 							<svg class="w-[24px] h-[24px]">
-								<use xlink:href="#icon_instagram_purple"></use>
+								<use xlink:href="#icon_linkedin_purple_2"></use>
 							</svg>
 						</a>
 						<a href="">
 							<svg class="w-[24px] h-[24px]">
-								<use xlink:href="#icon_twitter"></use>
-							</svg>
-						</a>
-						<a href="">
-							<svg class="w-[24px] h-[24px]">
-								<use xlink:href="#icon_linkedin"></use>
+								<use xlink:href="#icon_instagram_purple_2"></use>
 							</svg>
 						</a>
 					</div>
-				</div>	
-
+				</div>
 			</div>
 		</div>
+
+		<div class=" hidden border-t border-white border-opacity-10 md:block">
+			<div class="flex justify-center pl-32 gap-16 p-16">
+				<a href="">
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_whatsapp_purple_2"></use>
+					</svg>
+				</a>
+				<a href="">
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_facebook_purple_2"></use>
+					</svg>
+				</a>
+				<a href="">
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_linkedin_purple_2"></use>
+					</svg>
+				</a>
+				<a href="">
+					<svg class="w-[24px] h-[24px]">
+						<use xlink:href="#icon_instagram_purple_2"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="border-t border-white border-opacity-10 py-40 md:p-24">
+			<div class="container flex gap-40 md:flex-col">
+					<div class="max-w-[378px] w-full flex gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_email_purple"></use>
+						</svg>
+						<div>
+							<h4 class="text-headline-2 text-white font-medium mb-4">
+								E-mail
+							</h4>
+							<a href="" class="text-paragraph-2 text-white text-opacity-70">
+								E-mail
+							</a>
+						</div>
+					</div>
+					
+					<div class="max-w-[378px] w-full flex gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_whatsapp_purple_2"></use>
+						</svg>
+						<div>
+							<h4 class="text-headline-2 text-white font-medium mb-4">
+								Whatsapp
+							</h4>
+							<a href="" class="text-paragraph-2 text-primary-light-30 underline">
+								Whatsapp
+							</a>
+						</div>
+					</div>
+					
+					<div class="max-w-[378px] w-full flex gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_location_purple_2"></use>
+						</svg>
+						<div>
+							<h4 class="text-headline-2 text-white font-medium mb-4">
+								Localização
+							</h4>
+							<a href="" class="text-paragraph-2 text-white text-opacity-70">
+								Localização
+							</a>
+						</div>
+					</div>
+						
+				</div>
+		</div>
 	</div>	
+
+	<div class="container">
+		<div class="py-24 flex justify-between sm:flex-col sm:items-center sm:gap-24">
+			<p class="text-paragraph-2 text-neutral-70 font-normal">© Logo 2023 - Todos os direitos reservados.</p>
+			<img class="object-cover h-24 w-56" src="/static/img/logos/logo_ndt_light.png" alt="logo">
+		</div>
+	</div>
 </section>
