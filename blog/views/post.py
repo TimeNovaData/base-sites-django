@@ -31,4 +31,6 @@ class PostDetail(DetailView):
     slug_field = 'slug'
     model = Post
 
-def posts_
+def api_posts(request):
+    posts = Post.objects.all()
+    return #JsonResponse({"posts": posts})
