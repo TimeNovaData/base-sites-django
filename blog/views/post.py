@@ -30,3 +30,5 @@ class PostDetail(DetailView):
     template_name = 'blog/post_detail.html'
     slug_field = 'slug'
     model = Post
+
+def posts_

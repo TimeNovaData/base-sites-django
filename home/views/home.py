@@ -2,7 +2,7 @@ import math
 
 from django.shortcuts import render, redirect, get_object_or_404
 from ..models import Pagina, Site
-
+from blog.models.post import Post
 
 def home(request, slug=None):
     # pagina solicitada pela url
@@ -35,6 +35,7 @@ def home(request, slug=None):
         "items_menu": items_menu,
         "menu_codigo": menu_codigo,
         "lines": lines,
+        "posts": Post.objects.all()[:3]
     }
 
     em_manutencao = site.ativar_manutencao
