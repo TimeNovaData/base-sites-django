@@ -8,6 +8,8 @@
 
 const plugin = require('tailwindcss/plugin')
 
+import typography from './static/src/js/utils/typography'
+
 module.exports = {
 	content: ['**/*.html', '!./node_modules/**/*'],
 	safelist: ['flex', 'flex-wrap', 'breadcrumb-wrapper', 'errorlist'],
@@ -137,7 +139,7 @@ module.exports = {
 	plugins: [
 		plugin(function ({ addUtilities, theme }) {
 			// prettier-ignore
-			addUtilities(typografy)
+			addUtilities(typography)
 		}),
 	],
 }
