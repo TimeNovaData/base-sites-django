@@ -13,7 +13,7 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "liberdadeelogoali.herokuapp.com",
+    "site_surf_club.herokuapp.com",
     "seo-pro.dokku-sites.novadata.com.br",
 ]
 
@@ -74,7 +74,7 @@ DEV = config("DEV", default=False, cast=bool)
 #         # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 #     ]
 
-ROOT_URLCONF = "liberdadeelogoali.urls"
+ROOT_URLCONF = "site_surf_club.urls"
 
 TEMPLATES = [
     {
@@ -92,7 +92,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "liberdadeelogoali.wsgi.application"
+WSGI_APPLICATION = "site_surf_club.wsgi.application"
 
 
 default_dburl = "sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
@@ -123,7 +123,7 @@ if USE_AWS:
         AWS_S3_CUSTOM_DOMAIN,
         PUBLIC_MEDIA_LOCATION,
     )
-    DEFAULT_FILE_STORAGE = "liberdadeelogoali.storages_backends.PublicMediaStorage"
+    DEFAULT_FILE_STORAGE = "site_surf_club.storages_backends.PublicMediaStorage"
 else:
     STATIC_URL = "/static/"
     MEDIA_URL = "/media/"
@@ -140,8 +140,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "liberdadeelogoali API",
-    "DESCRIPTION": "liberdadeelogoali description",
+    "TITLE": "site_surf_club API",
+    "DESCRIPTION": "site_surf_club description",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     #

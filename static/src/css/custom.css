@@ -207,4 +207,8 @@ ul .circle::before {
 	border-radius: 0.25rem;
 	background: var(--ds-primary-light-10-op, rgba(88, 95, 247, 0.1));
 	backdrop-filter: blur(1.5625rem);
+	
 }
+
+
+

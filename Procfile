@@ -1,1 +1,1 @@
-web: gunicorn liberdadeelogoali.wsgi
+web: gunicorn site_surf_club.wsgi
