@@ -5,7 +5,7 @@ import sys
 def main():
     """Função principal para executar o projeto."""
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "site_surf_club.settings"
+        "DJANGO_SETTINGS_MODULE", "surf_club_site.settings"
     )
     try:
         from django.core.management import execute_from_command_line

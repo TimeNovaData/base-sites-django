@@ -1,1 +1,1 @@
-web: gunicorn site_surf_club.wsgi
+web: gunicorn surf_club_site.wsgi
