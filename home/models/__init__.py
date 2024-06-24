@@ -14,6 +14,8 @@ from .coming_soon import ComingSoon
 from .termo import Termo
 from .aceite_termo import AceiteTermo
 from .parceiro import Parceiro
+from .rede_social import RedeSocial
+
 
 __all__ = [
     AlterUserEmail,
@@ -31,5 +33,6 @@ __all__ = [
     ComingSoon,
     Termo,
     AceiteTermo,
-    Parceiro
+    Parceiro,
+    RedeSocial,
 ]
