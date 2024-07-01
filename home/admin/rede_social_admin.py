@@ -7,12 +7,44 @@ from ..models import RedeSocial
 @admin.register(RedeSocial)
 class RedeSocialAdmin(NovadataModelAdmin):
     list_display = [
-        'id',
-        'nome',
-        'link',
-        'ordem',
+        "id",
+        "nome",
+        "link",
+        "ordem",
     ]
 
     list_filter = [
-        'nome'
+        "nome",
     ]
+
+    readonly_fields = [
+        "data_criacao",
+        "data_atualizacao",
+        "usuario_criacao",
+        "usuario_atualizacao",
+    ]
+
+    fieldsets = (
+        (
+            "Dados Principais",
+            {
+                "fields": (
+                    "nome",
+                    "icone_svg",
+                    "link",
+                    "ordem",
+                )
+            },
+        ),
+        (
+            "Dados Cadastrais",
+            {
+                "fields": (
+                    "data_criacao",
+                    "data_atualizacao",
+                    "usuario_criacao",
+                    "usuario_atualizacao",
+                )
+            },
+        ),
+    )

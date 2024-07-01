@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 from .pagina import Pagina
 
 
@@ -25,6 +27,48 @@ class RedeSocial(models.Model):
         Pagina,
         verbose_name="Páginas",
     )
+
+    data_criacao = models.DateTimeField(
+        verbose_name="Data de criação",
+        null=True,
+        auto_now_add=True,
+    )
+
+    data_atualizacao = models.DateTimeField(
+        verbose_name="Data de atualização",
+        null=True,
+        auto_now=True,
+    )
+
+    usuario_criacao = models.ForeignKey(
+        User,
+        verbose_name="Usuário de Criação",
+        related_name="usuario_criacao_rede_social",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+    )
+
+    usuario_atualizacao = models.ForeignKey(
+        User,
+        verbose_name="Usuário de Atualização",
+        related_name="usuario_atualizacao_rede_social",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+    )
+
+    def save(self, *args, **kwargs):
+        from crum import get_current_user
+
+        user = get_current_user()
+        if user and not user.pk:
+            user = None
+        if not self.pk:
+            self.usuario_criacao = user
+        self.usuario_atualizacao = user
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.nome
