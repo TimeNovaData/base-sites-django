@@ -11,8 +11,10 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter",
     },
+    "python.linting.enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "flake8",
     "python.languageServer": "Pylance",
     "python.formatting.autopep8Args": [
         "--indent-size=4",
