@@ -13,6 +13,7 @@
         "formulahendry.auto-rename-tag",
         "stivo.tailwind-fold",
         "naumovs.color-highlight",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "ms-python.black-formatter",
     ]
 }
