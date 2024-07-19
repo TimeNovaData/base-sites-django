@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "widget_tweaks",
     "django_vite",
+    "rangefilter",
 ]
 
 MIDDLEWARE = [
@@ -96,9 +97,7 @@ WSGI_APPLICATION = "surf_club_site.wsgi.application"
 
 
 default_dburl = "sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
-DATABASES = {
-    "default": config("DATABASE_URL", default=default_dburl, cast=dburl)
-}
+DATABASES = {"default": config("DATABASE_URL", default=default_dburl, cast=dburl)}
 
 
 USE_AWS = config("USE_AWS", default=False, cast=bool)
@@ -130,9 +129,7 @@ else:
 
 
 REST_FRAMEWORK = {
-    "DEFAULT_FILTER_BACKENDS": [
-        "django_filters.rest_framework.DjangoFilterBackend"
-    ],
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",  # noqa E501
     "PAGE_SIZE": 10,
     #
