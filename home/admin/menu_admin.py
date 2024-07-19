@@ -11,6 +11,40 @@ class MenuAdmin(NovadataModelAdmin):
 
     inlines = [ItemMenuInline]
 
+    readonly_fields = [
+        "data_criacao",
+        "data_atualizacao",
+        "usuario_criacao",
+        "usuario_atualizacao",
+    ]
+
+    fieldsets = (
+        (
+            "Dados Principais",
+            {
+                "fields": (
+                    "nome",
+                    "codigo",
+                    "pagina",
+                )
+            },
+        ),
+        (
+            "Dados Cadastrais",
+            {
+                "fields": (
+                    "data_criacao",
+                    "data_atualizacao",
+                    "usuario_criacao",
+                    "usuario_atualizacao",
+                )
+            },
+        ),
+    )
+
+    def get_list_filter(self, request):
+        return []
+
     # list_filter = [
     #     'campos_fk_e_booleanos
     # ]
