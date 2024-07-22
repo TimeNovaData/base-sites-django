@@ -5,8 +5,4 @@ from novadata_utils.admin import NovadataModelAdmin
 
 @admin.register(Depoimento)
 class DepoimentoAdmin(NovadataModelAdmin):
-    search_fields = [
-        'id',
-        'nome'
-    ]
-    
+    search_fields = ["id", "nome"]

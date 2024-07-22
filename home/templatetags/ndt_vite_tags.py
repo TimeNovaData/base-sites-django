@@ -25,9 +25,7 @@ DJANGO_VITE_DEV_SERVER_HOST = getattr(
 )
 
 # Default Vite server port.
-DJANGO_VITE_DEV_SERVER_PORT = getattr(
-    settings, "DJANGO_VITE_DEV_SERVER_PORT", 3000
-)
+DJANGO_VITE_DEV_SERVER_PORT = getattr(settings, "DJANGO_VITE_DEV_SERVER_PORT", 3000)
 
 # Default Vite server path to HMR script.
 DJANGO_VITE_WS_CLIENT_URL = getattr(
@@ -45,9 +43,7 @@ DJANGO_VITE_REACT_REFRESH_URL = getattr(
 DJANGO_VITE_ASSETS_PATH = Path(getattr(settings, "DJANGO_VITE_ASSETS_PATH"))
 
 # Prefix for STATIC_URL
-DJANGO_VITE_STATIC_URL_PREFIX = getattr(
-    settings, "DJANGO_VITE_STATIC_URL_PREFIX", ""
-)
+DJANGO_VITE_STATIC_URL_PREFIX = getattr(settings, "DJANGO_VITE_STATIC_URL_PREFIX", "")
 
 DJANGO_VITE_STATIC_ROOT = (
     DJANGO_VITE_ASSETS_PATH
@@ -68,9 +64,7 @@ DJANGO_VITE_LEGACY_POLYFILLS_MOTIF = getattr(
     settings, "DJANGO_VITE_LEGACY_POLYFILLS_MOTIF", "legacy-polyfills"
 )
 
-DJANGO_VITE_STATIC_URL = urljoin(
-    settings.STATIC_URL, DJANGO_VITE_STATIC_URL_PREFIX
-)
+DJANGO_VITE_STATIC_URL = urljoin(settings.STATIC_URL, DJANGO_VITE_STATIC_URL_PREFIX)
 
 # Make sure 'DJANGO_VITE_STATIC_URL' finish with a '/'
 if DJANGO_VITE_STATIC_URL[-1] != "/":
@@ -158,9 +152,7 @@ class DjangoViteAssetLoader:
         for dep in manifest_entry.get("imports", []):
             dep_manifest_entry = self._manifest[dep]
             dep_file = dep_manifest_entry["file"]
-            url = DjangoViteAssetLoader._generate_production_server_url(
-                dep_file
-            )
+            url = DjangoViteAssetLoader._generate_production_server_url(dep_file)
             tags.append(
                 DjangoViteAssetLoader._generate_preload_tag(
                     url,
@@ -216,9 +208,7 @@ class DjangoViteAssetLoader:
         }
 
         manifest_file = manifest_entry["file"]
-        url = DjangoViteAssetLoader._generate_production_server_url(
-            manifest_file
-        )
+        url = DjangoViteAssetLoader._generate_production_server_url(manifest_file)
         tags.append(
             DjangoViteAssetLoader._generate_preload_tag(
                 url,
@@ -233,9 +223,7 @@ class DjangoViteAssetLoader:
         for dep in manifest_entry.get("imports", []):
             dep_manifest_entry = self._manifest[dep]
             dep_file = dep_manifest_entry["file"]
-            url = DjangoViteAssetLoader._generate_production_server_url(
-                dep_file
-            )
+            url = DjangoViteAssetLoader._generate_production_server_url(dep_file)
             tags.append(
                 DjangoViteAssetLoader._generate_preload_tag(
                     url,
@@ -291,10 +279,8 @@ class DjangoViteAssetLoader:
         if "css" in manifest_entry:
             for css_path in manifest_entry["css"]:
                 if css_path not in already_processed:
-                    url = (
-                        DjangoViteAssetLoader._generate_production_server_url(
-                            css_path
-                        )
+                    url = DjangoViteAssetLoader._generate_production_server_url(
+                        css_path
                     )
                     tags.append(tag_generator(url))
 
@@ -496,9 +482,7 @@ class DjangoViteAssetLoader:
             str -- The script tag.
         """
 
-        attrs_str = " ".join(
-            [f'{key}="{value}"' for key, value in attrs.items()]
-        )
+        attrs_str = " ".join([f'{key}="{value}"' for key, value in attrs.items()])
 
         return f'<script {attrs_str} src="{src}"></script>'
 
@@ -532,9 +516,7 @@ class DjangoViteAssetLoader:
 
     @staticmethod
     def _generate_preload_tag(href: str, attrs: Dict[str, str]) -> str:
-        attrs_str = " ".join(
-            [f'{key}="{value}"' for key, value in attrs.items()]
-        )
+        attrs_str = " ".join([f'{key}="{value}"' for key, value in attrs.items()])
 
         return f'<link href="{href}" {attrs_str} />'
 
@@ -731,9 +713,7 @@ def vite_legacy_polyfills(**kwargs: Dict[str, str]) -> str:
         str -- The script tag to the polyfills.
     """
 
-    return DjangoViteAssetLoader.instance().generate_vite_legacy_polyfills(
-        **kwargs
-    )
+    return DjangoViteAssetLoader.instance().generate_vite_legacy_polyfills(**kwargs)
 
 
 @register.simple_tag
@@ -765,9 +745,7 @@ def vite_legacy_asset(
 
     assert path is not None
 
-    return DjangoViteAssetLoader.instance().generate_vite_legacy_asset(
-        path, **kwargs
-    )
+    return DjangoViteAssetLoader.instance().generate_vite_legacy_asset(path, **kwargs)
 
 
 @register.simple_tag

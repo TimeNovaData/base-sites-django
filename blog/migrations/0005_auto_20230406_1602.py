@@ -6,21 +6,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('blog', '0004_auto_20230406_0840'),
+        ("blog", "0004_auto_20230406_0840"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='post',
-            name='usuario_atualizacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_atualizacao', to=settings.AUTH_USER_MODEL, verbose_name='Usúario de Atualização'),
+            model_name="post",
+            name="usuario_atualizacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_atualizacao",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usúario de Atualização",
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='usuario_criacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_criacao', to=settings.AUTH_USER_MODEL, verbose_name='Usúario de Criação'),
+            model_name="post",
+            name="usuario_criacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_criacao",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usúario de Criação",
+            ),
         ),
     ]

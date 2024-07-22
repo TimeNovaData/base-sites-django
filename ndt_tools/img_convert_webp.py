@@ -47,7 +47,7 @@ def get_images():
                 images.append(image)
 
         return images
-    except:
+    except:  # noqa E722
         pass
 
 
@@ -60,9 +60,7 @@ def convert_to_webp(image):
     try:
         quality = 80
         filename, extension = image, image.split(".")[1]
-        filename_without_extension = filename.replace(
-            ".{}".format(extension), ""
-        )
+        filename_without_extension = filename.replace(".{}".format(extension), "")
         command = 'cwebp -q {} "{}" -o "{}.webp"'.format(
             quality, filename, filename_without_extension
         )
@@ -106,9 +104,7 @@ def get_missing_images_from_new_directory():
         global any_missing_images
 
         if os.path.exists(os.path.join(os.curdir, dir_name)):
-            list_of_converted_images = os.listdir(
-                os.path.join(os.curdir, dir_name)
-            )
+            list_of_converted_images = os.listdir(os.path.join(os.curdir, dir_name))
 
             # Match the converted images list with the original
             # list to search for any missing images.
@@ -166,7 +162,7 @@ def if_missing_images_exist():
 # Restore the missing images.
 def restore():
     try:
-        if get_missing_images_from_new_directory() != False:
+        if get_missing_images_from_new_directory() is not False:
             for image in get_missing_images_from_new_directory():
                 convert_to_webp(image)
     except Exception as e:
@@ -214,7 +210,7 @@ def main():
 
         elif if_images_converted() == "Missing images":
             if type(get_missing_images_from_new_directory()) is list:
-                if if_missing_images_exist() == True:
+                if if_missing_images_exist() is True:
                     print(
                         "The converted images already exist in the original directory,",
                         end=" ",
@@ -225,11 +221,7 @@ def main():
                     move_webp_images()
 
                     elapsed = perf_counter() - start
-                    print(
-                        "\nSuccessfully moved the images in {0:.4f}s".format(
-                            elapsed
-                        )
-                    )
+                    print("\nSuccessfully moved the images in {0:.4f}s".format(elapsed))
                     input("\nPress any key to exit ")
                 else:
                     print("Restoring the missing images...\n")

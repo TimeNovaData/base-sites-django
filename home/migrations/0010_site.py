@@ -4,30 +4,56 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0009_auto_20230307_0904'),
+        ("home", "0009_auto_20230307_0904"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Site',
+            name="Site",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo_global', models.CharField(max_length=100, verbose_name='Título Global')),
-                ('descricao_global', models.TextField(max_length=500, verbose_name='Descrição Global')),
-                ('js_global', models.TextField(verbose_name='JS Global')),
-                ('css_global', models.TextField(verbose_name='CSS Global')),
-                ('meta_tag_google', models.TextField(verbose_name='Meta Tag Google')),
-                ('favicon', models.FileField(upload_to='site', verbose_name='Favicon')),
-                ('logo', models.FileField(upload_to='site', verbose_name='Logo')),
-                ('indexavel', models.BooleanField(default=True, verbose_name='Indexável?')),
-                ('ativar_coming_soon', models.BooleanField(default=False, verbose_name='Ativar Coming Soon?')),
-                ('ativar_manutencao', models.BooleanField(default=False, verbose_name='Ativar Manutenção?')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "titulo_global",
+                    models.CharField(max_length=100, verbose_name="Título Global"),
+                ),
+                (
+                    "descricao_global",
+                    models.TextField(max_length=500, verbose_name="Descrição Global"),
+                ),
+                ("js_global", models.TextField(verbose_name="JS Global")),
+                ("css_global", models.TextField(verbose_name="CSS Global")),
+                ("meta_tag_google", models.TextField(verbose_name="Meta Tag Google")),
+                ("favicon", models.FileField(upload_to="site", verbose_name="Favicon")),
+                ("logo", models.FileField(upload_to="site", verbose_name="Logo")),
+                (
+                    "indexavel",
+                    models.BooleanField(default=True, verbose_name="Indexável?"),
+                ),
+                (
+                    "ativar_coming_soon",
+                    models.BooleanField(
+                        default=False, verbose_name="Ativar Coming Soon?"
+                    ),
+                ),
+                (
+                    "ativar_manutencao",
+                    models.BooleanField(
+                        default=False, verbose_name="Ativar Manutenção?"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Site',
-                'verbose_name_plural': 'Sites',
+                "verbose_name": "Site",
+                "verbose_name_plural": "Sites",
             },
         ),
     ]

@@ -6,21 +6,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0034_auto_20240701_1401'),
+        ("home", "0034_auto_20240701_1401"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='redesocial',
-            name='usuario_atualizacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_atualizacao_rede_social', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Atualização'),
+            model_name="redesocial",
+            name="usuario_atualizacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_atualizacao_rede_social",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Atualização",
+            ),
         ),
         migrations.AlterField(
-            model_name='redesocial',
-            name='usuario_criacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_criacao_rede_social', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Criação'),
+            model_name="redesocial",
+            name="usuario_criacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_criacao_rede_social",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Criação",
+            ),
         ),
     ]

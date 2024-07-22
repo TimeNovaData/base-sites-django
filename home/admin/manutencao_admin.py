@@ -7,7 +7,7 @@ from novadata_utils.admin import NovadataModelAdmin
 @admin.register(Manutencao)
 class ManutencaoAdmin(NovadataModelAdmin):
     search_fields = [
-        'id',
+        "id",
     ]
 
     # list_filter = [

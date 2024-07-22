@@ -81,18 +81,18 @@ class Post(models.Model):
     )
 
     def save(self, *args, **kwargs):
-        '''Sobrescrita do método save para realizarmos ações personalizadas.'''
+        """Sobrescrita do método save para realizarmos ações personalizadas."""
         from crum import get_current_user
-    
+
         user = get_current_user()
         if user and not user.pk:
             user = None
         if not self.pk:
             self.usuario_criacao = user
         self.usuario_atualizacao = user
-   
+
         super().save(*args, **kwargs)
-    
+
     def __str__(self):
         """Método que retorna a representação do objeto como string."""
         return self.titulo

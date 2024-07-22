@@ -127,9 +127,7 @@ class MensagemEmail(models.Model):
         """Função para enviar o e-mail."""
         if not self.enviado:
             ENVIAR_EMAIL = config("ENVIAR_EMAIL", default=True, cast=bool)
-            template_renderizado = Template(
-                self.template_email.corpo_email.html
-            )
+            template_renderizado = Template(self.template_email.corpo_email.html)
             texto_renderizado = Template(self.template_email.corpo_email.plain)
             assunto_renderizado = Template(self.template_email.assunto)
             context = Context({"objeto": objeto})
@@ -169,9 +167,7 @@ class MensagemEmail(models.Model):
             email = EmailMessage(
                 assunto_text,
                 html_email,
-                "{} <{}>".format(
-                    settings.EMAIL_NAME, settings.EMAIL_HOST_USER
-                ),
+                "{} <{}>".format(settings.EMAIL_NAME, settings.EMAIL_HOST_USER),
                 destinatarios,
             )
             email.content_subtype = "html"

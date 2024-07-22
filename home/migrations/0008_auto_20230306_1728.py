@@ -4,30 +4,40 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0007_auto_20230306_1712'),
+        ("home", "0007_auto_20230306_1712"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='depoimento',
-            name='depoimento',
-            field=models.TextField(max_length=600, verbose_name='Depoimento'),
+            model_name="depoimento",
+            name="depoimento",
+            field=models.TextField(max_length=600, verbose_name="Depoimento"),
         ),
         migrations.CreateModel(
-            name='Servico',
+            name="Servico",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=100, verbose_name='Titulo')),
-                ('icone', models.CharField(max_length=100, verbose_name='Icone')),
-                ('descricao', models.TextField(max_length=100, verbose_name='Descrição')),
-                ('foto', models.ImageField(upload_to='%Y/%m', verbose_name='Foto')),
-                ('pagina', models.ManyToManyField(to='home.Pagina')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=100, verbose_name="Titulo")),
+                ("icone", models.CharField(max_length=100, verbose_name="Icone")),
+                (
+                    "descricao",
+                    models.TextField(max_length=100, verbose_name="Descrição"),
+                ),
+                ("foto", models.ImageField(upload_to="%Y/%m", verbose_name="Foto")),
+                ("pagina", models.ManyToManyField(to="home.Pagina")),
             ],
             options={
-                'verbose_name': 'Serviço',
-                'verbose_name_plural': 'Serviços',
+                "verbose_name": "Serviço",
+                "verbose_name_plural": "Serviços",
             },
         ),
     ]

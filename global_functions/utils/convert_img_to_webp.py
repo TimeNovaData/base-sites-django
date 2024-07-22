@@ -17,24 +17,21 @@ def convert_img_to_webp(instance):
     )
 
     img_types = (
-        'png',
-        'jpeg',
-        'jpg',
+        "png",
+        "jpeg",
+        "jpg",
     )
 
     # executa a conversão para as imagens
     for field in file_fields:
-
         # pega o campo real atravez do atributo
         file = getattr(instance, field.name)
 
         if file:
-
             is_webp = file.name.endswith(".webp")
             in_img_types = file.name.endswith(img_types)
 
             if not is_webp and in_img_types:
-                
                 parse_image = Image.open(file)
 
                 buffer = BytesIO()

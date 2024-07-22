@@ -5,23 +5,13 @@ from .pagina import Pagina
 
 
 class RedeSocial(models.Model):
-    nome = models.CharField(
-        verbose_name="Nome",
-        max_length=30
-    )
+    nome = models.CharField(verbose_name="Nome", max_length=30)
 
-    icone_svg = models.FileField(
-        verbose_name="Ícone SVG da rede social"
-    )
+    icone_svg = models.FileField(verbose_name="Ícone SVG da rede social")
 
-    link = models.URLField(
-        verbose_name="Link para o perfil na rede social"
-    )
+    link = models.URLField(verbose_name="Link para o perfil na rede social")
 
-    ordem = models.IntegerField(
-        verbose_name="Ordem",
-        default=0
-    )
+    ordem = models.IntegerField(verbose_name="Ordem", default=0)
 
     paginas = models.ManyToManyField(
         Pagina,

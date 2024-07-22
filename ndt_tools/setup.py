@@ -38,9 +38,7 @@ migrate_command = ["python3", "manage.py", "migrate"]
 
 # Executar o comando
 def create_env(name):
-    command = subprocess.run(
-        create_env_command, capture_output=True, text=True
-    )
+    command = subprocess.run(create_env_command, capture_output=True, text=True)
 
     print(create_env_command)
 
@@ -101,24 +99,20 @@ def install_requirements():
     )
 
     if command.returncode == 0:
-        return (
-            GREEN
-            + "As dependências do Django foram instaladas com sucesso!"
-            + RESET
-        )
+        return GREEN + "As dependências do Django foram instaladas com sucesso!" + RESET
 
 
 def generate_env_file():
-#     env_example_path = ".env_example"
+    #     env_example_path = ".env_example"
     env_file_path = ".env"
 
-#     if not os.path.exists(env_example_path):
-#         print(f"O arquivo .env_example não existe")
-#         return
+    #     if not os.path.exists(env_example_path):
+    #         print(f"O arquivo .env_example não existe")
+    #         return
 
-#     if os.path.exists(env_file_path):
-#         print(f"O arquivo .env já existe")
-#         return
+    #     if os.path.exists(env_file_path):
+    #         print(f"O arquivo .env já existe")
+    #         return
 
     try:
         with open(env_file_path, "w") as env_file:

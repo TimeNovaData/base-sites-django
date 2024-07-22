@@ -4,21 +4,21 @@ from ..models import Site, ComingSoon
 
 def coming_soon(request):
     pagina = {
-        'titulo': 'Coming Soon',
-        'indexavel': False,
+        "titulo": "Coming Soon",
+        "indexavel": False,
     }
-    
+
     site = Site.objects.all().first()
     content = ComingSoon.objects.all().first()
 
     context = {
-        'pagina': pagina,
-        'site': site,
-        'content': content,
+        "pagina": pagina,
+        "site": site,
+        "content": content,
     }
 
     if not site.ativar_coming_soon:
-        return redirect('home')
+        return redirect("home")
 
     return render(
         request,

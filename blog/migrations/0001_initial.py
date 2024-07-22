@@ -4,24 +4,38 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Categoria',
+            name="Categoria",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100, verbose_name='Nome')),
-                ('slug', models.SlugField(max_length=100, null=True, unique=True, verbose_name='Slug')),
-                ('descricao', models.TextField(max_length=200, verbose_name='Descrição')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=100, verbose_name="Nome")),
+                (
+                    "slug",
+                    models.SlugField(
+                        max_length=100, null=True, unique=True, verbose_name="Slug"
+                    ),
+                ),
+                (
+                    "descricao",
+                    models.TextField(max_length=200, verbose_name="Descrição"),
+                ),
             ],
             options={
-                'verbose_name': 'Categoria',
-                'verbose_name_plural': 'Categorias',
+                "verbose_name": "Categoria",
+                "verbose_name_plural": "Categorias",
             },
         ),
     ]

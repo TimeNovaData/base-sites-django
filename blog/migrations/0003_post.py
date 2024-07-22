@@ -7,33 +7,98 @@ import django_quill.fields
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('blog', '0002_tag'),
+        ("blog", "0002_tag"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name="Post",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=100, verbose_name='Ttitulo')),
-                ('slug', models.SlugField(max_length=100, null=True, unique=True, verbose_name='Slug')),
-                ('conteudo', django_quill.fields.QuillField(blank=True, null=True, verbose_name='Conteúdo')),
-                ('resumo', models.TextField(max_length=300, verbose_name='Resumo')),
-                ('banner', models.ImageField(blank=True, upload_to='', verbose_name='Banner')),
-                ('thumbnail', models.ImageField(blank=True, upload_to='', verbose_name='Thumbnail')),
-                ('data_alteracao', models.DateTimeField(auto_now=True, verbose_name='Data de Alteração')),
-                ('data_criacao', models.DateTimeField(auto_now_add=True, verbose_name='Data de Criação')),
-                ('categoria', models.ManyToManyField(blank=True, to='blog.Categoria', verbose_name='Categoria')),
-                ('tag', models.ManyToManyField(blank=True, to='blog.Tag', verbose_name='Tags')),
-                ('usuario_atualizacao', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='post_requests_modified', to=settings.AUTH_USER_MODEL)),
-                ('usuario_criacao', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='post_requests_created', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=100, verbose_name="Ttitulo")),
+                (
+                    "slug",
+                    models.SlugField(
+                        max_length=100, null=True, unique=True, verbose_name="Slug"
+                    ),
+                ),
+                (
+                    "conteudo",
+                    django_quill.fields.QuillField(
+                        blank=True, null=True, verbose_name="Conteúdo"
+                    ),
+                ),
+                ("resumo", models.TextField(max_length=300, verbose_name="Resumo")),
+                (
+                    "banner",
+                    models.ImageField(blank=True, upload_to="", verbose_name="Banner"),
+                ),
+                (
+                    "thumbnail",
+                    models.ImageField(
+                        blank=True, upload_to="", verbose_name="Thumbnail"
+                    ),
+                ),
+                (
+                    "data_alteracao",
+                    models.DateTimeField(
+                        auto_now=True, verbose_name="Data de Alteração"
+                    ),
+                ),
+                (
+                    "data_criacao",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Data de Criação"
+                    ),
+                ),
+                (
+                    "categoria",
+                    models.ManyToManyField(
+                        blank=True, to="blog.Categoria", verbose_name="Categoria"
+                    ),
+                ),
+                (
+                    "tag",
+                    models.ManyToManyField(
+                        blank=True, to="blog.Tag", verbose_name="Tags"
+                    ),
+                ),
+                (
+                    "usuario_atualizacao",
+                    models.ForeignKey(
+                        blank=True,
+                        default=None,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="post_requests_modified",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "usuario_criacao",
+                    models.ForeignKey(
+                        blank=True,
+                        default=None,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="post_requests_created",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Post',
-                'verbose_name_plural': 'Posts',
+                "verbose_name": "Post",
+                "verbose_name_plural": "Posts",
             },
         ),
     ]

@@ -4,30 +4,33 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0020_auto_20230308_0957'),
+        ("home", "0020_auto_20230308_0957"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='site',
-            name='meta_tag_facebook',
-            field=models.TextField(blank=True, null=True, verbose_name='Meta Tag Facebook'),
+            model_name="site",
+            name="meta_tag_facebook",
+            field=models.TextField(
+                blank=True, null=True, verbose_name="Meta Tag Facebook"
+            ),
         ),
         migrations.AlterField(
-            model_name='site',
-            name='css_global',
-            field=models.TextField(blank=True, null=True, verbose_name='CSS Global'),
+            model_name="site",
+            name="css_global",
+            field=models.TextField(blank=True, null=True, verbose_name="CSS Global"),
         ),
         migrations.AlterField(
-            model_name='site',
-            name='js_global',
-            field=models.TextField(blank=True, null=True, verbose_name='JS Global'),
+            model_name="site",
+            name="js_global",
+            field=models.TextField(blank=True, null=True, verbose_name="JS Global"),
         ),
         migrations.AlterField(
-            model_name='site',
-            name='meta_tag_google',
-            field=models.TextField(blank=True, null=True, verbose_name='Meta Tag Google'),
+            model_name="site",
+            name="meta_tag_google",
+            field=models.TextField(
+                blank=True, null=True, verbose_name="Meta Tag Google"
+            ),
         ),
     ]

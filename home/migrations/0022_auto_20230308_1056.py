@@ -4,20 +4,23 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0021_auto_20230308_1046'),
+        ("home", "0021_auto_20230308_1046"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pagina',
-            name='css_adicional',
-            field=models.TextField(blank=True, max_length=400, null=True, verbose_name='CSS Adicional'),
+            model_name="pagina",
+            name="css_adicional",
+            field=models.TextField(
+                blank=True, max_length=400, null=True, verbose_name="CSS Adicional"
+            ),
         ),
         migrations.AlterField(
-            model_name='pagina',
-            name='js_adicional',
-            field=models.TextField(blank=True, max_length=400, null=True, verbose_name='JS Adicional'),
+            model_name="pagina",
+            name="js_adicional",
+            field=models.TextField(
+                blank=True, max_length=400, null=True, verbose_name="JS Adicional"
+            ),
         ),
     ]

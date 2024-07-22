@@ -6,10 +6,7 @@ from novadata_utils.admin import NovadataModelAdmin
 
 @admin.register(Parceiro)
 class ParceiroAdmin(NovadataModelAdmin):
-    list_display = [
-        'id',
-        'nome'
-    ]
+    list_display = ["id", "nome"]
 
     # search_fields = [
     #     'id',

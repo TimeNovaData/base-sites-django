@@ -5,25 +5,18 @@ from ..models import Galeria
 
 @admin.register(Galeria)
 class GaleriaAdmin(admin.ModelAdmin):
-    list_display = [
-        'id',
-        'titulo',
-        'image_view'
-    ]
+    list_display = ["id", "titulo", "image_view"]
 
-    search_fields = [
-        'id',
-        'titulo'
-    ]
+    search_fields = ["id", "titulo"]
 
     readonly_fields = [
-        'image_view',
+        "image_view",
     ]
 
     def image_view(self, obj):
         return obj.image_view
 
-    image_view.short_description = 'Imagem'
+    image_view.short_description = "Imagem"
     image_view.allow_tags = True
 
     # list_filter = [

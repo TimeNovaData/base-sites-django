@@ -7,14 +7,9 @@ from novadata_utils.admin import NovadataModelAdmin
 
 @admin.register(Termo)
 class TermoAdmin(NovadataModelAdmin):
-    search_fields = [
-        'id',
-        'campos_importantes'
-    ]
-    
-    inlines = [
-        AceiteTermoInline
-    ]
+    search_fields = ["id", "campos_importantes"]
+
+    inlines = [AceiteTermoInline]
     # list_filter = [
     #     'campos_fk_e_booleanos
     # ]

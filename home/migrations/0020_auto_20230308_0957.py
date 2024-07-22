@@ -4,21 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0019_auto_20230308_0846'),
+        ("home", "0019_auto_20230308_0846"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pagina',
-            name='template',
-            field=models.CharField(default=0, max_length=100, verbose_name='Nome do Template'),
+            model_name="pagina",
+            name="template",
+            field=models.CharField(
+                default=0, max_length=100, verbose_name="Nome do Template"
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='pagina',
-            name='slug',
-            field=models.SlugField(blank=True, max_length=100, null=True, unique=True, verbose_name='Slug'),
+            model_name="pagina",
+            name="slug",
+            field=models.SlugField(
+                blank=True, max_length=100, null=True, unique=True, verbose_name="Slug"
+            ),
         ),
     ]

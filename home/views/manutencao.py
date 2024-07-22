@@ -4,21 +4,21 @@ from ..models import Site, Manutencao
 
 def manutencao(request):
     pagina = {
-        'titulo': "Manutenção",
-        'indexavel': False,
+        "titulo": "Manutenção",
+        "indexavel": False,
     }
-    
+
     site = Site.objects.all().first()
     content = Manutencao.objects.all().first()
 
     context = {
-        'pagina': pagina,
-        'site': site,
-        'content': content,
+        "pagina": pagina,
+        "site": site,
+        "content": content,
     }
 
     if not site.ativar_manutencao:
-        return redirect('home')
+        return redirect("home")
 
     return render(
         request,

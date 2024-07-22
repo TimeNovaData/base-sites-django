@@ -25,9 +25,7 @@ class Galeria(models.Model):
     def image_view(self):
         image = ""
         if self.imagem:
-            image = mark_safe(
-                f"<img src='{self.imagem.url}' width='60' height='60' />"
-            )
+            image = mark_safe(f"<img src='{self.imagem.url}' width='60' height='60' />")
         return image
 
     def __str__(self):

@@ -4,32 +4,50 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0005_auto_20230306_1556'),
+        ("home", "0005_auto_20230306_1556"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='galeria',
-            name='imagem',
-            field=models.ImageField(upload_to='%Y/%m', verbose_name='Imagem'),
+            model_name="galeria",
+            name="imagem",
+            field=models.ImageField(upload_to="%Y/%m", verbose_name="Imagem"),
         ),
         migrations.CreateModel(
-            name='Portifolio',
+            name="Portifolio",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100, verbose_name='Nome')),
-                ('cliente', models.CharField(max_length=100, verbose_name='Cliente')),
-                ('categoria', models.CharField(max_length=100, verbose_name='Categoria')),
-                ('descricao', models.TextField(max_length=400, verbose_name='Descrição')),
-                ('link', models.URLField(verbose_name='Link')),
-                ('imagem_destacada', models.ImageField(upload_to='%Y/%m', verbose_name='Imagem Destacada')),
-                ('pagina', models.ManyToManyField(to='home.Pagina')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=100, verbose_name="Nome")),
+                ("cliente", models.CharField(max_length=100, verbose_name="Cliente")),
+                (
+                    "categoria",
+                    models.CharField(max_length=100, verbose_name="Categoria"),
+                ),
+                (
+                    "descricao",
+                    models.TextField(max_length=400, verbose_name="Descrição"),
+                ),
+                ("link", models.URLField(verbose_name="Link")),
+                (
+                    "imagem_destacada",
+                    models.ImageField(
+                        upload_to="%Y/%m", verbose_name="Imagem Destacada"
+                    ),
+                ),
+                ("pagina", models.ManyToManyField(to="home.Pagina")),
             ],
             options={
-                'verbose_name': 'Portifolio',
-                'verbose_name_plural': 'Portifolios',
+                "verbose_name": "Portifolio",
+                "verbose_name_plural": "Portifolios",
             },
         ),
     ]

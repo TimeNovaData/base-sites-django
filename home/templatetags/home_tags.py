@@ -16,7 +16,7 @@ def get_site():
     site = Site.objects.all().first()
     return site
 
-    
+
 @register.filter()
 def type_file(file):
     """Retorna o tipo do arquivo."""

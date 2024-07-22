@@ -6,52 +6,118 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0017_manutencao'),
+        ("home", "0017_manutencao"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ComingSoon',
+            name="ComingSoon",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('imagem_fundo', models.ImageField(upload_to='assets', verbose_name='Imagem Fundo')),
-                ('video_fundo', models.FileField(upload_to='assets', verbose_name='Video Fundo')),
-                ('logo', models.FileField(upload_to='assets', verbose_name='Logo')),
-                ('background_cor1', colorfield.fields.ColorField(default='#FF0000', image_field=None, max_length=18, samples=None, verbose_name='Background Cor 1')),
-                ('background_cor2', colorfield.fields.ColorField(default='#FF0000', image_field=None, max_length=18, samples=None, verbose_name='Background Cor 2')),
-                ('link_telefone', models.CharField(max_length=100, verbose_name='Link Telefone')),
-                ('link_whatsapp', models.CharField(max_length=100, verbose_name='Link Whatsapp')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "imagem_fundo",
+                    models.ImageField(upload_to="assets", verbose_name="Imagem Fundo"),
+                ),
+                (
+                    "video_fundo",
+                    models.FileField(upload_to="assets", verbose_name="Video Fundo"),
+                ),
+                ("logo", models.FileField(upload_to="assets", verbose_name="Logo")),
+                (
+                    "background_cor1",
+                    colorfield.fields.ColorField(
+                        default="#FF0000",
+                        image_field=None,
+                        max_length=18,
+                        samples=None,
+                        verbose_name="Background Cor 1",
+                    ),
+                ),
+                (
+                    "background_cor2",
+                    colorfield.fields.ColorField(
+                        default="#FF0000",
+                        image_field=None,
+                        max_length=18,
+                        samples=None,
+                        verbose_name="Background Cor 2",
+                    ),
+                ),
+                (
+                    "link_telefone",
+                    models.CharField(max_length=100, verbose_name="Link Telefone"),
+                ),
+                (
+                    "link_whatsapp",
+                    models.CharField(max_length=100, verbose_name="Link Whatsapp"),
+                ),
             ],
             options={
-                'verbose_name': 'ComingSoon',
-                'verbose_name_plural': 'ComingSoon',
+                "verbose_name": "ComingSoon",
+                "verbose_name_plural": "ComingSoon",
             },
         ),
         migrations.CreateModel(
-            name='Termo',
+            name="Termo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=100, verbose_name='Título')),
-                ('descricao', models.TextField(max_length=400, verbose_name='Descrição')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=100, verbose_name="Título")),
+                (
+                    "descricao",
+                    models.TextField(max_length=400, verbose_name="Descrição"),
+                ),
             ],
             options={
-                'verbose_name': 'Termo',
-                'verbose_name_plural': 'Termos',
+                "verbose_name": "Termo",
+                "verbose_name_plural": "Termos",
             },
         ),
         migrations.CreateModel(
-            name='AceiteTermo',
+            name="AceiteTermo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('data_criacao', models.DateTimeField(auto_now=True, verbose_name='Data Criação')),
-                ('ip', models.CharField(max_length=100, verbose_name='IP')),
-                ('termo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='home.termo', verbose_name='Termo')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "data_criacao",
+                    models.DateTimeField(auto_now=True, verbose_name="Data Criação"),
+                ),
+                ("ip", models.CharField(max_length=100, verbose_name="IP")),
+                (
+                    "termo",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="home.termo",
+                        verbose_name="Termo",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Aceite Termo',
-                'verbose_name_plural': 'Aceite Termos',
+                "verbose_name": "Aceite Termo",
+                "verbose_name_plural": "Aceite Termos",
             },
         ),
     ]

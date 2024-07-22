@@ -4,55 +4,69 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0027_parceiro'),
+        ("home", "0027_parceiro"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='portifolio',
-            name='imagem_destacada',
+            model_name="portifolio",
+            name="imagem_destacada",
         ),
         migrations.RemoveField(
-            model_name='servico',
-            name='foto',
+            model_name="servico",
+            name="foto",
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='arquivo_banner',
-            field=models.FileField(blank=True, null=True, upload_to='pagina', verbose_name='Arquivo do banner'),
+            model_name="pagina",
+            name="arquivo_banner",
+            field=models.FileField(
+                blank=True,
+                null=True,
+                upload_to="pagina",
+                verbose_name="Arquivo do banner",
+            ),
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='thumbail_banner',
-            field=models.FileField(blank=True, help_text='Só será usado quando o banner for um vídeo.', null=True, upload_to='pagina', verbose_name='Thumbnail do banner'),
+            model_name="pagina",
+            name="thumbail_banner",
+            field=models.FileField(
+                blank=True,
+                help_text="Só será usado quando o banner for um vídeo.",
+                null=True,
+                upload_to="pagina",
+                verbose_name="Thumbnail do banner",
+            ),
         ),
         migrations.AddField(
-            model_name='portifolio',
-            name='imagem',
-            field=models.ImageField(default=1, upload_to='portifolio', verbose_name='Imagem'),
+            model_name="portifolio",
+            name="imagem",
+            field=models.ImageField(
+                default=1, upload_to="portifolio", verbose_name="Imagem"
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='servico',
-            name='imagem',
-            field=models.ImageField(default=1, upload_to='servico', verbose_name='Imagem'),
+            model_name="servico",
+            name="imagem",
+            field=models.ImageField(
+                default=1, upload_to="servico", verbose_name="Imagem"
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='depoimento',
-            name='foto',
-            field=models.ImageField(upload_to='depoimento', verbose_name='foto'),
+            model_name="depoimento",
+            name="foto",
+            field=models.ImageField(upload_to="depoimento", verbose_name="foto"),
         ),
         migrations.AlterField(
-            model_name='galeria',
-            name='imagem',
-            field=models.ImageField(upload_to='galeria', verbose_name='Imagem'),
+            model_name="galeria",
+            name="imagem",
+            field=models.ImageField(upload_to="galeria", verbose_name="Imagem"),
         ),
         migrations.AlterField(
-            model_name='parceiro',
-            name='brand',
-            field=models.FileField(upload_to='brand', verbose_name='Brand'),
+            model_name="parceiro",
+            name="brand",
+            field=models.FileField(upload_to="brand", verbose_name="Brand"),
         ),
     ]

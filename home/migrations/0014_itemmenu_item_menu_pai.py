@@ -5,16 +5,20 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0013_itemmenu'),
+        ("home", "0013_itemmenu"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='itemmenu',
-            name='item_menu_pai',
-            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='home.itemmenu', verbose_name='Item Menu Pai'),
+            model_name="itemmenu",
+            name="item_menu_pai",
+            field=models.ForeignKey(
+                default=0,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="home.itemmenu",
+                verbose_name="Item Menu Pai",
+            ),
             preserve_default=False,
         ),
     ]

@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Tag(models.Model):
-    
     nome = models.CharField(
         verbose_name="Nome",
         max_length=100,

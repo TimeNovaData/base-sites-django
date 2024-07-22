@@ -6,15 +6,9 @@ from novadata_utils.admin import NovadataModelAdmin
 
 @admin.register(Portifolio)
 class PortifolioAdmin(NovadataModelAdmin):
-    list_display = [
-        'id',
-        'nome'
-    ]
+    list_display = ["id", "nome"]
 
-    search_fields = [
-        'id',
-        'nome'
-    ]
+    search_fields = ["id", "nome"]
 
     # list_filter = [
     #     'campos_fk_e_booleanos

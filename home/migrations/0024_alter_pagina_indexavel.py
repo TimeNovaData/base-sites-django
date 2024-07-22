@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0023_remove_site_indexavel'),
+        ("home", "0023_remove_site_indexavel"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pagina',
-            name='indexavel',
-            field=models.BooleanField(default=True, verbose_name='Indexável?'),
+            model_name="pagina",
+            name="indexavel",
+            field=models.BooleanField(default=True, verbose_name="Indexável?"),
         ),
     ]

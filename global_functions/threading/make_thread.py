@@ -1,10 +1,10 @@
 import threading
 
 
-def make_thread(func: 'function', function_args = []) -> None:
-    '''
+def make_thread(func: "function", function_args=[]) -> None:  # noqa F821
+    """
     Função para fazer uma thread, ou seja, algum processo em segundo plano,
-    
+
     == params ==
 
     func:
@@ -13,14 +13,10 @@ def make_thread(func: 'function', function_args = []) -> None:
         Lista de argumentos da função em questão
 
     == exemple ==
-    
+
     from funcoes_utilitarias.threading import make_thread
 
     make_thread(self.notiticar_aprovacao, usuario)
-    '''
+    """
 
-    threading.Thread(
-        target=func,
-        args=function_args,
-        daemon=True
-    ).start()
+    threading.Thread(target=func, args=function_args, daemon=True).start()

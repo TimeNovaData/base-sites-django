@@ -7,32 +7,51 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0037_auto_20240719_1710'),
+        ("home", "0037_auto_20240719_1710"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='servico',
-            name='data_atualizacao',
-            field=models.DateTimeField(auto_now=True, verbose_name='Data de atualização'),
+            model_name="servico",
+            name="data_atualizacao",
+            field=models.DateTimeField(
+                auto_now=True, verbose_name="Data de atualização"
+            ),
         ),
         migrations.AddField(
-            model_name='servico',
-            name='data_criacao',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now, verbose_name='Data de criação'),
+            model_name="servico",
+            name="data_criacao",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=django.utils.timezone.now,
+                verbose_name="Data de criação",
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='servico',
-            name='usuario_atualizacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_atualizacao_servico', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Atualização'),
+            model_name="servico",
+            name="usuario_atualizacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_atualizacao_servico",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Atualização",
+            ),
         ),
         migrations.AddField(
-            model_name='servico',
-            name='usuario_criacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_criacao_servico', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Criação'),
+            model_name="servico",
+            name="usuario_criacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_criacao_servico",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Criação",
+            ),
         ),
     ]

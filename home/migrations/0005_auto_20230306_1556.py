@@ -4,30 +4,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0004_pagina'),
+        ("home", "0004_pagina"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='galeria',
-            name='pagina',
-            field=models.ManyToManyField(to='home.Pagina'),
+            model_name="galeria",
+            name="pagina",
+            field=models.ManyToManyField(to="home.Pagina"),
         ),
         migrations.AlterField(
-            model_name='pagina',
-            name='css_adicional',
-            field=models.TextField(max_length=400, verbose_name='CSS Adicional'),
+            model_name="pagina",
+            name="css_adicional",
+            field=models.TextField(max_length=400, verbose_name="CSS Adicional"),
         ),
         migrations.AlterField(
-            model_name='pagina',
-            name='custom_description',
-            field=models.TextField(max_length=400, verbose_name='Descrição'),
+            model_name="pagina",
+            name="custom_description",
+            field=models.TextField(max_length=400, verbose_name="Descrição"),
         ),
         migrations.AlterField(
-            model_name='pagina',
-            name='js_adicional',
-            field=models.TextField(max_length=400, verbose_name='JS Adicional'),
+            model_name="pagina",
+            name="js_adicional",
+            field=models.TextField(max_length=400, verbose_name="JS Adicional"),
         ),
     ]

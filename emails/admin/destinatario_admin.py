@@ -5,12 +5,6 @@ from ..models import Destinatario
 
 @admin.register(Destinatario)
 class DestinatarioAdmin(admin.ModelAdmin):
-    list_display = [
-        'id',
-        'email'
-    ]
+    list_display = ["id", "email"]
 
-    search_fields = [
-        'id',
-        'email'
-    ]
+    search_fields = ["id", "email"]

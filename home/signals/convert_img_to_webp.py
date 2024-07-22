@@ -1,6 +1,6 @@
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
-from global_functions.utils import convert_img_to_webp 
+from global_functions.utils import convert_img_to_webp
 from ..models import (
     Galeria,
     Depoimento,
@@ -8,7 +8,7 @@ from ..models import (
     ComingSoon,
     Portifolio,
     Servico,
-    Pagina
+    Pagina,
 )
 
 
@@ -40,6 +40,7 @@ def converter_para_webp_portifolio(sender, instance, **kwargs):
 @receiver(pre_save, sender=Servico)
 def converter_para_webp_servico(sender, instance, **kwargs):
     convert_img_to_webp(instance)
+
 
 @receiver(pre_save, sender=Pagina)
 def converter_para_webp_pagina(sender, instance, **kwargs):

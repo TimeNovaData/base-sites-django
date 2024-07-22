@@ -5,30 +5,53 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0030_profile'),
+        ("home", "0030_profile"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='site',
-            name='cor_email',
-            field=colorfield.fields.ColorField(default='#00D77C', image_field=None, max_length=18, samples=None, verbose_name='Cor Email'),
+            model_name="site",
+            name="cor_email",
+            field=colorfield.fields.ColorField(
+                default="#00D77C",
+                image_field=None,
+                max_length=18,
+                samples=None,
+                verbose_name="Cor Email",
+            ),
         ),
         migrations.AddField(
-            model_name='site',
-            name='cor_login',
-            field=colorfield.fields.ColorField(default='#121212', image_field=None, max_length=18, samples=None, verbose_name='Cor Login'),
+            model_name="site",
+            name="cor_login",
+            field=colorfield.fields.ColorField(
+                default="#121212",
+                image_field=None,
+                max_length=18,
+                samples=None,
+                verbose_name="Cor Login",
+            ),
         ),
         migrations.AddField(
-            model_name='site',
-            name='cor_primario',
-            field=colorfield.fields.ColorField(default='#00D77C', image_field=None, max_length=18, samples=None, verbose_name='Cor Primária'),
+            model_name="site",
+            name="cor_primario",
+            field=colorfield.fields.ColorField(
+                default="#00D77C",
+                image_field=None,
+                max_length=18,
+                samples=None,
+                verbose_name="Cor Primária",
+            ),
         ),
         migrations.AddField(
-            model_name='site',
-            name='cor_secundario',
-            field=colorfield.fields.ColorField(default='#121212', image_field=None, max_length=18, samples=None, verbose_name='Cor Secundaria'),
+            model_name="site",
+            name="cor_secundario",
+            field=colorfield.fields.ColorField(
+                default="#121212",
+                image_field=None,
+                max_length=18,
+                samples=None,
+                verbose_name="Cor Secundaria",
+            ),
         ),
     ]

@@ -5,7 +5,4 @@ from ..models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = [
-        'id',
-        'titulo'
-    ]
+    list_display = ["id", "titulo"]

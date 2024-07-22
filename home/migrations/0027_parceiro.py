@@ -4,24 +4,39 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0026_auto_20230309_0920'),
+        ("home", "0026_auto_20230309_0920"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Parceiro',
+            name="Parceiro",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100, verbose_name='Nome')),
-                ('brand', models.FileField(upload_to='uploads/%Y/%m', verbose_name='Brand')),
-                ('descricao', models.TextField(blank=True, max_length=300, null=True, verbose_name='Descricao')),
-                ('pagina', models.ManyToManyField(to='home.Pagina')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=100, verbose_name="Nome")),
+                (
+                    "brand",
+                    models.FileField(upload_to="uploads/%Y/%m", verbose_name="Brand"),
+                ),
+                (
+                    "descricao",
+                    models.TextField(
+                        blank=True, max_length=300, null=True, verbose_name="Descricao"
+                    ),
+                ),
+                ("pagina", models.ManyToManyField(to="home.Pagina")),
             ],
             options={
-                'verbose_name': 'Parceiro',
-                'verbose_name_plural': 'Parceiros',
+                "verbose_name": "Parceiro",
+                "verbose_name_plural": "Parceiros",
             },
         ),
     ]

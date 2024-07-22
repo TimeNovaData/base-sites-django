@@ -4,19 +4,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0025_auto_20230308_1437'),
+        ("home", "0025_auto_20230308_1437"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='site',
-            options={'verbose_name': 'Site', 'verbose_name_plural': 'Site'},
+            name="site",
+            options={"verbose_name": "Site", "verbose_name_plural": "Site"},
         ),
         migrations.AlterField(
-            model_name='itemmenu',
-            name='order',
-            field=models.IntegerField(default=0, verbose_name='Ordem'),
+            model_name="itemmenu",
+            name="order",
+            field=models.IntegerField(default=0, verbose_name="Ordem"),
         ),
     ]

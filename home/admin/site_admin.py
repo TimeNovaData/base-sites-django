@@ -14,6 +14,4 @@ class SiteAdmin(NovadataModelAdmin):
     ]
 
     class Media:
-        js = (
-            'home/admin_conteudo_custom.js',  # app static folder
-        )
+        js = ("home/admin_conteudo_custom.js",)  # app static folder

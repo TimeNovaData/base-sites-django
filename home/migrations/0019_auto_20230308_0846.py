@@ -5,21 +5,32 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('emails', '0001_initial'),
-        ('home', '0018_aceitetermo_comingsoon_termo'),
+        ("emails", "0001_initial"),
+        ("home", "0018_aceitetermo_comingsoon_termo"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='comingsoon',
-            name='template_email',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='emails.templateemail', verbose_name='Template Email'),
+            model_name="comingsoon",
+            name="template_email",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="emails.templateemail",
+                verbose_name="Template Email",
+            ),
         ),
         migrations.AddField(
-            model_name='manutencao',
-            name='template_email',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='emails.templateemail', verbose_name='Template Email'),
+            model_name="manutencao",
+            name="template_email",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="emails.templateemail",
+                verbose_name="Template Email",
+            ),
         ),
     ]

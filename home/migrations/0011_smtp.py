@@ -4,27 +4,48 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0010_site'),
+        ("home", "0010_site"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SMTP',
+            name="SMTP",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100, verbose_name='Nome')),
-                ('use_tls', models.BooleanField(default=True, verbose_name='Usar TLS?')),
-                ('host', models.CharField(max_length=100, verbose_name='Host')),
-                ('port', models.IntegerField(verbose_name='PORT')),
-                ('host_user', models.CharField(max_length=100, verbose_name='Host User')),
-                ('host_password', models.CharField(max_length=100, verbose_name='Host Password')),
-                ('default_from_email', models.CharField(max_length=100, verbose_name='Default From E-mail')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=100, verbose_name="Nome")),
+                (
+                    "use_tls",
+                    models.BooleanField(default=True, verbose_name="Usar TLS?"),
+                ),
+                ("host", models.CharField(max_length=100, verbose_name="Host")),
+                ("port", models.IntegerField(verbose_name="PORT")),
+                (
+                    "host_user",
+                    models.CharField(max_length=100, verbose_name="Host User"),
+                ),
+                (
+                    "host_password",
+                    models.CharField(max_length=100, verbose_name="Host Password"),
+                ),
+                (
+                    "default_from_email",
+                    models.CharField(
+                        max_length=100, verbose_name="Default From E-mail"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'SMTP',
-                'verbose_name_plural': 'SMTPs',
+                "verbose_name": "SMTP",
+                "verbose_name_plural": "SMTPs",
             },
         ),
     ]

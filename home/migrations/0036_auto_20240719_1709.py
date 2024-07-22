@@ -6,51 +6,86 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0035_auto_20240701_1409'),
+        ("home", "0035_auto_20240701_1409"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='menu',
-            name='data_atualizacao',
-            field=models.DateTimeField(auto_now=True, null=True, verbose_name='Data de atualização'),
+            model_name="menu",
+            name="data_atualizacao",
+            field=models.DateTimeField(
+                auto_now=True, null=True, verbose_name="Data de atualização"
+            ),
         ),
         migrations.AddField(
-            model_name='menu',
-            name='data_criacao',
-            field=models.DateTimeField(auto_now_add=True, null=True, verbose_name='Data de criação'),
+            model_name="menu",
+            name="data_criacao",
+            field=models.DateTimeField(
+                auto_now_add=True, null=True, verbose_name="Data de criação"
+            ),
         ),
         migrations.AddField(
-            model_name='menu',
-            name='usuario_atualizacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_atualizacao_menu', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Atualização'),
+            model_name="menu",
+            name="usuario_atualizacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_atualizacao_menu",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Atualização",
+            ),
         ),
         migrations.AddField(
-            model_name='menu',
-            name='usuario_criacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_criacao_menu', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Criação'),
+            model_name="menu",
+            name="usuario_criacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_criacao_menu",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Criação",
+            ),
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='data_atualizacao',
-            field=models.DateTimeField(auto_now=True, null=True, verbose_name='Data de atualização'),
+            model_name="pagina",
+            name="data_atualizacao",
+            field=models.DateTimeField(
+                auto_now=True, null=True, verbose_name="Data de atualização"
+            ),
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='data_criacao',
-            field=models.DateTimeField(auto_now_add=True, null=True, verbose_name='Data de criação'),
+            model_name="pagina",
+            name="data_criacao",
+            field=models.DateTimeField(
+                auto_now_add=True, null=True, verbose_name="Data de criação"
+            ),
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='usuario_atualizacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_atualizacao_pagina', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Atualização'),
+            model_name="pagina",
+            name="usuario_atualizacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_atualizacao_pagina",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Atualização",
+            ),
         ),
         migrations.AddField(
-            model_name='pagina',
-            name='usuario_criacao',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='usuario_criacao_pagina', to=settings.AUTH_USER_MODEL, verbose_name='Usuário de Criação'),
+            model_name="pagina",
+            name="usuario_criacao",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="usuario_criacao_pagina",
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="Usuário de Criação",
+            ),
         ),
     ]

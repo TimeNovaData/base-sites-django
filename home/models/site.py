@@ -14,23 +14,23 @@ class Site(models.Model):
     )
 
     cor_primario = ColorField(
-        verbose_name='Cor Primária',
-        default='#00D77C',
+        verbose_name="Cor Primária",
+        default="#00D77C",
     )
 
     cor_secundario = ColorField(
-        verbose_name='Cor Secundaria',
-        default='#121212',
+        verbose_name="Cor Secundaria",
+        default="#121212",
     )
 
     cor_email = ColorField(
-        verbose_name='Cor Email',
-        default='#00D77C',
+        verbose_name="Cor Email",
+        default="#00D77C",
     )
 
     cor_login = ColorField(
-        verbose_name='Cor Login',
-        default='#121212',
+        verbose_name="Cor Login",
+        default="#121212",
     )
 
     js_global = models.TextField(

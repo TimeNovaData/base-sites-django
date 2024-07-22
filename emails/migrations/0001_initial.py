@@ -7,7 +7,6 @@ import django_quill.fields
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -16,46 +15,127 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Destinatario',
+            name="Destinatario",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('email', models.EmailField(max_length=254, verbose_name='Email')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("email", models.EmailField(max_length=254, verbose_name="Email")),
             ],
             options={
-                'verbose_name': 'Destinatário',
-                'verbose_name_plural': 'Destinatários',
+                "verbose_name": "Destinatário",
+                "verbose_name_plural": "Destinatários",
             },
         ),
         migrations.CreateModel(
-            name='TemplateEmail',
+            name="TemplateEmail",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('assunto', models.CharField(max_length=200, verbose_name='Assunto')),
-                ('titulo_email', models.CharField(max_length=200, verbose_name='Título do email')),
-                ('legenda_email', models.CharField(blank=True, max_length=200, null=True, verbose_name='Legenda do email')),
-                ('titulo_alteracao_email', models.CharField(blank=True, max_length=200, null=True, verbose_name='Título alteração do email')),
-                ('corpo_email', django_quill.fields.QuillField(verbose_name='Corpo do email')),
-                ('codigo', models.CharField(max_length=50, unique=True, verbose_name='Código')),
-                ('enviar_usuario_criacao', models.BooleanField(verbose_name='Enviar usuário de criação')),
-                ('destinatarios', models.ManyToManyField(blank=True, to='emails.Destinatario', verbose_name='Destinatários')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("assunto", models.CharField(max_length=200, verbose_name="Assunto")),
+                (
+                    "titulo_email",
+                    models.CharField(max_length=200, verbose_name="Título do email"),
+                ),
+                (
+                    "legenda_email",
+                    models.CharField(
+                        blank=True,
+                        max_length=200,
+                        null=True,
+                        verbose_name="Legenda do email",
+                    ),
+                ),
+                (
+                    "titulo_alteracao_email",
+                    models.CharField(
+                        blank=True,
+                        max_length=200,
+                        null=True,
+                        verbose_name="Título alteração do email",
+                    ),
+                ),
+                (
+                    "corpo_email",
+                    django_quill.fields.QuillField(verbose_name="Corpo do email"),
+                ),
+                (
+                    "codigo",
+                    models.CharField(max_length=50, unique=True, verbose_name="Código"),
+                ),
+                (
+                    "enviar_usuario_criacao",
+                    models.BooleanField(verbose_name="Enviar usuário de criação"),
+                ),
+                (
+                    "destinatarios",
+                    models.ManyToManyField(
+                        blank=True,
+                        to="emails.Destinatario",
+                        verbose_name="Destinatários",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Template do email',
-                'verbose_name_plural': 'Templates dos emails',
+                "verbose_name": "Template do email",
+                "verbose_name_plural": "Templates dos emails",
             },
         ),
         migrations.CreateModel(
-            name='MensagemEmail',
+            name="MensagemEmail",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('enviado', models.BooleanField(default=False, verbose_name='Enviado')),
-                ('data_criacao', models.DateTimeField(auto_now_add=True, verbose_name='Data de criação')),
-                ('created_by', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='mensagememail_requests_created', to=settings.AUTH_USER_MODEL)),
-                ('template_email', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='emails.templateemail', verbose_name='Template do email')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("enviado", models.BooleanField(default=False, verbose_name="Enviado")),
+                (
+                    "data_criacao",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Data de criação"
+                    ),
+                ),
+                (
+                    "created_by",
+                    models.ForeignKey(
+                        blank=True,
+                        default=None,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="mensagememail_requests_created",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "template_email",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="emails.templateemail",
+                        verbose_name="Template do email",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Mensagem do email',
-                'verbose_name_plural': 'Mensagens dos emails',
+                "verbose_name": "Mensagem do email",
+                "verbose_name_plural": "Mensagens dos emails",
             },
         ),
     ]

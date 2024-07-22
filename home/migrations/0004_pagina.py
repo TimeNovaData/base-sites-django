@@ -4,26 +4,47 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0003_alter_galeria_imagem'),
+        ("home", "0003_alter_galeria_imagem"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Pagina',
+            name="Pagina",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=100, verbose_name='Título')),
-                ('slug', models.SlugField(max_length=100, verbose_name='Slug')),
-                ('custom_description', models.TextField(max_length=400, verbose_name='Título')),
-                ('js_adicional', models.TextField(max_length=400, verbose_name='Título')),
-                ('css_adicional', models.TextField(max_length=400, verbose_name='Título')),
-                ('indexavel', models.BooleanField(default=False, null=True, verbose_name='Indexável?')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=100, verbose_name="Título")),
+                ("slug", models.SlugField(max_length=100, verbose_name="Slug")),
+                (
+                    "custom_description",
+                    models.TextField(max_length=400, verbose_name="Título"),
+                ),
+                (
+                    "js_adicional",
+                    models.TextField(max_length=400, verbose_name="Título"),
+                ),
+                (
+                    "css_adicional",
+                    models.TextField(max_length=400, verbose_name="Título"),
+                ),
+                (
+                    "indexavel",
+                    models.BooleanField(
+                        default=False, null=True, verbose_name="Indexável?"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Paginas',
-                'verbose_name_plural': 'Pagina',
+                "verbose_name": "Paginas",
+                "verbose_name_plural": "Pagina",
             },
         ),
     ]

@@ -5,24 +5,38 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0012_menu'),
+        ("home", "0012_menu"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ItemMenu',
+            name="ItemMenu",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('label', models.CharField(max_length=100, verbose_name='Label')),
-                ('link', models.CharField(max_length=100, verbose_name='Link')),
-                ('order', models.IntegerField(verbose_name='Order')),
-                ('menu', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='home.menu', verbose_name='Menu')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("label", models.CharField(max_length=100, verbose_name="Label")),
+                ("link", models.CharField(max_length=100, verbose_name="Link")),
+                ("order", models.IntegerField(verbose_name="Order")),
+                (
+                    "menu",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="home.menu",
+                        verbose_name="Menu",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Item menu',
-                'verbose_name_plural': 'Items menu',
+                "verbose_name": "Item menu",
+                "verbose_name_plural": "Items menu",
             },
         ),
     ]

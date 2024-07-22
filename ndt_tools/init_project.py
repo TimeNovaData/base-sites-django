@@ -1,46 +1,31 @@
 import subprocess
 
-from glob import (
-    glob
-)
+from glob import glob
 
-from sys import (
-    argv as parameter
-)
-
-import os
+from sys import argv as parameter
 
 
-GREEN = '\033[92m'
-YELLOW = '\033[93m'
-RED = '\033[91m'
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
 
-RESET = '\033[0m'
+RESET = "\033[0m"
 
-PROJECT_NAME = glob('**/settings.py')[0].split('/')[0]
+PROJECT_NAME = glob("**/settings.py")[0].split("/")[0]
 
 # Comandos
-create_env_command = [
-    'python3', '-m', 'venv', '../env'
-]
-npm_init_command = [
-    'npm', 'install'
-]
-install_requirements_command = [
-    'pip', 'install', '-r', 'requirements-dev.txt'
-]
+create_env_command = ["python3", "-m", "venv", "../env"]
+npm_init_command = ["npm", "install"]
+install_requirements_command = ["pip", "install", "-r", "requirements-dev.txt"]
+
 
 # Executar o comando
 def create_env(name):
-    command = subprocess.run(
-        create_env_command, 
-        capture_output=True, 
-        text=True
-    )
+    command = subprocess.run(create_env_command, capture_output=True, text=True)
 
     if command.returncode == 0:
         print(GREEN)
-        print('ENV criada com sucesso!')
+        print("ENV criada com sucesso!")
         print(RESET)
         return True
     else:
@@ -49,12 +34,12 @@ def create_env(name):
 
 def npm_init():
     command = subprocess.run(
-        npm_init_command, 
+        npm_init_command,
     )
 
     if command.returncode == 0:
         print(GREEN)
-        print('Setup do NPM concluído!')
+        print("Setup do NPM concluído!")
         print(RESET)
 
     else:
@@ -63,38 +48,33 @@ def npm_init():
 
 def install_requirements():
     command = subprocess.run(
-        install_requirements_command, 
+        install_requirements_command,
     )
 
     if command.returncode == 0:
-        return (
-            GREEN+
-            'As dependências do Django foram instaladas com sucesso!'
-            +RESET
-        )
+        return GREEN + "As dependências do Django foram instaladas com sucesso!" + RESET
 
 
-if len(parameter) > 0 and 'help' not in parameter:
-    
+if len(parameter) > 0 and "help" not in parameter:
     project_name = PROJECT_NAME
 
     if len(parameter) > 1:
         project_name = parameter[1]
 
         command = subprocess.run(
-            ['python3', 'ndt_manage.py', 'renameproject', project_name], 
-            capture_output=True, 
-            text=True
+            ["python3", "ndt_manage.py", "renameproject", project_name],
+            capture_output=True,
+            text=True,
         )
-        
-    create_env_command[3] = f"../env"
-    
+
+    create_env_command[3] = f"../env"  # noqa F541
+
     result_env = create_env(project_name)
-    
+
     if result_env:
-        print('Execute o comando a seguir para habilitar a env:')
+        print("Execute o comando a seguir para habilitar a env:")
         print(YELLOW)
-        print(f"source ../env/bin/activate")
+        print(f"source ../env/bin/activate")  # noqa F541
         print(RESET)
 
         # if "VIRTUAL_ENV" in os.environ:
@@ -104,12 +84,13 @@ if len(parameter) > 0 and 'help' not in parameter:
 
 else:
     print()
-    print('Use o nome do projeto como parametro para iniciar um novo projeto, Exemplo:')
+    print("Use o nome do projeto como parametro para iniciar um novo projeto, Exemplo:")
     print(YELLOW)
-    print('python3 ndt_manage.py init <nome_do_projeto>')
+    print("python3 ndt_manage.py init <nome_do_projeto>")
     print(RESET)
-    print('Ou apenas execute o comando para para criar o ambiente de um projeto existente, Exemplo:')
+    print(
+        "Ou apenas execute o comando para para criar o ambiente de um projeto existente, Exemplo:"
+    )
     print(YELLOW)
-    print('python3 ndt_manage.py init')
+    print("python3 ndt_manage.py init")
     print(RESET)
-    

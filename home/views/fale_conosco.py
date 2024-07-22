@@ -29,18 +29,12 @@ def fale_conosco(request):
     )
 
     try:
-        template_email = TemplateEmail.objects.filter(
-            codigo="fale_conosco"
-        ).first()
+        template_email = TemplateEmail.objects.filter(codigo="fale_conosco").first()
 
         if not template_email:
-            raise ValueError(
-                "Serviço indisponível, contate seu administrador!"
-            )
+            raise ValueError("Serviço indisponível, contate seu administrador!")
 
-        mensagem_email = MensagemEmail.objects.create(
-            template_email=template_email
-        )
+        mensagem_email = MensagemEmail.objects.create(template_email=template_email)
         mensagem_email.enviar(fale_conosco_object)
 
         return JsonResponse(

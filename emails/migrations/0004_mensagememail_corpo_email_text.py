@@ -4,15 +4,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('emails', '0003_alter_mensagememail_codigo'),
+        ("emails", "0003_alter_mensagememail_codigo"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='mensagememail',
-            name='corpo_email_text',
-            field=models.CharField(max_length=200, null=True, verbose_name='Corpo do email em texto'),
+            model_name="mensagememail",
+            name="corpo_email_text",
+            field=models.CharField(
+                max_length=200, null=True, verbose_name="Corpo do email em texto"
+            ),
         ),
     ]

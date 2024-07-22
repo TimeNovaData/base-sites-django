@@ -4,14 +4,16 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0031_auto_20230808_1225'),
+        ("home", "0031_auto_20230808_1225"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='site',
-            options={'verbose_name': 'Site', 'verbose_name_plural': 'Configurações Básicas'},
+            name="site",
+            options={
+                "verbose_name": "Site",
+                "verbose_name_plural": "Configurações Básicas",
+            },
         ),
     ]
