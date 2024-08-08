@@ -32,7 +32,7 @@
 		</div>
 
 		<!-- Body cards -->
-		<div class="flex gap-32">
+		<div class="flex gap-32 md:hidden">
 			<div class="relative">
 				<img class="object-cover w-[488px] h-[368px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
 				<div class="absolute bottom-0 py-24 px-24 w-full h-full flex flex-col justify-end">
@@ -58,8 +58,7 @@
 				</div>
 			</div>
 
-			<!-- Retirar o hidden quando for usar definitivo-->
-			<div class="flex flex-col gap-24 md:hidden">
+			<div class="flex flex-col gap-24">
 				<div class="relative">
 					<img class="object-cover h-[216px] w-[332px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
 					<div class="flex items-end w-full h-full absolute bottom-0 py-24 px-24 ">
@@ -85,8 +84,8 @@
 				</div>
 
 			</div>
-<!-- Retirar o hidden quando for usar definitivo-->
-			<div class="flex flex-col gap-24 md:hidden">
+
+			<div class="flex flex-col gap-24">
 				<div class="relative">
 					<img class="object-cover h-[216px] w-[332px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
 					<div class="flex items-end w-full h-full absolute bottom-0 py-24 px-24 ">
@@ -114,22 +113,136 @@
 			</div>		
 		</div>
 
-		<!-- Pagination bullet swiper OBS: Somente o design, a lib do swiper não inicializada-->
-		<div class="hidden gap-24 h-fit items-center justify-between md:flex">
-			<div class="flex gap-4">
-				<div class="w-8 h-8 bg-primary-pure rounded-[50%]"></div>
-				<div class="w-8 h-8 bg-primary-pure-10 rounded-[50%]"></div>
-				<div class="w-8 h-8 bg-primary-pure-10 rounded-[50%]"></div>
+		<!-- Swiper mobile -->
+		<div class="hidden md:block swiper-container w-full overflow-hidden swiper-blog4 mb-32">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide !w-fit">
+					<div class="relative">
+						<img class="object-cover w-[327px] h-[368px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
+						<div class="absolute bottom-0 py-24 px-24 w-full h-full flex flex-col justify-end">
+		
+							<div class="flex gap-8 mb-16 items-center">
+								<p class="flex text-headline-4 text-white font-medium border-[1px] border-white border-opacity-10 rounded-2xl p-6 bg-white bg-opacity-10">categoria</p>
+		
+								<p class="flex items-center gap-4 text-headline-4 text-white text-opacity-70 font-medium">
+									<svg class="w-[16px] h-[16px]">
+										<use xlink:href="#icon_document"></use>
+									</svg>
+									10min de leitura
+								</p>
+							</div>
+							<div class="mb-24">
+								<h4 class="text-title-4 text-white font-normal">Line 1.0 blog title header</h4>
+								<h4 class="text-title-4 text-white font-normal">Line 1.0 blog title header</h4>
+							</div>
+							<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center">
+								Continuar lendo
+								<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6 md hydrated" role="img"></ion-icon>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="flex flex-col gap-24">
+						<div class="relative">
+							<img class="object-cover h-[216px] w-[327px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
+							<div class="flex items-end w-full h-full absolute bottom-0 py-24 px-24 ">
+								<div class="flex items-center gap-8">
+									<p class="flex text-headline-4 text-white font-medium border-[1px] border-white border-opacity-10 rounded-2xl p-6 bg-white bg-opacity-10">categoria</p>
+									<p class="flex items-center gap-4 text-headline-4 text-white text-opacity-70 font-medium">
+										<svg class="w-[16px] h-[16px]">
+											<use xlink:href="#icon_document"></use>
+										</svg>
+										10min de leitura
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						<div>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center mt-24">
+								Continuar lendo
+								<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6 md hydrated" role="img"></ion-icon>
+							</a>
+						</div>
+		
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="flex flex-col gap-24">
+						<div class="relative">
+							<img class="object-cover h-[216px] w-[327px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
+							<div class="flex items-end w-full h-full absolute bottom-0 py-24 px-24 ">
+								<div class="flex items-center gap-8">
+									<p class="flex text-headline-4 text-white font-medium border-[1px] border-white border-opacity-10 rounded-2xl p-6 bg-white bg-opacity-10">categoria</p>
+									<p class="flex items-center gap-4 text-headline-4 text-white text-opacity-70 font-medium">
+										<svg class="w-[16px] h-[16px]">
+											<use xlink:href="#icon_document"></use>
+										</svg>
+										10min de leitura
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						<div>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center mt-24">
+								Continuar lendo
+								<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6 md hydrated" role="img"></ion-icon>
+							</a>
+						</div>
+		
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="flex flex-col gap-24">
+						<div class="relative">
+							<img class="object-cover h-[216px] w-[327px] rounded-lg" src="{% static 'img/placeholder_2.webp'%}" alt="logo">
+							<div class="flex items-end w-full h-full absolute bottom-0 py-24 px-24 ">
+								<div class="flex items-center gap-8">
+									<p class="flex text-headline-4 text-white font-medium border-[1px] border-white border-opacity-10 rounded-2xl p-6 bg-white bg-opacity-10">categoria</p>
+									<p class="flex items-center gap-4 text-headline-4 text-white text-opacity-70 font-medium">
+										<svg class="w-[16px] h-[16px]">
+											<use xlink:href="#icon_document"></use>
+										</svg>
+										10min de leitura
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						<div>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<h4 class="text-title-4 text-neutral-100 font-normal">Line 1.0 blog title header</h4>
+							<a href="" class="text-paragraph-3 text-primary-pure font-normal flex items-center mt-24">
+								Continuar lendo
+								<ion-icon name="chevron-forward-outline" class="transition group-hover:translate-x-6 md hydrated" role="img"></ion-icon>
+							</a>
+						</div>
+		
+					</div>
+				</div>
 			</div>
+		</div>
+
+		<div class="hidden gap-24 h-fit items-center justify-between md:flex">
+			<div class="swiper-pagination-blog4"></div>
 
 			<div class="flex gap-16">
-				<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px]">
+				<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px] swiper-blog4-prev">
 					<svg class="w-[22px] h-[22px]">
 						<use xlink:href="#icon_arrow_white"></use>
 					</svg>
 				</div>
 				
-				<svg class="w-[40px] h-[40px]">
+				<svg class="w-[40px] h-[40px] swiper-blog4-next">
 					<use xlink:href="#icon_arrow_purple"></use>
 				</svg>
 			</div>

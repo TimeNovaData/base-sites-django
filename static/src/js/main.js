@@ -1,6 +1,7 @@
 import axios from 'axios'
 import axiosConfig from './modules/axiosConfig'
 import PageHome from './pages/Home.js'
+import PageDsSections from './pages/ds_sections.js'
 import PageLogin from "./pages/Login";
 import UseMouseOrKeyboard from "./modules/UseMouseOrKeyboard";
 import DesignSystem from "./DesignSystem/DesignSystem";
@@ -10,6 +11,8 @@ import ripple from "./modules/ripple";
 import formErros from "./modules/formErros";
 import animaAoScroll from "./animation/animaAoScroll";
 import animateSetup from "./animation/animateSetup";
+import animationNumbers from './pages/counter';
+
 // import SvgUse from "./utils/SvgUse";
 
 // Init
@@ -23,9 +26,10 @@ ripple()
 formErros()
 animateSetup()
 animaAoScroll()
-
+animationNumbers()
 // Pages
 PageHome()
+PageDsSections()
 PageLogin()?.init()
 
 // utils logs

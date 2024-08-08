@@ -31,7 +31,7 @@
 					</a>
 				</div>
 		
-				<div class="relative flex justify-end mb-32 sm:mb-120">
+				<div class="relative flex justify-end mb-32 sm:mb-24">
 					<div class="max-w-[482px] w-full bg-white border-[1px] border-neutral-10 rounded-md shadow-md-3 py-32 px-24 absolute left-0 z-10 sm:max-w-full">
 						<h2 class="text-title-4 text-neutral-100 font-medium mb-12 sm:mb-16">
 							Subtitle
@@ -41,31 +41,59 @@
 							Aliquet euismod lacus pulvinar blandit. Laoreet et turpis ac nec eget placerat ultricies sem mauris. Nisi integer ipsum sed.
 						</p>
 					</div>
+
+					<!-- SWIPER VIDEO ABOUT 5 -->
+					 <!-- O js das configurações estão no arquivos ds_sections.js -->
 		
-					<div class="max-w-[904px] max-h-[440px] h-full w-full relative flex items-center justify-center sm:top-96  sm:flex sm:items-center sm:justify-center">
-						<img class="object-cover max-w-[904px] max-h-[440px] h-full w-full rounded-lg" src="/static/img/placeholder.png" alt="bg-image">
-						<svg class="w-[64px] h-[64px] absolute">
-							<use xlink:href="#icon_player"></use>
-						</svg>
+					<div class="swiper-container w-full overflow-hidden swiper-about5">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide flex justify-end">
+								<div class="max-w-[904px] max-h-[440px] h-full w-full relative flex items-center justify-center sm:top-96  sm:flex sm:items-center sm:justify-center">
+									<img class="object-cover max-w-[904px] max-h-[440px] h-full w-full rounded-lg" src="/static/img/placeholder-gray.png" alt="bg-image">
+									<a data-fancybox href="{% static 'video/globo.mp4' %}" class="absolute">
+										<svg class="w-[64px] h-[64px]">
+											<use xlink:href="#icon_player"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide flex justify-end">
+								<div class="max-w-[904px] max-h-[440px] h-full w-full relative flex items-center justify-center sm:top-96  sm:flex sm:items-center sm:justify-center">
+									<img class="object-cover max-w-[904px] max-h-[440px] h-full w-full rounded-lg" src="/static/img/placeholder.png" alt="bg-image">
+									<a data-fancybox href="{% static 'video/globo.mp4' %}" class="absolute">
+										<svg class="w-[64px] h-[64px]">
+											<use xlink:href="#icon_player"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide flex justify-end">
+								<div class="max-w-[904px] max-h-[440px] h-full w-full relative flex items-center justify-center sm:top-96  sm:flex sm:items-center sm:justify-center">
+									<img class="object-cover max-w-[904px] max-h-[440px] h-full w-full rounded-lg" src="/static/img/placeholder.png" alt="bg-image">
+									<a data-fancybox href="{% static 'video/globo.mp4' %}" class="absolute">
+										<svg class="w-[64px] h-[64px]">
+											<use xlink:href="#icon_player"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>	
 				</div>
 		
 				<div class="w-full flex justify-end">
 					<div class="max-w-[904px] w-full flex gap-24 h-fit items-center justify-between">
-						<div class="flex gap-4">
-							<p class="text-headline-2 text-neutral-60 font-normal">1</p>
-							<p class="text-headline-2 text-neutral-60 font-normal">de</p>
-							<p class="text-headline-2 text-neutral-60 font-normal">5</p>
-						</div>
-					
+						<div class="flex gap-4 swiper-pagination-about5"></div>
 						<div class="flex gap-16">
-							<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px]">
+							<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px] swiper-about5-prev">
 								<svg class="w-[22px] h-[22px]">
 									<use xlink:href="#icon_arrow_white"></use>
 								</svg>
 							</div>
 							
-							<svg class="w-[40px] h-[40px]">
+							<svg class="w-[40px] h-[40px] swiper-about5-next">
 								<use xlink:href="#icon_arrow_purple"></use>
 							</svg>
 						</div>

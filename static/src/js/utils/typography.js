@@ -125,15 +125,23 @@ function generateTypography(val) {
 		const variacoes = Object.entries(value)
 			.filter(([$key, $value]) => !$key.includes('*'))
 			.map(([$key, { $value }]) => {
-				return {
-					[`text-${title}-${$key}`]: {
+
+
+				const lineHeight = $value.lineHeight.includes('%')
+					? $value.lineHeigh
+					: toPercent($value.lineHeight, $value.fontSize)
+
+				const result = {
+					[`.text-${title}-${$key}`]: {
 						fontSize: toRem($value.fontSize),
 						letterSpacing: toRem($value.letterSpacing, true),
-						lineHeight: toPercent($value.lineHeight, $value.fontSize),
 						textTransform: $value.textTransform,
 						fontFamily: $value.fontFamily + ', sans serif'
-					},
+					}
 				}
+				if (lineHeight) result.lineHeight = lineHeight
+
+				return { ...result }
 			})
 
 		return variacoes
@@ -144,4 +152,6 @@ function generateTypography(val) {
 	}, {})
 }
 
-export default generateTypography($type)
+const result = generateTypography($type)
+
+export default result

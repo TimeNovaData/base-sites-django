@@ -30,7 +30,7 @@
 			</a>
 		</div>
 
-		<div class="flex gap-32 mb-32 md:gap-24 md:flex-wrap"> 
+		<div class="flex gap-32 mb-32 md:hidden"> 
 			<div class="shadow-md-3 max-w-[384px] w-full">
 				<div class="flex flex-col gap-16 px-16 py-16">
 					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 
-			<div class="shadow-md-3 max-w-[384px] w-full sm:hidden">
+			<div class="shadow-md-3 max-w-[384px] w-full">
 				<div class="flex flex-col gap-16 px-16 py-16">
 					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
 
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 
-			<div class="shadow-md-3 max-w-[384px] w-full sm:hidden">
+			<div class="shadow-md-3 max-w-[384px] w-full">
 				<div class="flex flex-col gap-16 px-16 py-16">
 					<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
 
@@ -131,21 +131,162 @@
 			</div>
 		</div>
 
-		<div class="hidden gap-24 h-fit items-center justify-between md:flex">
-			<div class="flex gap-4">
-				<div class="w-8 h-8 bg-primary-pure rounded-[50%]"></div>
-				<div class="w-8 h-8 bg-primary-pure-10 rounded-[50%]"></div>
-				<div class="w-8 h-8 bg-primary-pure-10 rounded-[50%]"></div>
+		<!-- Swiper mobile -->
+		<div class="hidden md:block swiper-container w-full overflow-hidden swiper-blog1 mb-32">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide !w-fit">
+					<div class="shadow-md-3 max-w-[327px] w-full">
+						<div class="flex flex-col gap-16 px-16 py-16">
+							<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+		
+							<div>
+								<p class="text-headline-4 font-medium text-primary-pure mb-12">Categoria - 12 minutos de leitura</p>
+								<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
+								<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
+								<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+									Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
+									Compra...
+								</p>
+		
+								<div class="flex justify-between">
+									<div class="flex gap-12 items-center">
+										<img class="object-cover w-40 h-40" src="{% static 'img/image-avatar.svg' %}" alt="avatar">
+										<div>
+											<h6 class="text-paragraph-3 text-primary-dark font-normal">Name user</h6>
+											<h6 class="text-paragraph-4 text-primary-pure-70 font-normal">UX Designer</h6>
+										</div>
+									</div>
+		
+									<div class="w-32 h-32 rounded-[50%] border-[1px] border-neutral-10 flex items-center justify-center">
+										<svg class="w-[16px] h-[16px] rotate-[-45deg]">
+											<use xlink:href="#icon_arrow_purple_2"></use>
+										</svg>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="shadow-md-3 max-w-[327px] w-full">
+						<div class="flex flex-col gap-16 px-16 py-16">
+							<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+		
+							<div>
+								<p class="text-headline-4 font-medium text-primary-pure mb-12">Categoria - 12 minutos de leitura</p>
+								<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
+								<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
+								<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+									Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
+									Compra...
+								</p>
+		
+								<div class="flex justify-between">
+									<div class="flex gap-12 items-center">
+										<img class="object-cover w-40 h-40" src="{% static 'img/image-avatar.svg' %}" alt="avatar">
+										<div>
+											<h6 class="text-paragraph-3 text-primary-dark font-normal">Name user</h6>
+											<h6 class="text-paragraph-4 text-primary-pure-70 font-normal">UX Designer</h6>
+										</div>
+									</div>
+		
+									<div class="w-32 h-32 rounded-[50%] border-[1px] border-neutral-10 flex items-center justify-center">
+										<svg class="w-[16px] h-[16px] rotate-[-45deg]">
+											<use xlink:href="#icon_arrow_purple_2"></use>
+										</svg>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="shadow-md-3 max-w-[327px] w-full">
+						<div class="flex flex-col gap-16 px-16 py-16">
+							<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+		
+							<div>
+								<p class="text-headline-4 font-medium text-primary-pure mb-12">Categoria - 12 minutos de leitura</p>
+								<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
+								<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
+								<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+									Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
+									Compra...
+								</p>
+		
+								<div class="flex justify-between">
+									<div class="flex gap-12 items-center">
+										<img class="object-cover w-40 h-40" src="{% static 'img/image-avatar.svg' %}" alt="avatar">
+										<div>
+											<h6 class="text-paragraph-3 text-primary-dark font-normal">Name user</h6>
+											<h6 class="text-paragraph-4 text-primary-pure-70 font-normal">UX Designer</h6>
+										</div>
+									</div>
+		
+									<div class="w-32 h-32 rounded-[50%] border-[1px] border-neutral-10 flex items-center justify-center">
+										<svg class="w-[16px] h-[16px] rotate-[-45deg]">
+											<use xlink:href="#icon_arrow_purple_2"></use>
+										</svg>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="shadow-md-3 max-w-[327px] w-full">
+						<div class="flex flex-col gap-16 px-16 py-16">
+							<img  class="object-cover max-w-[352px] max-h-[228px] rounded-md" src="{% static 'img/placeholder.webp' %}" alt="placeholder">
+		
+							<div>
+								<p class="text-headline-4 font-medium text-primary-pure mb-12">Categoria - 12 minutos de leitura</p>
+								<h2 class="text-headline-1 font-medium text-neutral-100 ">Line 1.0 blog title header</h2>
+								<h2 class="text-headline-1 font-medium text-neutral-100 mb-8">Line 2.0 blog title header</h2>
+								<p class="text-paragraph-2 text-neutral-70 font-normal leading-[150%] mb-24">
+									Você já pode realizar, sem sair de casa: Divórcio, Procuração, Testamento, Ata Notarial, 
+									Compra...
+								</p>
+		
+								<div class="flex justify-between">
+									<div class="flex gap-12 items-center">
+										<img class="object-cover w-40 h-40" src="{% static 'img/image-avatar.svg' %}" alt="avatar">
+										<div>
+											<h6 class="text-paragraph-3 text-primary-dark font-normal">Name user</h6>
+											<h6 class="text-paragraph-4 text-primary-pure-70 font-normal">UX Designer</h6>
+										</div>
+									</div>
+		
+									<div class="w-32 h-32 rounded-[50%] border-[1px] border-neutral-10 flex items-center justify-center">
+										<svg class="w-[16px] h-[16px] rotate-[-45deg]">
+											<use xlink:href="#icon_arrow_purple_2"></use>
+										</svg>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
+
+		<div class="hidden gap-24 h-fit items-center justify-between md:flex">
+			<div class="swiper-pagination-blog1"></div>
 
 			<div class="flex gap-16">
-				<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px]">
+				<div class="rounded-[50%] border-[1px] border-neutral-10 px-[9px] py-[9px] swiper-blog1-prev">
 					<svg class="w-[22px] h-[22px]">
 						<use xlink:href="#icon_arrow_white"></use>
 					</svg>
 				</div>
 				
-				<svg class="w-[40px] h-[40px]">
+				<svg class="w-[40px] h-[40px] swiper-blog1-next">
 					<use xlink:href="#icon_arrow_purple"></use>
 				</svg>
 			</div>

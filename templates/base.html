@@ -19,8 +19,7 @@
 	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
 
@@ -28,6 +27,9 @@
 
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	 <!-- fancybox -->
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 
 	<!-- GLOBAL -->
 	{% vite_asset 'src/js/utils/GLOBAL.js' type='text/javascript' %}
@@ -46,8 +48,10 @@
 <body style="opacity: 0" class="{% block body_class %} {% endblock %}">
 
 	{% include 'svg_defs.html' %}
-	<!-- 	{% include "menus/menu_principal.html" %} -->
 
+{% comment %}
+	{% include "menus/menu_principal.html" %}
+{% endcomment %}
 
 	{% block content %} <!-- content --> {% endblock %}
 
@@ -57,6 +61,13 @@
 	{% vite_asset 'src/js/main.js'%}
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+	<!-- Fancybox -->
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+	<!-- counterUp -->
+	<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+
 	{% block extra_js %} {% endblock %}
 
 </body>
