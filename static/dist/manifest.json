@@ -1,18 +1,18 @@
 {
   "src/index.css": {
-    "file": "index-69ad6496.css",
+    "file": "index-b4ecf392.css",
     "src": "src/index.css"
   },
   "src/index.js": {
     "css": [
-      "index-69ad6496.css"
+      "index-b4ecf392.css"
     ],
-    "file": "index-b7ce719d.js",
+    "file": "index-4f8b67ea.js",
     "isEntry": true,
     "src": "src/index.js"
   },
   "src/js/main.js": {
-    "file": "main-dc413f27.js",
+    "file": "main-d4898b54.js",
     "isEntry": true,
     "src": "src/js/main.js"
   },
