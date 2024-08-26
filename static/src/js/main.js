@@ -11,7 +11,6 @@ import ripple from "./modules/ripple";
 import formErros from "./modules/formErros";
 import animaAoScroll from "./animation/animaAoScroll";
 import animateSetup from "./animation/animateSetup";
-import animationNumbers from './pages/counter';
 
 // import SvgUse from "./utils/SvgUse";
 
@@ -26,7 +25,7 @@ ripple()
 formErros()
 animateSetup()
 animaAoScroll()
-animationNumbers()
+
 // Pages
 PageHome()
 PageDsSections()
