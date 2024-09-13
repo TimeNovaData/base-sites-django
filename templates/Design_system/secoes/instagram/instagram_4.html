@@ -1,7 +1,7 @@
 {% load static %}
 
-<section id="instagram_2" class="min-h-screen w-full md:py-32">
-	<div class="container flex gap-56 flex-col items-center sm:gap-32">
+<section id="instagram_4" class="min-h-screen w-full py-120 md:py-32">
+	<div class="container flex flex-col items-center gap-56 md:gap-32">
 		<div class="max-w-[408px] text-center">
 			<span class="text-caps-2 inline-flex gap-8 text-primary-pure items-center mb-4 sm:text-caps-3">
 				<svg class="w-[24px] h-[24px]">
@@ -18,6 +18,7 @@
 				Lorem ipsum dolor sit amet consectetur. Sit vitae vel fermentum dui iaculis sem amet. 
 				Tellus interdum nunc aliquam nisi felis eu augue.
 			</p>
+
 			<div class="flex gap-16 sm:flex-col">
 				<a href="" class="Button text-paragraph-2 text-white w-fit sm:w-full sm:flex sm:justify-center" size="md">
 					<svg class="w-[24px] h-[24px] rotate-180">
@@ -44,29 +45,31 @@
 			</div>
 		</div>
 
-		<div class="grid grid-cols-6 gap-8 md:hidden">
-			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-					<svg class="w-[32px] h-[32px]">
-						<use xlink:href="#icon_instagram_white"></use>
-					</svg>
-					<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+		<div class="flex gap-32 md:hidden">
+			<div class="grid gap-32">
+				<div class="relative item-instagram1">
+					<img class="object-cover w-[356px] h-[336px] rounded-md sm:h-[220px]" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+					<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_instagram_white"></use>
+						</svg>
+						<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+					</div>
 				</div>
-			</div>
-
-			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-					<svg class="w-[32px] h-[32px]">
-						<use xlink:href="#icon_instagram_white"></use>
-					</svg>
-					<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-				</div>
-			</div>
 		
+				<div class="relative item-instagram1">
+					<img class="object-cover w-[356px] h-[336px] rounded-md sm:h-[220px]" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+					<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_instagram_white"></use>
+						</svg>
+						<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+					</div>
+				</div>
+			</div>
+			
 			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+				<img class="object-cover w-[500px] h-full rounded-md sm:h-[220px]" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
 				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
 					<svg class="w-[32px] h-[32px]">
 						<use xlink:href="#icon_instagram_white"></use>
@@ -75,114 +78,104 @@
 				</div>
 			</div>
 
-			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-					<svg class="w-[32px] h-[32px]">
-						<use xlink:href="#icon_instagram_white"></use>
-					</svg>
-					<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-				</div>
-			</div>
-
-			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-					<svg class="w-[32px] h-[32px]">
-						<use xlink:href="#icon_instagram_white"></use>
-					</svg>
-					<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-				</div>
-			</div>
-
-			<div class="relative item-instagram1">
-				<img class="object-cover w-[196px] h-[196px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-				<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-					<svg class="w-[32px] h-[32px]">
-						<use xlink:href="#icon_instagram_white"></use>
-					</svg>
-					<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-				</div>
-			</div>
-
-		</div>
-
-		<!-- Swiper mobile -->
-		<div class="hidden md:block swiper-container w-full overflow-hidden swiper-instagram2">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
+			<div class="grid gap-32">
+				<div class="relative item-instagram1">
+					<img class="object-cover w-[356px] h-[336px] rounded-md sm:h-[220px]" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+					<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_instagram_white"></use>
+						</svg>
+						<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
 					</div>
 				</div>
-
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide !w-fit">
-					<div class="relative item-instagram1">
-						<img class="object-cover w-[220px] h-[220px] rounded-md" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
-						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
-							<svg class="w-[32px] h-[32px]">
-								<use xlink:href="#icon_instagram_white"></use>
-							</svg>
-							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
-						</div>
+		
+				<div class="relative item-instagram1">
+					<img class="object-cover w-[356px] h-[336px] rounded-md sm:h-[220px]" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+					<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+						<svg class="w-[32px] h-[32px]">
+							<use xlink:href="#icon_instagram_white"></use>
+						</svg>
+						<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<div class="hidden md:block swiper-container w-full overflow-hidden swiper-instagram-4">
+			<div class="swiper-wrapper !items-center">
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide !w-fit">
+					<div class="relative item-instagram1">
+						<img class="object-cover w-[231px] h-[231px] rounded-md item-slide-instagram" src="{% static 'img/placeholder-3.webp' %}" alt="logo">
+						<div class="absolute bottom-0 w-full h-full LinearGradientBlack flex flex-col justify-center items-center gap-16">
+							<svg class="w-[32px] h-[32px]">
+								<use xlink:href="#icon_instagram_white"></use>
+							</svg>
+							<h4 class="text-caps-2 text-white font-semibold">Ver no instagram</h4>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
 	</div>
 </section>

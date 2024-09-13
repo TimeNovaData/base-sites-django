@@ -287,3 +287,16 @@ ul .circle::before {
 	backdrop-filter: blur(1.5625rem);
 }
 
+.item-slide-instagram{
+	&.active{
+		width:279px;
+		height:279px;
+	}
+}
+
+.gradiente-depoimentos-3{
+	border-radius: .25rem;
+	border: 1px solid rgba(255, 255, 255, 0.10);
+	background: rgba(255, 255, 255, 0.10);
+	backdrop-filter: blur(40px);
+}

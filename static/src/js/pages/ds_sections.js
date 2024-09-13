@@ -458,4 +458,227 @@ export default function () {
 		slidesPerView: 'auto',
 		spaceBetween:8
 	});
+
+	const swiperInstagram2 = new Swiper('.swiper-instagram2', {
+		slidesPerView: 'auto',
+		spaceBetween:8
+	});
+
+	const swiperInstagram4 = new Swiper('.swiper-instagram-4', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		
+		breakpoints:{
+			1024:{
+				slidesPerView:4,
+			}
+		},
+		// Configurações do Swiper
+		on: {
+			slideChange: function () {
+			const activeSlide = swiperInstagram4.slides[swiperInstagram4.activeIndex];
+			const divWrap = activeSlide.querySelector('.item-slide-instagram')
+			const divWrapAll = document.querySelectorAll('.item-slide-instagram')
+			divWrapAll.forEach(i=> i.classList.remove('active'))
+			divWrap.classList.add('active')
+			console.log("slide active", activeSlide);
+			}
+		}
+		
+	});
+	/* END */
+
+	/* Todos os swippers do DS sections partners */
+
+	const swiperPartner1 = new Swiper('.swiper-partner-1', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		loop:true,
+		autoplay: {
+			delay: 1000,
+			disableOnInteraction: false,
+		  },
+	});
+
+	const swiperPartner1Center = new Swiper('.swiper-partner-1-center', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		loop:true,
+		autoplay: {
+			delay: 1400,
+			disableOnInteraction: false,
+		  },
+	});
+
+	const swiperPartner1Bottom = new Swiper('.swiper-partner-1-bottom', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		loop:true,
+		autoplay: {
+			delay: 1800,
+			disableOnInteraction: false,
+		  },
+	});
+
+	const swiperPartner2 = new Swiper('.swiper-partner-2', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		loop:true,
+		autoplay: {
+			delay: 1000,
+			disableOnInteraction: false,
+		  },
+
+		pagination: {
+			el: '.pagination-swiper-partner-2',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		}
+	});
+
+	const swiperPartner3 = new Swiper('.swiper-partner-3', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		loop:true,
+		autoplay: {
+			delay: 1000,
+			disableOnInteraction: false,
+		},
+
+		breakpoints:{
+			1024:{
+				spaceBetween:8,
+			}
+		},
+
+		pagination: {
+			el: '.pagination-swiper-partner-3',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		}
+	});
+	/* END */
+
+	/* Todos os swippers do DS sections pricing */
+
+	const swiperPricing3 = new Swiper('.swiper-pricing-3', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+	});
+
+	const swiperPricing5 = new Swiper('.swiper-pricing-5', {
+		slidesPerView: 'auto',
+		spaceBetween:0,
+	});
+	/* END */
+
+	/* Todos os swippers do DS sections Testimonials */
+
+	const swiperDepoimentos1 = new Swiper('.swiper-depoimentos-1', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		centeredSlides:true,
+		navigation: {
+			nextEl: '.swiper-depoimentos-1-next',
+			prevEl: '.swiper-depoimentos-1-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination-depoimentos-1',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		},
+		breakpoints:{
+			600:{
+				spaceBetween:0,
+			}
+		}
+	});
+
+	const swiperDepoimentos2 = new Swiper('.swiper-depoimentos-2', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		navigation: {
+			nextEl: '.swiper-depoimentos-2-next',
+			prevEl: '.swiper-depoimentos-2-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination-depoimentos-2',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		},
+		breakpoints:{
+			600:{
+				spaceBetween:32,
+			}
+		}
+	});
+
+	const swiperDepoimentos3 = new Swiper('.swiper-depoimentos-3', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		navigation: {
+			nextEl: '.swiper-depoimentos-3-next',
+			prevEl: '.swiper-depoimentos-3-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination-depoimentos-3',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		},
+		breakpoints:{
+			600:{
+				spaceBetween:32,
+			}
+		}
+	});
+
+	const swiperDepoimentos4 = new Swiper('.swiper-depoimentos-4', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		navigation: {
+			nextEl: '.swiper-depoimentos-4-next',
+			prevEl: '.swiper-depoimentos-4-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination-depoimentos-4',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		},
+		breakpoints:{
+			600:{
+				spaceBetween:32,
+			}
+		}
+	});
+
+	const swiperDepoimentos5 = new Swiper('.swiper-depoimentos-5', {
+		slidesPerView: 'auto',
+		spaceBetween:16,
+		navigation: {
+			nextEl: '.swiper-depoimentos-5-next',
+			prevEl: '.swiper-depoimentos-5-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination-depoimentos-5',
+			clickable: true,
+			dynamicBullets: false,
+			dynamicMainBullets: 3,
+		},
+		breakpoints:{
+			600:{
+				spaceBetween:32,
+			}
+		}
+	});
 }

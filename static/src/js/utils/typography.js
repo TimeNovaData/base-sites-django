@@ -127,6 +127,19 @@ const $type = {
 				textDecoration: 'none',
 			},
 		},
+
+		3: {
+			$type: 'typography',
+			$value: {
+				fontFamily: 'Space Grotesk',
+				fontSize: '14px',
+				fontWeight: 500,
+				letterSpacing: '-2%',
+				lineHeight: '24px',
+				textTransform: 'none',
+				textDecoration: 'none',
+			},
+		},
 		
 	},
 
@@ -196,6 +209,47 @@ const $type = {
 			},
 		},
 		
+	},
+
+	Caps: {
+		1: {
+			$type: 'typography',
+			$value: {
+				fontFamily: 'Inter',
+				fontSize: '14px',
+				fontWeight: 600,
+				letterSpacing: '-2%',
+				lineHeight: '16px',
+				textTransform: 'uppercase',
+				textDecoration: 'none',
+			},
+		},
+
+		2: {
+			$type: 'typography',
+			$value: {
+				fontFamily: 'Inter',
+				fontSize: '12px',
+				fontWeight: 600,
+				letterSpacing: '-2%',
+				lineHeight: '16px',
+				textTransform: 'uppercase',
+				textDecoration: 'none',
+			},
+		},
+
+		3: {
+			$type: 'typography',
+			$value: {
+				fontFamily: 'Inter',
+				fontSize: '10px',
+				fontWeight: 600,
+				letterSpacing: '-2%',
+				lineHeight: '16px',
+				textTransform: 'uppercase',
+				textDecoration: 'none',
+			},
+		},		
 	},
 }
 
