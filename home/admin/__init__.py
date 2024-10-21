@@ -13,6 +13,8 @@ from .coming_soon_admin import ComingSoonAdmin
 from .termo_admin import TermoAdmin
 from .aceite_termo_inline import AceiteTermoInline
 from .parceiro_admin import ParceiroAdmin
+from .experiencia_exclusiva_admin import ExperienciaAdmin
+from .evento_e_festa_admin import EventoEFestaAdmin
 
 __all__ = [
     CustomUserAdmin,
@@ -29,5 +31,7 @@ __all__ = [
     ComingSoonAdmin,
     TermoAdmin,
     AceiteTermoInline,
-    ParceiroAdmin
+    ParceiroAdmin,
+    ExperienciaAdmin,
+    EventoEFestaAdmin,
 ]

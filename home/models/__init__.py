@@ -14,6 +14,8 @@ from .coming_soon import ComingSoon
 from .termo import Termo
 from .aceite_termo import AceiteTermo
 from .parceiro import Parceiro
+from .experiencia_exclusiva import Experiencia
+from .evento_e_festa import EventoEFesta
 
 __all__ = [
     AlterUserEmail,
@@ -31,5 +33,7 @@ __all__ = [
     ComingSoon,
     Termo,
     AceiteTermo,
-    Parceiro
+    Parceiro,
+    Experiencia,
+    EventoEFesta,
 ]

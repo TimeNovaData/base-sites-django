@@ -1,7 +1,12 @@
 import math
 
 from django.shortcuts import render, redirect, get_object_or_404
-from ..models import Pagina, Site
+from ..models import (
+    Pagina,
+    Site,
+    Experiencia,
+    EventoEFesta,
+)
 
 
 def home(request, slug=None):
@@ -10,6 +15,8 @@ def home(request, slug=None):
 
     # config global
     site = Site.objects.all().first()
+    experiencias_exclusiva = Experiencia.objects.all().order_by("ordem")
+    eventos_e_festas = EventoEFesta.objects.all().order_by("ordem")
 
     template_name = pagina.template
 
@@ -35,6 +42,8 @@ def home(request, slug=None):
         "items_menu": items_menu,
         "menu_codigo": menu_codigo,
         "lines": lines,
+        "experiencias_exclusiva": experiencias_exclusiva,
+        "eventos_e_festas": eventos_e_festas,
     }
 
     em_manutencao = site.ativar_manutencao

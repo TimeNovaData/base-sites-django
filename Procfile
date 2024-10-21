@@ -1,1 +1,1 @@
-web: gunicorn liberdadeelogoali.wsgi
+web: gunicorn nome_projeto.wsgi
