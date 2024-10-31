@@ -8,6 +8,10 @@ from .svg_viewer import svg_viewer
 from .aceitar_termo import aceitar_termo
 from .fale_conosco import fale_conosco
 from .parceiros_teste import ParceirosView
+from .artigo import (
+    ArtigoDetail,
+    ArtigoList,
+)
 
 errors_views = [
     error_403,
@@ -25,4 +29,6 @@ __all__ = [
     aceitar_termo,
     fale_conosco,
     ParceirosView,
+    ArtigoList,
+    ArtigoDetail,
 ] + errors_views

@@ -13,7 +13,7 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "liberdadeelogoali.herokuapp.com",
+    "vvr-group.herokuapp.com",
     "seo-pro.dokku-sites.novadata.com.br",
 ]
 
@@ -74,7 +74,7 @@ DEV = config("DEV", default=False, cast=bool)
 #         # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 #     ]
 
-ROOT_URLCONF = "liberdadeelogoali.urls"
+ROOT_URLCONF = "vvr-group.urls"
 
 TEMPLATES = [
     {
@@ -92,13 +92,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "liberdadeelogoali.wsgi.application"
+WSGI_APPLICATION = "vvr-group.wsgi.application"
 
 
 default_dburl = "sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
-DATABASES = {
-    "default": config("DATABASE_URL", default=default_dburl, cast=dburl)
-}
+DATABASES = {"default": config("DATABASE_URL", default=default_dburl, cast=dburl)}
 
 
 USE_AWS = config("USE_AWS", default=False, cast=bool)
@@ -123,25 +121,30 @@ if USE_AWS:
         AWS_S3_CUSTOM_DOMAIN,
         PUBLIC_MEDIA_LOCATION,
     )
-    DEFAULT_FILE_STORAGE = "liberdadeelogoali.storages_backends.PublicMediaStorage"
+    DEFAULT_FILE_STORAGE = "vvr-group.storages_backends.PublicMediaStorage"
 else:
     STATIC_URL = "/static/"
     MEDIA_URL = "/media/"
 
 
 REST_FRAMEWORK = {
-    "DEFAULT_FILTER_BACKENDS": [
-        "django_filters.rest_framework.DjangoFilterBackend"
-    ],
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",  # noqa E501
     "PAGE_SIZE": 10,
     #
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
+if not DEV:
+    REST_FRAMEWORK.update(
+        {
+            "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+        }
+    )
+
 SPECTACULAR_SETTINGS = {
-    "TITLE": "liberdadeelogoali API",
-    "DESCRIPTION": "liberdadeelogoali description",
+    "TITLE": "vvr-group API",
+    "DESCRIPTION": "vvr-group description",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     #

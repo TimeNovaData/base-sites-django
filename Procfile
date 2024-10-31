@@ -1,1 +1,1 @@
-web: gunicorn liberdadeelogoali.wsgi
+web: gunicorn vvr-group.wsgi
