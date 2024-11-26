@@ -9,8 +9,8 @@
     "build": "vite build",
     "webp": "node ndt_tools/node_scripts/webp_convert.js",
     "clear-src": "find ./static -mindepth 1 -maxdepth 1 ! -name 'src' ! -name 'dist' ! -name 'public' -exec rm -r {} \\;",
-    "prepare": "husky install",
-    "webflow": "bunx gulp webflow"
+    "webflow": "bunx gulp webflow",
+    "prepare": "husky"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -22,6 +22,8 @@
   },
   "browserslist": "> 0.5%, not dead",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "fs": "^0.0.1-security",
     "gulp": "^5.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-dom": "^1.0.0",
@@ -31,9 +33,7 @@
     "gulp-run": "^1.7.1",
     "gulp-template": "^6.0.0",
     "gulp-uglify": "^3.0.2",
-    "autoprefixer": "^10.4.13",
-    "fs": "^0.0.1-security",
-    "husky": "^8.0.0",
+    "husky": "^9.1.7",
     "inquirer": "^7.3.3",
     "postcss": "^8.4.26",
     "postcss-comment": "^2.0.0",
