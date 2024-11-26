@@ -140,7 +140,7 @@ task('✂️ Copiar pasta CSS WEBFLOW', () => {
     .pipe(dest(destFolder))
 })
 
-task('🌄 Mudar src das <img />', function () {
+task('🌄 Mudar src/srcset das <img />', function () {
   return _src(paths.scrWebflow + '*.html')
     .pipe(
       dom(function () {
@@ -188,6 +188,16 @@ task('✂️ Copiar BASE.HTML', () => {
     .pipe(dest('templates/'))
 })
 
+task('🟦 Add Attributes no HTML do BASE.HTML', function () {
+  return _src('templates/base.html/', { allowEmpty: true }).pipe(
+    dom(function () {
+      console.log(this)
+      return this
+    })
+  )
+  // .pipe(dest(paths.scrWebflow + '[Templates]'))
+})
+
 task(
   'webflow',
   series(
@@ -204,7 +214,8 @@ task(
     '✂️ Copiar BASE.HTML',
     '⚡ Sobrescrever VITE CONFIG',
     '🔹 Sobrescrever Tailwind CONFIG',
-    '🌄 Mudar src/srcset das <img />'
+    '🌄 Mudar src/srcset das <img />',
+    '🟦 Add Attributes no HTML do BASE.HTML'
     // '📟 Minifica arquivo WEBFLOW'
     // '♻️ Converte imagens em WEBP'
   )
