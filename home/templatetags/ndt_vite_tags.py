@@ -13,7 +13,7 @@ register = template.Library()
 
 # If using in development or production mode.
 DJANGO_VITE_DEV_MODE = getattr(settings, "DJANGO_VITE_DEV_MODE", False)
-
+USE_AWS = getattr(settings, "USE_AWS", False)
 # Default Vite server protocol (http or https)
 DJANGO_VITE_DEV_SERVER_PROTOCOL = getattr(
     settings, "DJANGO_VITE_DEV_SERVER_PROTOCOL", "http"
@@ -428,8 +428,15 @@ class DjangoViteAssetLoader:
         """
 
         try:
-            response = requests.get(DJANGO_VITE_MANIFEST_PATH)
-            self._manifest = json.loads(response.text)
+            if USE_AWS:
+                response = requests.get(DJANGO_VITE_MANIFEST_PATH)
+                self._manifest = json.loads(response.text)
+            else:
+                manifest_file = open(DJANGO_VITE_MANIFEST_PATH, "r")
+                manifest_content = manifest_file.read()
+                manifest_file.close()
+                self._manifest = json.loads(manifest_content)
+
         except Exception as error:
             raise RuntimeError(
                 f"Não foi possivel fazer o request do manifest"

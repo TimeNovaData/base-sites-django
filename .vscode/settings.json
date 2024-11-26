@@ -33,10 +33,9 @@
         // "runtime.txt": true,
         ".mypy_cache": true,
         "*/__pycache__": true,
-        ".husky":true,
+        ".husky": true,
         ".env_example": true
     },
-
     "tailwind-fold.foldStyle": "QUOTES",
     "tailwind-fold.supportedLanguages": [
         "html",
@@ -58,7 +57,7 @@
     },
     "[javascript]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -75,4 +74,8 @@
     "[postcss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "search.exclude": {
+        "**/node_modules": true,
+        "ndt_tools/gulp_templates/**": true,
+    }
 }

@@ -11,3 +11,4 @@ db.sqlite3
 yarn.lock
 package-lock.json
 *.pyc
+bun.lockd

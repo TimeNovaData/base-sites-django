@@ -14,15 +14,19 @@
 	</title>
 
 	<!-- FONT -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:wght@500&display=swap"
+		rel="stylesheet">
 
-	{% vite_asset 'src/js/utils/GLOBAL.js' type='text/javascript' %}
-
+	<script>
+		window.GLOBAL = {
+			context: {}
+		}
+	</script>
 	<!-- CSS -->
-	{% vite_asset 'src/index.js' %}
+	{% vite_asset 'src/index.admin.js' %}
 
 	{% block extra_styles %} <!--  --> {% endblock %}
 
@@ -36,7 +40,7 @@
 	{% endblock %}
 </head>
 
-<body style="opacity: 0;" class=" {% block body_class %} {% endblock %}">
+<body class=" {% block body_class %} {% endblock %}">
 
 	<div>
 		{% block content %} <!--  --> {% endblock %}
@@ -51,7 +55,7 @@
 	<!-- JS ADICIONAL ADMIN -->
 	{% include 'adicionais/js.html' %}
 	<!-- MAIN -->
-	{% vite_asset 'src/js/main.js'%}
+	{% vite_asset 'src/js/main.admin.js'%}
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 

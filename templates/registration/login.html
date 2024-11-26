@@ -11,91 +11,87 @@
 <!--  
 	js: "static/src/js/pages/Login.js"
 -->
+{% block extra_styles %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 
+
 <main js-page='login'>
-	<form method="post" action="">
-		{% csrf_token %}
-		<div class="grid  grid-cols-[auto,_max-content] h-full min-h-screen md2:flex md2:flex-col">
+	<div class="grid min-h-screen grid-cols-[50vw_auto] md:flex">
 
-			<picture
-				class="rounded-lg bg-primary-pure  sm:w-full sm:m-0 sm:rounded-none h-[calc(100%_-_5rem)] w-[calc(100%_-_5rem)] m-40 grid place-items-center relative select-none overflow-hidden md2:h-[36rem]">
-				<div class="w-max h-max overflow-hidden md2:-mt-[280px] sm:-mt-[310px]">
-					<img js-anima data-anima="left" data-value="-200%" data-duration="0.9" class="h-120 lg:h-80 relative z-10 "
-						src="{% static 'img/logos/logo_generic.webp' %}" alt="">
-				</div>
+		<picture class="relative w-[50vw] bg-[rgb(var(--primary-pure))] md:hidden">
+			<img class="z-2 absolute inset-0 m-auto size-[250px] object-contain"
+				src="{% static 'images/logos/logo_generic.webp' %}" data-aos="fade" data-aos-delay="200">
+			<img class="absolute z-[1] m-auto size-full object-contain" src="{% static 'images/login/blur.webp' %}"
+				data-aos="fade">
+		</picture>
 
-				<img class=" absolute z-0 w-full h-full  object-contain mx-auto inset-0 md2:-mt-40 md2:-mr-24 sm:-mt-64"
-					src="{% static 'img/login/blur.webp' %}" js-anima data-delay="0.5" data-anima="opacity">
-			</picture>
+		<section class="flex bg-[#f5f5f5] py-6 md:w-full md:px-2">
 
+			<form method="post" action="" data-aos="fade-up"
+				class="m-auto w-[468px] rounded-md bg-white p-8 shadow-md md:w-full md:max-w-[468px] md:p-6">
+				{% csrf_token %}
 
-			<section class="flex flex-col mx-120 lg:mx-64 my-auto overflow-hidden md2:mt-[-400px] sm:mx-16 sm:mt-[-350px]">
-				<!-- Formulario -->
-				<article
-					class="Card shadow-sm py-32 px-24 rounded-lg form-wrapper  border mx-auto w-[428px] sm:w-full bg-white sm:max-w-[initial]  mt-48 "
-					js-anima data-anima="left" data-value="-100%" data-duration="0.6">
+				<h2 class="titulo mb-2 text-[rgb(var(--neutral-100))]">Fazer login</h2>
+				<p class="mb-8 text-[rgb(var(--neutral-70))]">
+					Seja bem-vindo(a)! Insira seu e-mail e<br> senha para entrar em sua conta.
+				</p>
 
-					<header class="flex flex-col gap-8">
-						<h2 js-anima data-delay="0.1" data-anima="opacity" class="text-title-4">Fazer login</h2>
-						<p class="description text-neutral-70" js-anima data-delay="0.15" data-anima="opacity">
-							Seja bem-vindo(a)!<br> Insira seu e-mail e senha para entrar em sua conta.
-						</p>
-					</header>
-
-					<div class="mt-32 mx-auto">
-						<div class="Input h-48  flex" js-anima data-delay="0.2" data-anima="opacity">
-							{{form.username|attr:'placeholder:E-mail'}}
-						</div>
-
-						<div class="Input h-48 flex mt-8 gap-0" js-password js-anima data-delay="0.25" data-anima="opacity">
-							{{form.password|attr:'js-input-password'|attr:'placeholder:Senha'}}
-							<button js-button-password type="button"
-								class="grid place-items-center cursor-pointer h-full w-48 shrink-0 hover:bg-primary-pure/10" js-ripple>
-								<ion-icon class="on text-paragraph-1 text-neutral-60" name="eye-outline" size="small"></ion-icon>
-								<ion-icon class="off hidden text-paragraph-1 text-neutral-60" name="eye-off-outline"></ion-icon>
-							</button>
-						</div>
-
-						<div class="mt-8" js-anima data-delay="0.30" data-anima="opacity">
-							<a href="{% url 'password_reset' %}" class="hover:underline text-headline-4  text-neutral-60 ">
-								Esqueceu a senha?
-							</a>
-						</div>
-
+				<div>
+					<div class="Input mb-5">
+						{{form.username|attr:'placeholder:E-mail'}}
 					</div>
 
-					<!-- Erros -->
-					<div js-anima data-delay="0.35 " data-anima="opacity">
-						{{form.errors|json_script:"js-error"}}
-					</div>
+					<div class="Input" js-password>
+						{{form.password|attr:'js-input-password'|attr:'placeholder:Senha'}}
 
-
-					<label class="Label-check text-headline-3 mt-16" js-anima data-delay="0.35 " data-anima="opacity">
-						<div js-checkbox size="sm">
-							<input type="checkbox" name="permanecer_conectado" checked>
-						</div>
-						<p>Permanecer conectado</p>
-					</label>
-
-					<div class="btn-wrapper mt-40 " js-anima data-delay="0.40" data-anima="opacity">
-						<button type="submit" class="Button  text-headline-2 !rounded-3xl w-full justify-center" secondary size="lg"
-							js-ripple>
-							Entrar na conta
+						<button js-button-password type="button" js-ripple
+							class="mr-2 grid place-items-center rounded-md p-2 hover:bg-[rgba(var(--neutral-100),0.1)]">
+							<ion-icon class="on text-neutral-60" name="eye-outline" size="small"></ion-icon>
+							<ion-icon class="off hidden text-neutral-60" name="eye-off-outline"></ion-icon>
 						</button>
 					</div>
-				</article>
 
-				<footer class="h-max py-16" js-anima data-delay="0.5" data-anima="opacity">
+					<div class="mb-1 mt-1 text-[0.875rem] text-[rgb(var(--neutral-70))] hover:underline">
+						<a href="{% url 'password_reset' %}">
+							Esqueceu a senha?
+						</a>
+					</div>
+
+				</div>
+
+				<!-- Erros -->
+				<div>
+					{{form.errors|json_script:"js-error"}}
+				</div>
+
+
+				<label
+					class="mt-6 flex cursor-pointer select-none items-center gap-1 text-[0.875rem] text-[rgb(var(--neutral-70))]">
+					<div js-checkbox size="sm">
+						<input type="checkbox" name="permanecer_conectado" checked>
+					</div>
+					<p>Permanecer conectado</p>
+				</label>
+
+				<button type="submit" class="Button mt-10">
+					Entrar na conta
+				</button>
+
+
+				<footer class="mt-6" js-anima data-delay="0.5" data-anima="opacity">
 					<a href="https://novadata.com.br" target="_blank">
-						<img class="h-24 mx-auto" src="{% static 'img/logos/logo_ndt_light.webp' %}" alt="novadata">
+						<img class="mx-auto h-5 object-contain" src="{% static 'images/logos/logo_ndt_light.webp' %}"
+							alt="novadata">
 					</a>
 				</footer>
-			</section>
+			</form>
 
-		</div>
 
-	</form>
+		</section>
+	</div>
 
 </main>
 
@@ -103,4 +99,95 @@
 
 
 {% block extra_js %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 {% endblock %}
+
+
+<form method="post" action="">
+	{% csrf_token %}
+	<div class="md2:flex md2:flex-col grid h-full min-h-screen grid-cols-[auto,_max-content]">
+
+		<picture
+			class="md2:h-[36rem] sm:m-0 sm:w-full sm:rounded-none relative m-40 grid h-[calc(100%_-_5rem)] w-[calc(100%_-_5rem)] select-none place-items-center overflow-hidden rounded-lg bg-primary-pure">
+			<div class="md2:-mt-[280px] sm:-mt-[310px] h-max w-max overflow-hidden">
+				<img js-anima data-anima="left" data-value="-200%" data-duration="0.9"
+					class="h-120 lg:h-80 relative z-10" src="{% static 'images/logos/logo_generic.webp' %}" alt="">
+			</div>
+
+			<img class="md2:-mr-24 md2:-mt-40 sm:-mt-64 absolute inset-0 z-0 mx-auto h-full w-full object-contain"
+				src="{% static 'images/login/blur.webp' %}" js-anima data-delay="0.5" data-anima="opacity">
+		</picture>
+
+
+		<section class="mx-120 lg:mx-64 md2:mt-[-400px] sm:mx-16 sm:mt-[-350px] my-auto flex flex-col overflow-hidden">
+			<!-- Formulario -->
+			<article
+				class="Card form-wrapper sm:w-full sm:max-w-[initial] mx-auto mt-48 w-[428px] rounded-lg border bg-white px-24 py-32 shadow-sm"
+				js-anima data-anima="left" data-value="-100%" data-duration="0.6">
+
+				<header class="flex flex-col gap-8">
+					<h2 js-anima data-delay="0.1" data-anima="opacity" class="text-title-4">Fazer login</h2>
+					<p class="description text-neutral-70" js-anima data-delay="0.15" data-anima="opacity">
+						Seja bem-vindo(a)!<br> Insira seu e-mail e senha para entrar em sua conta.
+					</p>
+				</header>
+
+				<div class="mx-auto mt-32">
+					<div class="Input flex h-48" js-anima data-delay="0.2" data-anima="opacity">
+						{{form.username|attr:'placeholder:E-mail'}}
+					</div>
+
+					<div class="Input mt-8 flex h-48 gap-0" js-password js-anima data-delay="0.25" data-anima="opacity">
+						{{form.password|attr:'js-input-password'|attr:'placeholder:Senha'}}
+						<button js-button-password type="button"
+							class="grid h-full w-48 shrink-0 cursor-pointer place-items-center hover:bg-primary-pure/10"
+							js-ripple>
+							<ion-icon class="on text-paragraph-1 text-neutral-60" name="eye-outline"
+								size="small"></ion-icon>
+							<ion-icon class="off text-paragraph-1 hidden text-neutral-60"
+								name="eye-off-outline"></ion-icon>
+						</button>
+					</div>
+
+					<div class="mt-8" js-anima data-delay="0.30" data-anima="opacity">
+						<a href="{% url 'password_reset' %}" class="text-headline-4 text-neutral-60 hover:underline">
+							Esqueceu a senha?
+						</a>
+					</div>
+
+				</div>
+
+				<!-- Erros -->
+				<div js-anima data-delay="0.35 " data-anima="opacity">
+					{{form.errors|json_script:"js-error"}}
+				</div>
+
+
+				<label class="Label-check text-headline-3 mt-16" js-anima data-delay="0.35 " data-anima="opacity">
+					<div js-checkbox size="sm">
+						<input type="checkbox" name="permanecer_conectado" checked>
+					</div>
+					<p>Permanecer conectado</p>
+				</label>
+
+				<div class="btn-wrapper mt-40" js-anima data-delay="0.40" data-anima="opacity">
+					<button type="submit" class="Button text-headline-2 w-full justify-center !rounded-3xl" secondary
+						size="lg" js-ripple>
+						Entrar na conta
+					</button>
+				</div>
+			</article>
+
+			<footer class="h-max py-16" js-anima data-delay="0.5" data-anima="opacity">
+				<a href="https://novadata.com.br" target="_blank">
+					<img class="mx-auto h-24" src="{% static 'images/logos/logo_ndt_light.webp' %}" alt="novadata">
+				</a>
+			</footer>
+		</section>
+
+	</div>
+
+</form>

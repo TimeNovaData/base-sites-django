@@ -1,0 +1,54 @@
+{% load home_tags %}
+{% is_dev as is_dev %}
+{% get_site as site %}
+{% load ndt_vite_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	{% vite_hmr_client %}
+
+	<title>
+		{% block title %} {{site.titulo_global}} | {{pagina.titulo}} {% endblock%}
+	</title>
+
+	{% include 'meta_tags.html' %}
+
+	<!-- FONTES -->
+
+	<!---------->
+
+	<!-- CSS ENTRADA -->
+	{% vite_asset 'src/index.js' %}
+
+	{% block extra_styles %} <!--  --> {% endblock %}
+
+	<!-- CSS ADICIONAL ADMIN -->
+	{% include 'adicionais/css.html' %}
+
+
+</head>
+
+<body class="{% block body_class %} {% endblock %}">
+
+
+	{% block content %} <!-- content --> {% endblock %}
+
+	<!-- JS ADICIONAL ADMIN -->
+	{% include 'adicionais/js.html' %}
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="{% static 'vendor/jquery3.5.js' %}"></script>
+	<!-- WEBFLOW  -->
+	<script type="text/javascript" src="{% static 'vendor/webflow.js' %}"></script>
+
+	<!-- MAIN -->
+	{% vite_asset 'src/js/main.js'%}
+
+	{% block extra_js %} {% endblock %}
+
+</body>
+
+</html>
