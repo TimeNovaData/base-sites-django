@@ -195,7 +195,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ⚡VITE -----
 DJANGO_VITE_ASSETS_PATH = os.path.join(BASE_DIR, 'static', 'dist')
 DJANGO_VITE_DEV_MODE = DEV
-#DJANGO_VITE_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
+DJANGO_VITE_MANIFEST_PATH = os.path.join(STATIC_URL, "manifest.json")
 PUBLIC_FOLDER = BASE_DIR / "static" / "public"
 STATICFILES_DIRS = [DJANGO_VITE_ASSETS_PATH]
 if DEV:
